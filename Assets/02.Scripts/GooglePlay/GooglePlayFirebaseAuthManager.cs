@@ -2,15 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Auth;
 using GooglePlayGames;
-using GooglePlayGames.BasicApi;
-using UnityEngine.SocialPlatforms;
 
 public class GooglePlayFirebaseAuthManager : MonoBehaviour
 {
-    public Text SignUpAuthID;
-    public Text SignUpAuthPW;
-    public Text SignInAuthID;
-    public Text SignInAuthPW;
     public Text LogMessage;
     
     private string message;
@@ -18,15 +12,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
 
     private void Start()
     {
-        PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-            .RequestIdToken()
-            .RequestEmail()
-            .Build();
-
-        PlayGamesPlatform.InitializeInstance(config);
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
-
+        ConfigureGooglePlayGames();
         auth = FirebaseAuth.DefaultInstance;
         Debug.Log(auth);
     }
@@ -36,42 +22,16 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         LogMessage.text = message;
     }
 
-    public void OnClick_SignUp()
-    {
-        SignUp(SignUpAuthID.text, SignUpAuthPW.text);
-        Debug.Log("SignUp : " + SignUpAuthID.text + " " + SignUpAuthPW.text);
-    }
-
     public void OnClick_SignIn()
     {
         SignInWithGooglePlay();
         Debug.Log("Google Play Services를 통한 로그인 시도");
     }
 
-    private void SignUp(string email, string password)
+    private void ConfigureGooglePlayGames()
     {
-        auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(
-            task =>
-            {
-                if (task.IsCanceled) {
-                    Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
-                    return;
-                }
-                if (task.IsFaulted) {
-                    Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
-                    return;
-                }
-                
-                if (!task.IsCanceled && !task.IsFaulted)
-                {
-                    message = email + " 로 회원가입 했습니다.";
-                }
-                else
-                {
-                    message = "회원가입에 실패했습니다.";
-                }
-            }
-        );
+        PlayGamesPlatform.DebugLogEnabled = true;
+        PlayGamesPlatform.Activate();
     }
 
     private void SignInWithGooglePlay()
@@ -81,30 +41,43 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
             if (success)
             {
                 Debug.Log("Google Play Games 로그인 성공");
-                string idToken = PlayGamesPlatform.Instance.GetIdToken();
-                SignInWithFirebase(idToken);
+                PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
+                {
+                    if (!string.IsNullOrEmpty(code))
+                    {
+                        Debug.Log("Server auth code: " + code);
+                        SignInWithFirebase(code);
+                    }
+                    else
+                    {
+                        Debug.LogError("서버 인증 코드가 비어 있습니다.");
+                        message = "서버 인증 코드가 비어 있습니다.";
+                    }
+                });
             }
             else
             {
-                Debug.Log("Google Play Games 로그인 실패");
+                Debug.LogError("Google Play Games 로그인 실패");
                 message = "Google Play Games 로그인에 실패했습니다.";
             }
         });
     }
 
-    private void SignInWithFirebase(string idToken)
+    private void SignInWithFirebase(string authCode)
     {
-        Credential credential = GoogleAuthProvider.GetCredential(idToken, null);
+        Credential credential = PlayGamesAuthProvider.GetCredential(authCode);
         auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
                 Debug.LogError("SignInWithCredentialAsync was canceled.");
+                message = "Firebase 로그인 취소";
                 return;
             }
             if (task.IsFaulted)
             {
                 Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+                message = "Firebase 로그인 오류: " + task.Exception;
                 return;
             }
 
