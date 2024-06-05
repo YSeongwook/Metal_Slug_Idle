@@ -58,6 +58,9 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+# SonarLint plugin
+.idea/sonarlint/
+
 # Crashlytics generated file
 crashlytics-build.properties
 

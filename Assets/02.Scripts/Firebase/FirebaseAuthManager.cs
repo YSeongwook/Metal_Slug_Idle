@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Auth;
-using Firebase.Extensions;
 
 public class FirebaseAuthManager : MonoBehaviour
 {
@@ -16,23 +13,8 @@ public class FirebaseAuthManager : MonoBehaviour
     private string message;
     private FirebaseAuth auth;
 
-    void Start()
+    private void Start()
     {
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task => {
-            var dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available) {
-                // Create and hold a reference to your FirebaseApp,
-                // where app is a Firebase.FirebaseApp property of your application class.
-                // app = Firebase.FirebaseApp.DefaultInstance;
-
-                // Set a flag here to indicate whether Firebase is ready to use by your app.
-            } else {
-                UnityEngine.Debug.LogError(System.String.Format(
-                    "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
-                // Firebase Unity SDK is not safe to use here.
-            }
-        });
-        
         auth = FirebaseAuth.DefaultInstance;
         Debug.Log(auth);
     }
@@ -59,14 +41,23 @@ public class FirebaseAuthManager : MonoBehaviour
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWith(
             task =>
             {
+                if (task.IsCanceled) {
+                    Debug.LogError("CreateUserWithEmailAndPasswordAsync was canceled.");
+                    return;
+                }
+                if (task.IsFaulted) {
+                    Debug.LogError("CreateUserWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                    return;
+                }
+                
                 if (!task.IsCanceled && !task.IsFaulted)
                 {
-                    message = email + " 로 회원가입 하셨습니다.";
+                    message = email + " 로 회원가입 했습니다.";
                 }
                 else
                 {
                     // 이메일로는 성공, Google로는 실패, 인증서가 문제?, 아직 등록을 안해서 그런듯
-                    message = "회원가입에 실패하셨습니다.";
+                    message = "회원가입에 실패했습니다.";
                 }
             }
         );
@@ -77,13 +68,22 @@ public class FirebaseAuthManager : MonoBehaviour
         auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(
             task =>
             {
+                if (task.IsCanceled) {
+                    Debug.LogError("SignInWithEmailAndPasswordAsync was canceled.");
+                    return;
+                }
+                if (task.IsFaulted) {
+                    Debug.LogError("SignInWithEmailAndPasswordAsync encountered an error: " + task.Exception);
+                    return;
+                }
+                
                 if (task.IsCompleted && !task.IsFaulted && !task.IsCanceled)
                 {
-                    message = email + " 로 로그인 하셨습니다.";
+                    message = email + " 로 로그인 했습니다.";
                 }
                 else
                 {
-                    message = "로그인에 실패하셨습니다.";
+                    message = "로그인에 실패했습니다.";
                 }
             }
         );
