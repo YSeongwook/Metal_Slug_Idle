@@ -9,3 +9,5 @@ T
 $Assets/Firebase/google-services.json,b\7\b788fb66b1240b4ffda9a96411f6efa78410ecbc
 c
 3Assets/StreamingAssets/google-services-desktop.json,8\e\8e9b6e557bb0a1d65a5efe16187cb7c85477033f
+m
+=Assets/02.Scripts/GooglePlay/GooglePlayFirebaseAuthManager.cs,a\3\a3d16f7d84a1ef48a740f964c3f281d3ca433da2
