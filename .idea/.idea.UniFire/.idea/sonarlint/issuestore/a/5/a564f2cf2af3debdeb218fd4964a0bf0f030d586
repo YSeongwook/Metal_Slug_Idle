@@ -1,8 +1,8 @@
 
-zcsharpsquid:S3903"2Move 'FirebaseAuthManager' into a named namespace.(ø„Ä‚üÿÿÿÿJ$4da7b2b7-d04d-4ae3-a821-8bb6984b288a
-‡csharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(«ˆ¹ñJ$58c86788-f436-4db8-81bd-0779ffe70a8f
-Œcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ë§ÂÿúÿÿÿÿJ$a4e1398c-8610-4cd2-ae93-5bed2969d0de
-Œcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ŸìÅüÿÿÿÿJ$e45c7497-03ff-49b2-8a05-d1d767cf4346
-Œcsharpsquid:S1104
-"DMake this field 'private' and encapsulate it in a 'public' property.(™¼ÏûÿÿÿÿJ$24faab8e-fc16-4232-bb97-bb53276e66bb
-Œcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(˜Éÿ·ûÿÿÿÿJ$aaa42e13-8f86-458e-a4f1-88dcb142049e
+[csharpsquid:S3903"2Move 'FirebaseAuthManager' into a named namespace.(ø„Ä‚üÿÿÿÿ8òÿ±¯ş1
+hcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(«ˆ¹ñ8óÿ±¯ş1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(ë§Âÿúÿÿÿÿ8óÿ±¯ş1
+mcsharpsquid:S1104	"DMake this field 'private' and encapsulate it in a 'public' property.(ŸìÅüÿÿÿÿ8óÿ±¯ş1
+mcsharpsquid:S1104
+"DMake this field 'private' and encapsulate it in a 'public' property.(™¼Ïûÿÿÿÿ8óÿ±¯ş1
+mcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(˜Éÿ·ûÿÿÿÿ8óÿ±¯ş1
