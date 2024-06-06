@@ -27,13 +27,8 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
 
             if (auth == null)
             {
-                Log("auth is null");
-                Log("databaseRef is null");
-            }
-            else
-            {
-                Log($"{auth}");
-                Log($"{databaseRef}");
+                Log("인증 인스턴스가 null 입니다.");
+                Log("데이터베이스 레퍼런스가 null 입니다.");
             }
             
             Log("FirebaseAuth 초기화 완료.");
@@ -100,7 +95,6 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
                 {
                     if (!string.IsNullOrEmpty(code))
                     {
-                        // Log("Server auth code: " + code);
                         SignInWithFirebase(code);
                     }
                     else
@@ -139,17 +133,17 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         {
             if (task.IsCanceled)
             {
-                LogError("SignInWithCredentialAsync was canceled.");
+                LogError("Firebase 자격 증명 로그인이 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+                LogError("Firebase 자격 증명 로그인 중 오류 발생: " + task.Exception);
                 return;
             }
 
             FirebaseUser newUser = task.Result;
-            Log(newUser.Email + " 로 로그인 했습니다.");
+            Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             SaveUserData(newUser);
         });
     }
@@ -157,18 +151,18 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     // 유저 데이터를 Firebase Realtime Database에 저장
     private void SaveUserData(FirebaseUser user)
     {
-        User userData = new User(user.UserId, user.Email, "초기 레벨", "초기 아이템");
+        User userData = new User(user.UserId, user.DisplayName, 1, "None");
         string json = JsonUtility.ToJson(userData);
         databaseRef.Child("users").Child(user.UserId).SetRawJsonValueAsync(json).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
-                LogError("SetRawJsonValueAsync was canceled.");
+                LogError("유저 데이터 저장이 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                LogError("SetRawJsonValueAsync encountered an error: " + task.Exception);
+                LogError("유저 데이터 저장 중 오류 발생: " + task.Exception);
                 return;
             }
 
@@ -183,18 +177,18 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         {
             if (task.IsCanceled)
             {
-                LogError("GetValueAsync was canceled.");
+                LogError("유저 데이터 불러오기가 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                LogError("GetValueAsync encountered an error: " + task.Exception);
+                LogError("유저 데이터 불러오기 중 오류 발생: " + task.Exception);
                 return;
             }
 
             DataSnapshot snapshot = task.Result;
             User userData = JsonUtility.FromJson<User>(snapshot.GetRawJsonValue());
-            Log("유저 데이터 불러오기 성공: " + userData.email + ", " + userData.level + ", " + userData.items);
+            Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items);
         });
     }
 
@@ -202,14 +196,14 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     public class User
     {
         public string userId;
-        public string email;
-        public string level;
+        public string displayName;
+        public int level;
         public string items;
 
-        public User(string userId, string email, string level, string items)
+        public User(string userId, string displayName, int level, string items)
         {
             this.userId = userId;
-            this.email = email;
+            this.displayName = displayName;
             this.level = level;
             this.items = items;
         }
