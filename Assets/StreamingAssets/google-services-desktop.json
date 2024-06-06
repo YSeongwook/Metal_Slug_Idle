@@ -15,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "887675378531-i6fvnd95474hucrlj6k6kcpb6l9hdhp6.apps.googleusercontent.com",
+          "client_id": "887675378531-lss97v49i1bss9lcbql4drqs6idpb8n7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Wook.UniFire",
+            "certificate_hash": "6dacfdd3cc327209f2ce1b65a473b12a5f9afd06"
+          }
+        },
+        {
+          "client_id": "887675378531-fab4ca2dg8g4jv46nltra3metmne2eva.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -28,7 +36,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "887675378531-i6fvnd95474hucrlj6k6kcpb6l9hdhp6.apps.googleusercontent.com",
+              "client_id": "887675378531-fab4ca2dg8g4jv46nltra3metmne2eva.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

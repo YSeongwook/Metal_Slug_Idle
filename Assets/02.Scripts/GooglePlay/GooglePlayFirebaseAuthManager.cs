@@ -24,11 +24,18 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         {
             auth = FirebaseAuth.DefaultInstance;
             databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
-            if (databaseRef == null)
+
+            if (auth == null)
             {
-                
+                Log("auth is null");
+                Log("databaseRef is null");
             }
-            Log($"{databaseRef}");
+            else
+            {
+                Log($"{auth}");
+                Log($"{databaseRef}");
+            }
+            
             Log("FirebaseAuth 초기화 완료.");
         }
         catch (System.Exception e)
