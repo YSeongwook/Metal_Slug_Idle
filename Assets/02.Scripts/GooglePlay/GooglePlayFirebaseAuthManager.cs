@@ -1,9 +1,10 @@
-using Firebase;
+using EnumTypes;
 using UnityEngine;
 using UnityEngine.UI;
 using Firebase.Auth;
 using Firebase.Database;
 using GooglePlayGames;
+using EventLibrary;
 
 public class GooglePlayFirebaseAuthManager : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     public Transform LogContent; // Content 오브젝트
     public ScrollRect ScrollRect; // ScrollRect 오브젝트
     
-    private FirebaseAuth auth;
-    private DatabaseReference databaseRef;
+    private FirebaseAuth _auth;
+    private DatabaseReference _databaseRef;
 
     // 초기화 시 실행
     private void Start()
@@ -22,10 +23,10 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         // Firebase 인증 및 데이터베이스 초기화
         try
         {
-            auth = FirebaseAuth.DefaultInstance;
-            databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+            _auth = FirebaseAuth.DefaultInstance;
+            _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 
-            if (auth == null)
+            if (_auth == null)
             {
                 Log("인증 인스턴스가 null 입니다.");
                 Log("데이터베이스 레퍼런스가 null 입니다.");
@@ -39,7 +40,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         }
         
         // 자동 로그인 시도
-        TryAutoLogin();
+        // TryAutoLogin();
     }
 
     // 로그 메시지 출력
@@ -86,6 +87,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     // Google Play Games를 통한 로그인
     private void SignInWithGooglePlay(bool isAutoLogin)
     {
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickSignInGoogle);  // 구글 로그인 이벤트 발생
         Social.localUser.Authenticate(success =>
         {
             if (success)
@@ -129,7 +131,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     private void SignInWithFirebase(string authCode)
     {
         Credential credential = PlayGamesAuthProvider.GetCredential(authCode);
-        auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
+        _auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -153,7 +155,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     {
         User userData = new User(user.UserId, user.DisplayName, 1, "None");
         string json = JsonUtility.ToJson(userData);
-        databaseRef.Child("users").Child(user.UserId).SetRawJsonValueAsync(json).ContinueWith(task =>
+        _databaseRef.Child("users").Child(user.UserId).SetRawJsonValueAsync(json).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -173,7 +175,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     // 유저 데이터를 Firebase Realtime Database에서 불러오기
     private void LoadUserData(string userId)
     {
-        databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
+        _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
