@@ -23,5 +23,12 @@ namespace EnumTypes
         OnClickSignInGoogle,
     }
 
+    public enum DataEvents
+    {
+        OnUserDataSave,
+        OnUserDataLoad,
+        OnUserDataReset,
+    }
+
     public class EnumTypes : MonoBehaviour { }
 }
