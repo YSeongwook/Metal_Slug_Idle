@@ -83,6 +83,60 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             Log("유저 데이터 리셋 성공.");
         });
     }
+    
+    public void SyncUserData(string userId)
+    {
+        _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.Log("유저 데이터 불러오기가 취소되었습니다.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.Log("유저 데이터 불러오기 중 오류 발생: " + task.Exception);
+                return;
+            }
+
+            DataSnapshot snapshot = task.Result;
+            UserData serverData = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
+            UserData localData = JsonUtilityManager.LoadFromJson<UserData>("UserData.json");
+
+            if (localData == null || serverData.lastUpdated > localData.lastUpdated)
+            {
+                // 서버 데이터가 더 최신이므로 로컬 데이터를 서버 데이터로 덮어쓰기
+                JsonUtilityManager.SaveToJson(serverData, "UserData.json");
+                Debug.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
+            }
+            else if (localData.lastUpdated > serverData.lastUpdated)
+            {
+                // 로컬 데이터가 더 최신이므로 서버 데이터를 로컬 데이터로 업데이트
+                SaveUserDataToServer(localData);
+                Debug.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
+            }
+        });
+    }
+
+    public void SaveUserDataToServer(UserData userData)
+    {
+        string json = JsonUtility.ToJson(userData);
+        _databaseRef.Child("users").Child(userData.userId).SetRawJsonValueAsync(json).ContinueWith(task =>
+        {
+            if (task.IsCanceled)
+            {
+                Debug.Log("유저 데이터 저장이 취소되었습니다.");
+                return;
+            }
+            if (task.IsFaulted)
+            {
+                Debug.Log("유저 데이터 저장 중 오류 발생: " + task.Exception);
+                return;
+            }
+
+            Debug.Log("유저 데이터 저장 성공.");
+        });
+    }
 
     public void Log(string message)
     {

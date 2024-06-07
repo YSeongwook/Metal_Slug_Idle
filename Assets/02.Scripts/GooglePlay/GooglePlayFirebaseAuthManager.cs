@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using Firebase.Auth;
 using GooglePlayGames;
 using EventLibrary;
+using GooglePlayGames.BasicApi;
 
 public class GooglePlayFirebaseAuthManager : MonoBehaviour
 {
@@ -34,30 +35,9 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         }
 
         // 자동 로그인 시도
-        // TryAutoLogin();
+        TryAutoLogin();
     }
-
-    // 로그 메시지 출력
-    private void Log(string message)
-    {
-        firebaseDataManager.Log(message);
-        Debug.Log(message);
-    }
-
-    // 에러 로그 메시지 출력
-    private void LogError(string message)
-    {
-        firebaseDataManager.Log(message);
-        Debug.LogError(message);
-    }
-
-    // 로그인 버튼 클릭 시 실행
-    public void OnClick_SignIn()
-    {
-        SignInWithGooglePlay(false);
-        Log("Google Play Services를 통한 로그인 시도");
-    }
-
+    
     // Google Play Games 초기화
     private void ConfigureGooglePlayGames()
     {
@@ -134,5 +114,26 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
             Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             firebaseDataManager.SaveUserData(newUser);
         });
+    }
+    
+    // 로그 메시지 출력
+    private void Log(string message)
+    {
+        firebaseDataManager.Log(message);
+        Debug.Log(message);
+    }
+
+    // 에러 로그 메시지 출력
+    private void LogError(string message)
+    {
+        firebaseDataManager.Log(message);
+        Debug.LogError(message);
+    }
+    
+    // 로그인 버튼 클릭 시 실행
+    public void OnClick_SignIn()
+    {
+        SignInWithGooglePlay(false);
+        Log("Google Play Services를 통한 로그인 시도");
     }
 }
