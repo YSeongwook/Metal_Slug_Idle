@@ -15,10 +15,13 @@ public class AuthManager : MonoBehaviour
     private FirebaseAuth _auth; // Firebase 인증 객체
     private bool isSignin = false; // 로그인 상태를 추적하는 플래그
 
+    private Logger logger;
+
     private void Start()
     {
         TryAutoSignIn();
         InitializeFirebase();
+        logger = Logger.Instance;
     }
 
     // Google Play Games 초기화 및 자동 로그인 시도
@@ -33,7 +36,7 @@ public class AuthManager : MonoBehaviour
     {
         if (status == SignInStatus.Success)
         {
-            Log("Google Play Games 로그인 성공");
+            logger.Log("Google Play Games 로그인 성공");
 
             // 서버 측 인증 코드를 요청하여 Firebase에 로그인
             PlayGamesPlatform.Instance.RequestServerSideAccess(false, code =>
@@ -44,13 +47,13 @@ public class AuthManager : MonoBehaviour
                 }
                 else
                 {
-                    LogError("서버 인증 코드가 비어 있습니다.");
+                    logger.LogError("서버 인증 코드가 비어 있습니다.");
                 }
             });
         }
         else
         {
-            LogError("Google Play Games 로그인 실패");
+            logger.LogError("Google Play Games 로그인 실패");
 
             // 로그인 버튼 활성화 및 상태 메시지 업데이트
             signInText.text = "GOOGLE LOGIN";
@@ -84,12 +87,12 @@ public class AuthManager : MonoBehaviour
         {
             if (task.IsCanceled || task.IsFaulted)
             {
-                LogError("Firebase 자격 증명 로그인 중 오류 발생: " + task.Exception);
+                logger.LogError("Firebase 자격 증명 로그인 중 오류 발생: " + task.Exception);
                 return;
             }
 
             FirebaseUser newUser = task.Result; // 로그인 성공 시 사용자 정보 가져오기
-            Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
+            logger.Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             signInText.text = "Firebase Login"; // 상태 메시지 업데이트
             isSignin = true; // 로그인 상태 업데이트
             firebaseDataManager.SaveUserData(newUser); // 사용자 데이터 저장
@@ -102,19 +105,5 @@ public class AuthManager : MonoBehaviour
         PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication); // 수동 로그인 시도
         UIManager.Instance.DisableSignInUI(); // Sign In UI 비활성화
         signInText.text = "로그인 시도 중..."; // 상태 메시지 업데이트
-    }
-
-    // 로그 메시지 출력 메서드
-    private void Log(string message)
-    {
-        firebaseDataManager.Log(message); // Firebase 데이터 관리자에 로그 기록
-        Debug.Log(message); // Unity 콘솔에 로그 출력
-    }
-
-    // 에러 로그 메시지 출력 메서드
-    private void LogError(string message)
-    {
-        firebaseDataManager.Log(message); // Firebase 데이터 관리자에 에러 로그 기록
-        Debug.LogError(message); // Unity 콘솔에 에러 로그 출력
     }
 }

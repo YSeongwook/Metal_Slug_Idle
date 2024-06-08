@@ -9,12 +9,14 @@ using GooglePlayGames.BasicApi;
 public class GooglePlayFirebaseAuthManager : MonoBehaviour
 {
     public FirebaseDataManager firebaseDataManager;
-
     private FirebaseAuth _auth;
+
+    private Logger logger;
 
     // 초기화 시 실행
     private void Start()
     {
+        logger = Logger.Instance;
         ConfigureGooglePlayGames();
 
         // Firebase 인증 및 데이터베이스 초기화
@@ -24,14 +26,14 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
 
             if (_auth == null)
             {
-                Log("인증 인스턴스가 null 입니다.");
+                logger.Log("인증 인스턴스가 null 입니다.");
             }
 
-            Log("FirebaseAuth 초기화 완료.");
+            logger.Log("FirebaseAuth 초기화 완료.");
         }
         catch (System.Exception e)
         {
-            LogError("Firebase 초기화 실패: " + e.Message);
+            logger.LogError("Firebase 초기화 실패: " + e.Message);
         }
 
         // 자동 로그인 시도
@@ -59,7 +61,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         {
             if (success)
             {
-                Log("Google Play Games 로그인 성공");
+                logger.Log("Google Play Games 로그인 성공");
                 PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
                 {
                     if (!string.IsNullOrEmpty(code))
@@ -68,7 +70,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
                     }
                     else
                     {
-                        LogError("서버 인증 코드가 비어 있습니다.");
+                        logger.LogError("서버 인증 코드가 비어 있습니다.");
                         if (isAutoLogin)
                         {
                             HandleAutoLoginFailure();
@@ -78,7 +80,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
             }
             else
             {
-                LogError("Google Play Games 로그인 실패");
+                logger.LogError("Google Play Games 로그인 실패");
                 if (isAutoLogin)
                 {
                     HandleAutoLoginFailure();
@@ -90,7 +92,7 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
     // 자동 로그인 실패 처리
     private void HandleAutoLoginFailure()
     {
-        LogError("자동 로그인에 실패했습니다.");
+        logger.LogError("자동 로그인에 실패했습니다.");
     }
 
     // Firebase를 통한 로그인
@@ -101,39 +103,25 @@ public class GooglePlayFirebaseAuthManager : MonoBehaviour
         {
             if (task.IsCanceled)
             {
-                LogError("Firebase 자격 증명 로그인이 취소되었습니다.");
+                logger.LogError("Firebase 자격 증명 로그인이 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                LogError("Firebase 자격 증명 로그인 중 오류 발생: " + task.Exception);
+                logger.LogError("Firebase 자격 증명 로그인 중 오류 발생: " + task.Exception);
                 return;
             }
 
             FirebaseUser newUser = task.Result;
-            Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
+            logger.Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             firebaseDataManager.SaveUserData(newUser);
         });
-    }
-    
-    // 로그 메시지 출력
-    private void Log(string message)
-    {
-        firebaseDataManager.Log(message);
-        Debug.Log(message);
-    }
-
-    // 에러 로그 메시지 출력
-    private void LogError(string message)
-    {
-        firebaseDataManager.Log(message);
-        Debug.LogError(message);
     }
     
     // 로그인 버튼 클릭 시 실행
     public void OnClick_SignIn()
     {
         SignInWithGooglePlay(false);
-        Log("Google Play Services를 통한 로그인 시도");
+        logger.Log("Google Play Services를 통한 로그인 시도");
     }
 }
