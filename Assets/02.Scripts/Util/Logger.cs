@@ -5,7 +5,9 @@ public class Logger : Singleton<Logger>
 {
     public TMP_Text logMessagePrefab; // 프리팹으로 사용할 TextMeshPro 텍스트 객체
     public Transform logContent; // Content 오브젝트
-
+    public int initialPoolSize = 10; // 초기 풀 크기
+    
+    private ObjectPool objectPool;
     private bool isInitialized;
 
     protected override void Awake()
@@ -17,6 +19,9 @@ public class Logger : Singleton<Logger>
         // Public으로 선언한 오브젝트가 할당되지 않으면 fake null 상태가 되기 때문에
         // isInitialized 플래그를 사용해서 null 체크를 최적화함.
         isInitialized = logMessagePrefab != null && logContent != null;
+        
+        objectPool = gameObject.AddComponent<ObjectPool>();
+        objectPool.CreatePool(logMessagePrefab.gameObject, initialPoolSize);
     }
 
     public void Log(string message)
@@ -45,7 +50,14 @@ public class Logger : Singleton<Logger>
 
     private void CreateLogMessage(string message)
     {
-        TMP_Text newLogText = Instantiate(logMessagePrefab, logContent);
-        newLogText.text = message;
+        GameObject logTextObject = objectPool.DequeueObject(logMessagePrefab.gameObject);
+        TMP_Text logText = logTextObject.GetComponent<TMP_Text>();
+        logText.transform.SetParent(logContent, false);
+        logText.text = message;
+    }
+
+    public void ReturnLogMessage(TMP_Text logText)
+    {
+        objectPool.EnqueueObject(logText.gameObject);
     }
 }

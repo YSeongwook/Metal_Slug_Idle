@@ -703,7 +703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670452624944205949, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00028893314
+      value: 0.000010605405
       objectReference: {fileID: 0}
     - target: {fileID: 7928228845128340207, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -764,11 +764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &959883699 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7670452624944205949, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
-  m_PrefabInstance: {fileID: 959883695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &959883700 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3498829071558516609, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
@@ -940,8 +935,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3dd9746e1d986d428108e8dc46995ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logMessagePrefab: {fileID: 8590622765319241488, guid: 27414527cb05e9a4080d70f428eca5c6, type: 3}
-  logContent: {fileID: 959883699}
 --- !u!4 &1171378423
 Transform:
   m_ObjectHideFlags: 0

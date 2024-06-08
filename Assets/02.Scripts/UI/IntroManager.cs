@@ -12,6 +12,8 @@ public class IntroManager : MonoBehaviour
     [Header("Load Next Scene")]
     public string nextSceneName; // 다음 씬 이름
 
+    private Tween blinkingTween; // 텍스트 블링크 효과를 위한 Tween
+
     private void Start()
     {
         // 텍스트 반짝임 시작
@@ -27,7 +29,7 @@ public class IntroManager : MonoBehaviour
     private void StartBlinkingText()
     {
         // DOTween을 사용하여 텍스트 알파값을 페이드 인/아웃
-        startText.DOFade(0, textBlinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+        blinkingTween = startText.DOFade(0, textBlinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
     }
 
     private void DetectTouch()
@@ -51,6 +53,9 @@ public class IntroManager : MonoBehaviour
 
     private void StartGame()
     {
+        // DOTween 애니메이션 정지
+        blinkingTween.Kill();
+
         // 다음 씬 또는 상태로 전환
         Debug.Log("Game Started!");
         SceneManager.LoadScene(nextSceneName);
