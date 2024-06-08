@@ -1,14 +1,14 @@
 using UnityEngine;
 using Firebase.Database;
 using Firebase.Auth;
-using UnityEngine.UI;
+using TMPro;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
     private DatabaseReference _databaseRef;
     private FirebaseAuth _auth;
 
-    public Text logMessagePrefab; // 프리팹으로 사용할 Text 오브젝트
+    public TMP_Text logMessagePrefab; // 프리팹으로 사용할 Text 오브젝트
     public Transform logContent; // Content 오브젝트
 
     protected override void Awake()
@@ -140,7 +140,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
     public void Log(string message)
     {
-        Text newLogText = Instantiate(logMessagePrefab, logContent);
+        TMP_Text newLogText = Instantiate(logMessagePrefab, logContent);
         newLogText.text = message;
         Debug.Log(message);
     }

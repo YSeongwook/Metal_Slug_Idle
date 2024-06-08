@@ -1,46 +1,33 @@
-using Firebase;
 using UnityEngine;
+using TMPro;
+using Firebase;
 using Firebase.Auth;
+using Firebase.Extensions;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using TMPro;
-using Firebase.Extensions;
-using UnityEngine.UI;
 
 public class AuthManager : MonoBehaviour
 {
     public FirebaseDataManager firebaseDataManager; // Firebase 데이터 관리자 참조
     public TextMeshProUGUI noticeText; // 상태 메시지를 표시할 UI 텍스트
     public TextMeshProUGUI signInText; // 로그인 상태를 표시할 UI 텍스트
-    public Button signInBtn; // 로그인 버튼
 
     private FirebaseAuth _auth; // Firebase 인증 객체
     private bool isSignin = false; // 로그인 상태를 추적하는 플래그
 
     private void Start()
     {
-        // Google Play Games 초기화 및 자동 로그인 시도
-        PlayGamesPlatform.Activate(); // Google Play Games 활성화
-        PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication); // 자동 로그인 시도
-
-        // Firebase 초기화
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsCanceled || task.IsFaulted)
-            {
-                noticeText.text = "Firebase Initialize Failed: " + task.Exception?.ToString();
-                return;
-            }
-
-            noticeText.text = "Firebase Initialize Complete"; // Firebase 초기화 완료 메시지
-            FirebaseApp app = FirebaseApp.DefaultInstance; // Firebase 앱 인스턴스 가져오기
-            _auth = FirebaseAuth.DefaultInstance; // Firebase 인증 인스턴스 가져오기
-        });
-
-        // 로그인 버튼 이벤트 핸들러 등록
-        signInBtn.onClick.AddListener(OnClick_SignIn);
+        TryAutoSignIn();
+        InitializeFirebase();
     }
 
+    // Google Play Games 초기화 및 자동 로그인 시도
+    private void TryAutoSignIn()
+    {
+        PlayGamesPlatform.Activate(); // Google Play Games 활성화
+        PlayGamesPlatform.Instance.Authenticate(ProcessAuthentication); // 자동 로그인 시도
+    }
+    
     // Google Play Games 인증 상태를 처리하는 메서드
     private void ProcessAuthentication(SignInStatus status)
     {
@@ -67,8 +54,26 @@ public class AuthManager : MonoBehaviour
 
             // 로그인 버튼 활성화 및 상태 메시지 업데이트
             signInText.text = "GOOGLE LOGIN";
-            signInBtn.interactable = true;
+            UIManager.Instance.EnableSignInUI(); //  Sign In UI 활성화
         }
+    }
+    
+    // Firebase 초기화
+    private void InitializeFirebase()
+    {
+        // Firebase 초기화
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled || task.IsFaulted)
+            {
+                noticeText.text = "Firebase Initialize Failed: " + task.Exception?.ToString();
+                return;
+            }
+
+            noticeText.text = "Firebase Initialize Complete"; // Firebase 초기화 완료 메시지
+            FirebaseApp app = FirebaseApp.DefaultInstance; // Firebase 앱 인스턴스 가져오기
+            _auth = FirebaseAuth.DefaultInstance; // Firebase 인증 인스턴스 가져오기
+        });
     }
 
     // Firebase를 통한 로그인 처리 메서드
@@ -85,17 +90,17 @@ public class AuthManager : MonoBehaviour
 
             FirebaseUser newUser = task.Result; // 로그인 성공 시 사용자 정보 가져오기
             Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
-            signInText.text = "LOGOUT"; // 상태 메시지 업데이트
+            signInText.text = "Firebase Login"; // 상태 메시지 업데이트
             isSignin = true; // 로그인 상태 업데이트
             firebaseDataManager.SaveUserData(newUser); // 사용자 데이터 저장
         });
     }
-    
+
     // 로그인 버튼 클릭 시 실행되는 메서드
     public void OnClick_SignIn()
     {
         PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication); // 수동 로그인 시도
-        signInBtn.interactable = false; // 로그인 버튼 비활성화
+        UIManager.Instance.DisableSignInUI(); // Sign In UI 비활성화
         signInText.text = "로그인 시도 중..."; // 상태 메시지 업데이트
     }
 

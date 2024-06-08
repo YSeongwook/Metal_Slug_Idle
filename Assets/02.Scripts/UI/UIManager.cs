@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using EnumTypes;
 using UnityEngine;
 using EventLibrary;
@@ -26,7 +24,13 @@ public class UIManager : Singleton<UIManager>
         EventManager<DataEvents>.StartListening<User>(DataEvents.OnUserDataLoad, OnUserDataLoaded); // 데이터 로드 이벤트 리스너 추가
     }
 
-    private void DisableSignInUI()
+    public void EnableSignInUI()
+    {
+        signInUI.SetActive(true);
+        logScrollView.SetActive(true);
+    }
+
+    public void DisableSignInUI()
     {
         signInUI.SetActive(false);
         logScrollView.SetActive(true);
