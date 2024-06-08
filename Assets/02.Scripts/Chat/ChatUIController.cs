@@ -6,24 +6,24 @@ using UnityEngine.UI;
 
 public class ChatUIController : MonoBehaviour
 {
-    public InfiniteScroll chatScroll;
-    public TMP_InputField chatInputField;
-    public Button sendButton;
+    public InfiniteScroll scrollViewChat;
+    public TMP_InputField inputFieldChat;
+    public Button btnSend;
     public GameObject chatMessagePrefab;
 
     private void Start()
     {
-        chatScroll.PublicInitialize();
-        sendButton.onClick.AddListener(OnSendButtonClicked);
+        scrollViewChat.PublicInitialize();
+        btnSend.onClick.AddListener(OnSendButtonClicked);
     }
 
     private void OnSendButtonClicked()
     {
-        string message = chatInputField.text;
+        string message = inputFieldChat.text;
         if (!string.IsNullOrEmpty(message))
         {
             AddChatMessage("Me", message);
-            chatInputField.text = string.Empty;
+            inputFieldChat.text = string.Empty;
         }
     }
 
@@ -35,6 +35,6 @@ public class ChatUIController : MonoBehaviour
             message = message,
             timestamp = DateTime.Now
         };
-        chatScroll.InsertData(data);
+        scrollViewChat.InsertData(data);
     }
 }
