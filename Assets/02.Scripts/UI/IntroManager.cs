@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using EnumTypes;
+using EventLibrary;
 
 public class IntroManager : MonoBehaviour
 {
@@ -59,5 +61,7 @@ public class IntroManager : MonoBehaviour
         // 다음 씬 또는 상태로 전환
         Debug.Log("Game Started!");
         SceneManager.LoadScene(nextSceneName);
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickStart);
+        this.gameObject.SetActive(false);
     }
 }

@@ -614,7 +614,6 @@ GameObject:
   - component: {fileID: 5457751128092873461}
   - component: {fileID: 3630361076493459670}
   - component: {fileID: 3287816765519030889}
-  - component: {fileID: 7130302680154763990}
   m_Layer: 5
   m_Name: Chat UI
   m_TagString: Untagged
@@ -683,22 +682,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 3
---- !u!114 &7130302680154763990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2570519095346232697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1246aeb359cb9dd4e8c7de8f4cb58b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollViewChat: {fileID: 8369679287523645989}
-  inputFieldChat: {fileID: 9035688924628233862}
-  btnSend: {fileID: 166638082522418577}
-  chatMessagePrefab: {fileID: 0}
 --- !u!1 &3137846474507013168
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,8 +893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9084368901477172583
 CanvasRenderer:
@@ -943,15 +926,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1cd65b217725fab409fa54b663c0e77f, type: 2}
+  m_sharedMaterial: {fileID: -5890942990308495925, guid: 1cd65b217725fab409fa54b663c0e77f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -968,8 +951,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1205,8 +1188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3112566045188865796
 CanvasRenderer:
@@ -1600,8 +1583,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.5}
-  m_SizeDelta: {x: -20, y: -13}
+  m_AnchoredPosition: {x: 5, y: -0.5}
+  m_SizeDelta: {x: -30, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2384028805165514099
 MonoBehaviour:
@@ -1844,7 +1827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4099790514097904394
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2855,19 +2838,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977577520152874511, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5977577520152874511, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5977577520152874511, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
       propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888780780746386674, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6888780780746386674, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314354065189175334, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
       propertyPath: m_Name
-      value: Infinite Scroll View
+      value: Chat Scroll
       objectReference: {fileID: 0}
     - target: {fileID: 8341460646214894312, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2881,24 +2872,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6026778768783419706, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
 --- !u!224 &4214252982959908136 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2246604402709186635, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
   m_PrefabInstance: {fileID: 2689073455948361059}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8369679287523645989 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5870038559761725254, guid: c023d49c19a55964ea125a6ffd76472a, type: 3}
-  m_PrefabInstance: {fileID: 2689073455948361059}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10837ee7ec97f6d48b4db00e8ee75cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4638580521612136858
 PrefabInstance:
   m_ObjectHideFlags: 0

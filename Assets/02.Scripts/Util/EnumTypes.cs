@@ -21,6 +21,7 @@ namespace EnumTypes
     public enum UIEvents
     {
         OnClickSignInGoogle,
+        OnClickStart,
     }
 
     public enum DataEvents

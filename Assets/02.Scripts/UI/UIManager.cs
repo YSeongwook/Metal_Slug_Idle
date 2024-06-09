@@ -21,6 +21,7 @@ public class UIManager : Singleton<UIManager>
     {
         base.Awake();
         EventManager<UIEvents>.StartListening(UIEvents.OnClickSignInGoogle, DisableSignInUI);
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickStart, DisableIntroUI);
         EventManager<DataEvents>.StartListening<User>(DataEvents.OnUserDataLoad, OnUserDataLoaded); // 데이터 로드 이벤트 리스너 추가
     }
 
@@ -34,6 +35,11 @@ public class UIManager : Singleton<UIManager>
     {
         signInUI.SetActive(false);
         logScrollView.SetActive(true);
+    }
+
+    private void DisableIntroUI()
+    {
+        this.gameObject.transform.GetChild(1).gameObject.SetActive(false);
     }
 
     public void OnClick_ExitLog()
