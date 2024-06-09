@@ -7,6 +7,7 @@ namespace Gpm.Ui
 
     public partial class InfiniteScroll : IMoveScroll
     {
+        // 스크롤 이동 타입
         public enum MoveToType
         {
             MOVE_TO_TOP = 0,
@@ -14,6 +15,7 @@ namespace Gpm.Ui
             MOVE_TO_BOTTOM
         }
 
+        // 스크롤 컨트롤 클래스
         public static class Control
         {
             public static void MoveTo(InfiniteScroll scroll, int itemIndex, MoveToType moveToType, float time = 0)
@@ -53,12 +55,12 @@ namespace Gpm.Ui
         private const int NEEDITEM_MORE_LINE = 1;
         private const int NEEDITEM_EXTRA_ADD = 2;
 
-        protected ScrollRect scrollRect = null;
-        protected RectTransform viewport = null;
+        protected ScrollRect scrollRect = null; // 스크롤 뷰의 스크롤렉트 컴포넌트
+        protected RectTransform viewport = null; // 뷰포트 RectTransform
 
-        protected float sizeInterpolationValue = 0.0001f; // 0.01%
-        
+        protected float sizeInterpolationValue = 0.0001f; // 사이즈 보간 값 (0.01%)
 
+        // 아이템 인덱스로 이동
         public void MoveTo(InfiniteScrollData data, MoveToType moveToType, float time = 0)
         {
             MoveTo(GetItemIndex(data), moveToType, time);
@@ -171,6 +173,7 @@ namespace Gpm.Ui
             MoveTo(1);
         }
 
+        // 스크롤이 첫 번째 데이터로 이동했는지 확인
         public bool IsMoveToFirstData()
         {
             if (isInitialize == false)
@@ -190,8 +193,7 @@ namespace Gpm.Ui
             return IsMoveToFirstData(contentPosition, viewportSize, contentSize);
         }
 
-
-
+        // 스크롤이 마지막 데이터로 이동했는지 확인
         public bool IsMoveToLastData()
         {
             if (isInitialize == false)
@@ -206,6 +208,7 @@ namespace Gpm.Ui
             return IsMoveToLastData(contentPosition, viewportSize, contentSize);
         }
 
+        // 스크롤 비율로 이동 위치 계산
         public Vector2 GetMovePosition(float scrollRate)
         {
             float viewportSize = GetViewportSize();
@@ -219,6 +222,7 @@ namespace Gpm.Ui
             return layout.GetAxisVector(content.anchoredPosition, move);
         }
 
+        // 아이템 인덱스와 이동 타입으로 이동 위치 계산
         public Vector2 GetMovePosition(int itemIndex, MoveToType moveToType)
         {
             float move = GetMoveOffset(itemIndex, moveToType);
@@ -226,11 +230,13 @@ namespace Gpm.Ui
             return layout.GetAxisVector(content.anchoredPosition, move);
         }
 
+        // 스크롤 위치 반환
         public Vector2 GetScrollPosition()
         {
             return content.anchoredPosition;
         }
 
+        // 스크롤 위치 설정
         public void SetScrollPosition(Vector2 position)
         {
             content.anchoredPosition = position;
@@ -243,6 +249,7 @@ namespace Gpm.Ui
             }
         }
 
+        // 이동 위치 설정
         public void SetScrollPosition(float movePosition)
         {
             Vector2 prevPosition = GetScrollPosition();
@@ -250,6 +257,7 @@ namespace Gpm.Ui
             SetScrollPosition(layout.GetAxisVector(prevPosition, movePosition));
         }
 
+        // 스크롤 컨텐츠 초기화
         public void ClearScrollContent()
         {
             content.anchoredPosition = Vector2.zero;
@@ -260,6 +268,7 @@ namespace Gpm.Ui
             CheckScrollData();
         }
 
+        // 스크롤 값 변경 리스너 추가
         public void AddScrollValueChangedLisnter(UnityAction<Vector2> listener)
         {
             if (isInitialize == false)
@@ -270,6 +279,7 @@ namespace Gpm.Ui
             scrollRect.onValueChanged.AddListener(listener);
         }
 
+        // 스크롤이 첫 번째 데이터로 이동했는지 확인 (내부 메서드)
         private bool IsMoveToFirstData(float position, float viewportSize, float contentSize)
         {
             bool isShow = false;
@@ -290,6 +300,7 @@ namespace Gpm.Ui
             return isShow;
         }
 
+        // 스크롤이 마지막 데이터로 이동했는지 확인 (내부 메서드)
         private bool IsMoveToLastData(float position, float viewportSize, float contentSize)
         {
             bool isShow = false;
@@ -311,6 +322,7 @@ namespace Gpm.Ui
             return isShow;
         }
 
+        // 아이템 인덱스와 이동 타입으로 이동 오프셋 계산
         protected float GetMoveOffset(int itemIndex, MoveToType moveToType)
         {
             float viewportSize = GetViewportSize();
@@ -342,7 +354,7 @@ namespace Gpm.Ui
             return ItemPostionFromOffset(move);
         }
 
-
+        // 스크롤 값 변경 시 호출되는 메서드
         private void OnValueChanged(Vector2 value)
         {
             bool prevIsStartLine = isStartLine;

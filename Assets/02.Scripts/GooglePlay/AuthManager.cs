@@ -8,19 +8,19 @@ using GooglePlayGames.BasicApi;
 
 public class AuthManager : MonoBehaviour
 {
-    public FirebaseDataManager firebaseDataManager; // Firebase 데이터 관리자 참조
     public TextMeshProUGUI noticeText; // 상태 메시지를 표시할 UI 텍스트
     public TextMeshProUGUI signInText; // 로그인 상태를 표시할 UI 텍스트
 
     private FirebaseAuth _auth; // Firebase 인증 객체
     private bool isSignin = false; // 로그인 상태를 추적하는 플래그
-
+    private FirebaseDataManager firebaseDataManager; // Firebase 데이터 관리자 참조
     private Logger logger;
 
     private void Start()
     {
         TryAutoSignIn();
         InitializeFirebase();
+        firebaseDataManager = FirebaseDataManager.Instance;
         logger = Logger.Instance;
     }
 

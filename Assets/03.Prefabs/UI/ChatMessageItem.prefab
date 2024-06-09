@@ -693,11 +693,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoApplySize: 0
-  playerPortrait: {fileID: 4379397999958951122}
-  playerNameText: {fileID: 4379398000156570393}
+  userNameText: {fileID: 4379398000156570393}
   messageText: {fileID: 4379397999625174353}
+  userAvatarImage: {fileID: 4379397999958951122}
   timestampText: {fileID: 4379397999969205102}
-  chatBackground: {fileID: 4379397999575317939}
+  rectTransform: {fileID: 4379398001438035475}
 --- !u!1 &9108004894046604895
 GameObject:
   m_ObjectHideFlags: 0

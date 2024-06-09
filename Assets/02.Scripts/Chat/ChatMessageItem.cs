@@ -1,25 +1,40 @@
 using Gpm.Ui;
+using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
 public class ChatMessageItem : InfiniteScrollItem
 {
-    public Image playerPortrait;  // 플레이어 초상화
-    public TMP_Text playerNameText; // 플레이어 이름 텍스트
-    public TMP_Text messageText;   // 채팅 내용 텍스트
-    public TMP_Text timestampText; // 타임스탬프 텍스트
-    public Image chatBackground;   // 말풍선 배경 이미지
+    public TMP_Text userNameText;
+    public TMP_Text messageText;
+    public Image userAvatarImage;
+    public TMP_Text timestampText;
+    public RectTransform rectTransform;
 
     public override void UpdateData(InfiniteScrollData scrollData)
     {
         base.UpdateData(scrollData);
 
-        if (scrollData is ChatMessageData data)
+        ChatMessageData chatData = scrollData as ChatMessageData;
+        if (chatData != null)
         {
-            playerPortrait.sprite = data.userAvatar;
-            playerNameText.text = data.userName;
-            messageText.text = data.message;
-            timestampText.text = data.timestamp.ToString("g"); // 예: "오후 3:24"
+            userNameText.text = chatData.userName;
+            messageText.text = chatData.message;
+            timestampText.text = chatData.timestamp.ToString("HH:mm");
+
+            if (chatData.userAvatar != null)
+            {
+                userAvatarImage.sprite = chatData.userAvatar;
+                userAvatarImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                userAvatarImage.gameObject.SetActive(false);
+            }
+
+            // 메시지 텍스트가 길어질 경우 높이를 동적으로 설정
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+            chatData.itemHeight = rectTransform.rect.height;
         }
     }
 }

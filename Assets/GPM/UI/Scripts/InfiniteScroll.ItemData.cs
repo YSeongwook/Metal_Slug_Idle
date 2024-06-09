@@ -14,24 +14,21 @@ namespace Gpm.Ui
                 this.data = data;
             }
 
-            internal InfiniteScrollData data;
-            internal int index = -1;
+            internal InfiniteScrollData data; // 데이터 객체
+            internal int index = -1; // 데이터 인덱스
+            internal int itemIndex = -1; // 아이템 인덱스
+            internal float offset = 0; // 오프셋
+            internal bool needUpdateItemData = true; // 아이템 데이터 업데이트 필요 여부
+            internal float scrollItemSize = 0; // 스크롤 아이템 크기
+            internal InfiniteScrollItem itemObject; // 연결된 아이템 객체
 
-            internal int itemIndex = -1;
-
-            internal float offset = 0;
-
-            internal bool needUpdateItemData = true;
-
-            internal float scrollItemSize = 0;
-
-            internal InfiniteScrollItem itemObject;
-
+            // 아이템 데이터 업데이트 필요 여부 반환
             public bool IsNeedUpdateItemData()
             {
                 return needUpdateItemData;
             }
 
+            // 아이템 연결 해제
             public void UnlinkItem(bool notifyEvent = false)
             {
                 if (itemObject != null)
@@ -43,31 +40,35 @@ namespace Gpm.Ui
                 itemIndex = -1;
             }
 
+            // 데이터 업데이트
             public void UpdateData(InfiniteScrollData data)
             {
                 this.data = data;
                 needUpdateItemData = true;
             }
 
+            // 아이템 크기 반환
             public float GetItemSize()
             {
                 return scrollItemSize;
             }
 
+            // 아이템 크기 설정
             public void SetItemSize(float value)
             {
                 scrollItemSize = value;
             }
         }
 
-        protected List<DataContext> dataList = new List<DataContext>();
-        protected int itemCount = 0;
+        protected List<DataContext> dataList = new List<DataContext>(); // 데이터 컨텍스트 리스트
+        protected int itemCount = 0; // 아이템 개수
 
-        protected bool needUpdateItemList = true;
+        protected bool needUpdateItemList = true; // 아이템 리스트 업데이트 필요 여부
 
-        protected int selectDataIndex = -1;
-        protected Action<InfiniteScrollData> selectCallback = null;
+        protected int selectDataIndex = -1; // 선택된 데이터 인덱스
+        protected Action<InfiniteScrollData> selectCallback = null; // 선택 콜백
 
+        // 데이터의 인덱스 반환
         public int GetDataIndex(InfiniteScrollData data)
         {
             if (isInitialize == false)
@@ -81,34 +82,38 @@ namespace Gpm.Ui
             });
         }
 
+        // 데이터 개수 반환
         public int GetDataCount()
         {
             return dataList.Count;
         }
 
+        // 인덱스로 데이터 반환
         public InfiniteScrollData GetData(int index)
         {
             return dataList[index].data;
         }
 
+        // 데이터 리스트 반환
         public List<InfiniteScrollData> GetDataList()
         {
             List<InfiniteScrollData> list = new List<InfiniteScrollData>();
 
-            for(int index = 0; index < dataList.Count; index++)
+            for (int index = 0; index < dataList.Count; index++)
             {
                 list.Add(dataList[index].data);
             }
             return list;
         }
 
+        // 활성화된 아이템 리스트 반환
         public List<InfiniteScrollData> GetItemList()
         {
             List<InfiniteScrollData> list = new List<InfiniteScrollData>();
 
             for (int index = 0; index < dataList.Count; index++)
             {
-                if(dataList[index].itemIndex != -1)
+                if (dataList[index].itemIndex != -1)
                 {
                     list.Add(dataList[index].data);
                 }
@@ -116,17 +121,20 @@ namespace Gpm.Ui
             return list;
         }
 
+        // 아이템 개수 반환
         public int GetItemCount()
         {
             return itemCount;
         }
 
+        // 데이터로부터 아이템 인덱스 반환
         public int GetItemIndex(InfiniteScrollData data)
         {
             var context = GetDataContext(data);
             return context.itemIndex;
         }
 
+        // 선택 콜백 추가
         public void AddSelectCallback(Action<InfiniteScrollData> callback)
         {
             if (isInitialize == false)
@@ -137,6 +145,7 @@ namespace Gpm.Ui
             selectCallback += callback;
         }
 
+        // 선택 콜백 제거
         public void RemoveSelectCallback(Action<InfiniteScrollData> callback)
         {
             if (isInitialize == false)
@@ -147,11 +156,13 @@ namespace Gpm.Ui
             selectCallback -= callback;
         }
 
+        // 아이템 활성화 상태 변경 시 호출
         public void OnChangeActiveItem(int dataIndex, bool active)
         {
             onChangeActiveItem.Invoke(dataIndex, active);
         }
 
+        // 데이터로부터 데이터 컨텍스트 반환
         protected DataContext GetDataContext(InfiniteScrollData data)
         {
             if (isInitialize == false)
@@ -165,6 +176,7 @@ namespace Gpm.Ui
             });
         }
 
+        // 아이템 인덱스로부터 데이터 컨텍스트 반환
         protected DataContext GetContextFromItem(int itemIndex)
         {
             if (isInitialize == false)
@@ -182,6 +194,7 @@ namespace Gpm.Ui
             }
         }
 
+        // 데이터 추가
         protected void AddData(InfiniteScrollData data)
         {
             DataContext addData = new DataContext(data, dataList.Count);
@@ -192,10 +205,10 @@ namespace Gpm.Ui
             CheckItemAfterAddData(addData);
         }
 
+        // 데이터 추가 후 아이템 상태 확인
         private bool CheckItemAfterAddData(DataContext addData)
         {
-            if (onFilter != null &&
-                onFilter(addData.data) == true)
+            if (onFilter != null && onFilter(addData.data) == true)
             {
                 return false;
             }
@@ -216,7 +229,7 @@ namespace Gpm.Ui
             addData.itemIndex = itemIndex;
             itemCount++;
 
-            for (int dataIndex = addData.index+1; dataIndex < dataList.Count; dataIndex++)
+            for (int dataIndex = addData.index + 1; dataIndex < dataList.Count; dataIndex++)
             {
                 if (dataList[dataIndex].itemIndex != -1)
                 {
@@ -229,6 +242,7 @@ namespace Gpm.Ui
             return true;
         }
 
+        // 데이터 삽입
         protected void InsertData(InfiniteScrollData data, int insertIndex)
         {
             if (insertIndex < 0 || insertIndex > dataList.Count)
@@ -256,6 +270,7 @@ namespace Gpm.Ui
             }
         }
 
+        // 데이터 컨텍스트 초기화
         protected void InitFitContext(DataContext context)
         {
             float size = layout.GetMainSize(defaultItemPrefabSize);
@@ -271,16 +286,19 @@ namespace Gpm.Ui
             context.SetItemSize(size);
         }
 
+        // 유효한 데이터 인덱스인지 확인
         protected bool IsValidDataIndex(int index)
         {
-            return (index >= 0 && index < dataList.Count) ? true : false;
+            return (index >= 0 && index < dataList.Count);
         }
 
+        // 유효한 아이템 인덱스인지 확인
         protected bool IsValidItemIndex(int index)
         {
-            return (index >= 0 && index < itemCount) ? true : false;
+            return (index >= 0 && index < itemCount);
         }
 
+        // 아이템 리스트 빌드
         protected void BuildItemList()
         {
             itemCount = 0;
@@ -288,11 +306,9 @@ namespace Gpm.Ui
             {
                 DataContext context = dataList[i];
 
-                if (onFilter != null &&
-                     onFilter(context.data) == true)
+                if (onFilter != null && onFilter(context.data) == true)
                 {
                     context.UnlinkItem(false);
-
                     continue;
                 }
                 context.itemIndex = itemCount;
@@ -302,10 +318,11 @@ namespace Gpm.Ui
             needReBuildLayout = true;
         }
         
+        // 아이템 선택 시 호출
         private void OnSelectItem(InfiniteScrollData data)
         {
             int dataIndex = GetDataIndex(data);
-            if (IsValidDataIndex(dataIndex) == true)
+            if (IsValidDataIndex(dataIndex))
             {
                 selectDataIndex = dataIndex;
 

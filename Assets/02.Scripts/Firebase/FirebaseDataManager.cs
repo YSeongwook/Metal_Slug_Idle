@@ -1,24 +1,38 @@
+using Firebase;
 using UnityEngine;
 using Firebase.Database;
 using Firebase.Auth;
+using Firebase.Extensions;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
     private DatabaseReference _databaseRef;
     private FirebaseAuth _auth;
-    private Logger logger; // Logger 인스턴스를 저장할 멤버 변수
+    public Logger logger;
+    public DatabaseReference DatabaseReference => _databaseRef; // 데이터베이스 참조
 
     protected override void Awake()
     {
         base.Awake();
-        // 추가 초기화 작업이 있으면 여기에 작성
+        InitializeFirebase();
     }
 
-    private void Start()
+    private void InitializeFirebase()
     {
-        _auth = FirebaseAuth.DefaultInstance;
-        _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
-        logger = Logger.Instance; // Logger 인스턴스 초기화
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
+        {
+            if (task.IsCanceled || task.IsFaulted)
+            {
+                logger.LogError("Firebase 초기화 실패: " + task.Exception);
+                return;
+            }
+
+            FirebaseApp app = FirebaseApp.DefaultInstance; // Firebase 앱 인스턴스 가져오기
+            _auth = FirebaseAuth.DefaultInstance; // Firebase 인증 인스턴스 가져오기
+            _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+            logger.Log($"Firebase 초기화 완료: {_databaseRef}");
+            logger.Log($"Auth: {_auth}");
+        });
     }
 
     public void SaveUserData(FirebaseUser user)

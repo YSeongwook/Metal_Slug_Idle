@@ -1,31 +1,32 @@
 namespace Gpm.Ui
 {
     using System;
+    using System.Collections.Generic;
     using UnityEngine;
     using UnityEngine.UI;
     using UnityEngine.Events;
 
     public partial class InfiniteScroll : MonoBehaviour
     {
-        protected bool                          isInitialize            = false;
+        protected bool isInitialize = false; // 초기화 여부를 나타내는 플래그
 
-        protected RectTransform                 content                 = null;
+        protected RectTransform content = null; // 스크롤뷰의 콘텐츠 영역
 
-        private bool                            changeValue             = false;
+        private bool changeValue = false; // 값 변경 여부 플래그
 
         [Header("Event", order = 4)]
-        public ChangeValueEvent                 onChangeValue           = new ChangeValueEvent();
-        public ItemActiveEvent                  onChangeActiveItem      = new ItemActiveEvent();
-        public StateChangeEvent                 onStartLine             = new StateChangeEvent();
-        public StateChangeEvent                 onEndLine               = new StateChangeEvent();
+        public ChangeValueEvent onChangeValue = new ChangeValueEvent(); // 값이 변경될 때 발생하는 이벤트
+        public ItemActiveEvent onChangeActiveItem = new ItemActiveEvent(); // 아이템 활성화 상태가 변경될 때 발생하는 이벤트
+        public StateChangeEvent onStartLine = new StateChangeEvent(); // 스크롤뷰의 시작 상태 이벤트
+        public StateChangeEvent onEndLine = new StateChangeEvent(); // 스크롤뷰의 끝 상태 이벤트
 
-        private Predicate<InfiniteScrollData>   onFilter                = null;
+        private Predicate<InfiniteScrollData> onFilter = null; // 필터링 조건을 설정하는 델리게이트
 
         private void Awake()
         {
-            Initialize();
+            PublicInitialize();
         }
-        
+
         public void PublicInitialize()
         {
             Initialize();
@@ -35,28 +36,28 @@ namespace Gpm.Ui
         {
             if (isInitialize == false)
             {
-                scrollRect = GetComponent<ScrollRect>();
-                content = scrollRect.content;
-                viewport = scrollRect.viewport;
+                scrollRect = GetComponent<ScrollRect>(); // ScrollRect 컴포넌트 가져오기
+                content = scrollRect.content; // ScrollRect의 content 가져오기
+                viewport = scrollRect.viewport; // ScrollRect의 viewport 가져오기
 
-                CheckScrollAxis();
-                ClearScrollContent();
+                CheckScrollAxis(); // 스크롤 축 확인
+                ClearScrollContent(); // 스크롤 콘텐츠 초기화
 
                 RectTransform itemTransform = (RectTransform)itemPrefab.transform;
-                defaultItemPrefabSize = itemTransform.sizeDelta;
+                defaultItemPrefabSize = itemTransform.sizeDelta; // 기본 아이템 프리팹 크기 설정
 
-                itemObjectList.Clear();
-                dataList.Clear();
+                itemObjectList.Clear(); // 아이템 오브젝트 리스트 초기화
+                dataList.Clear(); // 데이터 리스트 초기화
 
-                scrollRect.onValueChanged.AddListener(OnValueChanged);
+                scrollRect.onValueChanged.AddListener(OnValueChanged); // 스크롤 값 변경 리스너 추가
 
-                CreateNeedItem();
+                CreateNeedItem(); // 필요한 아이템 생성
 
-                CheckScrollData();
+                CheckScrollData(); // 스크롤 데이터 확인
 
-                isInitialize = true;
+                isInitialize = true; // 초기화 완료 플래그 설정
 
-                needReBuildLayout = true;
+                needReBuildLayout = true; // 레이아웃 재구성 필요 플래그 설정
             }
         }
 
@@ -70,6 +71,13 @@ namespace Gpm.Ui
             AddData(data);
 
             UpdateAllData(immediately);
+
+            // 새로운 데이터 추가 시 자동으로 스크롤
+            if (scrollRect != null)
+            {
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+            }
         }
 
         public void InsertData(InfiniteScrollData data, int insertIndex, bool immediately = false)
@@ -87,6 +95,13 @@ namespace Gpm.Ui
             InsertData(data, insertIndex);
 
             UpdateAllData(immediately);
+
+            // 새로운 데이터 추가 시 자동으로 스크롤
+            if (scrollRect != null)
+            {
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+            }
         }
 
         public void InsertData(InfiniteScrollData[] datas, bool immediately = false)
@@ -102,7 +117,15 @@ namespace Gpm.Ui
             }
 
             UpdateAllData(immediately);
+
+            // 새로운 데이터 추가 시 자동으로 스크롤
+            if (scrollRect != null)
+            {
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+            }
         }
+
         public void InsertData(InfiniteScrollData[] datas, int insertIndex, bool immediately = false)
         {
             if (insertIndex < 0 || insertIndex > dataList.Count)
@@ -121,6 +144,13 @@ namespace Gpm.Ui
             }
 
             UpdateAllData(immediately);
+
+            // 새로운 데이터 추가 시 자동으로 스크롤
+            if (scrollRect != null)
+            {
+                Canvas.ForceUpdateCanvases();
+                scrollRect.verticalNormalizedPosition = 0f;
+            }
         }
 
         public void RemoveData(InfiniteScrollData data, bool immediately = false)
