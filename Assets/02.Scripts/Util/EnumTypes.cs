@@ -31,5 +31,11 @@ namespace EnumTypes
         OnUserDataReset,
     }
 
+    public enum FirebaseEvents
+    {
+        FirebaseInitialized,
+        FirebaseLoggedIn,
+    }
+
     public class EnumTypes : MonoBehaviour { }
 }

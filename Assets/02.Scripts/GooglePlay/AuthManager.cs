@@ -1,3 +1,4 @@
+using EnumTypes;
 using UnityEngine;
 using TMPro;
 using Firebase;
@@ -5,6 +6,7 @@ using Firebase.Auth;
 using Firebase.Extensions;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
+using EventLibrary;
 
 public class AuthManager : MonoBehaviour
 {
@@ -13,14 +15,13 @@ public class AuthManager : MonoBehaviour
 
     private FirebaseAuth _auth; // Firebase 인증 객체
     private bool isSignin = false; // 로그인 상태를 추적하는 플래그
-    private FirebaseDataManager firebaseDataManager; // Firebase 데이터 관리자 참조
+
     private Logger logger;
 
     private void Start()
     {
         TryAutoSignIn();
         InitializeFirebase();
-        firebaseDataManager = FirebaseDataManager.Instance;
         logger = Logger.Instance;
     }
 
@@ -76,6 +77,9 @@ public class AuthManager : MonoBehaviour
             noticeText.text = "Firebase Initialize Complete"; // Firebase 초기화 완료 메시지
             FirebaseApp app = FirebaseApp.DefaultInstance; // Firebase 앱 인스턴스 가져오기
             _auth = FirebaseAuth.DefaultInstance; // Firebase 인증 인스턴스 가져오기
+
+            // Firebase 초기화 완료 이벤트 트리거
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseInitialized);
         });
     }
 
@@ -95,7 +99,9 @@ public class AuthManager : MonoBehaviour
             logger.Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             signInText.text = "Firebase Login"; // 상태 메시지 업데이트
             isSignin = true; // 로그인 상태 업데이트
-            firebaseDataManager.SaveUserData(newUser); // 사용자 데이터 저장
+
+            // Firebase 로그인 완료 이벤트 트리거
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseLoggedIn, newUser);
         });
     }
 

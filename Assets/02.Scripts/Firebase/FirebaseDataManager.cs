@@ -1,8 +1,8 @@
-using Firebase;
+using EnumTypes;
 using UnityEngine;
 using Firebase.Database;
 using Firebase.Auth;
-using Firebase.Extensions;
+using EventLibrary;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
@@ -14,25 +14,30 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     protected override void Awake()
     {
         base.Awake();
-        InitializeFirebase();
+        // 이벤트 리스너 등록
+        EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
+        EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
     }
 
-    private void InitializeFirebase()
+    private void OnDestroy()
     {
-        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-        {
-            if (task.IsCanceled || task.IsFaulted)
-            {
-                logger.LogError("Firebase 초기화 실패: " + task.Exception);
-                return;
-            }
+        // 이벤트 리스너 해제
+        EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
+        EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
+    }
 
-            FirebaseApp app = FirebaseApp.DefaultInstance; // Firebase 앱 인스턴스 가져오기
-            _auth = FirebaseAuth.DefaultInstance; // Firebase 인증 인스턴스 가져오기
-            _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
-            logger.Log($"Firebase 초기화 완료: {_databaseRef}");
-            logger.Log($"Auth: {_auth}");
-        });
+    private void OnFirebaseInitialized()
+    {
+        _auth = FirebaseAuth.DefaultInstance;
+        _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+        logger = Logger.Instance; // Logger 인스턴스 초기화
+        logger.Log($"Realtime Database: {_databaseRef}");
+        logger.Log($"Auth: {_auth}");
+    }
+
+    private void OnFirebaseLoggedIn(FirebaseUser user)
+    {
+        SaveUserData(user);
     }
 
     public void SaveUserData(FirebaseUser user)
@@ -117,13 +122,11 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             if (localData == null || serverData.lastUpdated > localData.lastUpdated)
             {
-                // 서버 데이터가 더 최신이므로 로컬 데이터를 서버 데이터로 덮어쓰기
                 JsonUtilityManager.SaveToJson(serverData, "UserData.json");
                 logger.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
             }
             else if (localData.lastUpdated > serverData.lastUpdated)
             {
-                // 로컬 데이터가 더 최신이므로 서버 데이터를 로컬 데이터로 업데이트
                 SaveUserDataToServer(localData);
                 logger.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
             }
