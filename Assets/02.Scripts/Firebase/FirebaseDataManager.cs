@@ -38,6 +38,8 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         logger = Logger.Instance; // Logger 인스턴스 초기화
         logger.Log($"Realtime Database: {_databaseRef}");
         logger.Log($"Auth: {_auth}");
+        
+        EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseDatabaseInitialized);
     }
 
     private void OnFirebaseLoggedIn(FirebaseUser user)

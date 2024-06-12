@@ -116,7 +116,7 @@ namespace EventLibrary
                 if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
                 {
                     unityEvent.RemoveListener(listener);
-                    Debug.Log($"Listener removed from event: {eventName}");
+                    // Debug.Log($"Listener removed from event: {eventName}");
                     RemoveEventIfEmpty(eventName, unityEvent);
                 }
             }
@@ -132,7 +132,7 @@ namespace EventLibrary
                     if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is GenericEvent<T> genericEvent)
                     {
                         genericEvent.Invoke(parameter);
-                        Debug.Log($"Event triggered: {eventName} with parameter: {parameter}");
+                        // Debug.Log($"Event triggered: {eventName} with parameter: {parameter}");
                     }
                 }
                 catch (Exception e)
@@ -151,7 +151,7 @@ namespace EventLibrary
                     if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
                     {
                         unityEvent.Invoke();
-                        Debug.Log($"Event triggered: {eventName}");
+                        // Debug.Log($"Event triggered: {eventName}");
                     }
                 }
                 catch (Exception e)

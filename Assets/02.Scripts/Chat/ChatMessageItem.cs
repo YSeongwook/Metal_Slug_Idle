@@ -15,25 +15,25 @@ public class ChatMessageItem : InfiniteScrollItem
         base.UpdateData(scrollData);
 
         ChatMessageData chatData = scrollData as ChatMessageData;
-        if (chatData != null)
+        
+        if (chatData == null) return;
+        
+        userNameText.text = chatData.userName;
+        messageText.text = chatData.message;
+        timestampText.text = chatData.timestamp.ToString("HH:mm");
+
+        if (chatData.userAvatar != null)
         {
-            userNameText.text = chatData.userName;
-            messageText.text = chatData.message;
-            timestampText.text = chatData.timestamp.ToString("HH:mm");
-
-            if (chatData.userAvatar != null)
-            {
-                userAvatarImage.sprite = chatData.userAvatar;
-                userAvatarImage.gameObject.SetActive(true);
-            }
-            else
-            {
-                userAvatarImage.gameObject.SetActive(false);
-            }
-
-            // 메시지 텍스트가 길어질 경우 높이를 동적으로 설정
-            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
-            chatData.itemHeight = rectTransform.rect.height;
+            userAvatarImage.sprite = chatData.userAvatar;
+            userAvatarImage.gameObject.SetActive(true);
         }
+        else
+        {
+            userAvatarImage.gameObject.SetActive(false);
+        }
+
+        // 메시지 텍스트가 길어질 경우 높이를 동적으로 설정
+        LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+        // chatData.itemHeight = rectTransform.rect.height;
     }
 }

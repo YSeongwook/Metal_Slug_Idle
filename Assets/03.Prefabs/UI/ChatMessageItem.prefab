@@ -656,7 +656,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 760, y: 180}
+  m_SizeDelta: {x: 760, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4379398001438035474
 CanvasRenderer:
@@ -697,7 +697,6 @@ MonoBehaviour:
   messageText: {fileID: 4379397999625174353}
   userAvatarImage: {fileID: 4379397999958951122}
   timestampText: {fileID: 4379397999969205102}
-  rectTransform: {fileID: 4379398001438035475}
 --- !u!1 &9108004894046604895
 GameObject:
   m_ObjectHideFlags: 0

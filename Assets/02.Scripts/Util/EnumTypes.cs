@@ -34,6 +34,7 @@ namespace EnumTypes
     public enum FirebaseEvents
     {
         FirebaseInitialized,
+        FirebaseDatabaseInitialized,
         FirebaseLoggedIn,
     }
 
