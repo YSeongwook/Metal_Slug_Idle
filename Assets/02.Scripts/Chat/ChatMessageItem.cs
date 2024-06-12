@@ -9,7 +9,6 @@ public class ChatMessageItem : InfiniteScrollItem
     public TMP_Text messageText;
     public Image userAvatarImage;
     public TMP_Text timestampText;
-    public RectTransform rectTransform;
 
     public override void UpdateData(InfiniteScrollData scrollData)
     {

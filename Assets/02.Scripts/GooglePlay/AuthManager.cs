@@ -1,12 +1,12 @@
 using EnumTypes;
-using UnityEngine;
-using TMPro;
+using EventLibrary;
 using Firebase;
 using Firebase.Auth;
 using Firebase.Extensions;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
-using EventLibrary;
+using TMPro;
+using UnityEngine;
 
 public class AuthManager : MonoBehaviour
 {
@@ -14,15 +14,25 @@ public class AuthManager : MonoBehaviour
     public TextMeshProUGUI signInText; // 로그인 상태를 표시할 UI 텍스트
 
     private FirebaseAuth _auth; // Firebase 인증 객체
-    private bool isSignin = false; // 로그인 상태를 추적하는 플래그
-
+    private FirebaseUser currentUser;
+    private bool isSignin; // 로그인 상태를 추적하는 플래그
     private Logger logger;
+
+    private void Awake()
+    {
+        logger = Logger.Instance;
+    }
 
     private void Start()
     {
-        TryAutoSignIn();
         InitializeFirebase();
-        logger = Logger.Instance;
+        
+        // 에디터가 아닌 경우에만 Google Play Games 로그인 시도
+#if !UNITY_EDITOR
+        TryAutoSignIn();
+#else
+        logger.Log("에디터 모드에서는 Google Play Games 로그인을 생략합니다.");
+#endif
     }
 
     // Google Play Games 초기화 및 자동 로그인 시도
@@ -95,14 +105,19 @@ public class AuthManager : MonoBehaviour
                 return;
             }
 
-            FirebaseUser newUser = task.Result; // 로그인 성공 시 사용자 정보 가져오기
-            logger.Log($"{newUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
+            currentUser = task.Result; // 로그인 성공 시 사용자 정보 가져오기
+            logger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             signInText.text = "Firebase Login"; // 상태 메시지 업데이트
             isSignin = true; // 로그인 상태 업데이트
 
             // Firebase 로그인 완료 이벤트 트리거
-            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseLoggedIn, newUser);
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseLoggedIn, currentUser);
         });
+    }
+    
+    public FirebaseUser GetCurrentUser()
+    {
+        return currentUser;
     }
 
     // 로그인 버튼 클릭 시 실행되는 메서드

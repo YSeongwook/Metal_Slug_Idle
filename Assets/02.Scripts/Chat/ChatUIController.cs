@@ -1,9 +1,12 @@
 using System;
+using EnumTypes;
 using Firebase.Database;
+using Firebase.Auth;
 using Gpm.Ui;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using EventLibrary;
 
 public class ChatUIController : MonoBehaviour
 {
@@ -14,6 +17,7 @@ public class ChatUIController : MonoBehaviour
     private ScrollRect scrollRect;
     private FirebaseDataManager firebaseDataManager;
     private Logger logger;
+    private FirebaseUser currentUser; // 현재 로그인한 사용자
 
     private void Start()
     {
@@ -25,8 +29,22 @@ public class ChatUIController : MonoBehaviour
         
         logger = Logger.Instance;
 
-        // Firebase에서 기존 채팅 메시지 로드
+        // Firebase 초기화 완료 이벤트 리스너 등록
+        EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
+        // Firebase 로그인 완료 이벤트 리스너 등록
+        EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
+    }
+
+    private void OnFirebaseInitialized()
+    {
+        // Firebase 초기화 완료 후 메시지 로드
         LoadChatMessages();
+    }
+
+    private void OnFirebaseLoggedIn(FirebaseUser user)
+    {
+        // Firebase 로그인 완료 후 사용자 정보 저장
+        currentUser = user;
     }
 
     private void OnSendButtonClicked()
@@ -35,14 +53,14 @@ public class ChatUIController : MonoBehaviour
         string message = chatInputField.text;
         if (!string.IsNullOrEmpty(message))
         {
-            AddChatMessage("Me", message, DateTime.Now, null); // Avatar는 null로 설정
+            AddChatMessage(currentUser.UserId, message, DateTime.Now, null); // 현재 사용자 ID를 사용
             chatInputField.text = string.Empty;
             ScrollToBottom();
         }
         else
         {
             message = "InputField가 null";
-            AddChatMessage("Me", message, DateTime.Now , null);
+            AddChatMessage(currentUser.UserId, message, DateTime.Now, null);
         }
     }
 
@@ -57,7 +75,7 @@ public class ChatUIController : MonoBehaviour
             userAvatar = userAvatar
         };
         
-        // Firebase에 데이터 저장, 모바일에서는 이 부분이 문제가 된다.
+        // Firebase에 데이터 저장
         string key = firebaseDataManager.DatabaseReference.Child("messages").Push().Key;
         firebaseDataManager.DatabaseReference.Child("messages").Child(key).SetRawJsonValueAsync(JsonUtility.ToJson(data));
         

@@ -6,10 +6,13 @@ using EventLibrary;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
+    public DatabaseReference DatabaseReference => _databaseRef; // 데이터베이스 참조
+    
     private DatabaseReference _databaseRef;
     private FirebaseAuth _auth;
-    public Logger logger;
-    public DatabaseReference DatabaseReference => _databaseRef; // 데이터베이스 참조
+    private FirebaseUser currentUser;
+    private Logger logger;
+    
 
     protected override void Awake()
     {
@@ -17,6 +20,8 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
+
+        logger = Logger.Instance;
     }
 
     private void OnDestroy()
@@ -38,6 +43,16 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     private void OnFirebaseLoggedIn(FirebaseUser user)
     {
         SaveUserData(user);
+    }
+    
+    private void OnUserLoggedIn(FirebaseUser user)
+    {
+        currentUser = user;
+    }
+
+    public FirebaseUser GetCurrentUser()
+    {
+        return currentUser;
     }
 
     public void SaveUserData(FirebaseUser user)
