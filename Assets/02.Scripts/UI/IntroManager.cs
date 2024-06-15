@@ -1,25 +1,46 @@
-using UnityEngine;
-using TMPro;
-using UnityEngine.SceneManagement;
 using DG.Tweening;
 using EnumTypes;
 using EventLibrary;
+using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IntroManager : MonoBehaviour
 {
     [Header("Blink Start Text")]
     public TextMeshProUGUI startText; // TextMeshPro 텍스트 객체
     [SerializeField] private float textBlinkDuration = 1f;
-    
+
     [Header("Load Next Scene")]
     public string nextSceneName; // 다음 씬 이름
 
     private Tween blinkingTween; // 텍스트 블링크 효과를 위한 Tween
 
+    private bool isGPGSReady = false; // GPGS 준비 상태
+    private bool isFirebaseReady = false; // Firebase 준비 상태
+
+    private Logger logger;
+
+    private void Awake()
+    {
+        logger = Logger.Instance;
+        
+        // 이벤트 리스너 등록
+        EventManager<GoogleEvents>.StartListening(GoogleEvents.GPGSSignIn, OnGPGSSignIn);
+        EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
+    }
+
     private void Start()
     {
         // 텍스트 반짝임 시작
         StartBlinkingText();
+    }
+
+    private void OnDestroy()
+    {
+        // 이벤트 리스너 제거
+        EventManager<GoogleEvents>.StopListening(GoogleEvents.GPGSSignIn, OnGPGSSignIn);
+        EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
 
     private void Update()
@@ -36,20 +57,23 @@ public class IntroManager : MonoBehaviour
 
     private void DetectTouch()
     {
-        if (Input.touchCount > 0)
+        if (isGPGSReady && isFirebaseReady)
         {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
+            if (Input.touchCount > 0)
             {
-                // 터치 시작 시 호출
+                Touch touch = Input.GetTouch(0);
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    // 터치 시작 시 호출
+                    StartGame();
+                }
+            }
+            else if (Input.GetMouseButtonDown(0))
+            {
+                // 마우스 클릭도 감지
                 StartGame();
             }
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            // 마우스 클릭도 감지
-            StartGame();
         }
     }
 
@@ -59,9 +83,20 @@ public class IntroManager : MonoBehaviour
         blinkingTween.Kill();
 
         // 다음 씬 또는 상태로 전환
-        Debug.Log("Game Started!");
         SceneManager.LoadScene(nextSceneName);
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickStart);
         this.gameObject.SetActive(false);
+    }
+    
+    private void OnGPGSSignIn()
+    {
+        logger.Log("GPGS 로그인 완료");
+        isGPGSReady = true;
+    }
+
+    private void OnFirebaseSignIn()
+    {
+        logger.Log("Firebase 초기화 완료");
+        isFirebaseReady = true;
     }
 }

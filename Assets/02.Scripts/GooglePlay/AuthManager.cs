@@ -21,6 +21,8 @@ public class AuthManager : MonoBehaviour
     private void Awake()
     {
         logger = Logger.Instance;
+        
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickManualGPGSSignIn, ManualGoogleSignIn);
     }
 
     private void Start()
@@ -31,7 +33,8 @@ public class AuthManager : MonoBehaviour
 #if !UNITY_EDITOR
         TryAutoSignIn();
 #else
-        logger.Log("에디터 모드에서는 Google Play Games 로그인을 생략합니다.");
+        // logger.Log("에디터 모드에서는 Google Play Games 로그인을 생략합니다.");
+        TryAutoSignIn();
 #endif
     }
 
@@ -45,6 +48,8 @@ public class AuthManager : MonoBehaviour
     // Google Play Games 인증 상태를 처리하는 메서드
     private void ProcessAuthentication(SignInStatus status)
     {
+        signInText.text = "GOOGLE Sign In";
+        
         if (status == SignInStatus.Success)
         {
             logger.Log("Google Play Games 로그인 성공");
@@ -55,6 +60,8 @@ public class AuthManager : MonoBehaviour
                 if (!string.IsNullOrEmpty(code))
                 {
                     SignInWithFirebase(code); // Firebase 인증 처리
+                    EventManager<GoogleEvents>.TriggerEvent(GoogleEvents.GPGSSignIn);    // 구글 로그인 성공 이벤트 발생
+                    signInText.text = "Success GOOGLE Sign In";
                 }
                 else
                 {
@@ -65,6 +72,7 @@ public class AuthManager : MonoBehaviour
         else
         {
             logger.LogError("Google Play Games 로그인 실패");
+            signInText.text = "Fail GOOGLE Sign In";
 
             // 로그인 버튼 활성화 및 상태 메시지 업데이트
             signInText.text = "GOOGLE LOGIN";
@@ -111,7 +119,7 @@ public class AuthManager : MonoBehaviour
             isSignin = true; // 로그인 상태 업데이트
 
             // Firebase 로그인 완료 이벤트 트리거
-            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseLoggedIn, currentUser);
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn, currentUser);
         });
     }
     
@@ -120,11 +128,11 @@ public class AuthManager : MonoBehaviour
         return currentUser;
     }
 
-    // 로그인 버튼 클릭 시 실행되는 메서드
-    public void OnClick_SignIn()
+    // 수동 구글 로그인
+    private void ManualGoogleSignIn()
     {
-        PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication); // 수동 로그인 시도
-        UIManager.Instance.DisableSignInUI(); // Sign In UI 비활성화
         signInText.text = "로그인 시도 중..."; // 상태 메시지 업데이트
+        UIManager.Instance.DisableSignInUI(); // Sign In UI 비활성화
+        PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication); // 수동 로그인 시도
     }
 }

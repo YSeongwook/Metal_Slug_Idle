@@ -22,6 +22,7 @@ namespace EnumTypes
     {
         OnClickSignInGoogle,
         OnClickStart,
+        OnClickManualGPGSSignIn,
     }
 
     public enum DataEvents
@@ -31,11 +32,17 @@ namespace EnumTypes
         OnUserDataReset,
     }
 
+    public enum GoogleEvents
+    {
+        GPGSSignIn,
+        ManualGPGSSignIn,
+    }
+
     public enum FirebaseEvents
     {
         FirebaseInitialized,
         FirebaseDatabaseInitialized,
-        FirebaseLoggedIn,
+        FirebaseSignIn,
     }
 
     public class EnumTypes : MonoBehaviour { }

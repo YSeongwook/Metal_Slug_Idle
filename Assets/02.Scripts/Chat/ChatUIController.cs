@@ -8,14 +8,14 @@ using TMPro;
 using UnityEngine.UI;
 using EventLibrary;
 
-namespace MyGameNamespace
+namespace Chat
 {
     public class ChatUIController : MonoBehaviour
     {
         public InfiniteScroll chatScroll;
         public TMP_InputField chatInputField;
         public Button sendButton;
-        
+
         private ScrollRect scrollRect;
         private FirebaseDataManager firebaseDataManager;
         private Logger logger;
@@ -29,7 +29,7 @@ namespace MyGameNamespace
             // Firebase 초기화 완료 이벤트 리스너 등록
             EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseDatabaseInitialized, OnFirebaseDatabaseInitialized);
             // Firebase 로그인 완료 이벤트 리스너 등록
-            EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
+            EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
         }
 
         private void Start()
@@ -42,12 +42,12 @@ namespace MyGameNamespace
 
             logger = Logger.Instance;
         }
-        
+
         private void OnDestroy()
         {
             // 이벤트 리스너 해제
             EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseDatabaseInitialized, OnFirebaseDatabaseInitialized);
-            EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseLoggedIn, OnFirebaseLoggedIn);
+            EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
         }
 
         private void OnFirebaseDatabaseInitialized()
@@ -69,6 +69,7 @@ namespace MyGameNamespace
             {
                 // messagesReference 캐싱
                 messagesReference = firebaseDataManager.DatabaseReference.Child("messages");
+                logger.LogError($"{messagesReference}");
 
                 // Firebase 초기화 완료 후 메시지 로드
                 // LoadChatMessages();
@@ -102,7 +103,7 @@ namespace MyGameNamespace
                 timestamp = timestamp,
                 userAvatar = userAvatar
             };
-            
+
             // Firebase에 데이터 저장
             string key = messagesReference.Push().Key;
             messagesReference.Child(key).SetRawJsonValueAsync(JsonUtility.ToJson(data)).ContinueWith(task =>
@@ -120,7 +121,7 @@ namespace MyGameNamespace
 
                 logger.Log("메시지 저장 성공.");
             });
-            
+
             chatScroll.InsertData(data);
             // 새로운 데이터를 추가한 후 높이를 업데이트
             UpdateItemHeight(data);
@@ -128,28 +129,42 @@ namespace MyGameNamespace
 
         private void LoadChatMessages()
         {
-            messagesReference.GetValueAsync().ContinueWith(task =>
+            try
             {
-                if (task.IsCanceled)
+                messagesReference.GetValueAsync().ContinueWith(task =>
                 {
-                    logger.Log("채팅 메시지 불러오기가 취소되었습니다.");
-                    return;
-                }
-                if (task.IsFaulted)
-                {
-                    logger.LogError("채팅 메시지 불러오기 중 오류 발생: " + task.Exception);
-                    return;
-                }
+                    if (task.IsCanceled)
+                    {
+                        logger.Log("채팅 메시지 불러오기가 취소되었습니다.");
+                        return;
+                    }
+                    if (task.IsFaulted)
+                    {
+                        logger.LogError("채팅 메시지 불러오기 중 오류 발생: " + task.Exception);
+                        return;
+                    }
 
-                DataSnapshot snapshot = task.Result;
-                foreach (DataSnapshot messageSnapshot in snapshot.Children)
-                {
-                    var data = JsonUtility.FromJson<ChatMessageData>(messageSnapshot.GetRawJsonValue());
-                    chatScroll.InsertData(data);
-                    UpdateItemHeight(data);
-                }
-                ScrollToBottom();
-            });
+                    DataSnapshot snapshot = task.Result;
+                    foreach (DataSnapshot messageSnapshot in snapshot.Children)
+                    {
+                        try
+                        {
+                            var data = JsonUtility.FromJson<ChatMessageData>(messageSnapshot.GetRawJsonValue());
+                            chatScroll.InsertData(data);
+                            UpdateItemHeight(data);
+                        }
+                        catch (Exception e)
+                        {
+                            logger.LogError("메시지 처리 중 오류 발생: " + e.Message);
+                        }
+                    }
+                    ScrollToBottom();
+                });
+            }
+            catch (Exception e)
+            {
+                logger.LogError("채팅 메시지 로드 중 예외 발생: " + e.Message);
+            }
         }
 
         private void UpdateItemHeight(ChatMessageData data)
