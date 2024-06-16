@@ -1,3 +1,4 @@
+using System;
 using EnumTypes;
 using UnityEngine;
 using EventLibrary;
@@ -31,6 +32,10 @@ public class UIManager : Singleton<UIManager>
 
     [VerticalGroup("Sign In UI/Horizontal/Right")] [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In")]
     public TMP_InputField inputFieldPW;
+    
+    [TabGroup("Intro UI")] public GameObject introUI;
+    
+    [TabGroup("Loading UI")] public GameObject loadingUI;
 
     [TabGroup("Data Panel")] public GameObject dataPanel;
 
@@ -48,7 +53,29 @@ public class UIManager : Singleton<UIManager>
 
         EventManager<UIEvents>.StartListening(UIEvents.OnClickSignInGoogle, DisableSignInUI);
         EventManager<UIEvents>.StartListening(UIEvents.OnClickStart, DisableIntroUI);
-        EventManager<DataEvents>.StartListening<User>(DataEvents.OnUserDataLoad, OnUserDataLoaded); // 데이터 로드 이벤트 리스너 추가
+        EventManager<DataEvents>.StartListening<User>(DataEvents.OnUserDataLoad, OnUserDataLoaded);
+        EventManager<UIEvents>.StartListening(UIEvents.StartLoading, ShowLoadingUI);
+        EventManager<UIEvents>.StartListening(UIEvents.EndLoading, HideLoadingUI);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickSignInGoogle, DisableSignInUI);
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickStart, DisableIntroUI);
+        EventManager<DataEvents>.StopListening<User>(DataEvents.OnUserDataLoad, OnUserDataLoaded);
+        EventManager<UIEvents>.StopListening(UIEvents.StartLoading, ShowLoadingUI);
+        EventManager<UIEvents>.StopListening(UIEvents.EndLoading, HideLoadingUI);
+    }
+
+    private void ShowLoadingUI()
+    {
+        loadingUI.SetActive(true);
+    }
+
+    private void HideLoadingUI()
+    {
+        loadingUI.SetActive(false);
+        introUI.SetActive(false);
     }
 
     public void EnableSignInUI()
@@ -83,7 +110,12 @@ public class UIManager : Singleton<UIManager>
     
     public void DisableEmailSignInUI()
     {
-        emailSignIn.SetActive(false); // 이메일 로그인 UI 비활성화
+        // Sign In UI 비활성화
+        emailSignIn.SetActive(false);
+        signInButtons.SetActive(true);
+        signInUI.SetActive(false);
+        
+        logScrollView.SetActive(false);
     }
     
     public void OnClick_ExitLog()

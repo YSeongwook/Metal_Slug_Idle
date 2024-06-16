@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337290292077077221, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6468137662609604962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_Size
@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670452624944205949, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0006387401
+      value: 0.00022607748
       objectReference: {fileID: 0}
     - target: {fileID: 8369679287523645989, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: layout.axis
@@ -651,6 +651,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9035403755990179842, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131439271964177962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -844,7 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startText: {fileID: 959883700}
   textBlinkDuration: 1.5
-  nextSceneName: GameScene
+  nextScene: {fileID: 102900000, guid: 2763c614461ac66449a59bba7598f170, type: 3}
 --- !u!1 &1171378421
 GameObject:
   m_ObjectHideFlags: 0

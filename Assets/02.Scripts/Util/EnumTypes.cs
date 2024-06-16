@@ -24,6 +24,8 @@ namespace EnumTypes
         OnClickStart,
         OnClickManualGPGSSignIn,
         OnClickEmailSignIn,
+        StartLoading,
+        EndLoading,
     }
 
     public enum DataEvents

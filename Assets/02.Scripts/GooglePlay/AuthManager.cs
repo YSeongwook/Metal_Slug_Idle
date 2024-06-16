@@ -173,6 +173,7 @@ public class AuthManager : MonoBehaviour
             signInText.text = "이메일 로그인 성공";
             isSignin = true;
 
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
             UIManager.Instance.DisableEmailSignInUI();
 
             // 유저 데이터 저장
