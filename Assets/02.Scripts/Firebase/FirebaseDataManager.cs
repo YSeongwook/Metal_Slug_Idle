@@ -1,8 +1,9 @@
-using EnumTypes;
 using UnityEngine;
 using Firebase.Database;
 using Firebase.Auth;
 using EventLibrary;
+using System;
+using EnumTypes;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
@@ -12,7 +13,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     private FirebaseAuth _auth;
     private FirebaseUser currentUser;
     private Logger logger;
-    
 
     protected override void Awake()
     {
@@ -57,11 +57,18 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         return currentUser;
     }
 
+    // FirebaseUser를 받아 저장하는 메서드
     public void SaveUserData(FirebaseUser user)
     {
-        User userData = new User(user.UserId, user.DisplayName, 1, "None");
+        var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
+        SaveUserData(userData);
+    }
+
+    // UserData를 받아 저장하는 메서드
+    public void SaveUserData(UserData userData)
+    {
         string json = JsonUtility.ToJson(userData);
-        _databaseRef.Child("users").Child(user.UserId).SetRawJsonValueAsync(json).ContinueWith(task =>
+        _databaseRef.Child("users").Child(userData.userId).SetRawJsonValueAsync(json).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -94,7 +101,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             }
 
             DataSnapshot snapshot = task.Result;
-            User userData = JsonUtility.FromJson<User>(snapshot.GetRawJsonValue());
+            UserData userData = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
             logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items);
         });
     }
@@ -117,7 +124,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             logger.Log("유저 데이터 리셋 성공.");
         });
     }
-    
+
     public void SyncUserData(string userId)
     {
         _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
@@ -134,64 +141,60 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             }
 
             DataSnapshot snapshot = task.Result;
-            UserData serverData = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
+            UserData serverData = snapshot.Exists ? JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue()) : null;
             UserData localData = JsonUtilityManager.LoadFromJson<UserData>("UserData.json");
 
-            if (localData == null || serverData.lastUpdated > localData.lastUpdated)
+            if (serverData == null)
             {
-                JsonUtilityManager.SaveToJson(serverData, "UserData.json");
-                logger.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
+                if (localData != null)
+                {
+                    // 서버에 데이터가 없고 로컬에 데이터가 있는 경우 로컬 데이터를 서버에 저장
+                    SaveUserData(localData);
+                    logger.Log("로컬 데이터를 서버에 저장했습니다.");
+                }
+                else
+                {
+                    logger.Log("서버와 로컬에 모두 유저 데이터가 없습니다.");
+                }
             }
-            else if (localData.lastUpdated > serverData.lastUpdated)
+            else
             {
-                SaveUserDataToServer(localData);
-                logger.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
+                if (localData == null || serverData.lastUpdated > localData.lastUpdated)
+                {
+                    // 서버 데이터가 최신이거나 로컬 데이터가 없는 경우 서버 데이터로 로컬 데이터를 업데이트
+                    JsonUtilityManager.SaveToJson(serverData, "UserData.json");
+                    logger.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
+                }
+                else if (localData.lastUpdated > serverData.lastUpdated)
+                {
+                    // 로컬 데이터가 최신인 경우 로컬 데이터를 서버에 저장
+                    SaveUserData(localData);
+                    logger.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
+                }
+                else
+                {
+                    logger.Log("서버와 로컬 데이터가 이미 동기화되어 있습니다.");
+                }
             }
         });
     }
 
-    public void SaveUserDataToServer(UserData userData)
+    public void DeleteAllData()
     {
-        string json = JsonUtility.ToJson(userData);
-        _databaseRef.Child("users").Child(userData.userId).SetRawJsonValueAsync(json).ContinueWith(task =>
+        _databaseRef.RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 데이터 저장이 취소되었습니다.");
+                logger.Log("모든 데이터 삭제가 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 데이터 저장 중 오류 발생: " + task.Exception);
+                logger.LogError("모든 데이터 삭제 중 오류 발생: " + task.Exception);
                 return;
             }
 
-            logger.Log("유저 데이터 저장 성공.");
+            logger.Log("모든 데이터 삭제 성공.");
         });
-    }
-
-    public void OnClick_SaveData()
-    {
-        if (_auth.CurrentUser != null)
-        {
-            SaveUserData(_auth.CurrentUser);
-            logger.Log("Save User Data");
-        }
-        else
-        {
-            logger.Log("현재 로그인된 사용자가 없습니다.");
-        }
-    }
-
-    public void OnClick_LoadData(string userId)
-    {
-        LoadUserData(userId);
-        logger.Log("Load User Data");
-    }
-
-    public void OnClick_ResetData(string userId)
-    {
-        ResetUserData(userId);
-        logger.Log("Reset User Data");
     }
 }

@@ -9,6 +9,10 @@ public class UserData
     public string items;
     public long lastUpdated; // 타임스탬프
 
+    // 기본 생성자
+    public UserData() { }
+
+    // 매개변수를 받는 생성자
     public UserData(string userId, string displayName, int level, string items, long lastUpdated)
     {
         this.userId = userId;
