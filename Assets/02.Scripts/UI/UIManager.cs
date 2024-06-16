@@ -81,6 +81,11 @@ public class UIManager : Singleton<UIManager>
         emailSignIn.SetActive(true); // 이메일 로그인 UI 활성화
     }
     
+    public void DisableEmailSignInUI()
+    {
+        emailSignIn.SetActive(false); // 이메일 로그인 UI 비활성화
+    }
+    
     public void OnClick_ExitLog()
     {
         logScrollView.SetActive(false);
@@ -93,8 +98,13 @@ public class UIManager : Singleton<UIManager>
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickManualGPGSSignIn);
     }
     
-    public void OnClick_EmailSignIn()
+    public void OnClick_EmailSignInButton()
     {
         EnableEmailSignInUI();
+    }
+
+    public void OnClick_EmailSignIn()
+    {
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickEmailSignIn);
     }
 }

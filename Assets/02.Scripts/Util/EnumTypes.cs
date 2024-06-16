@@ -23,6 +23,7 @@ namespace EnumTypes
         OnClickSignInGoogle,
         OnClickStart,
         OnClickManualGPGSSignIn,
+        OnClickEmailSignIn,
     }
 
     public enum DataEvents
@@ -43,6 +44,7 @@ namespace EnumTypes
         FirebaseInitialized,
         FirebaseDatabaseInitialized,
         FirebaseSignIn,
+        EmailSignIn,
     }
 
     public class EnumTypes : MonoBehaviour { }

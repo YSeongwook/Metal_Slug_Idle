@@ -19,7 +19,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         base.Awake();
         // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
-        EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
+        EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
 
         logger = Logger.Instance;
     }
@@ -28,7 +28,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     {
         // 이벤트 리스너 해제
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
-        EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
+        EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
 
     private void OnFirebaseInitialized()
@@ -42,7 +42,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseDatabaseInitialized);
     }
 
-    private void OnFirebaseLoggedIn(FirebaseUser user)
+    private void OnFirebaseSignIn(FirebaseUser user)
     {
         SaveUserData(user);
     }
