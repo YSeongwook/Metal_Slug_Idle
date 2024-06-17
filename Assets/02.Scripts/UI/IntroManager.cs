@@ -13,7 +13,7 @@ public class IntroManager : MonoBehaviour
     [TabGroup("Press to Start")] public TextMeshProUGUI startText; // TextMeshPro 텍스트 객체
     [TabGroup("Press to Start")] [SerializeField] private float textBlinkDuration = 1f;
 
-    [TabGroup("Load Next Scene"), Required] public SceneAsset nextScene; // 다음 씬
+    [TabGroup("Load Next Scene"), Required] public string nextSceneName; // 다음 씬
 
     private Tween blinkingTween; // 텍스트 블링크 효과를 위한 Tween
 
@@ -84,7 +84,7 @@ public class IntroManager : MonoBehaviour
         EventManager<UIEvents>.TriggerEvent(UIEvents.StartLoading);
 
         // 다음 씬을 비동기적으로 로드
-        await LoadSceneAsync(nextScene.name);
+        await LoadSceneAsync(nextSceneName);
 
         // Loading UI 비활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.EndLoading);

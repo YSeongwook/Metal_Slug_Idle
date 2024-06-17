@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -138,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -222,6 +223,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &837093192
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +336,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1171378422}
     - target: {fileID: 741095072882689100, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 839259309667067988, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -608,7 +633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670452624944205949, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00022607748
+      value: 0.000044422286
       objectReference: {fileID: 0}
     - target: {fileID: 8369679287523645989, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: layout.axis
@@ -651,10 +676,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9035403755990179842, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9131439271964177962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -848,7 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startText: {fileID: 959883700}
   textBlinkDuration: 1.5
-  nextScene: {fileID: 102900000, guid: 2763c614461ac66449a59bba7598f170, type: 3}
+  nextSceneName: GameScene
 --- !u!1 &1171378421
 GameObject:
   m_ObjectHideFlags: 0

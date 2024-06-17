@@ -113,7 +113,7 @@ public class AuthManager : MonoBehaviour
             // 유저 데이터 저장
             FirebaseDataManager.Instance.SaveUserData(currentUser);
 
-            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn, currentUser);
+            EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
         });
     }
 

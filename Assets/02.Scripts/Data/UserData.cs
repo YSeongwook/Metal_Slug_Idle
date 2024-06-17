@@ -7,7 +7,7 @@ public class UserData
     public string displayName;
     public int level;
     public string items;
-    public long lastUpdated; // 타임스탬프
+    public long lastUpdated; // Unix 타임스탬프, 로컬과 서버 동기화를 위해 필요한 데이터
 
     // 기본 생성자
     public UserData() { }

@@ -17,6 +17,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     protected override void Awake()
     {
         base.Awake();
+        
         // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
@@ -65,7 +66,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     }
 
     // UserData를 받아 저장하는 메서드
-    public void SaveUserData(UserData userData)
+    private void SaveUserData(UserData userData)
     {
         string json = JsonUtility.ToJson(userData);
         _databaseRef.Child("users").Child(userData.userId).SetRawJsonValueAsync(json).ContinueWith(task =>
