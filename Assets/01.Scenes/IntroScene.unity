@@ -383,10 +383,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 3287816765519030889, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4831823797003209057, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -529,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5294477767000068238, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 239.99994
+      value: 240.00003
       objectReference: {fileID: 0}
     - target: {fileID: 6098807442788013150, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
@@ -575,13 +571,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6337290292077077221, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6468137662609604962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6468137662609604962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
+      propertyPath: m_Value
+      value: -4821.5312
       objectReference: {fileID: 0}
     - target: {fileID: 6510404233360409758, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -633,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7670452624944205949, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000044422286
+      value: 60.00503
       objectReference: {fileID: 0}
     - target: {fileID: 8369679287523645989, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: layout.axis
@@ -661,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8847426543259402641, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8894564728974411897, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -676,6 +672,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9035403755990179842, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131439271964177962, guid: f5732d9c978330040b64e8de88899b2c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

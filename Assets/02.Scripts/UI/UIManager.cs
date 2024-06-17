@@ -34,10 +34,16 @@ public class UIManager : Singleton<UIManager>
     [VerticalGroup("Sign In UI/Horizontal/Right")] [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In")]
     public TMP_InputField inputFieldPW;
     
+    [FoldoutGroup("Main UI")] [PropertySpace(5f, 10f)]
+    public GameObject mainUI;
+    [BoxGroup("Main UI/Buttons", centerLabel: true)] public Button chatButton;
+    
     [TabGroup("Intro UI")] public GameObject introUI;
     
     [TabGroup("Loading UI")] public GameObject loadingUI;
-
+    
+    [TabGroup("Chat UI")] public GameObject chatUI;
+    
     [TabGroup("Data Panel")] public GameObject dataPanel;
 
     [TabGroup("Player Information")] public TextMeshProUGUI displayNameText; // displayName을 표시할 TMP Text
@@ -52,8 +58,22 @@ public class UIManager : Singleton<UIManager>
     protected override void Awake()
     {
         base.Awake();
+        
         AddEvents();
         AddInputFieldEvents();
+        AddButtonClickEvents();
+    }
+
+    private void Start()
+    {
+        // Intro UI를 제외하고 자식 오브젝트 모두 비활성화
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject != introUI && child.gameObject != logScrollView)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     // 이벤트 리스너 제거
@@ -61,6 +81,7 @@ public class UIManager : Singleton<UIManager>
     {
         RemoveEvents();
         RemoveInputFieldEvents();
+        RemoveButtonClickEvents();
     }
 
     // 이벤트를 등록하는 메서드
@@ -97,6 +118,16 @@ public class UIManager : Singleton<UIManager>
         inputFieldPW.onEndEdit.RemoveListener(OnEndEdit);
     }
 
+    private void AddButtonClickEvents()
+    {
+        chatButton.onClick.AddListener(OnClick_ChatButton);
+    }
+
+    private void RemoveButtonClickEvents()
+    {
+        chatButton.onClick.RemoveListener(OnClick_ChatButton);
+    }
+
     // 로딩 UI를 표시하는 메서드
     private void ShowLoadingUI()
     {
@@ -108,6 +139,7 @@ public class UIManager : Singleton<UIManager>
     {
         loadingUI.SetActive(false);
         introUI.SetActive(false);
+        mainUI.SetActive(true);
     }
 
     // 로그인 UI를 활성화하는 메서드
@@ -155,7 +187,9 @@ public class UIManager : Singleton<UIManager>
         
         logScrollView.SetActive(false);
     }
-    
+
+    #region OnClick
+
     // 로그 창을 닫는 메서드
     public void OnClick_ExitLog()
     {
@@ -181,7 +215,16 @@ public class UIManager : Singleton<UIManager>
     {
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickEmailSignIn);
     }
+    
+    // 채팅 버튼 클릭 메서드
+    public void OnClick_ChatButton()
+    {
+        Debug.Log("클릭 중~~~~~~~~~~~~~");
+        chatUI.SetActive(true);
+    }
 
+    #endregion
+    
     // InputField의 onEndEdit 이벤트 핸들러
     private void OnEndEdit(string input)
     {

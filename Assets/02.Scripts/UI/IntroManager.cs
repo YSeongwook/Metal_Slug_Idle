@@ -1,12 +1,12 @@
-using Cysharp.Threading.Tasks; // UniTask를 사용하기 위해 필요
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using EnumTypes;
 using EventLibrary;
 using Sirenix.OdinInspector;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+// UniTask를 사용하기 위해 필요
 
 public class IntroManager : MonoBehaviour
 {
@@ -93,6 +93,21 @@ public class IntroManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    private void OnFirebaseSignIn()
+    {
+        logger.Log("Firebase 초기화 완료");
+        isFirebaseReady = true;
+        CheckIfReadyToStart();
+    }
+
+    private void CheckIfReadyToStart()
+    {
+        if (!isFirebaseReady) return;
+        
+        StartBlinkingText();
+        canStartGame = true;
+    }
+    
     private async UniTask LoadSceneAsync(string sceneName)
     {
         var sceneLoadOperation = SceneManager.LoadSceneAsync(sceneName);
@@ -107,20 +122,5 @@ public class IntroManager : MonoBehaviour
             }
             await UniTask.Yield();
         }
-    }
-
-    private void OnFirebaseSignIn()
-    {
-        logger.Log("Firebase 초기화 완료");
-        isFirebaseReady = true;
-        CheckIfReadyToStart();
-    }
-
-    private void CheckIfReadyToStart()
-    {
-        if (!isFirebaseReady) return;
-        
-        StartBlinkingText();
-        canStartGame = true;
     }
 }
