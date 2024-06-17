@@ -100,7 +100,7 @@ namespace Chat
             {
                 userName = userName,
                 message = message,
-                timestamp = timestamp,
+                Timestamp = timestamp, // Unix 타임스탬프로 변환하여 저장
                 userAvatar = userAvatar
             };
 

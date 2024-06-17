@@ -20,7 +20,7 @@ public class ChatMessageItem : InfiniteScrollItem
         
         userNameText.text = chatData.userName;
         messageText.text = chatData.message;
-        timestampText.text = chatData.timestamp.ToString("HH:mm");
+        timestampText.text = chatData.Timestamp.ToString("HH:mm"); // Unix 타임스탬프를 DateTime으로 변환하여 표시
 
         if (chatData.userAvatar != null)
         {
