@@ -21,15 +21,15 @@ namespace Chat
         private Logger logger;
         private FirebaseUser currentUser; // 현재 로그인한 사용자
         private DatabaseReference messagesReference; // 메시지 참조 캐시
-        private bool isDatabaseInitialized = false;
-        private bool isUserLoggedIn = false;
+        private bool isDatabaseInitialized;
+        private bool isUserSignIn;
 
         private void Awake()
         {
             // Firebase 초기화 완료 이벤트 리스너 등록
             EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseDatabaseInitialized, OnFirebaseDatabaseInitialized);
             // Firebase 로그인 완료 이벤트 리스너 등록
-            EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
+            EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
         }
 
         private void Start()
@@ -47,7 +47,7 @@ namespace Chat
         {
             // 이벤트 리스너 해제
             EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseDatabaseInitialized, OnFirebaseDatabaseInitialized);
-            EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseLoggedIn);
+            EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
         }
 
         private void OnFirebaseDatabaseInitialized()
@@ -56,16 +56,16 @@ namespace Chat
             CheckInitializationStatus();
         }
 
-        private void OnFirebaseLoggedIn(FirebaseUser user)
+        private void OnFirebaseSignIn()
         {
-            currentUser = user;
-            isUserLoggedIn = true;
+            currentUser = AuthManager.Instance.GetCurrentUser();
+            isUserSignIn = true;
             CheckInitializationStatus();
         }
 
         private void CheckInitializationStatus()
         {
-            if (isDatabaseInitialized && isUserLoggedIn)
+            if (isDatabaseInitialized && isUserSignIn)
             {
                 // messagesReference 캐싱
                 messagesReference = firebaseDataManager.DatabaseReference.Child("messages");
@@ -93,7 +93,7 @@ namespace Chat
             }
         }
 
-        public void AddChatMessage(string userName, string message, DateTime timestamp, Sprite userAvatar)
+        private void AddChatMessage(string userName, string message, DateTime timestamp, Sprite userAvatar)
         {
             logger.Log("AddChatMessage");
             var data = new ChatMessageData()

@@ -1,6 +1,8 @@
 using UnityEngine.Events;
 using System.Collections.Generic;
 using System;
+using EnumTypes;
+using Firebase.Auth;
 using UnityEngine;
 
 namespace EventLibrary
@@ -12,9 +14,9 @@ namespace EventLibrary
     public class EventManager<E> where E : Enum
     {
         // 이벤트 이름과 해당 UnityEvent를 저장하는 딕셔너리
-        private static readonly Dictionary<E, UnityEventBase> eventDictionary = new Dictionary<E, UnityEventBase>();
+        private static readonly Dictionary<E, UnityEventBase> EventDictionary = new Dictionary<E, UnityEventBase>();
         // 스레드 안전성을 위한 객체
-        private static readonly object lockObj = new object();
+        private static readonly object LockObj = new object();
 
         // 매개변수가 없는 UnityAction 리스너를 추가하는 메서드
         public static void StartListening(E eventName, UnityAction listener)
@@ -55,11 +57,10 @@ namespace EventLibrary
         // 이벤트가 존재하지 않으면 생성하여 반환하는 메서드
         private static TEvent GetOrCreateEvent<TEvent>(E eventName) where TEvent : UnityEventBase, new()
         {
-            if (!eventDictionary.TryGetValue(eventName, out var thisEvent))
+            if (!EventDictionary.TryGetValue(eventName, out var thisEvent))
             {
                 thisEvent = new TEvent();
-                eventDictionary.Add(eventName, thisEvent);
-                // Debug.Log($"Event created: {eventName}");
+                EventDictionary.Add(eventName, thisEvent);
             }
             return thisEvent as TEvent;
         }
@@ -69,41 +70,37 @@ namespace EventLibrary
         {
             if (thisEvent.GetPersistentEventCount() == 0)
             {
-                eventDictionary.Remove(eventName);
-                // Debug.Log($"Event removed: {eventName}");
+                EventDictionary.Remove(eventName);
             }
         }
 
         // 리스너를 추가하는 메서드
         private static void AddListener<T>(E eventName, UnityAction<T> listener)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
                 GenericEvent<T> genericEvent = GetOrCreateEvent<GenericEvent<T>>(eventName);
                 genericEvent.AddListener(listener);
-                // Debug.Log($"Listener added to event: {eventName}");
             }
         }
 
         private static void AddListener(E eventName, UnityAction listener)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
                 UnityEvent unityEvent = GetOrCreateEvent<UnityEvent>(eventName);
                 unityEvent.AddListener(listener);
-                // Debug.Log($"Listener added to event: {eventName}");
             }
         }
 
         // 리스너를 제거하는 메서드
         private static void RemoveListener<T>(E eventName, UnityAction<T> listener)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
-                if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is GenericEvent<T> genericEvent)
+                if (EventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is GenericEvent<T> genericEvent)
                 {
                     genericEvent.RemoveListener(listener);
-                    // Debug.Log($"Listener removed from event: {eventName}");
                     RemoveEventIfEmpty(eventName, genericEvent);
                 }
             }
@@ -111,12 +108,11 @@ namespace EventLibrary
 
         private static void RemoveListener(E eventName, UnityAction listener)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
-                if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
+                if (EventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
                 {
                     unityEvent.RemoveListener(listener);
-                    // Debug.Log($"Listener removed from event: {eventName}");
                     RemoveEventIfEmpty(eventName, unityEvent);
                 }
             }
@@ -125,14 +121,13 @@ namespace EventLibrary
         // 이벤트를 트리거하는 메서드
         private static void InvokeEvent<T>(E eventName, T parameter)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
                 try
                 {
-                    if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is GenericEvent<T> genericEvent)
+                    if (EventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is GenericEvent<T> genericEvent)
                     {
                         genericEvent.Invoke(parameter);
-                        // Debug.Log($"Event triggered: {eventName} with parameter: {parameter}");
                     }
                 }
                 catch (Exception e)
@@ -144,14 +139,13 @@ namespace EventLibrary
 
         private static void InvokeEvent(E eventName)
         {
-            lock (lockObj)
+            lock (LockObj)
             {
                 try
                 {
-                    if (eventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
+                    if (EventDictionary.TryGetValue(eventName, out var thisEvent) && thisEvent is UnityEvent unityEvent)
                     {
                         unityEvent.Invoke();
-                        // Debug.Log($"Event triggered: {eventName}");
                     }
                 }
                 catch (Exception e)

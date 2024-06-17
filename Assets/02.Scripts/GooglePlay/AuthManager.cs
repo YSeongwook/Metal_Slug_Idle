@@ -8,7 +8,7 @@ using GooglePlayGames.BasicApi;
 using TMPro;
 using UnityEngine;
 
-public class AuthManager : MonoBehaviour
+public class AuthManager : Singleton<AuthManager>
 {
     public TextMeshProUGUI noticeText; // 상태 메시지를 표시할 UI 텍스트
     public TextMeshProUGUI signInText; // 로그인 상태를 표시할 UI 텍스트
@@ -20,6 +20,8 @@ public class AuthManager : MonoBehaviour
 
     private void Awake()
     {
+        base.Awake();
+        
         logger = Logger.Instance;
 
         EventManager<UIEvents>.StartListening(UIEvents.OnClickManualGPGSSignIn, ManualGoogleSignIn);
@@ -110,10 +112,10 @@ public class AuthManager : MonoBehaviour
             signInText.text = "Firebase Login";
             isSignin = true;
 
-            // 유저 데이터 저장
-            FirebaseDataManager.Instance.SaveUserData(currentUser);
-
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
+            
+            // 유저 데이터 저장
+            // FirebaseDataManager.Instance.SaveUserData(currentUser);
         });
     }
 
@@ -177,7 +179,7 @@ public class AuthManager : MonoBehaviour
             UIManager.Instance.DisableEmailSignInUI();
 
             // 유저 데이터 저장
-            FirebaseDataManager.Instance.SaveUserData(currentUser);
+            // FirebaseDataManager.Instance.SaveUserData(currentUser);
         });
     }
 

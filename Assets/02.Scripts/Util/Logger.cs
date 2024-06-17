@@ -33,7 +33,6 @@ public class Logger : Singleton<Logger>
         }
 
         CreateLogMessage(message);
-        Debug.Log(message);
     }
 
     public void LogError(string message)
@@ -45,7 +44,6 @@ public class Logger : Singleton<Logger>
         }
 
         CreateLogMessage($"<color=red>{message}</color>");
-        Debug.LogError(message);
     }
 
     private void CreateLogMessage(string message)

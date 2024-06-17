@@ -52,6 +52,8 @@ public class UIManager : Singleton<UIManager>
 
     [TabGroup("Log Scroll View")] public GameObject logScrollView;
 
+    private bool _isActiveChatUI;
+
     #endregion
 
     // 싱글톤 초기화 및 이벤트 등록
@@ -217,10 +219,9 @@ public class UIManager : Singleton<UIManager>
     }
     
     // 채팅 버튼 클릭 메서드
-    public void OnClick_ChatButton()
+    private void OnClick_ChatButton()
     {
-        Debug.Log("클릭 중~~~~~~~~~~~~~");
-        chatUI.SetActive(true);
+        chatUI.SetActive(!chatUI.activeSelf);
     }
 
     #endregion

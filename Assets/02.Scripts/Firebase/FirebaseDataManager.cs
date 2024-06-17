@@ -20,7 +20,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         
         // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
-        EventManager<FirebaseEvents>.StartListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
+        EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
 
         logger = Logger.Instance;
     }
@@ -29,7 +29,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     {
         // 이벤트 리스너 해제
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
-        EventManager<FirebaseEvents>.StopListening<FirebaseUser>(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
+        EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
 
     private void OnFirebaseInitialized()
@@ -43,14 +43,11 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseDatabaseInitialized);
     }
 
-    private void OnFirebaseSignIn(FirebaseUser user)
+    private void OnFirebaseSignIn()
     {
-        SaveUserData(user);
-    }
-    
-    private void OnUserLoggedIn(FirebaseUser user)
-    {
-        currentUser = user;
+        currentUser = AuthManager.Instance.GetCurrentUser();
+        
+        SaveUserData(currentUser);
     }
 
     public FirebaseUser GetCurrentUser()
@@ -59,7 +56,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     }
 
     // FirebaseUser를 받아 저장하는 메서드
-    public void SaveUserData(FirebaseUser user)
+    private void SaveUserData(FirebaseUser user)
     {
         var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
         SaveUserData(userData);
