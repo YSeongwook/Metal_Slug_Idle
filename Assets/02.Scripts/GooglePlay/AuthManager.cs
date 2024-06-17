@@ -58,7 +58,7 @@ public class AuthManager : Singleton<AuthManager>
                 if (!string.IsNullOrEmpty(code))
                 {
                     SignInWithFirebase(code);
-                    EventManager<GoogleEvents>.TriggerEvent(GoogleEvents.GPGSSignIn);
+                    // EventManager<GoogleEvents>.TriggerEvent(GoogleEvents.GPGSSignIn);
                     signInText.text = "Success GOOGLE Sign In";
                 }
                 else

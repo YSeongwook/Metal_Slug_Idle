@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using EnumTypes;
 using EventLibrary;
 using Sirenix.OdinInspector;
@@ -33,17 +34,19 @@ public class UIManager : Singleton<UIManager>
 
     [VerticalGroup("Sign In UI/Horizontal/Right")] [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In")]
     public TMP_InputField inputFieldPW;
-    
+
     [FoldoutGroup("Main UI")] [PropertySpace(5f, 10f)]
     public GameObject mainUI;
-    [BoxGroup("Main UI/Buttons", centerLabel: true)] public Button chatButton;
-    
+
+    [BoxGroup("Main UI/Buttons", centerLabel: true)]
+    public Button chatButton;
+
     [TabGroup("Intro UI")] public GameObject introUI;
-    
+
     [TabGroup("Loading UI")] public GameObject loadingUI;
-    
+
     [TabGroup("Chat UI")] public GameObject chatUI;
-    
+
     [TabGroup("Data Panel")] public GameObject dataPanel;
 
     [TabGroup("Player Information")] public TextMeshProUGUI displayNameText; // displayName을 표시할 TMP Text
@@ -51,6 +54,7 @@ public class UIManager : Singleton<UIManager>
     [TabGroup("Player Information")] public TextMeshProUGUI itemsText; // items를 표시할 TMP Text
 
     [TabGroup("Log Scroll View")] public GameObject logScrollView;
+    [TabGroup("Log Scroll View")] public Button logButton;
 
     private bool _isActiveChatUI;
 
@@ -60,7 +64,7 @@ public class UIManager : Singleton<UIManager>
     protected override void Awake()
     {
         base.Awake();
-        
+
         AddEvents();
         AddInputFieldEvents();
         AddButtonClickEvents();
@@ -68,10 +72,10 @@ public class UIManager : Singleton<UIManager>
 
     private void Start()
     {
-        // Intro UI를 제외하고 자식 오브젝트 모두 비활성화
+        // 인트로 UI와 로그 버튼을 제외하고 자식 오브젝트 모두 비활성화
         foreach (Transform child in transform)
         {
-            if (child.gameObject != introUI && child.gameObject != logScrollView)
+            if (child.gameObject != introUI && child.gameObject != logButton.gameObject)
             {
                 child.gameObject.SetActive(false);
             }
@@ -123,11 +127,14 @@ public class UIManager : Singleton<UIManager>
     private void AddButtonClickEvents()
     {
         chatButton.onClick.AddListener(OnClick_ChatButton);
+        logButton.onClick.AddListener(OnClick_LogButton);
+        
     }
 
     private void RemoveButtonClickEvents()
     {
         chatButton.onClick.RemoveListener(OnClick_ChatButton);
+        logButton.onClick.RemoveListener(OnClick_LogButton);
     }
 
     // 로딩 UI를 표시하는 메서드
@@ -148,14 +155,12 @@ public class UIManager : Singleton<UIManager>
     public void EnableSignInUI()
     {
         signInUI.SetActive(true);
-        logScrollView.SetActive(true);
     }
 
     // 로그인 UI를 비활성화하는 메서드
     public void DisableSignInUI()
     {
         signInUI.SetActive(false);
-        logScrollView.SetActive(true);
     }
 
     // 인트로 UI를 비활성화하는 메서드
@@ -178,7 +183,7 @@ public class UIManager : Singleton<UIManager>
         signInButtons.SetActive(false); // 로그인 버튼 UI 비활성화
         emailSignIn.SetActive(true); // 이메일 로그인 UI 활성화
     }
-    
+
     // 이메일 로그인 UI를 비활성화하는 메서드
     public void DisableEmailSignInUI()
     {
@@ -186,7 +191,7 @@ public class UIManager : Singleton<UIManager>
         emailSignIn.SetActive(false);
         signInButtons.SetActive(true);
         signInUI.SetActive(false);
-        
+
         logScrollView.SetActive(false);
     }
 
@@ -205,7 +210,7 @@ public class UIManager : Singleton<UIManager>
     {
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickManualGPGSSignIn);
     }
-    
+
     // 이메일 로그인 버튼 클릭 시 호출되는 메서드
     public void OnClick_EmailSignInButton()
     {
@@ -217,15 +222,21 @@ public class UIManager : Singleton<UIManager>
     {
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickEmailSignIn);
     }
-    
+
     // 채팅 버튼 클릭 메서드
     private void OnClick_ChatButton()
     {
         chatUI.SetActive(!chatUI.activeSelf);
     }
 
+    // 로그 버튼 클릭 메서드
+    private void OnClick_LogButton()
+    {
+        logScrollView.SetActive(!logScrollView.activeSelf);
+    }
+
     #endregion
-    
+
     // InputField의 onEndEdit 이벤트 핸들러
     private void OnEndEdit(string input)
     {
