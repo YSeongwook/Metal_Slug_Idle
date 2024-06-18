@@ -18,7 +18,7 @@ public class AuthManager : Singleton<AuthManager>
     private bool isSignin; // 로그인 상태를 추적하는 플래그
     private Logger logger;
 
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         

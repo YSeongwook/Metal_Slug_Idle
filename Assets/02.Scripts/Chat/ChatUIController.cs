@@ -38,7 +38,6 @@ namespace Chat
             _scrollRect = chatScroll.GetComponent<ScrollRect>();
             _firebaseDataManager = FirebaseDataManager.Instance;
 
-            chatScroll.onChangeValue.AddListener(OnChatScrollValueChanged);
             sendButton.onClick.AddListener(OnSendButtonClicked);
 
             logger = Logger.Instance;
@@ -97,7 +96,6 @@ namespace Chat
 
         private void AddChatMessage(string userName, string message, DateTime timestamp, Sprite userAvatar)
         {
-            logger.Log("AddChatMessage");
             var data = new ChatMessageData()
             {
                 userName = userName,
@@ -121,13 +119,9 @@ namespace Chat
                     logger.LogError("메시지 저장 중 오류 발생: " + task.Exception);
                     return;
                 }
-
-                logger.Log("메시지 저장 성공.");
             });
-
+            
             chatScroll.InsertData(data);
-            // 새로운 데이터를 추가한 후 높이를 업데이트
-            UpdateItemHeight(data);
         }
 
         private void LoadChatMessages()
@@ -155,33 +149,18 @@ namespace Chat
                         {
                             var data = JsonUtility.FromJson<ChatMessageData>(messageSnapshot.GetRawJsonValue());
                             chatScroll.InsertData(data);
-                            UpdateItemHeight(data);
                         }
                         catch (Exception e)
                         {
                             logger.LogError("메시지 처리 중 오류 발생: " + e.Message);
                         }
                     }
-
-                    ScrollToBottom();
                 });
             }
             catch (Exception e)
             {
                 logger.LogError("채팅 메시지 로드 중 예외 발생: " + e.Message);
             }
-        }
-
-        private void UpdateItemHeight(ChatMessageData data)
-        {
-            chatScroll.UpdateData(data);
-            chatScroll.UpdateAllData(true);
-        }
-
-        private void OnChatScrollValueChanged(int firstIndex, int lastIndex, bool isStart, bool isEnd)
-        {
-            // 스크롤 변경 시 호출되는 메서드
-            // 필요에 따라 데이터를 더 로드하거나 다른 작업을 수행할 수 있습니다.
         }
 
         private void ScrollToBottom()

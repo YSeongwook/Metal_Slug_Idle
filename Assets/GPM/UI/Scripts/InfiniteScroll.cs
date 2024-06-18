@@ -31,6 +31,17 @@ namespace Gpm.Ui
         {
             Initialize();
         }
+        
+        private float GetSecondChildHeight()
+        {
+            RectTransform secondChildRect = transform.GetChild(1) as RectTransform;
+            if (secondChildRect != null)
+            {
+                return secondChildRect.rect.height;
+            }
+
+            return 0;
+        }
 
         protected void Initialize()
         {
@@ -44,6 +55,7 @@ namespace Gpm.Ui
                 ClearScrollContent(); // 스크롤 콘텐츠 초기화
 
                 RectTransform itemTransform = (RectTransform)itemPrefab.transform;
+                RectTransform chatTransform = (RectTransform)itemTransform.transform.GetChild(1);
                 defaultItemPrefabSize = itemTransform.sizeDelta; // 기본 아이템 프리팹 크기 설정
 
                 itemObjectList.Clear(); // 아이템 오브젝트 리스트 초기화

@@ -1,6 +1,7 @@
+using Cysharp.Threading.Tasks;
 using Gpm.Ui;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ChatMessageItem : InfiniteScrollItem
@@ -10,6 +11,8 @@ public class ChatMessageItem : InfiniteScrollItem
     public Image userAvatarImage;
     public TMP_Text timestampText;
 
+    public ContentSizeFitter contentSizeFitter;
+    
     public override void UpdateData(InfiniteScrollData scrollData)
     {
         base.UpdateData(scrollData);
@@ -31,9 +34,28 @@ public class ChatMessageItem : InfiniteScrollItem
         {
             userAvatarImage.gameObject.SetActive(false);
         }
+        
+        // 레이아웃 업데이트 강제 수행
+        // Canvas.ForceUpdateCanvases();
+        waitTask();
+    }
 
-        // 메시지 텍스트가 길어질 경우 높이를 동적으로 설정
-        LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
-        // chatData.itemHeight = rectTransform.rect.height;
+    async UniTask waitTask()
+    {
+        await UniTask.NextFrame();
+        
+        SetSize(GetSecondChildHeight());
+    }
+    
+    private float GetSecondChildHeight()
+    {
+        Canvas.ForceUpdateCanvases();
+        RectTransform secondChildRect = transform.GetChild(1) as RectTransform;
+        if (secondChildRect != null)
+        {
+            return secondChildRect.rect.height + 20f;
+        }
+
+        return 0;
     }
 }
