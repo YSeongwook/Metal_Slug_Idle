@@ -1,4 +1,3 @@
-using System.Xml.Serialization;
 using EnumTypes;
 using EventLibrary;
 using Sirenix.OdinInspector;
@@ -46,6 +45,8 @@ public class UIManager : Singleton<UIManager>
     [TabGroup("Loading UI")] public GameObject loadingUI;
 
     [TabGroup("Chat UI")] public GameObject chatUI;
+    
+    [TabGroup("Joystick UI")] public GameObject joystickUI;
 
     [TabGroup("Data Panel")] public GameObject dataPanel;
 
@@ -143,12 +144,13 @@ public class UIManager : Singleton<UIManager>
         loadingUI.SetActive(true);
     }
 
-    // 로딩 UI를 숨기는 메서드
+    // Game 씬으로 전환 시 로딩 UI를 숨기는 메서드
     private void HideLoadingUI()
     {
         loadingUI.SetActive(false);
         introUI.SetActive(false);
         mainUI.SetActive(true);
+        joystickUI.SetActive(true);
     }
 
     // 로그인 UI를 활성화하는 메서드
