@@ -1,0 +1,1424 @@
+fileFormatVersion: 2
+guid: 61ed22632383d08409348ef2d94ec37e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 2227
+        width: 54
+        height: 45
+      alignment: 9
+      pivot: {x: 0.22222222, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8ae18236a7af542851e44a4c33dc39
+      internalID: -1963965444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2226
+        width: 52
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e80ba7399004a4db8da7da1adc20df
+      internalID: -1853365306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2225
+        width: 54
+        height: 45
+      alignment: 9
+      pivot: {x: 0.22222222, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e7df489e1b5034198e065045ef544a
+      internalID: -1989675841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_9
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 2225
+        width: 55
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21818182, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278be047f73436040ba84c6cf4eeb280
+      internalID: 2114479298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_14
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 2143
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.20338982, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47e9d9b7d82a3245ad028fb1baec92b
+      internalID: 1726058824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_15
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 2143
+        width: 62
+        height: 45
+      alignment: 9
+      pivot: {x: 0.19354838, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e298ac458a2fc4e98170f8b3c8f8e6
+      internalID: -2001149734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_16
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 2143
+        width: 57
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21052632, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0baab32ace27f45afbe810f0f1e0d1
+      internalID: 423154418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_17
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 2143
+        width: 56
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21428572, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f54abd216ca4a459328cb913596a95
+      internalID: 581642969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_18
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2142
+        width: 60
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0260efc4a4b150f438318b6c00e90105
+      internalID: -760807059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_19
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2140
+        width: 63
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1904762, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2539802733b509c49bca70ce4c30edf8
+      internalID: -1598511992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_20
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2140
+        width: 63
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1904762, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740513290fbe78e42bf8cdcb5be5cd2f
+      internalID: -776012276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_21
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2140
+        width: 55
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21818182, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4ed36e4d293da47a68ff0c63987537
+      internalID: -368932575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_89
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1737
+        width: 56
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21428572, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42f34fc162dac748a64448add084683
+      internalID: 2107001403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_90
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 1737
+        width: 53
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586f221841baca34c9b5b2bd5cb5fe8c
+      internalID: 224379820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_91
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1737
+        width: 70
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17142858, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dbbc977e801386479ba0ac88a1deb09
+      internalID: 904498140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_93
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1737
+        width: 74
+        height: 45
+      alignment: 9
+      pivot: {x: 0.16216215, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488cca16df8cab7459bfbb36ee731e35
+      internalID: 882373070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_95
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 1735
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.20338982, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e72ee0962def84bbdc775fa03466cd
+      internalID: 1263840271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_96
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1735
+        width: 50
+        height: 45
+      alignment: 9
+      pivot: {x: 0.24, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5802ed7ac55154eb127e6da90a0528
+      internalID: -993180110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_97
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1735
+        width: 52
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b7072754b18d14187adff396bcbc8d
+      internalID: 728822678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_98
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1735
+        width: 54
+        height: 45
+      alignment: 9
+      pivot: {x: 0.22222222, y: 0.51111114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7268424c260b09c4c9e66dd818e6f5e7
+      internalID: -684235132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_99
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd291c1b03d0994390a8895d85fbaed
+      internalID: 475407691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_100
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b9a596710e3054eb6833ef6637a76a
+      internalID: -2048394972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_101
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc54f8b6f26f984ab2b82e4683bc4b2
+      internalID: -1817439683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_102
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a710a811bccce2042ad98e16b964f8d3
+      internalID: 1838349504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_103
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ba449be4102804cb811fdb96f5ce19
+      internalID: -1108265339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_104
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7e3a8b7a37e2f4d80d318a38e095de
+      internalID: 2081318245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_105
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace3e5fca6cfdf541af4a851f95cee9b
+      internalID: -178647670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_106
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1760
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df6327dcf88271c4b93bd0cd6e7987d1
+      internalID: 1736245991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_107
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1761
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4287a0fb6d788aa4d95e211d72547b43
+      internalID: -1283521924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_108
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e515fff10d6c5849941ac4e48640567
+      internalID: -283828629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_109
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a3d14b3c9c3eb40b33e02044579c2b
+      internalID: 732809808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_110
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ac90273395ef243a36510ca0ca77b6
+      internalID: 446561484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_111
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b2846f52b328f469a79aadd4c948f2
+      internalID: 1212115244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_112
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebffa02a79aa45f4190c46fb676cc30f
+      internalID: 1056974602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_113
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0231232a85e3b25409480f10a35989fb
+      internalID: -1863038126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_114
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40715e21819611242acdcadb5ac5bc4b
+      internalID: -5043805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_115
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1743
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7208dc577d5b1694f8ed064ec9d0221c
+      internalID: -1746570869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_116
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1744
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7708a5175f5108447b5998018d8feab2
+      internalID: -1876102715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_187
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1290
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86611a240c3525b46a95758c53d4e973
+      internalID: -1840976189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_200
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1288
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af31d526bb8a90d4da76471f93c546bb
+      internalID: -1021459391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_293
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 713
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e437cc077b2b64c8d5d5760ab7cf00
+      internalID: -1437423703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Metal Slug Attack - Louise_306
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 713
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8e8b8b7e61bc649bccd5a6380ed481
+      internalID: 534836243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b1e4f61812ebd0e449495fe32f9e816b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mobile - Metal Slug Attack - Louise_0: -811178117
+      Mobile - Metal Slug Attack - Louise_1: 950554278
+      Mobile - Metal Slug Attack - Louise_10: -787162321
+      Mobile - Metal Slug Attack - Louise_100: -2048394972
+      Mobile - Metal Slug Attack - Louise_101: -1817439683
+      Mobile - Metal Slug Attack - Louise_102: 1838349504
+      Mobile - Metal Slug Attack - Louise_103: -1108265339
+      Mobile - Metal Slug Attack - Louise_104: 2081318245
+      Mobile - Metal Slug Attack - Louise_105: -178647670
+      Mobile - Metal Slug Attack - Louise_106: 1736245991
+      Mobile - Metal Slug Attack - Louise_107: -1283521924
+      Mobile - Metal Slug Attack - Louise_108: -283828629
+      Mobile - Metal Slug Attack - Louise_109: 732809808
+      Mobile - Metal Slug Attack - Louise_11: -1155586329
+      Mobile - Metal Slug Attack - Louise_110: 446561484
+      Mobile - Metal Slug Attack - Louise_111: 1212115244
+      Mobile - Metal Slug Attack - Louise_112: 1056974602
+      Mobile - Metal Slug Attack - Louise_113: -1863038126
+      Mobile - Metal Slug Attack - Louise_114: -5043805
+      Mobile - Metal Slug Attack - Louise_115: -1746570869
+      Mobile - Metal Slug Attack - Louise_116: -1876102715
+      Mobile - Metal Slug Attack - Louise_117: 350686471
+      Mobile - Metal Slug Attack - Louise_118: -600419186
+      Mobile - Metal Slug Attack - Louise_119: -1247321195
+      Mobile - Metal Slug Attack - Louise_12: -1788597911
+      Mobile - Metal Slug Attack - Louise_120: -313416286
+      Mobile - Metal Slug Attack - Louise_121: -1640295986
+      Mobile - Metal Slug Attack - Louise_122: -26803751
+      Mobile - Metal Slug Attack - Louise_123: -1743301937
+      Mobile - Metal Slug Attack - Louise_124: -924795332
+      Mobile - Metal Slug Attack - Louise_125: -1812642280
+      Mobile - Metal Slug Attack - Louise_126: 237020397
+      Mobile - Metal Slug Attack - Louise_127: -864014861
+      Mobile - Metal Slug Attack - Louise_128: -1832828259
+      Mobile - Metal Slug Attack - Louise_129: -1832406365
+      Mobile - Metal Slug Attack - Louise_13: 1056621989
+      Mobile - Metal Slug Attack - Louise_130: 541503367
+      Mobile - Metal Slug Attack - Louise_131: 1626725283
+      Mobile - Metal Slug Attack - Louise_132: -1635495773
+      Mobile - Metal Slug Attack - Louise_133: -1294065852
+      Mobile - Metal Slug Attack - Louise_134: 1878604669
+      Mobile - Metal Slug Attack - Louise_135: 1878366769
+      Mobile - Metal Slug Attack - Louise_136: 22996777
+      Mobile - Metal Slug Attack - Louise_137: -1624437860
+      Mobile - Metal Slug Attack - Louise_138: -988187671
+      Mobile - Metal Slug Attack - Louise_139: 143497417
+      Mobile - Metal Slug Attack - Louise_14: 1726058824
+      Mobile - Metal Slug Attack - Louise_140: 2097179206
+      Mobile - Metal Slug Attack - Louise_141: -1912166321
+      Mobile - Metal Slug Attack - Louise_142: -1405676607
+      Mobile - Metal Slug Attack - Louise_143: -838985732
+      Mobile - Metal Slug Attack - Louise_144: -2064301193
+      Mobile - Metal Slug Attack - Louise_145: 1581931594
+      Mobile - Metal Slug Attack - Louise_146: 1960562257
+      Mobile - Metal Slug Attack - Louise_147: -1895257595
+      Mobile - Metal Slug Attack - Louise_148: -1553653460
+      Mobile - Metal Slug Attack - Louise_149: 1489565032
+      Mobile - Metal Slug Attack - Louise_15: -2001149734
+      Mobile - Metal Slug Attack - Louise_150: -1215872294
+      Mobile - Metal Slug Attack - Louise_151: -642714003
+      Mobile - Metal Slug Attack - Louise_152: 813097195
+      Mobile - Metal Slug Attack - Louise_153: -1108225665
+      Mobile - Metal Slug Attack - Louise_154: -615846112
+      Mobile - Metal Slug Attack - Louise_155: 496237289
+      Mobile - Metal Slug Attack - Louise_156: -981338492
+      Mobile - Metal Slug Attack - Louise_157: 107657037
+      Mobile - Metal Slug Attack - Louise_158: -365586157
+      Mobile - Metal Slug Attack - Louise_159: 1294655087
+      Mobile - Metal Slug Attack - Louise_16: 423154418
+      Mobile - Metal Slug Attack - Louise_160: -2050732847
+      Mobile - Metal Slug Attack - Louise_161: 1707721766
+      Mobile - Metal Slug Attack - Louise_162: -1653212789
+      Mobile - Metal Slug Attack - Louise_163: 797187557
+      Mobile - Metal Slug Attack - Louise_164: 1963621940
+      Mobile - Metal Slug Attack - Louise_165: -25543303
+      Mobile - Metal Slug Attack - Louise_166: 268245538
+      Mobile - Metal Slug Attack - Louise_167: -1317409369
+      Mobile - Metal Slug Attack - Louise_168: 143990280
+      Mobile - Metal Slug Attack - Louise_169: -1421777921
+      Mobile - Metal Slug Attack - Louise_17: 581642969
+      Mobile - Metal Slug Attack - Louise_170: -773314564
+      Mobile - Metal Slug Attack - Louise_171: -847517611
+      Mobile - Metal Slug Attack - Louise_172: 1185221648
+      Mobile - Metal Slug Attack - Louise_173: 1295378791
+      Mobile - Metal Slug Attack - Louise_174: -1481869890
+      Mobile - Metal Slug Attack - Louise_175: 1031982544
+      Mobile - Metal Slug Attack - Louise_176: 1337358550
+      Mobile - Metal Slug Attack - Louise_177: 769267240
+      Mobile - Metal Slug Attack - Louise_178: 1366494760
+      Mobile - Metal Slug Attack - Louise_179: -549001737
+      Mobile - Metal Slug Attack - Louise_18: -760807059
+      Mobile - Metal Slug Attack - Louise_180: 1429049762
+      Mobile - Metal Slug Attack - Louise_181: -1445104644
+      Mobile - Metal Slug Attack - Louise_182: 1466607066
+      Mobile - Metal Slug Attack - Louise_183: -895543781
+      Mobile - Metal Slug Attack - Louise_184: -1489410037
+      Mobile - Metal Slug Attack - Louise_185: 335415709
+      Mobile - Metal Slug Attack - Louise_186: -677169141
+      Mobile - Metal Slug Attack - Louise_187: -1840976189
+      Mobile - Metal Slug Attack - Louise_188: 1261938462
+      Mobile - Metal Slug Attack - Louise_189: 2062865222
+      Mobile - Metal Slug Attack - Louise_19: -1598511992
+      Mobile - Metal Slug Attack - Louise_190: -1082750762
+      Mobile - Metal Slug Attack - Louise_191: 17925109
+      Mobile - Metal Slug Attack - Louise_192: -243062371
+      Mobile - Metal Slug Attack - Louise_193: -1677777977
+      Mobile - Metal Slug Attack - Louise_194: 159295808
+      Mobile - Metal Slug Attack - Louise_195: -241229105
+      Mobile - Metal Slug Attack - Louise_196: -1116384837
+      Mobile - Metal Slug Attack - Louise_197: 1374125089
+      Mobile - Metal Slug Attack - Louise_198: 32311898
+      Mobile - Metal Slug Attack - Louise_199: 1203462210
+      Mobile - Metal Slug Attack - Louise_2: 1847830560
+      Mobile - Metal Slug Attack - Louise_20: -776012276
+      Mobile - Metal Slug Attack - Louise_200: -1021459391
+      Mobile - Metal Slug Attack - Louise_201: -1054125912
+      Mobile - Metal Slug Attack - Louise_202: -446453860
+      Mobile - Metal Slug Attack - Louise_203: 829743725
+      Mobile - Metal Slug Attack - Louise_204: 1061984817
+      Mobile - Metal Slug Attack - Louise_205: 128429903
+      Mobile - Metal Slug Attack - Louise_206: 1086273182
+      Mobile - Metal Slug Attack - Louise_207: 971609026
+      Mobile - Metal Slug Attack - Louise_208: -905810833
+      Mobile - Metal Slug Attack - Louise_209: 918034914
+      Mobile - Metal Slug Attack - Louise_21: -368932575
+      Mobile - Metal Slug Attack - Louise_210: 1335575520
+      Mobile - Metal Slug Attack - Louise_211: 1397593994
+      Mobile - Metal Slug Attack - Louise_212: 439784967
+      Mobile - Metal Slug Attack - Louise_213: -128623010
+      Mobile - Metal Slug Attack - Louise_214: -1240158042
+      Mobile - Metal Slug Attack - Louise_215: 1951742467
+      Mobile - Metal Slug Attack - Louise_216: -181457836
+      Mobile - Metal Slug Attack - Louise_217: 90473764
+      Mobile - Metal Slug Attack - Louise_218: -438020816
+      Mobile - Metal Slug Attack - Louise_219: -675333250
+      Mobile - Metal Slug Attack - Louise_22: -1445916840
+      Mobile - Metal Slug Attack - Louise_220: 1158879890
+      Mobile - Metal Slug Attack - Louise_221: 1968947015
+      Mobile - Metal Slug Attack - Louise_222: 1783802242
+      Mobile - Metal Slug Attack - Louise_223: 390845658
+      Mobile - Metal Slug Attack - Louise_224: -1414713245
+      Mobile - Metal Slug Attack - Louise_225: 1291147043
+      Mobile - Metal Slug Attack - Louise_226: -543384552
+      Mobile - Metal Slug Attack - Louise_227: 785583459
+      Mobile - Metal Slug Attack - Louise_228: -1888116351
+      Mobile - Metal Slug Attack - Louise_229: -67065286
+      Mobile - Metal Slug Attack - Louise_23: -1378130937
+      Mobile - Metal Slug Attack - Louise_230: -429848963
+      Mobile - Metal Slug Attack - Louise_231: -1524122185
+      Mobile - Metal Slug Attack - Louise_232: 1480324099
+      Mobile - Metal Slug Attack - Louise_233: 2069837086
+      Mobile - Metal Slug Attack - Louise_234: -1648212911
+      Mobile - Metal Slug Attack - Louise_235: 1759564806
+      Mobile - Metal Slug Attack - Louise_236: -1290336161
+      Mobile - Metal Slug Attack - Louise_237: 893593138
+      Mobile - Metal Slug Attack - Louise_238: 139816352
+      Mobile - Metal Slug Attack - Louise_239: 1912199460
+      Mobile - Metal Slug Attack - Louise_24: -1342470288
+      Mobile - Metal Slug Attack - Louise_240: 1665788630
+      Mobile - Metal Slug Attack - Louise_241: 1236659201
+      Mobile - Metal Slug Attack - Louise_242: -1062583848
+      Mobile - Metal Slug Attack - Louise_243: -1105033940
+      Mobile - Metal Slug Attack - Louise_244: -1191830927
+      Mobile - Metal Slug Attack - Louise_245: -822046802
+      Mobile - Metal Slug Attack - Louise_246: 1375568709
+      Mobile - Metal Slug Attack - Louise_247: -1646886891
+      Mobile - Metal Slug Attack - Louise_248: 811470843
+      Mobile - Metal Slug Attack - Louise_249: 984905537
+      Mobile - Metal Slug Attack - Louise_25: -169786822
+      Mobile - Metal Slug Attack - Louise_250: -848458592
+      Mobile - Metal Slug Attack - Louise_251: 100993443
+      Mobile - Metal Slug Attack - Louise_252: 409525206
+      Mobile - Metal Slug Attack - Louise_253: -541929357
+      Mobile - Metal Slug Attack - Louise_254: 758060023
+      Mobile - Metal Slug Attack - Louise_255: -680303423
+      Mobile - Metal Slug Attack - Louise_256: -161711788
+      Mobile - Metal Slug Attack - Louise_257: 574503439
+      Mobile - Metal Slug Attack - Louise_258: 1915702256
+      Mobile - Metal Slug Attack - Louise_259: 684355903
+      Mobile - Metal Slug Attack - Louise_26: -1959776371
+      Mobile - Metal Slug Attack - Louise_260: 484972592
+      Mobile - Metal Slug Attack - Louise_261: -622735495
+      Mobile - Metal Slug Attack - Louise_262: 1825420127
+      Mobile - Metal Slug Attack - Louise_263: -824092112
+      Mobile - Metal Slug Attack - Louise_264: -1747885534
+      Mobile - Metal Slug Attack - Louise_265: -2051268379
+      Mobile - Metal Slug Attack - Louise_266: 2042745081
+      Mobile - Metal Slug Attack - Louise_267: 121101278
+      Mobile - Metal Slug Attack - Louise_268: -1430511952
+      Mobile - Metal Slug Attack - Louise_269: -384423094
+      Mobile - Metal Slug Attack - Louise_27: 1630887468
+      Mobile - Metal Slug Attack - Louise_270: -1501308371
+      Mobile - Metal Slug Attack - Louise_271: -758562466
+      Mobile - Metal Slug Attack - Louise_272: -366195998
+      Mobile - Metal Slug Attack - Louise_273: 824105369
+      Mobile - Metal Slug Attack - Louise_274: -1389268405
+      Mobile - Metal Slug Attack - Louise_275: -1849454771
+      Mobile - Metal Slug Attack - Louise_276: 1522837337
+      Mobile - Metal Slug Attack - Louise_277: 2119789443
+      Mobile - Metal Slug Attack - Louise_278: -856005180
+      Mobile - Metal Slug Attack - Louise_279: -988227105
+      Mobile - Metal Slug Attack - Louise_28: -471198253
+      Mobile - Metal Slug Attack - Louise_280: 1071411649
+      Mobile - Metal Slug Attack - Louise_281: -937748166
+      Mobile - Metal Slug Attack - Louise_282: 997603743
+      Mobile - Metal Slug Attack - Louise_283: 1517905361
+      Mobile - Metal Slug Attack - Louise_284: 1021141896
+      Mobile - Metal Slug Attack - Louise_285: 1534555830
+      Mobile - Metal Slug Attack - Louise_286: -748550507
+      Mobile - Metal Slug Attack - Louise_287: 2100501602
+      Mobile - Metal Slug Attack - Louise_288: 713549710
+      Mobile - Metal Slug Attack - Louise_289: -1198403900
+      Mobile - Metal Slug Attack - Louise_29: -1315848404
+      Mobile - Metal Slug Attack - Louise_290: 1249412938
+      Mobile - Metal Slug Attack - Louise_291: 791259238
+      Mobile - Metal Slug Attack - Louise_292: -647307656
+      Mobile - Metal Slug Attack - Louise_293: -1437423703
+      Mobile - Metal Slug Attack - Louise_294: -1622736070
+      Mobile - Metal Slug Attack - Louise_295: 1601783675
+      Mobile - Metal Slug Attack - Louise_296: -1293629601
+      Mobile - Metal Slug Attack - Louise_297: 1699267588
+      Mobile - Metal Slug Attack - Louise_298: 466050255
+      Mobile - Metal Slug Attack - Louise_299: -282754548
+      Mobile - Metal Slug Attack - Louise_3: -436437840
+      Mobile - Metal Slug Attack - Louise_30: 299964076
+      Mobile - Metal Slug Attack - Louise_300: -1576282509
+      Mobile - Metal Slug Attack - Louise_301: 934780299
+      Mobile - Metal Slug Attack - Louise_302: 909233127
+      Mobile - Metal Slug Attack - Louise_303: -117897540
+      Mobile - Metal Slug Attack - Louise_304: -283981283
+      Mobile - Metal Slug Attack - Louise_305: 1966637204
+      Mobile - Metal Slug Attack - Louise_306: 534836243
+      Mobile - Metal Slug Attack - Louise_307: 2084501972
+      Mobile - Metal Slug Attack - Louise_308: 401956115
+      Mobile - Metal Slug Attack - Louise_309: 548949899
+      Mobile - Metal Slug Attack - Louise_31: 1114965015
+      Mobile - Metal Slug Attack - Louise_310: -1646824511
+      Mobile - Metal Slug Attack - Louise_311: 1930776807
+      Mobile - Metal Slug Attack - Louise_312: 486652185
+      Mobile - Metal Slug Attack - Louise_313: -604299374
+      Mobile - Metal Slug Attack - Louise_314: 1121914795
+      Mobile - Metal Slug Attack - Louise_315: -1867336253
+      Mobile - Metal Slug Attack - Louise_316: -698315592
+      Mobile - Metal Slug Attack - Louise_317: -1893756360
+      Mobile - Metal Slug Attack - Louise_318: -877298652
+      Mobile - Metal Slug Attack - Louise_319: -881307803
+      Mobile - Metal Slug Attack - Louise_32: -1753719817
+      Mobile - Metal Slug Attack - Louise_320: -11507971
+      Mobile - Metal Slug Attack - Louise_321: -928223329
+      Mobile - Metal Slug Attack - Louise_322: -73168859
+      Mobile - Metal Slug Attack - Louise_323: 1840273828
+      Mobile - Metal Slug Attack - Louise_324: -2019408105
+      Mobile - Metal Slug Attack - Louise_325: -665204911
+      Mobile - Metal Slug Attack - Louise_326: 1504163691
+      Mobile - Metal Slug Attack - Louise_327: -953294125
+      Mobile - Metal Slug Attack - Louise_328: -655847004
+      Mobile - Metal Slug Attack - Louise_329: 1604662975
+      Mobile - Metal Slug Attack - Louise_33: -1362761228
+      Mobile - Metal Slug Attack - Louise_330: -1026396560
+      Mobile - Metal Slug Attack - Louise_331: 672626611
+      Mobile - Metal Slug Attack - Louise_332: 715680202
+      Mobile - Metal Slug Attack - Louise_333: -1895686349
+      Mobile - Metal Slug Attack - Louise_334: -476290732
+      Mobile - Metal Slug Attack - Louise_335: -992991850
+      Mobile - Metal Slug Attack - Louise_336: -428851741
+      Mobile - Metal Slug Attack - Louise_337: -832208872
+      Mobile - Metal Slug Attack - Louise_338: 1090834905
+      Mobile - Metal Slug Attack - Louise_339: 1000695665
+      Mobile - Metal Slug Attack - Louise_34: -1621295689
+      Mobile - Metal Slug Attack - Louise_340: 1438013719
+      Mobile - Metal Slug Attack - Louise_341: -723407537
+      Mobile - Metal Slug Attack - Louise_342: 1695138119
+      Mobile - Metal Slug Attack - Louise_343: -17696517
+      Mobile - Metal Slug Attack - Louise_344: 469395493
+      Mobile - Metal Slug Attack - Louise_345: -1500079277
+      Mobile - Metal Slug Attack - Louise_346: 1824742365
+      Mobile - Metal Slug Attack - Louise_347: -577351165
+      Mobile - Metal Slug Attack - Louise_348: -1242179373
+      Mobile - Metal Slug Attack - Louise_349: 778923858
+      Mobile - Metal Slug Attack - Louise_35: -1166501954
+      Mobile - Metal Slug Attack - Louise_350: 49049461
+      Mobile - Metal Slug Attack - Louise_351: 286818758
+      Mobile - Metal Slug Attack - Louise_352: -2095603954
+      Mobile - Metal Slug Attack - Louise_353: -2021570608
+      Mobile - Metal Slug Attack - Louise_354: 1686839151
+      Mobile - Metal Slug Attack - Louise_355: -94884168
+      Mobile - Metal Slug Attack - Louise_356: 1367269369
+      Mobile - Metal Slug Attack - Louise_357: -641527276
+      Mobile - Metal Slug Attack - Louise_358: -189537580
+      Mobile - Metal Slug Attack - Louise_359: -611844067
+      Mobile - Metal Slug Attack - Louise_36: 1132168283
+      Mobile - Metal Slug Attack - Louise_360: 910017775
+      Mobile - Metal Slug Attack - Louise_361: 1664867540
+      Mobile - Metal Slug Attack - Louise_362: 1065940433
+      Mobile - Metal Slug Attack - Louise_363: 45682512
+      Mobile - Metal Slug Attack - Louise_364: -1753607591
+      Mobile - Metal Slug Attack - Louise_365: -572315830
+      Mobile - Metal Slug Attack - Louise_366: 301008061
+      Mobile - Metal Slug Attack - Louise_367: -1771640448
+      Mobile - Metal Slug Attack - Louise_368: 492314632
+      Mobile - Metal Slug Attack - Louise_369: 1740613402
+      Mobile - Metal Slug Attack - Louise_37: -242807846
+      Mobile - Metal Slug Attack - Louise_370: 995425488
+      Mobile - Metal Slug Attack - Louise_371: -965918925
+      Mobile - Metal Slug Attack - Louise_372: 182155137
+      Mobile - Metal Slug Attack - Louise_373: -1311555699
+      Mobile - Metal Slug Attack - Louise_374: -1222562255
+      Mobile - Metal Slug Attack - Louise_375: -378236896
+      Mobile - Metal Slug Attack - Louise_376: -666321855
+      Mobile - Metal Slug Attack - Louise_377: -1587489166
+      Mobile - Metal Slug Attack - Louise_378: -1963597021
+      Mobile - Metal Slug Attack - Louise_379: -2104985229
+      Mobile - Metal Slug Attack - Louise_38: -1558558216
+      Mobile - Metal Slug Attack - Louise_380: 2141182844
+      Mobile - Metal Slug Attack - Louise_381: 1514016029
+      Mobile - Metal Slug Attack - Louise_382: -568951528
+      Mobile - Metal Slug Attack - Louise_383: 941275183
+      Mobile - Metal Slug Attack - Louise_384: 1756376219
+      Mobile - Metal Slug Attack - Louise_385: 392808014
+      Mobile - Metal Slug Attack - Louise_386: 1106699745
+      Mobile - Metal Slug Attack - Louise_387: -2071150564
+      Mobile - Metal Slug Attack - Louise_388: 1256802945
+      Mobile - Metal Slug Attack - Louise_389: 1451496267
+      Mobile - Metal Slug Attack - Louise_39: 847576936
+      Mobile - Metal Slug Attack - Louise_390: 611589722
+      Mobile - Metal Slug Attack - Louise_391: -1095076724
+      Mobile - Metal Slug Attack - Louise_392: -1318374695
+      Mobile - Metal Slug Attack - Louise_393: -2087073389
+      Mobile - Metal Slug Attack - Louise_394: 736218487
+      Mobile - Metal Slug Attack - Louise_395: -578631489
+      Mobile - Metal Slug Attack - Louise_396: 2068218070
+      Mobile - Metal Slug Attack - Louise_397: 161977592
+      Mobile - Metal Slug Attack - Louise_398: -209229513
+      Mobile - Metal Slug Attack - Louise_399: 1360393110
+      Mobile - Metal Slug Attack - Louise_4: -985411156
+      Mobile - Metal Slug Attack - Louise_40: -383923494
+      Mobile - Metal Slug Attack - Louise_400: 949562999
+      Mobile - Metal Slug Attack - Louise_401: -1986864300
+      Mobile - Metal Slug Attack - Louise_402: 898075050
+      Mobile - Metal Slug Attack - Louise_403: 472776300
+      Mobile - Metal Slug Attack - Louise_404: -822359059
+      Mobile - Metal Slug Attack - Louise_405: 546514085
+      Mobile - Metal Slug Attack - Louise_406: -130788956
+      Mobile - Metal Slug Attack - Louise_41: 954782270
+      Mobile - Metal Slug Attack - Louise_42: 1383782644
+      Mobile - Metal Slug Attack - Louise_43: 1196241253
+      Mobile - Metal Slug Attack - Louise_44: -291540231
+      Mobile - Metal Slug Attack - Louise_45: -13854244
+      Mobile - Metal Slug Attack - Louise_46: 1973207670
+      Mobile - Metal Slug Attack - Louise_47: 1274503030
+      Mobile - Metal Slug Attack - Louise_48: -489550975
+      Mobile - Metal Slug Attack - Louise_49: 1426091123
+      Mobile - Metal Slug Attack - Louise_5: 236212002
+      Mobile - Metal Slug Attack - Louise_50: -115791641
+      Mobile - Metal Slug Attack - Louise_51: -1931751948
+      Mobile - Metal Slug Attack - Louise_52: 477477347
+      Mobile - Metal Slug Attack - Louise_53: -2078341998
+      Mobile - Metal Slug Attack - Louise_54: 1825881450
+      Mobile - Metal Slug Attack - Louise_55: 892812803
+      Mobile - Metal Slug Attack - Louise_56: -35190710
+      Mobile - Metal Slug Attack - Louise_57: -989792035
+      Mobile - Metal Slug Attack - Louise_58: -321131315
+      Mobile - Metal Slug Attack - Louise_59: -971091993
+      Mobile - Metal Slug Attack - Louise_6: -1963965444
+      Mobile - Metal Slug Attack - Louise_60: -272676748
+      Mobile - Metal Slug Attack - Louise_61: -278071705
+      Mobile - Metal Slug Attack - Louise_62: 112911362
+      Mobile - Metal Slug Attack - Louise_63: -1029922544
+      Mobile - Metal Slug Attack - Louise_64: -1456009103
+      Mobile - Metal Slug Attack - Louise_65: -1551834062
+      Mobile - Metal Slug Attack - Louise_66: -1067004914
+      Mobile - Metal Slug Attack - Louise_67: 304783194
+      Mobile - Metal Slug Attack - Louise_68: 1910099061
+      Mobile - Metal Slug Attack - Louise_69: -1637219260
+      Mobile - Metal Slug Attack - Louise_7: -1853365306
+      Mobile - Metal Slug Attack - Louise_70: -1535435732
+      Mobile - Metal Slug Attack - Louise_71: -1202820825
+      Mobile - Metal Slug Attack - Louise_72: -204473796
+      Mobile - Metal Slug Attack - Louise_73: -1823227892
+      Mobile - Metal Slug Attack - Louise_74: -2018455890
+      Mobile - Metal Slug Attack - Louise_75: 1089402474
+      Mobile - Metal Slug Attack - Louise_76: -975016138
+      Mobile - Metal Slug Attack - Louise_77: 413494332
+      Mobile - Metal Slug Attack - Louise_78: 1623983422
+      Mobile - Metal Slug Attack - Louise_79: 506416739
+      Mobile - Metal Slug Attack - Louise_8: -1989675841
+      Mobile - Metal Slug Attack - Louise_80: -405648156
+      Mobile - Metal Slug Attack - Louise_81: -979191259
+      Mobile - Metal Slug Attack - Louise_82: 312670684
+      Mobile - Metal Slug Attack - Louise_83: -724973258
+      Mobile - Metal Slug Attack - Louise_84: -1535975318
+      Mobile - Metal Slug Attack - Louise_85: 830007780
+      Mobile - Metal Slug Attack - Louise_86: 1176509089
+      Mobile - Metal Slug Attack - Louise_87: -1246660767
+      Mobile - Metal Slug Attack - Louise_88: -1466969157
+      Mobile - Metal Slug Attack - Louise_89: 2107001403
+      Mobile - Metal Slug Attack - Louise_9: 2114479298
+      Mobile - Metal Slug Attack - Louise_90: 224379820
+      Mobile - Metal Slug Attack - Louise_91: 904498140
+      Mobile - Metal Slug Attack - Louise_92: -1789270980
+      Mobile - Metal Slug Attack - Louise_93: 882373070
+      Mobile - Metal Slug Attack - Louise_94: 1492285483
+      Mobile - Metal Slug Attack - Louise_95: 1263840271
+      Mobile - Metal Slug Attack - Louise_96: -993180110
+      Mobile - Metal Slug Attack - Louise_97: 728822678
+      Mobile - Metal Slug Attack - Louise_98: -684235132
+      Mobile - Metal Slug Attack - Louise_99: 475407691
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
