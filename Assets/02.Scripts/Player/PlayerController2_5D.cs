@@ -3,7 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController2_5D : MonoBehaviour
 {
-    public float moveSpeed = 5f; // 이동 속도
+    public float moveSpeed = 5f; // 기본 이동 속도
+    public float zSpeedMultiplier = 1.78f; // 16:9 비율에 맞춘 세로 이동 속도 배수 (16/9 = 1.78)
     private Vector2 moveInput = Vector2.zero;
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
@@ -38,7 +39,7 @@ public class PlayerController2_5D : MonoBehaviour
     private void FixedUpdate()
     {
         // 카메라의 로컬 공간에 맞춘 이동 방향 설정
-        Vector3 moveDirection = mainCamera.transform.rotation * new Vector3(moveInput.x, 0, moveInput.y).normalized;
+        Vector3 moveDirection = mainCamera.transform.rotation * new Vector3(moveInput.x, 0, moveInput.y * zSpeedMultiplier);
 
         // 현재 위치에서 y값을 초기값으로 고정
         Vector3 newPosition = rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
