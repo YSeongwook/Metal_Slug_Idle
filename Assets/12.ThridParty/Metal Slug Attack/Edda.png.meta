@@ -115,7 +115,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Edda_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2513
+        width: 74
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6486486, y: 0.56122446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92ac1300a08d9a4eb7695d303e8a913
+      internalID: -518009009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2516
+        width: 74
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6486486, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28565f276cb1a1b43bb6347b3636ad11
+      internalID: 393360240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 2516
+        width: 73
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6438356, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb7ef428c0209447b6c9aaa7994d39d
+      internalID: 714261034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_3
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 2516
+        width: 72
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6388889, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f1a75ae1d3ddf4086d24c8a92b4f08
+      internalID: 1528417887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_4
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 2515
+        width: 73
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6438356, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4edebbbfd05234cbc3ba9ac02389a1
+      internalID: -69330368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_5
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 2515
+        width: 74
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6486486, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3002077940e730479bbacca2f97d104
+      internalID: 1198638010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_6
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2512
+        width: 73
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6438356, y: 0.56122446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392567c63d068684c823ceb8d756171d
+      internalID: 1947285253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_7
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2512
+        width: 74
+        height: 49
+      alignment: 9
+      pivot: {x: 0.6486486, y: 0.56122446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559e8a5986c745841b663a90b00f11af
+      internalID: -1860733361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_9
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 2427
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d30f337500d105a41bc9f4a8231a1183
+      internalID: 604386134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2427
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544e874c979f1d74391c953f562c6275
+      internalID: -1205776662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_11
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 2427
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b22f6a918e826145aca128884ae4d9f
+      internalID: 1060505909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_12
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 2427
+        width: 79
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea8bf1ce43aac145b23e0c80d74ca7d
+      internalID: -1428995473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_13
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 2368
+        width: 80
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77336b0e02255924c8492097c20ad1a9
+      internalID: 946125547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_14
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2369
+        width: 80
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1b5b0b819683049b9191a50677d75a
+      internalID: 18604862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_15
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2368
+        width: 79
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e8727e99bf614c9bb0b589c923132
+      internalID: 400111004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_16
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2368
+        width: 79
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce71ffccdbe48d943b28d38fe3155726
+      internalID: -1349954984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_230
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1380
+        width: 76
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd8ab86374eb014cad29937fced4043
+      internalID: 1373705387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_231
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1383
+        width: 77
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213c62d118411c648928d7fc654c7a91
+      internalID: -564608547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_232
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1383
+        width: 63
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fc7fdb921898b458b76b3a6f2c3949
+      internalID: -2032121447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_233
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 1383
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc61c3e5fd5dbfe4c9a01ced81a07fbf
+      internalID: 1406419944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_234
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1380
+        width: 117
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eef0b061c0f9574aadd467568b9b2db
+      internalID: 620863575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_235
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1258
+        width: 91
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2baf1139e905a04caf9754b5e3a2727
+      internalID: 1726679414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_236
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 1252
+        width: 91
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d53d92b516cfe794cbca7f3204db7c19
+      internalID: 414245812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_237
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1260
+        width: 88
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a04bf07e2f91b39428eba73fb81abef7
+      internalID: 1469590273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_239
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1075
+        width: 73
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f737ee58430f9840bb1ba40a610b0d2
+      internalID: -335060863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_240
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 1070
+        width: 123
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225c06a3a1d90b347bcb021bae40e591
+      internalID: -69307711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_241
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 1089
+        width: 95
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33b915149a480448828bfcd94590347
+      internalID: -1023938588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_242
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 961
+        width: 86
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058d09a2d75825f48bc353c2a067212d
+      internalID: -1963142537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_243
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 961
+        width: 77
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb2cbdd7fda188439b9e6cce9ed9fbb
+      internalID: 1371310803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_244
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 961
+        width: 68
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be10a3a82f9fd04193300a239d3b472
+      internalID: 215852045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_245
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 850
+        width: 97
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbe0c90101e27d4fa8369149b7a8712
+      internalID: -612282549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_246
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 850
+        width: 110
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8969ee98ae0b3042b056c2822e859be
+      internalID: -1587544334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_247
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 850
+        width: 123
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fb827c811b9c44d8d29cd8ca688820
+      internalID: 942915602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_248
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 758
+        width: 83
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82be449556699934abda6cff678b106f
+      internalID: -429134111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_249
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 758
+        width: 44
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebabba46f4ff85468ad112b8b31ca4f
+      internalID: -1074638486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Edda_250
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 758
+        width: 75
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da762e592f1c3e347b487b9a4ab7177b
+      internalID: -363485940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +882,423 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Edda_0: -518009009
+      Edda_1: 393360240
+      Edda_10: -1205776662
+      Edda_100: 894082920
+      Edda_101: 207237598
+      Edda_102: 1683406218
+      Edda_103: 892408321
+      Edda_104: -102460626
+      Edda_105: -1964613381
+      Edda_106: 436099380
+      Edda_107: -462656803
+      Edda_108: -399319900
+      Edda_109: 1081415360
+      Edda_11: 1060505909
+      Edda_110: 169806640
+      Edda_111: 46698784
+      Edda_112: 1463010670
+      Edda_113: -49553602
+      Edda_114: -1202572553
+      Edda_115: 104747869
+      Edda_116: -1572723800
+      Edda_117: 2130727183
+      Edda_118: 66072809
+      Edda_119: 1882585039
+      Edda_12: -1428995473
+      Edda_120: 1137220480
+      Edda_121: 1789699243
+      Edda_122: 204502208
+      Edda_123: 607420757
+      Edda_124: -791964783
+      Edda_125: 218675592
+      Edda_126: -1293395049
+      Edda_127: -283740772
+      Edda_128: -746732481
+      Edda_129: 46977949
+      Edda_13: 946125547
+      Edda_130: -1718445240
+      Edda_131: -1696658210
+      Edda_132: 847822997
+      Edda_133: -446186469
+      Edda_134: -2059942070
+      Edda_135: 716517120
+      Edda_136: -1065562593
+      Edda_137: 449249180
+      Edda_138: 2814334
+      Edda_139: -170784974
+      Edda_14: 18604862
+      Edda_140: 1166174034
+      Edda_141: 1992704680
+      Edda_142: 652222431
+      Edda_143: -1252142277
+      Edda_144: 901012576
+      Edda_145: -743021177
+      Edda_146: -298124682
+      Edda_147: -851918597
+      Edda_148: -1806631810
+      Edda_149: 652191283
+      Edda_15: 400111004
+      Edda_150: -1551213629
+      Edda_151: 1794905027
+      Edda_152: 1609703653
+      Edda_153: 1721979294
+      Edda_154: -841599410
+      Edda_155: -1661906968
+      Edda_156: -1549107395
+      Edda_157: 928438160
+      Edda_158: -2075697946
+      Edda_159: -2089772378
+      Edda_16: -1349954984
+      Edda_160: 1234675694
+      Edda_161: -172184807
+      Edda_162: -745277974
+      Edda_163: 1026322904
+      Edda_164: -810474937
+      Edda_165: -1624390598
+      Edda_166: -1660548236
+      Edda_167: 2003971739
+      Edda_168: 1331251742
+      Edda_169: -1759165799
+      Edda_17: -1431531496
+      Edda_170: -34354997
+      Edda_171: 840613768
+      Edda_172: -110172670
+      Edda_173: 222922000
+      Edda_174: -415697785
+      Edda_175: -190481294
+      Edda_176: -2087344347
+      Edda_177: 1478711653
+      Edda_178: 487248216
+      Edda_179: -1400152122
+      Edda_18: -1187500902
+      Edda_180: -394190844
+      Edda_181: -1467715878
+      Edda_182: -653927382
+      Edda_183: -1715740281
+      Edda_184: 2104299214
+      Edda_185: -1444025143
+      Edda_186: -1866672204
+      Edda_187: -206732846
+      Edda_188: 123504859
+      Edda_189: 454026665
+      Edda_19: 273249918
+      Edda_190: -385427159
+      Edda_191: -2120097771
+      Edda_192: -837346136
+      Edda_193: 445148465
+      Edda_194: -1603510450
+      Edda_195: 1173619439
+      Edda_196: 1213089448
+      Edda_197: 756168246
+      Edda_198: 87325297
+      Edda_199: 1852968148
+      Edda_2: 714261034
+      Edda_20: 387950802
+      Edda_200: -916805869
+      Edda_201: 101510808
+      Edda_202: -1957316712
+      Edda_203: 1758358566
+      Edda_204: -1207450667
+      Edda_205: -638298099
+      Edda_206: 1585937156
+      Edda_207: 592445405
+      Edda_208: 720855623
+      Edda_209: -1009676678
+      Edda_21: 1279755123
+      Edda_210: -522158748
+      Edda_211: -1642255840
+      Edda_212: 2124949345
+      Edda_213: -1408129541
+      Edda_214: 1023510513
+      Edda_215: 1527048474
+      Edda_216: -1110350050
+      Edda_217: 1306867218
+      Edda_218: 946245514
+      Edda_219: 102953333
+      Edda_22: -1275643877
+      Edda_220: -2043274470
+      Edda_221: -966960379
+      Edda_222: -586217974
+      Edda_223: 1238480180
+      Edda_224: -142031635
+      Edda_225: -269664182
+      Edda_226: -1490033807
+      Edda_227: 173899931
+      Edda_228: 648898623
+      Edda_229: 1087016263
+      Edda_23: -1523854140
+      Edda_230: 1373705387
+      Edda_231: -564608547
+      Edda_232: -2032121447
+      Edda_233: 1406419944
+      Edda_234: 620863575
+      Edda_235: 1726679414
+      Edda_236: 414245812
+      Edda_237: 1469590273
+      Edda_238: -1815459994
+      Edda_239: -335060863
+      Edda_24: 2002633199
+      Edda_240: -69307711
+      Edda_241: -1023938588
+      Edda_242: -1963142537
+      Edda_243: 1371310803
+      Edda_244: 215852045
+      Edda_245: -612282549
+      Edda_246: -1587544334
+      Edda_247: 942915602
+      Edda_248: -429134111
+      Edda_249: -1074638486
+      Edda_25: 1527324290
+      Edda_250: -363485940
+      Edda_251: -168695761
+      Edda_252: -1728453263
+      Edda_253: 1067302006
+      Edda_254: 1349263682
+      Edda_255: 275687624
+      Edda_256: -1065716149
+      Edda_257: -1510726195
+      Edda_258: -25003651
+      Edda_259: -1038405216
+      Edda_26: 435841596
+      Edda_260: -1531539344
+      Edda_261: 974630149
+      Edda_262: 725577120
+      Edda_263: 822731922
+      Edda_264: 374263126
+      Edda_265: -1395070053
+      Edda_266: -1637446242
+      Edda_267: 1999796483
+      Edda_268: 1785729948
+      Edda_269: 102323280
+      Edda_27: 801251508
+      Edda_270: 1172041134
+      Edda_271: -1149212984
+      Edda_272: -881540726
+      Edda_273: 1748441228
+      Edda_274: 23655442
+      Edda_275: 976315227
+      Edda_276: 92256015
+      Edda_277: 785398241
+      Edda_278: -2047731686
+      Edda_279: 1213441676
+      Edda_28: -663976702
+      Edda_280: -1711157170
+      Edda_281: 776756745
+      Edda_282: -289101378
+      Edda_283: -1834109042
+      Edda_284: 401617539
+      Edda_285: -732731177
+      Edda_286: 1136130744
+      Edda_287: -1452252187
+      Edda_288: 1645152417
+      Edda_289: -1459671107
+      Edda_29: 253693937
+      Edda_290: -936353675
+      Edda_291: 1089860904
+      Edda_292: 220139115
+      Edda_293: -1430031885
+      Edda_294: 962918048
+      Edda_295: -304094225
+      Edda_296: 230653504
+      Edda_297: 577927760
+      Edda_298: 1308013502
+      Edda_299: -546481134
+      Edda_3: 1528417887
+      Edda_30: -1787332863
+      Edda_300: 1796121578
+      Edda_301: -1948037643
+      Edda_302: -2056167927
+      Edda_303: 2137666978
+      Edda_304: -2127091597
+      Edda_305: 1629970937
+      Edda_306: 1973981914
+      Edda_307: 1312228491
+      Edda_308: 1646351046
+      Edda_309: 802921841
+      Edda_31: 501056429
+      Edda_310: 1437210529
+      Edda_311: -213058784
+      Edda_312: -1158845158
+      Edda_313: -1987573133
+      Edda_314: 36175990
+      Edda_315: 145086245
+      Edda_316: 63682775
+      Edda_317: 794309572
+      Edda_318: -830678440
+      Edda_319: 1679404699
+      Edda_32: -1424248173
+      Edda_320: -132559164
+      Edda_321: -636071678
+      Edda_322: -1069017011
+      Edda_323: 648383378
+      Edda_324: 1570775217
+      Edda_325: -757534600
+      Edda_326: -971269706
+      Edda_327: -1650923415
+      Edda_328: -1037808686
+      Edda_329: 1174155404
+      Edda_33: -742637811
+      Edda_330: 1674443556
+      Edda_331: -2104889302
+      Edda_332: 1714822510
+      Edda_333: 392515197
+      Edda_334: -1827758652
+      Edda_335: 770130152
+      Edda_336: 415463650
+      Edda_337: 638658268
+      Edda_338: -976884764
+      Edda_339: -913666176
+      Edda_34: -2106799391
+      Edda_340: 8146678
+      Edda_341: 104093008
+      Edda_342: -1429098589
+      Edda_343: -1385762215
+      Edda_344: 423592428
+      Edda_345: -191517646
+      Edda_346: -2011169219
+      Edda_347: -990118663
+      Edda_348: -1454585695
+      Edda_349: 834433695
+      Edda_35: 1343011909
+      Edda_350: 786733808
+      Edda_351: 2020327326
+      Edda_352: 1149338210
+      Edda_353: 2045737943
+      Edda_354: -1483557505
+      Edda_355: -2004775845
+      Edda_356: -2000378006
+      Edda_357: 1995247903
+      Edda_358: 724428377
+      Edda_359: 1003590757
+      Edda_36: -1371086792
+      Edda_360: -2058355556
+      Edda_361: -783966394
+      Edda_362: 498484612
+      Edda_363: -932815368
+      Edda_364: 525686457
+      Edda_365: -1825453385
+      Edda_366: -872585995
+      Edda_367: -505331090
+      Edda_368: -1030323388
+      Edda_369: 1657143263
+      Edda_37: 565474448
+      Edda_370: 1725013426
+      Edda_371: -294133914
+      Edda_372: 1437430973
+      Edda_373: 1396516684
+      Edda_374: 401729915
+      Edda_375: 303346378
+      Edda_376: -1385557748
+      Edda_377: -2034547515
+      Edda_378: 1472953262
+      Edda_379: 1566262731
+      Edda_38: 1325868900
+      Edda_380: -2035657936
+      Edda_381: -338193716
+      Edda_382: -1844195299
+      Edda_383: 1972883409
+      Edda_384: -1149750272
+      Edda_385: -598843299
+      Edda_386: -1894260607
+      Edda_387: 1490630075
+      Edda_388: -687571502
+      Edda_389: 1518091258
+      Edda_39: -5318683
+      Edda_390: 162411154
+      Edda_391: 886481947
+      Edda_392: 3639119
+      Edda_393: -6792167
+      Edda_394: 1238341135
+      Edda_395: 910763710
+      Edda_396: 760997968
+      Edda_397: 751429714
+      Edda_398: 1084852527
+      Edda_399: 1045590148
+      Edda_4: -69330368
+      Edda_40: 1494906358
+      Edda_400: 2025659585
+      Edda_401: 1941462308
+      Edda_402: -825285999
+      Edda_403: 1833197591
+      Edda_404: -335552074
+      Edda_405: 707316693
+      Edda_406: -134583771
+      Edda_407: 400230374
+      Edda_408: -652134430
+      Edda_409: -1397058073
+      Edda_41: -1339906158
+      Edda_410: -797334409
+      Edda_411: -1494834833
+      Edda_412: 474175467
+      Edda_413: 1858693551
+      Edda_414: 1598451641
+      Edda_415: -998018301
+      Edda_416: -507407241
+      Edda_417: 548128734
+      Edda_42: -767212634
+      Edda_43: 867372306
+      Edda_44: 1928321448
+      Edda_45: -1114231135
+      Edda_46: 755375704
+      Edda_47: 1809687024
+      Edda_48: 1188010697
+      Edda_49: -986752104
+      Edda_5: 1198638010
+      Edda_50: -1337811196
+      Edda_51: -1859683854
+      Edda_52: 695525954
+      Edda_53: -1097671820
+      Edda_54: 84260305
+      Edda_55: 1931254548
+      Edda_56: -262712099
+      Edda_57: 2131535616
+      Edda_58: 290618672
+      Edda_59: -186204948
+      Edda_6: 1947285253
+      Edda_60: 1854901187
+      Edda_61: -891945175
+      Edda_62: -1889629638
+      Edda_63: -1996566553
+      Edda_64: -1291006594
+      Edda_65: -515122362
+      Edda_66: -389795954
+      Edda_67: -681383046
+      Edda_68: -122606358
+      Edda_69: -1207124836
+      Edda_7: -1860733361
+      Edda_70: 1611447812
+      Edda_71: -849666327
+      Edda_72: -1526845777
+      Edda_73: 863499140
+      Edda_74: -103848536
+      Edda_75: -681552566
+      Edda_76: 723734046
+      Edda_77: 1710233013
+      Edda_78: 1519771702
+      Edda_79: -1314156644
+      Edda_80: 1829226254
+      Edda_81: 1546210472
+      Edda_82: 655934096
+      Edda_83: -2061733868
+      Edda_84: 1337079810
+      Edda_85: 114239255
+      Edda_86: 1836895423
+      Edda_87: 1207045451
+      Edda_88: -1813065592
+      Edda_89: 600570611
+      Edda_9: 604386134
+      Edda_91: 1941473449
+      Edda_92: 113959689
+      Edda_93: 772150895
+      Edda_94: 1416580729
+      Edda_95: -1196389418
+      Edda_96: -1217184704
+      Edda_97: 2073499405
+      Edda_98: -432298342
+      Edda_99: -367483671
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
