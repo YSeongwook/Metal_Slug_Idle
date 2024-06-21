@@ -124,8 +124,8 @@ TextureImporter:
         y: 629
         width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.025, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,8 +187,8 @@ TextureImporter:
         y: 629
         width: 41
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.048780486, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -670,8 +670,8 @@ TextureImporter:
         y: 395
         width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -687,12 +687,12 @@ TextureImporter:
       name: CatEar_Leona_27
       rect:
         serializedVersion: 2
-        x: 83
+        x: 81
         y: 395
-        width: 38
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -708,12 +708,12 @@ TextureImporter:
       name: CatEar_Leona_28
       rect:
         serializedVersion: 2
-        x: 150
+        x: 143
         y: 395
-        width: 33
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -729,12 +729,12 @@ TextureImporter:
       name: CatEar_Leona_29
       rect:
         serializedVersion: 2
-        x: 219
+        x: 207
         y: 395
-        width: 28
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -750,12 +750,12 @@ TextureImporter:
       name: CatEar_Leona_30
       rect:
         serializedVersion: 2
-        x: 276
+        x: 269
         y: 395
-        width: 33
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -771,12 +771,12 @@ TextureImporter:
       name: CatEar_Leona_31
       rect:
         serializedVersion: 2
-        x: 337
+        x: 334
         y: 395
-        width: 37
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -792,12 +792,12 @@ TextureImporter:
       name: CatEar_Leona_32
       rect:
         serializedVersion: 2
-        x: 397
-        y: 396
-        width: 39
+        x: 396
+        y: 395
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -813,12 +813,12 @@ TextureImporter:
       name: CatEar_Leona_33
       rect:
         serializedVersion: 2
-        x: 460
+        x: 455
         y: 395
-        width: 35
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -834,12 +834,12 @@ TextureImporter:
       name: CatEar_Leona_34
       rect:
         serializedVersion: 2
-        x: 528
+        x: 517
         y: 395
-        width: 29
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -855,12 +855,12 @@ TextureImporter:
       name: CatEar_Leona_35
       rect:
         serializedVersion: 2
-        x: 585
-        y: 396
-        width: 30
+        x: 575
+        y: 395
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -876,12 +876,12 @@ TextureImporter:
       name: CatEar_Leona_36
       rect:
         serializedVersion: 2
-        x: 643
+        x: 636
         y: 395
-        width: 33
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -897,12 +897,12 @@ TextureImporter:
       name: CatEar_Leona_37
       rect:
         serializedVersion: 2
-        x: 701
+        x: 697
         y: 395
-        width: 36
+        width: 40
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,7 +919,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 323
+        y: 322
         width: 34
         height: 45
       alignment: 4
@@ -943,8 +943,8 @@ TextureImporter:
         y: 322
         width: 32
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.0625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -985,8 +985,8 @@ TextureImporter:
         y: 322
         width: 35
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.17142858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1006,8 +1006,8 @@ TextureImporter:
         y: 322
         width: 47
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.04255319, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1023,9 +1023,9 @@ TextureImporter:
       name: CatEar_Leona_43
       rect:
         serializedVersion: 2
-        x: 378
+        x: 376
         y: 322
-        width: 52
+        width: 54
         height: 45
       alignment: 4
       pivot: {x: 0, y: 0.5}
@@ -1044,9 +1044,9 @@ TextureImporter:
       name: CatEar_Leona_44
       rect:
         serializedVersion: 2
-        x: 456
+        x: 454
         y: 322
-        width: 56
+        width: 58
         height: 45
       alignment: 4
       pivot: {x: 0, y: 0.5}
@@ -1065,9 +1065,9 @@ TextureImporter:
       name: CatEar_Leona_45
       rect:
         serializedVersion: 2
-        x: 542
+        x: 540
         y: 322
-        width: 57
+        width: 59
         height: 45
       alignment: 4
       pivot: {x: 0, y: 0.5}

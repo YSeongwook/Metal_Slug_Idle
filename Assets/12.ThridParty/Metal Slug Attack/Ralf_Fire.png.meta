@@ -250,8 +250,8 @@ TextureImporter:
         y: 3658
         width: 53
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0.45555556}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -376,8 +376,8 @@ TextureImporter:
         y: 3584
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0.45555556}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,9 +477,9 @@ TextureImporter:
       name: Ralf_Fire_29
       rect:
         serializedVersion: 2
-        x: 79
+        x: 78
         y: 3342
-        width: 55
+        width: 56
         height: 45
       alignment: 4
       pivot: {x: 0, y: 0.5}
@@ -519,12 +519,12 @@ TextureImporter:
       name: Ralf_Fire_31
       rect:
         serializedVersion: 2
-        x: 206
+        x: 204
         y: 3342
-        width: 53
+        width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.06909091, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -540,12 +540,12 @@ TextureImporter:
       name: Ralf_Fire_32
       rect:
         serializedVersion: 2
-        x: 267
+        x: 266
         y: 3342
-        width: 54
+        width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.036363635, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -561,12 +561,12 @@ TextureImporter:
       name: Ralf_Fire_33
       rect:
         serializedVersion: 2
-        x: 333
+        x: 332
         y: 3342
-        width: 54
+        width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.018181818, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -582,11 +582,11 @@ TextureImporter:
       name: Ralf_Fire_34
       rect:
         serializedVersion: 2
-        x: 395
+        x: 394
         y: 3342
-        width: 54
+        width: 55
         height: 45
-      alignment: 4
+      alignment: 9
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
