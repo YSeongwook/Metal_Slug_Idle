@@ -5,6 +5,7 @@ public class PlayerController2_5D : MonoBehaviour
 {
     public float moveSpeed = 5f; // 기본 이동 속도
     public float zSpeedMultiplier = 1.78f; // 16:9 비율에 맞춘 세로 이동 속도 배수 (16/9 = 1.78)
+    public float flipSpeed = 10f; // 스프라이트 반전 속도
     private Vector2 moveInput = Vector2.zero;
     private Rigidbody rb;
     private SpriteRenderer spriteRenderer;
@@ -42,7 +43,7 @@ public class PlayerController2_5D : MonoBehaviour
         Vector3 moveDirection = mainCamera.transform.rotation * new Vector3(moveInput.x, 0, moveInput.y * zSpeedMultiplier);
 
         // 현재 위치에서 y값을 초기값으로 고정
-        Vector3 newPosition = rb.position + moveDirection * moveSpeed * Time.fixedDeltaTime;
+        Vector3 newPosition = rb.position + moveDirection * (moveSpeed * Time.fixedDeltaTime);
         newPosition.y = initialY;
 
         // 캐릭터 이동
@@ -61,13 +62,12 @@ public class PlayerController2_5D : MonoBehaviour
     // 스프라이트 좌우 반전 처리
     void HandleSpriteFlip(float moveHorizontal)
     {
-        if (moveHorizontal < 0)
+        if (moveHorizontal != 0)
         {
-            spriteRenderer.flipX = true; // 왼쪽으로 이동 시 좌우 반전
-        }
-        else if (moveHorizontal > 0)
-        {
-            spriteRenderer.flipX = false; // 오른쪽으로 이동 시 좌우 반전 해제
+            float targetScaleX = moveHorizontal < 0 ? -1 : 1;
+            Vector3 newScale = spriteRenderer.transform.localScale;
+            newScale.x = Mathf.Lerp(newScale.x, targetScaleX, Time.fixedDeltaTime * flipSpeed);
+            spriteRenderer.transform.localScale = newScale;
         }
     }
 }

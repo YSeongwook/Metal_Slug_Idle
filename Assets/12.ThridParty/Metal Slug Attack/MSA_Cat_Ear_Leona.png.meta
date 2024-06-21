@@ -1,0 +1,1838 @@
+fileFormatVersion: 2
+guid: db3cb20c4a824714aaaa007c5f196b8b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 629
+        width: 40
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548a34ae83cf3fa458496363b0c4fc8b
+      internalID: -1972186517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 629
+        width: 38
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6188f305107ce44b20da35777f1121
+      internalID: -611749113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 629
+        width: 38
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9355843f5858745a84ae85c1883019
+      internalID: -1797797623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 629
+        width: 41
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b88acec079e29c4da7fe4d4f1ff1a6c
+      internalID: 585033643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_4
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 629
+        width: 30
+        height: 38
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf65bb833c3c7af42b930929f658b482
+      internalID: 41099730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_5
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 629
+        width: 34
+        height: 35
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693c7d0d5562ac44b96a7dbda6bad76c
+      internalID: 1844460590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_6
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 629
+        width: 33
+        height: 33
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664530e7fb2adc047945a8a0b1b03047
+      internalID: 2004704729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 560
+        width: 30
+        height: 38
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea38ed0bdab51242a8f6bb5df1f83e7
+      internalID: 1091151300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 561
+        width: 31
+        height: 35
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696de03dd2441974eb557674ea7b87e4
+      internalID: 1183401531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_9
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 561
+        width: 31
+        height: 35
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e048f0f1b5b3de42a2e86ca44cb8294
+      internalID: -382794675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_10
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 560
+        width: 32
+        height: 34
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8091b3b15ea8f3449b49b991290dd7c6
+      internalID: 1625354562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_11
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 560
+        width: 44
+        height: 32
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084ca9e5da3d5d1459567f2ad5d06d87
+      internalID: -1187214095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_12
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 560
+        width: 42
+        height: 25
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e806c1f2c31e09a4eb8765cc5b44c643
+      internalID: -2052748871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_13
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 552
+        width: 42
+        height: 30
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3b0ff097a01be47a2bd70a11441f02
+      internalID: 1878788618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 559
+        width: 38
+        height: 29
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae078cc2dfd22c4fbad27eb65590c3a
+      internalID: -1753620854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_15
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 559
+        width: 40
+        height: 31
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1edf53608713f04b8521b5adbb5bcb3
+      internalID: -825237691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_16
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 560
+        width: 30
+        height: 30
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5f6355220a274408b35b5704d87f6b
+      internalID: 1861100367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 501
+        width: 40
+        height: 22
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77d1aa30b8698741844565ab6c90f98
+      internalID: 463220805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 496
+        width: 34
+        height: 29
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65052ffc0148a9149b03a878878f9462
+      internalID: 1601594363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_19
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 496
+        width: 37
+        height: 27
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c662ee9317a3aba42a76fd3823be037e
+      internalID: -319402819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_20
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 496
+        width: 36
+        height: 31
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37ca1fd7086a0c4496ccc834ba0044e
+      internalID: -1658764523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_21
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 496
+        width: 38
+        height: 30
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8523c3981713333408e4b14dde7e60a7
+      internalID: 654303388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_22
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 497
+        width: 31
+        height: 31
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09e297ae8aee134899ff16d2ad9259c
+      internalID: -1217668126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_23
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 496
+        width: 38
+        height: 25
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5974c7c29814fdb408cb9ebc56831172
+      internalID: 397071549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_24
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 496
+        width: 44
+        height: 14
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4d6af433b536d4b9bee7d77e96cae2
+      internalID: -1328851198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_25
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 496
+        width: 47
+        height: 12
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9335cc28e682f4fbd5af7af693acc9
+      internalID: -332365397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_26
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 395
+        width: 40
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35986c2847fbc85418285e63f57d33c4
+      internalID: 60684785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_27
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 395
+        width: 38
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1349cdbb994a38140b882f27dd6226ce
+      internalID: -2095300983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_28
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 395
+        width: 33
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b927ded5509d8f44a966031cca8412c
+      internalID: -1976117561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_29
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 395
+        width: 28
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5cbfef8873f624fba20d6e4bec722b
+      internalID: 1104924947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_30
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 395
+        width: 33
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f77849e801385149a4b253961de0053
+      internalID: -1578545081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_31
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 395
+        width: 37
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8e9caf66c87c047bbe0f9dc6927a04
+      internalID: -1753431533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_32
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 396
+        width: 39
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bf25565907deb44977f27360fa7dcd
+      internalID: 1730156992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_33
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 395
+        width: 35
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d042097a36d3d9749b5cf749fc4a31ed
+      internalID: -1073567632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_34
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 395
+        width: 29
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e78d4f7de4125d42a35962f691a3a10
+      internalID: 1585911267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_35
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 396
+        width: 30
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea19646e8aa99e4f8ac7fb82513a82b
+      internalID: 453741373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_36
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 395
+        width: 33
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e242b8aa36fc0b443835e105dece415f
+      internalID: -1497695769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_37
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 395
+        width: 36
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88dd40d1de8fa94b8cc947e093b3447
+      internalID: -1779169440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_38
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 323
+        width: 34
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69df33348d4b9be408996fd933627cda
+      internalID: -2126762107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_39
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 322
+        width: 32
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a07bbba7107ba4186754f0f92eb9aa
+      internalID: -994011770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_40
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 322
+        width: 27
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9774df7e6d4c70941a86fb79872b82e2
+      internalID: 153768710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_41
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 322
+        width: 35
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d0cf8bbe20a25478359597e0ba2166
+      internalID: 2084676498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_42
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 322
+        width: 47
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7179db804d2314bab73b6e72499cb2
+      internalID: -2005436284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_43
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 322
+        width: 52
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a03676e79a95848be995438229f239
+      internalID: 904130337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_44
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 322
+        width: 56
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505b00e8c2b2cb84dabf3c6eed66d13e
+      internalID: 1807275530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_45
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 322
+        width: 57
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec3806e1cb6ec7439ce3b22c66c5952
+      internalID: 1921542568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CatEar_Leona_46
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 322
+        width: 38
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7639039a015b4a841b58cc25a74c1ee4
+      internalID: 781943420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_49
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 230
+        width: 28
+        height: 45
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9816506d5fa599c4fa66b06223f0fbe3
+      internalID: 247832785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_50
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 229
+        width: 28
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac9c3ce14889ff438919e9463e077c2
+      internalID: -1995456632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_51
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 229
+        width: 50
+        height: 50
+      alignment: 9
+      pivot: {x: 0, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2911588358cfe4394e2e3afbea1f57
+      internalID: 1810476128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_52
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 229
+        width: 51
+        height: 50
+      alignment: 9
+      pivot: {x: 0, y: 0.45918366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9883847db44784846bf5f6a2ecff7d75
+      internalID: -1448393314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_53
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 228
+        width: 49
+        height: 55
+      alignment: 9
+      pivot: {x: 0, y: 0.4090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8310d3ad87ff9e14684278f3b382805f
+      internalID: -1550816939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_54
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 228
+        width: 57
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d63a2d374a8a348b721b5bb1063711
+      internalID: 95542067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_55
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 220
+        width: 45
+        height: 59
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28166cb297b0e274eaaf0b3ec8ff7261
+      internalID: -1494461799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_56
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 217
+        width: 45
+        height: 61
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f860045086701c94bafb698de3aedc0e
+      internalID: -552364918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_58
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 132
+        width: 52
+        height: 53
+      alignment: 9
+      pivot: {x: 0.115384616, y: 0.5754717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccb31cd828090244a000a6522880f02
+      internalID: 1849533492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_60
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 131
+        width: 50
+        height: 54
+      alignment: 9
+      pivot: {x: 0.24, y: 0.5833333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56723f4b9e8fe5429985f168f3ecf5b
+      internalID: -754700944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_63
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 136
+        width: 49
+        height: 49
+      alignment: 9
+      pivot: {x: 0.30612245, y: 0.5408163}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71da0c3077fabae459edc89de2007ce2
+      internalID: -1375725365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_65
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 140
+        width: 52
+        height: 45
+      alignment: 9
+      pivot: {x: 0.3653846, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2346d8bf251041a4387808ddd617dcc8
+      internalID: 1413063378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_66
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 140
+        width: 35
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09f273a878c8894192bfe6d57700334
+      internalID: 860850226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_67
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 140
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92a14ff503716342a6ebacc06f81244
+      internalID: -1266713236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_70
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 46
+        width: 25
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049e0b0bfdd753840a26aed2a541971b
+      internalID: 904787021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_71
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 46
+        width: 24
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061b3b449e11f7b4c8f95dd69a7e5169
+      internalID: -377306612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_72
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 46
+        width: 24
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad152a762edaa9438c630b5a71986b4
+      internalID: 928847492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_73
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 46
+        width: 23
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb779fab61736e4cb813d70b985317d
+      internalID: -1799630593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_74
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 46
+        width: 24
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13dc64a957560ec42af23c890c9c6b2b
+      internalID: -776045822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_75
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 46
+        width: 25
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d420c293e51e74d8bffa57de3cd902
+      internalID: -423388304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_76
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 46
+        width: 26
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70bc2795a7d31a48b8da2f0f791d2ed
+      internalID: 1182655133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_77
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 46
+        width: 33
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f723b3f2586ade45ab7d5703db92fa1
+      internalID: 946408342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_78
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 46
+        width: 35
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0170b03698ca84ca868aefecbc9d2b
+      internalID: -165561891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_79
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 46
+        width: 37
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faaccbea51a1c574f8ec48c5349cdbbd
+      internalID: -1474316418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_80
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 46
+        width: 37
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bb0234b4edd764c84c55d4296b2ed8
+      internalID: -493501842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_81
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 46
+        width: 32
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723d8466500654a4f9603a19f190569d
+      internalID: -226457798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_82
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 46
+        width: 32
+        height: 44
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b98e1bef5f233dd44a8f3be7de6b1fbe
+      internalID: 1636987043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_83
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 46
+        width: 30
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81eff040c25d004287b7aaf7ca7bcbb
+      internalID: 1761105087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_84
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 46
+        width: 31
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7951628cb8546f349b3cc5110b268c7c
+      internalID: -1381907211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MSA_Cat_Ear_Leona_85
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 46
+        width: 33
+        height: 43
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b41854cda7000e4bb2ccb5ac80eb078
+      internalID: -1390397616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 61edde14ec8bd4f4dac6433ad9d4b808
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      CatEar_Leona_10: 1625354562
+      CatEar_Leona_11: -1187214095
+      CatEar_Leona_12: -2052748871
+      CatEar_Leona_13: 1878788618
+      CatEar_Leona_14: -1753620854
+      CatEar_Leona_15: -825237691
+      CatEar_Leona_16: 1861100367
+      CatEar_Leona_17: 463220805
+      CatEar_Leona_18: 1601594363
+      CatEar_Leona_19: -319402819
+      CatEar_Leona_20: -1658764523
+      CatEar_Leona_21: 654303388
+      CatEar_Leona_22: -1217668126
+      CatEar_Leona_23: 397071549
+      CatEar_Leona_24: -1328851198
+      CatEar_Leona_25: -332365397
+      CatEar_Leona_26: 60684785
+      CatEar_Leona_27: -2095300983
+      CatEar_Leona_28: -1976117561
+      CatEar_Leona_29: 1104924947
+      CatEar_Leona_30: -1578545081
+      CatEar_Leona_31: -1753431533
+      CatEar_Leona_32: 1730156992
+      CatEar_Leona_33: -1073567632
+      CatEar_Leona_34: 1585911267
+      CatEar_Leona_35: 453741373
+      CatEar_Leona_36: -1497695769
+      CatEar_Leona_37: -1779169440
+      CatEar_Leona_38: -2126762107
+      CatEar_Leona_39: -994011770
+      CatEar_Leona_40: 153768710
+      CatEar_Leona_41: 2084676498
+      CatEar_Leona_42: -2005436284
+      CatEar_Leona_43: 904130337
+      CatEar_Leona_44: 1807275530
+      CatEar_Leona_45: 1921542568
+      CatEar_Leona_46: 781943420
+      CatEar_Leona_7: 1091151300
+      CatEar_Leona_8: 1183401531
+      CatEar_Leona_9: -382794675
+      MSA_Cat_Ear_Leona_0: -1972186517
+      MSA_Cat_Ear_Leona_1: -611749113
+      MSA_Cat_Ear_Leona_2: -1797797623
+      MSA_Cat_Ear_Leona_3: 585033643
+      MSA_Cat_Ear_Leona_4: 41099730
+      MSA_Cat_Ear_Leona_47: 1182833059
+      MSA_Cat_Ear_Leona_48: 2115572529
+      MSA_Cat_Ear_Leona_49: 247832785
+      MSA_Cat_Ear_Leona_5: 1844460590
+      MSA_Cat_Ear_Leona_50: -1995456632
+      MSA_Cat_Ear_Leona_51: 1810476128
+      MSA_Cat_Ear_Leona_52: -1448393314
+      MSA_Cat_Ear_Leona_53: -1550816939
+      MSA_Cat_Ear_Leona_54: 95542067
+      MSA_Cat_Ear_Leona_55: -1494461799
+      MSA_Cat_Ear_Leona_56: -552364918
+      MSA_Cat_Ear_Leona_57: -1687617806
+      MSA_Cat_Ear_Leona_58: 1849533492
+      MSA_Cat_Ear_Leona_59: -1746462926
+      MSA_Cat_Ear_Leona_6: 2004704729
+      MSA_Cat_Ear_Leona_60: -754700944
+      MSA_Cat_Ear_Leona_61: -139621476
+      MSA_Cat_Ear_Leona_62: -804406687
+      MSA_Cat_Ear_Leona_63: -1375725365
+      MSA_Cat_Ear_Leona_64: 257750500
+      MSA_Cat_Ear_Leona_65: 1413063378
+      MSA_Cat_Ear_Leona_66: 860850226
+      MSA_Cat_Ear_Leona_67: -1266713236
+      MSA_Cat_Ear_Leona_68: -538390651
+      MSA_Cat_Ear_Leona_69: -717469753
+      MSA_Cat_Ear_Leona_70: 904787021
+      MSA_Cat_Ear_Leona_71: -377306612
+      MSA_Cat_Ear_Leona_72: 928847492
+      MSA_Cat_Ear_Leona_73: -1799630593
+      MSA_Cat_Ear_Leona_74: -776045822
+      MSA_Cat_Ear_Leona_75: -423388304
+      MSA_Cat_Ear_Leona_76: 1182655133
+      MSA_Cat_Ear_Leona_77: 946408342
+      MSA_Cat_Ear_Leona_78: -165561891
+      MSA_Cat_Ear_Leona_79: -1474316418
+      MSA_Cat_Ear_Leona_80: -493501842
+      MSA_Cat_Ear_Leona_81: -226457798
+      MSA_Cat_Ear_Leona_82: 1636987043
+      MSA_Cat_Ear_Leona_83: 1761105087
+      MSA_Cat_Ear_Leona_84: -1381907211
+      MSA_Cat_Ear_Leona_85: -1390397616
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
