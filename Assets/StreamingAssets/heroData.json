@@ -1,0 +1,44 @@
+﻿{
+  "heroes": [
+    {
+      "name": "루이즈",
+      "grade": "A",
+      "level": 50,
+      "health": 1000,
+      "attack": 150,
+      "portraitPath": "HeroPortraits/Louise"
+    },
+    {
+      "name": "만능 군인 랄프",
+      "grade": "SSS",
+      "level": 50,
+      "health": 1500,
+      "attack": 200,
+      "portraitPath": "HeroPortraits/OneMan_Kyle"
+    },
+    {
+      "name": "고양이 귀 레오나",
+      "grade": "SSS",
+      "level": 50,
+      "health": 1000,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/CatEar_Leona"
+    },
+    {
+      "name": "디온",
+      "grade": "S",
+      "level": 50,
+      "health": 1250,
+      "attack": 250,
+      "portraitPath": "HeroPortraits/Dion"
+    },
+    {
+      "name": "에다",
+      "grade": "S",
+      "level": 50,
+      "health": 1200,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Edda"
+    }
+  ]
+}
