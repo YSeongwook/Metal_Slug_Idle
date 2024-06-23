@@ -168,7 +168,7 @@ TextureImporter:
         height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -207,7 +207,7 @@ TextureImporter:
         x: 1656
         y: 322
         width: 90
-        height: 133
+        height: 134
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,6 +326,573 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_2
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 994
+        width: 88
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcc1f7f7d3dbac478522942206e5431
+      internalID: 2098900686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Btn_Auto
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1534
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9561b450b3a8d9a4aaa88d47f0df6f18
+      internalID: 2059654163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gradation_Blue
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 590
+        width: 150
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2747192b652d5e14e92ee4609aea2d3b
+      internalID: -220887197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_Portrarit
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 806
+        width: 112
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 33, y: 33, z: 33, w: 33}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868f3734ac8ba77428d0e2476ba10b34
+      internalID: -784343410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_Portrait
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 1483
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3a966628133f247bf500e525a739f5
+      internalID: 1295741555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar_UserExp
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 1371
+        width: 174
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a9c3023f6a354bb20bb8784ebbb8f
+      internalID: -471300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar_Background
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 1753
+        width: 64
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96010649c6e8eb4eb91f96f54a8a5d1
+      internalID: 694279397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gradation_Red
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1843
+        width: 374
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fa7caa31b467e4dac214bf343fa8b3
+      internalID: 916978636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gradtion_White
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 1743
+        width: 360
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fc9a09181f77e4b974bd67c7d6e6d4
+      internalID: -860316776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bar_Glow_White
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 1853
+        width: 6
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a451baa7c9ddd4fb80a032a969da71
+      internalID: 1567129248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gradation_Black
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 1829
+        width: 374
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc578e3cee87f8f429aca762bd93663d
+      internalID: 842625512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_Setting
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1410
+        width: 96
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cee0ae1da201994f909b4a2c4101e16
+      internalID: -1992670987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Setting
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1679
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be421aff34e8134468738d58a17fc2d2
+      internalID: -980861336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animated Arrow
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 1339
+        width: 85
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3d6e9362f674845b34bdb5dd1a64b9
+      internalID: -1962447497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Indicator_Arrow
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 1540
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee446440d5eda2b4497101bd75940568
+      internalID: 832810696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Indicator_GaugeBack
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1638
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894dd344795fba449a652a53a6ae5e00
+      internalID: -1388944216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_Circle
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1516
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60444e677883aa34dac1305aafed025a
+      internalID: 1163601858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_SettingSpread
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1874
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 20, z: 20, w: 20}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47d36630040be44089139dd86d8c36a
+      internalID: 1681667513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Settin
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 1447
+        width: 82
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba28dd01a3152d4c9d458cb3dd66e61
+      internalID: -467996728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Message
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1692
+        width: 70
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d2f2cf4fa9148429ffc13b7cf779a2
+      internalID: -1152493131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Crew
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1073
+        width: 74
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f22e18e49e0d748beb56886b92bb21
+      internalID: 116951510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Honor
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 1102
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4735bf1cf76dd0941bbc3ecab6da3769
+      internalID: 1782616445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Ranking
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1314
+        width: 80
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff3d8a2554609a4a9a9d822ad72a8de
+      internalID: -63773374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_SleepMode
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1455
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2b6bf0aa127c140a3c7d926b03af06
+      internalID: 1489362162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Calendar
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1286
+        width: 88
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840ebae1eba93304a864cdae508bef8e
+      internalID: -238866815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Notice
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1711
+        width: 74
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4963e01da7254895a63b917da72e0
+      internalID: -1425534369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_LuckyWheel
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1110
+        width: 77
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ebc9a0bdec7b347aad1b9b959e6a6e
+      internalID: 284223642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -337,15 +904,43 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Animated Arrow: -1962447497
+      Arrow_Portrait: 1295741555
+      Bar_Background: 694279397
       Bar_Btn: -1045338615
+      Bar_Glow_White: 1567129248
+      Bar_UserExp: -471300152
+      Btn_Auto: 2059654163
       Dot_Cam: 1380075240
       Dot_Cam2: 299644772
+      Frame_Circle: 1163601858
       Frame_Menu: 1007766267
       Frame_Party: -338084932
+      Frame_Portrarit: -784343410
+      Frame_Setting: -1992670987
+      Frame_SettingSpread: 1681667513
+      Gradation_Black: 842625512
+      Gradation_Blue: -220887197
+      Gradation_MainBoss: 189608460
+      Gradation_Red: 916978636
+      Gradtion_White: -860316776
       Icon_Box: -109754346
+      Icon_Calendar: -238866815
       Icon_Cam: 1744224617
+      Icon_Crew: 116951510
+      Icon_Honor: 1782616445
+      Icon_LuckyWheel: 284223642
+      Icon_Message: -1152493131
+      Icon_Notice: -1425534369
+      Icon_Ranking: -63773374
+      Icon_Settin: -467996728
+      Icon_Setting: -980861336
+      Icon_SleepMode: 1489362162
+      Indicator_Arrow: 832810696
+      Indicator_GaugeBack: -1388944216
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_0: 154814926
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_1: -1834279502
+      sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_2: 2098900686
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_3: 18790017
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_5: 2030107166
   spritePackingTag: 
