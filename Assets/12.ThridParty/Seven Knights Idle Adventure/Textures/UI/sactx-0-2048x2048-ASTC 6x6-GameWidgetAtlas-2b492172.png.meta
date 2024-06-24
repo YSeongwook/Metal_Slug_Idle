@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_3
+      name: Icon_Menu
       rect:
         serializedVersion: 2
         x: 1569
@@ -893,6 +893,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Icon_ChangeEnhanceMode
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1845
+        width: 104
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b89ac88088cf034280a87a35770847d
+      internalID: -1616089099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_Violet
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1514
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 15, y: 15, z: 15, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76a25980f4c73f24faf5e8fd507996ed
+      internalID: -2095119926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_ThreeLine
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 1586
+        width: 47
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c7214615a44f74c91166fdc1542b4c
+      internalID: 975696194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_List
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1721
+        width: 76
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e957622594ffa548847c482366a8cb2
+      internalID: -108923995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -919,6 +1003,7 @@ TextureImporter:
       Frame_Portrarit: -784343410
       Frame_Setting: -1992670987
       Frame_SettingSpread: 1681667513
+      Frame_Violet: -2095119926
       Gradation_Black: 842625512
       Gradation_Blue: -220887197
       Gradation_MainBoss: 189608460
@@ -927,21 +1012,24 @@ TextureImporter:
       Icon_Box: -109754346
       Icon_Calendar: -238866815
       Icon_Cam: 1744224617
+      Icon_ChangeEnhanceMode: -1616089099
       Icon_Crew: 116951510
       Icon_Honor: 1782616445
+      Icon_List: -108923995
       Icon_LuckyWheel: 284223642
+      Icon_Menu: 18790017
       Icon_Message: -1152493131
       Icon_Notice: -1425534369
       Icon_Ranking: -63773374
       Icon_Settin: -467996728
       Icon_Setting: -980861336
       Icon_SleepMode: 1489362162
+      Icon_ThreeLine: 975696194
       Indicator_Arrow: 832810696
       Indicator_GaugeBack: -1388944216
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_0: 154814926
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_1: -1834279502
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_2: 2098900686
-      sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_3: 18790017
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_5: 2030107166
   spritePackingTag: 
   pSDRemoveMatte: 0
