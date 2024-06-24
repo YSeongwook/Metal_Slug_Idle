@@ -977,6 +977,39 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Mask_Portrait
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 737
+        width: 84
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: -26}
+        - {x: -41, y: 49}
+        - {x: -28, y: 51}
+        - {x: -19, y: 54}
+        - {x: -8, y: 58}
+        - {x: 0, y: 63}
+        - {x: 9, y: 57}
+        - {x: 20, y: 53}
+        - {x: 31, y: 50}
+        - {x: 42, y: 48}
+        - {x: 38, y: -23}
+        - {x: 0, y: -58}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28ad9c357ace704a9164e3e62d13f92
+      internalID: 1490613454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1027,6 +1060,7 @@ TextureImporter:
       Icon_ThreeLine: 975696194
       Indicator_Arrow: 832810696
       Indicator_GaugeBack: -1388944216
+      Mask_Portrait: 1490613454
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_0: 154814926
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_1: -1834279502
       sactx-0-2048x2048-ASTC 6x6-GameWidgetAtlas-2b492172_2: 2098900686
