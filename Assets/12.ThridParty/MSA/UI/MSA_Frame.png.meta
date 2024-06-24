@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_6
+      name: MSA_Stars_Military
       rect:
         serializedVersion: 2
         x: 20
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_7
+      name: MSA_Stars_Platinum
       rect:
         serializedVersion: 2
         x: 80
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_8
+      name: MSA_Stars_Gold
       rect:
         serializedVersion: 2
         x: 140
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_9
+      name: MSA_Stars_Silver
       rect:
         serializedVersion: 2
         x: 20
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_10
+      name: MSA_Stars_Bronze
       rect:
         serializedVersion: 2
         x: 80
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_11
+      name: MSA_Stars_Iron
       rect:
         serializedVersion: 2
         x: 140
@@ -372,8 +372,8 @@ TextureImporter:
       name: MSA_Frame_12
       rect:
         serializedVersion: 2
-        x: 23
-        y: 193
+        x: 21
+        y: 137
         width: 46
         height: 18
       alignment: 0
@@ -390,641 +390,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_13
+      name: MSA_1Star
       rect:
         serializedVersion: 2
-        x: 106
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aae75bcb6ed2e2d4787dcc3609a7d916
-      internalID: 1445438535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_14
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 203
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe6892fed41f3ad4da229a3160b080eb
-      internalID: -2132904199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_15
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f141c3ee4899a6f4289ac0eb1fede6d2
-      internalID: 1654851300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_16
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7972f4011a0c83f488670ba84362dfe5
-      internalID: 969475382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_17
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20de853b41b1e4740adccd89a9c86a63
-      internalID: 176637828
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_18
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8acbf807de6232c419f3a63ec31b7e75
-      internalID: 865131084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_19
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42c27e834a8b96b429a2154d005cd23a
-      internalID: -272607302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_20
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd8218f47c73e5b4d9c4e1aa36852723
-      internalID: 769280297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_21
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77bdaa71842250f4ca4528c41b1eacbe
-      internalID: -424286082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_22
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 203
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a285cc960245775418ed40fbb3f678c7
-      internalID: 1258124644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_23
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 192
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d0fa4acc8df74947a6bdd419adb49a3
-      internalID: 390387946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_24
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 193
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39215601ef0a5b648bdeb4752b843d87
-      internalID: -574292261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_25
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7101071c496de564bafdb39895708295
-      internalID: -1644095135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_26
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8631e7b2b0e5b9141967604d13f189d7
-      internalID: -823606577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_27
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e553ac78ea305794baad6c94d8e7703d
-      internalID: -845186422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_28
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: def414fa3f9eac24baa50bd421a0d914
-      internalID: -1031081641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_29
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4a302a1f3410fe4192e9114c03f1767
-      internalID: -357479790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_30
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69233ebd8ca7421439924afc39602a8e
-      internalID: -1441253510
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_31
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5f649e488dfc9d41b3eb3d775540a15
-      internalID: 2000088587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_32
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 193
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d775e0bdcb0cca3478fc584a326304fb
-      internalID: -15887411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_33
-      rect:
-        serializedVersion: 2
-        x: 106
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa77f8e24b1cc1f488528e532a5e7c93
-      internalID: 75985061
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_34
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 183
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f056e84ef5203141ad06d9580af7a56
-      internalID: -833379233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_35
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 072857ee7d5ca71489d7b6fc245cb3df
-      internalID: 688811781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_36
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80128b9876f2c7647a75a1c868e94d19
-      internalID: -919550702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_37
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 831df2edd7e10be4aad9657756c2b941
-      internalID: -208295638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_38
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e81f0fc631435d4da0cb4cd792e342c
-      internalID: 434455733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_39
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f226ee938467984f86b7a4035ce0acf
-      internalID: 1068330307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_40
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 851d523c60c346c4086d8cea5b26de3f
-      internalID: -1428305893
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_41
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4215a73c9905544bbe351c2636a3b36
-      internalID: -465616973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_42
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 183
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cba13b3bf299977428c7ab5c36972062
-      internalID: 169895522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_43
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 178
+        x: 30
+        y: 213
         width: 5
         height: 5
       alignment: 0
@@ -1041,222 +411,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_44
+      name: MSA_2Star
       rect:
         serializedVersion: 2
-        x: 106
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bf4c885080683047a9f459b9a148b4a
-      internalID: 856800514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_45
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 173
-        width: 4
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3cd2adc4c5fd8bd4380fc216c79a2f23
-      internalID: 152949936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_46
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f455177e37457f94894210905a816e51
-      internalID: -50998483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_47
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8adfe4cf546eb6141a33d934313e5428
-      internalID: -87273029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_48
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5acf79ffde486f746beabe7ea1260fed
-      internalID: 1676452408
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_49
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddf40b4df56a14148b3adb4e57a91fa7
-      internalID: -927327125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_50
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05b6644b2a7c46b4f9006eff130a7d9f
-      internalID: -1068771552
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_51
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78924ae8b1cd2d84bb6237d19ca98ea7
-      internalID: -690239754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_52
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 021b5248f4c0de249b28705f0906f4cc
-      internalID: -280551742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_53
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 173
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc2f7a6815798f14090d35cb8d7ec7ab
-      internalID: -1983022934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_54
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 171
-        width: 5
+        x: 30
+        y: 206
+        width: 14
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1272,33 +432,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_55
+      name: MSA_3Star
       rect:
         serializedVersion: 2
-        x: 40
-        y: 171
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 152abde12440fa448b7e31d1194caaf6
-      internalID: -1715301250
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_56
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 164
-        width: 5
+        x: 30
+        y: 199
+        width: 23
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1314,54 +453,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Frame_57
+      name: MSA_4Star
       rect:
         serializedVersion: 2
-        x: 40
-        y: 164
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39895d794a170c94ca0c55e39f4530df
-      internalID: 115029798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_58
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 164
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a633991d692a104ea300c147c4c8f46
-      internalID: -366053178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_59
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 158
-        width: 5
+        x: 30
+        y: 193
+        width: 32
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1372,300 +469,6 @@ TextureImporter:
       bones: []
       spriteID: e52406463f1225640a997ffc2d4b86e4
       internalID: -1690321649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_60
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 158
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3dc3a4bfc383999449c2c4941cf62c61
-      internalID: -920501346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_61
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 158
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35d2b00da4733d4498d9eefeadc12b95
-      internalID: 525174090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_62
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 158
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fe5f9599da54164ca0b670d21e5b377
-      internalID: 1406933318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_64
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 115f4308a444816459b16c1a532c56ae
-      internalID: -221463789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_65
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 122
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 371536ab7b105e44386934299069ac5f
-      internalID: 1051749646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_66
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8eff93ea8ac07c45a60ad94fd996124
-      internalID: 1902651023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_67
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7707bd7b2e9ec6459e59d3cd2fa7493
-      internalID: -763326608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_68
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 122
-        width: 9
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93c965f5b3bb1e545ab593a8c4a8f97c
-      internalID: -1969461557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_69
-      rect:
-        serializedVersion: 2
-        x: 122
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3881c506173aa441bb09382b832db29
-      internalID: -1609277718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_70
-      rect:
-        serializedVersion: 2
-        x: 132
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e25cd9a568ac09444942a22d01d7edfa
-      internalID: -315071708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_71
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7ba8f0cddca0014db8a8642966f1d02
-      internalID: -1534656506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_72
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b60560328aafdf94b8c18821085d2665
-      internalID: -1229210160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_73
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 122
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c648ab882c544b40bb1dfc7353c2801
-      internalID: -720478396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MSA_Frame_74
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 122
-        width: 8
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f6f2ead16825ea4bbbc4523046306d1
-      internalID: -1368394040
       vertices: []
       indices: 
       edges: []
@@ -1765,8 +568,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MSA_Frame_10: 128640509
-      MSA_Frame_11: 153211161
+      MSA_1Star: 2015079335
+      MSA_2Star: -384760596
+      MSA_3Star: -190124557
+      MSA_4Star: -1690321649
       MSA_Frame_12: 1377769760
       MSA_Frame_13: 1445438535
       MSA_Frame_14: -2132904199
@@ -1798,10 +603,6 @@ TextureImporter:
       MSA_Frame_40: -1428305893
       MSA_Frame_41: -465616973
       MSA_Frame_42: 169895522
-      MSA_Frame_43: 2015079335
-      MSA_Frame_44: 856800514
-      MSA_Frame_45: 152949936
-      MSA_Frame_46: -50998483
       MSA_Frame_47: -87273029
       MSA_Frame_48: 1676452408
       MSA_Frame_49: -927327125
@@ -1809,13 +610,9 @@ TextureImporter:
       MSA_Frame_51: -690239754
       MSA_Frame_52: -280551742
       MSA_Frame_53: -1983022934
-      MSA_Frame_54: -384760596
       MSA_Frame_55: -1715301250
-      MSA_Frame_56: -190124557
       MSA_Frame_57: 115029798
       MSA_Frame_58: -366053178
-      MSA_Frame_59: -1690321649
-      MSA_Frame_6: -1335580318
       MSA_Frame_60: -920501346
       MSA_Frame_61: 525174090
       MSA_Frame_62: 1406933318
@@ -1826,7 +623,6 @@ TextureImporter:
       MSA_Frame_67: -763326608
       MSA_Frame_68: -1969461557
       MSA_Frame_69: -1609277718
-      MSA_Frame_7: -418817815
       MSA_Frame_70: -315071708
       MSA_Frame_71: -1534656506
       MSA_Frame_72: -1229210160
@@ -1837,14 +633,18 @@ TextureImporter:
       MSA_Frame_77: 557886401
       MSA_Frame_78: -714680621
       MSA_Frame_79: -638262574
-      MSA_Frame_8: 1698230484
-      MSA_Frame_9: -1255441963
       MSA_Frame_Bronze: -447421295
       MSA_Frame_Gold: -607501087
       MSA_Frame_Iron: -1313474231
       MSA_Frame_Military: 1884494126
       MSA_Frame_Platinum: 671221757
       MSA_Frame_Silver: 1836015338
+      MSA_Stars_Bronze: 128640509
+      MSA_Stars_Gold: 1698230484
+      MSA_Stars_Iron: 153211161
+      MSA_Stars_Military: -1335580318
+      MSA_Stars_Platinum: -418817815
+      MSA_Stars_Silver: -1255441963
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -3,42 +3,52 @@
     {
       "name": "루이즈",
       "grade": "A",
-      "level": 50,
+      "level": 1,
       "health": 1000,
       "attack": 150,
-      "portraitPath": "HeroPortraits/Louise"
+      "portraitPath": "HeroPortraits/Louise",
+      "starLevel": 0,
+      "type": "공격형"
     },
     {
       "name": "만능 군인 랄프",
-      "grade": "SSS",
-      "level": 50,
+      "grade": "S",
+      "level": 1,
       "health": 1500,
       "attack": 200,
-      "portraitPath": "HeroPortraits/OneMan_Kyle"
+      "portraitPath": "HeroPortraits/OneMan_Kyle",
+      "starLevel": 0,
+      "type": "만능형"
     },
     {
       "name": "고양이 귀 레오나",
-      "grade": "SSS",
-      "level": 50,
+      "grade": "S",
+      "level": 1,
       "health": 1000,
-      "attack": 300,
-      "portraitPath": "HeroPortraits/CatEar_Leona"
+      "attack": 200,
+      "portraitPath": "HeroPortraits/CatEar_Leona",
+      "starLevel": 0,
+      "type": "지원형"
     },
     {
       "name": "디온",
       "grade": "S",
-      "level": 50,
+      "level": 1,
       "health": 1250,
-      "attack": 250,
-      "portraitPath": "HeroPortraits/Dion"
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Dion",
+      "starLevel": 0,
+      "type": "공격형"
     },
     {
       "name": "에다",
       "grade": "S",
-      "level": 50,
+      "level": 1,
       "health": 1200,
-      "attack": 300,
-      "portraitPath": "HeroPortraits/Edda"
+      "attack": 350,
+      "portraitPath": "HeroPortraits/Edda",
+      "starLevel": 0,
+      "type": "공격형"
     }
   ]
 }
