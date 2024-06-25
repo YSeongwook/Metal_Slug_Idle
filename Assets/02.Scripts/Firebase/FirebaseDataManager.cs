@@ -33,7 +33,8 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
 
-    private void OnFirebaseInitialized()
+    // Firebase가 초기화될 때 호출
+    private void OnFirebaseInitialized() 
     {
         _auth = FirebaseAuth.DefaultInstance;
         _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
@@ -47,28 +48,43 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseDatabaseInitialized);
     }
 
-    private void OnFirebaseSignIn()
+    private void OnFirebaseSignIn() 
     {
         currentUser = AuthManager.Instance.GetCurrentUser();
         
         SaveUserData(currentUser);
     }
 
-    public FirebaseUser GetCurrentUser()
+    // 현재 Firebase 사용자를 반환
+    public FirebaseUser GetCurrentUser() 
     {
         return currentUser;
     }
 
+    // FirebaseUser 데이터를 저장
     private async void SaveUserData(FirebaseUser user)
     {
-        byte[] heroCollection = new byte[4];
-        var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
-        var userHeroCollection = new UserHeroCollection(user.UserId, heroCollection);
+        var userId = user.UserId;
+    
+        var userDataSnapshot = await _databaseRef.Child("users").Child(userId).GetValueAsync();
+        var userHeroCollectionSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
+    
+        if (!userDataSnapshot.Exists || !userHeroCollectionSnapshot.Exists)
+        {
+            HeroCollectionManager.Instance.Initialize(30);
+            var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
+            var userHeroCollection = new UserHeroCollection(user.UserId, HeroCollectionManager.Instance.ToBase64());
         
-        await SaveUserData(userData);
-        await SaveHeroCollection(userHeroCollection);
+            await SaveUserData(userData);
+            await SaveHeroCollection(userHeroCollection);
+        }
+        else
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("기존 사용자 데이터가 존재합니다."));
+        }
     }
 
+    // UserData 객체를 Firebase 데이터베이스에 저장
     private async Task SaveUserData(UserData userData)
     {
         var updates = new Dictionary<string, object>
@@ -96,6 +112,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
+    // UserHeroCollection 객체를 Firebase 데이터베이스에 저장
     private async Task SaveHeroCollection(UserHeroCollection userHeroCollection)
     {
         var updates = new Dictionary<string, object>
@@ -120,6 +137,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
+    // Firebase 데이터베이스에서 사용자 데이터를 로드
     public async void LoadUserData(string userId)
     {
         var userDataTask = _databaseRef.Child("users").Child(userId).GetValueAsync();
@@ -152,8 +170,8 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                 );
 
                 string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
-                byte[] heroCollection = Convert.FromBase64String(base64HeroCollection);
-                var userHeroCollection = new UserHeroCollection(userId, heroCollection);
+                HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
+                var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
 
                 UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items));
                 // 여기서 userData와 userHeroCollection을 필요한 곳에 사용
@@ -164,7 +182,26 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             }
         });
     }
+    
+    // user_HeroCollection만 로드
+    public async Task<UserHeroCollection> LoadHeroCollection(string userId)
+    {
+        var heroDataSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
 
+        if (heroDataSnapshot.Exists)
+        {
+            string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
+            var userHeroCollection = new UserHeroCollection(userId, base64HeroCollection);
+            return userHeroCollection;
+        }
+        else
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 데이터가 존재하지 않습니다."));
+            return null;
+        }
+    }
+
+    // 사용자 데이터를 초기화
     public void ResetUserData(string userId)
     {
         _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWithOnMainThread(task =>
@@ -200,6 +237,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
+    // 사용자 데이터를 동기화
     public void SyncUserData(string userId)
     {
         _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
@@ -254,6 +292,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
+    // 모든 데이터를 삭제
     public void DeleteAllData()
     {
         _databaseRef.RemoveValueAsync().ContinueWith(task =>
@@ -271,5 +310,26 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("모든 데이터 삭제 성공."));
         });
+    }
+
+    // 유저가 새로운 영웅을 획득할 때 호출되는 메서드
+    public async void AddHeroToCollection(string userId, int heroId)
+    {
+        var heroDataSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
+        
+        if (heroDataSnapshot.Exists)
+        {
+            string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
+            HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
+            
+            HeroCollectionManager.Instance.AddHero(heroId);
+            
+            var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
+            await SaveHeroCollection(userHeroCollection);
+        }
+        else
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 데이터가 존재하지 않습니다."));
+        }
     }
 }

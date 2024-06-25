@@ -33,9 +33,9 @@ public class UserHeroCollection
     public UserHeroCollection() { }
 
     // 매개변수를 받는 생성자
-    public UserHeroCollection(string userId, byte[] heroCollection)
+    public UserHeroCollection(string userId, string heroCollectionBase64)
     {
         this.userId = userId;
-        this.heroCollectionBase64 = Convert.ToBase64String(heroCollection);
+        this.heroCollectionBase64 = heroCollectionBase64;
     }
 }
