@@ -13,11 +13,7 @@ public class Logger : Singleton<Logger>
     protected override void Awake()
     {
         base.Awake();
-        // 추가 초기화 작업이 있으면 여기에 작성
-        
-        // Unity Engine의 null 체크를 최적화 하기 위해 ReferenceEquals를 사용하는게 좋지만
-        // Public으로 선언한 오브젝트가 할당되지 않으면 fake null 상태가 되기 때문에
-        // isInitialized 플래그를 사용해서 null 체크를 최적화함.
+
         isInitialized = logMessagePrefab != null && logContent != null;
         
         objectPool = gameObject.AddComponent<ObjectPool>();
@@ -32,7 +28,7 @@ public class Logger : Singleton<Logger>
             return;
         }
 
-        CreateLogMessage(message);
+        UnityMainThreadDispatcher.Enqueue(() => CreateLogMessage(message));
     }
 
     public void LogError(string message)
@@ -43,7 +39,7 @@ public class Logger : Singleton<Logger>
             return;
         }
 
-        CreateLogMessage($"<color=red>{message}</color>");
+        UnityMainThreadDispatcher.Enqueue(() => CreateLogMessage($"<color=red>{message}</color>"));
     }
 
     private void CreateLogMessage(string message)

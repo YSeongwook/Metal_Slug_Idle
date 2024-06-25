@@ -21,7 +21,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     {
         base.Awake();
         
-        // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
 
@@ -30,7 +29,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
     private void OnDestroy()
     {
-        // 이벤트 리스너 해제
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
@@ -40,8 +38,11 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         _auth = FirebaseAuth.DefaultInstance;
         _databaseRef = FirebaseDatabase.DefaultInstance.RootReference;
         logger = Logger.Instance; // Logger 인스턴스 초기화
-        logger.Log($"Realtime Database: {_databaseRef}");
-        logger.Log($"Auth: {_auth}");
+        
+        UnityMainThreadDispatcher.Enqueue(() => {
+            logger.Log($"Realtime Database: {_databaseRef}");
+            logger.Log($"Auth: {_auth}");
+        });
         
         EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseDatabaseInitialized);
     }
@@ -58,10 +59,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         return currentUser;
     }
 
-    // FirebaseUser를 받아 저장하는 메서드
     private async void SaveUserData(FirebaseUser user)
     {
-        byte[] heroCollection = new byte[4]; // 30개의 캐릭터 정보를 저장할 초기값
+        byte[] heroCollection = new byte[4];
         var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
         var userHeroCollection = new UserHeroCollection(user.UserId, heroCollection);
         
@@ -69,7 +69,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         await SaveHeroCollection(userHeroCollection);
     }
 
-    // UserData를 받아 저장하는 메서드
     private async Task SaveUserData(UserData userData)
     {
         var updates = new Dictionary<string, object>
@@ -84,20 +83,19 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 데이터 저장이 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 저장이 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 데이터 저장 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 데이터 저장 중 오류 발생: " + task.Exception));
                 return;
             }
 
-            logger.Log("유저 데이터 저장 성공.");
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 저장 성공."));
         });
     }
 
-    // UserHeroCollection을 받아 저장하는 메서드
     private async Task SaveHeroCollection(UserHeroCollection userHeroCollection)
     {
         var updates = new Dictionary<string, object>
@@ -109,16 +107,16 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 히어로 컬렉션 저장이 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 저장이 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 히어로 컬렉션 저장 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 히어로 컬렉션 저장 중 오류 발생: " + task.Exception));
                 return;
             }
 
-            logger.Log("유저 히어로 컬렉션 저장 성공.");
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 저장 성공."));
         });
     }
 
@@ -131,12 +129,12 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 데이터 불러오기가 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기가 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 데이터 불러오기 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 데이터 불러오기 중 오류 발생: " + task.Exception));
                 return;
             }
 
@@ -157,12 +155,12 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                 byte[] heroCollection = Convert.FromBase64String(base64HeroCollection);
                 var userHeroCollection = new UserHeroCollection(userId, heroCollection);
 
-                logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items);
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items));
                 // 여기서 userData와 userHeroCollection을 필요한 곳에 사용
             }
             else
             {
-                logger.Log("유저 데이터가 존재하지 않습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터가 존재하지 않습니다."));
             }
         });
     }
@@ -173,32 +171,32 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 데이터 리셋이 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 리셋이 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 데이터 리셋 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 데이터 리셋 중 오류 발생: " + task.Exception));
                 return;
             }
 
-            logger.Log("유저 데이터 리셋 성공.");
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 리셋 성공."));
         });
 
         _databaseRef.Child("user_HeroCollection").Child(userId).RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 히어로 컬렉션 리셋이 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 리셋이 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 히어로 컬렉션 리셋 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 히어로 컬렉션 리셋 중 오류 발생: " + task.Exception));
                 return;
             }
 
-            logger.Log("유저 히어로 컬렉션 리셋 성공.");
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 리셋 성공."));
         });
     }
 
@@ -208,12 +206,12 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("유저 데이터 불러오기가 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기가 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("유저 데이터 불러오기 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("유저 데이터 불러오기 중 오류 발생: " + task.Exception));
                 return;
             }
 
@@ -221,38 +219,38 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             UserData serverData = snapshot.Exists ? JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue()) : null;
             UserData localData = JsonUtilityManager.LoadFromJson<UserData>("UserData.json");
 
-            if (serverData == null)
+            UnityMainThreadDispatcher.Enqueue(() =>
             {
-                if (localData != null)
+                if (serverData == null)
                 {
-                    // 서버에 데이터가 없고 로컬에 데이터가 있는 경우 로컬 데이터를 서버에 저장
-                    SaveUserData(localData);
-                    logger.Log("로컬 데이터를 서버에 저장했습니다.");
+                    if (localData != null)
+                    {
+                        SaveUserData(localData);
+                        logger.Log("로컬 데이터를 서버에 저장했습니다.");
+                    }
+                    else
+                    {
+                        logger.Log("서버와 로컬에 모두 유저 데이터가 없습니다.");
+                    }
                 }
                 else
                 {
-                    logger.Log("서버와 로컬에 모두 유저 데이터가 없습니다.");
+                    if (localData == null || serverData.lastUpdated > localData.lastUpdated)
+                    {
+                        JsonUtilityManager.SaveToJson(serverData, "UserData.json");
+                        logger.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
+                    }
+                    else if (localData.lastUpdated > serverData.lastUpdated)
+                    {
+                        SaveUserData(localData);
+                        logger.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
+                    }
+                    else
+                    {
+                        logger.Log("서버와 로컬 데이터가 이미 동기화되어 있습니다.");
+                    }
                 }
-            }
-            else
-            {
-                if (localData == null || serverData.lastUpdated > localData.lastUpdated)
-                {
-                    // 서버 데이터가 최신이거나 로컬 데이터가 없는 경우 서버 데이터로 로컬 데이터를 업데이트
-                    JsonUtilityManager.SaveToJson(serverData, "UserData.json");
-                    logger.Log("서버 데이터로 로컬 데이터를 업데이트했습니다.");
-                }
-                else if (localData.lastUpdated > serverData.lastUpdated)
-                {
-                    // 로컬 데이터가 최신인 경우 로컬 데이터를 서버에 저장
-                    SaveUserData(localData);
-                    logger.Log("로컬 데이터로 서버 데이터를 업데이트했습니다.");
-                }
-                else
-                {
-                    logger.Log("서버와 로컬 데이터가 이미 동기화되어 있습니다.");
-                }
-            }
+            });
         });
     }
 
@@ -262,16 +260,16 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             if (task.IsCanceled)
             {
-                logger.Log("모든 데이터 삭제가 취소되었습니다.");
+                UnityMainThreadDispatcher.Enqueue(() => logger.Log("모든 데이터 삭제가 취소되었습니다."));
                 return;
             }
             if (task.IsFaulted)
             {
-                logger.LogError("모든 데이터 삭제 중 오류 발생: " + task.Exception);
+                UnityMainThreadDispatcher.Enqueue(() => logger.LogError("모든 데이터 삭제 중 오류 발생: " + task.Exception));
                 return;
             }
 
-            logger.Log("모든 데이터 삭제 성공.");
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("모든 데이터 삭제 성공."));
         });
     }
 }
