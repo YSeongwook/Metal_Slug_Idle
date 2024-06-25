@@ -31,7 +31,7 @@
       "attack": 200,
       "portraitPath": "HeroPortraits/Avatar_CatEar_Leona",
       "starLevel": 0,
-      "type": "지원형"
+      "type": "만능형"
     },
     {
       "id": 3,
@@ -54,6 +54,61 @@
       "portraitPath": "HeroPortraits/Avatar_Edda",
       "starLevel": 0,
       "type": "근거리형"
+    },
+    {
+      "id": 5,
+      "name": "더미",
+      "rank": "D",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Marco",
+      "starLevel": 0,
+      "type": "만능형"
+    },
+    {
+      "id": 6,
+      "name": "더미",
+      "rank": "C",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Marco",
+      "starLevel": 0,
+      "type": "만능형"
+    },
+    {
+      "id": 7,
+      "name": "더미",
+      "rank": "B",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Marco",
+      "starLevel": 0,
+      "type": "만능형"
+    },
+    {
+      "id": 8,
+      "name": "더미",
+      "rank": "A",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Marco",
+      "starLevel": 0,
+      "type": "만능형"
+    },
+    {
+      "id": 9,
+      "name": "더미",
+      "rank": "S",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Marco",
+      "starLevel": 0,
+      "type": "만능형"
     }
   ]
 }
