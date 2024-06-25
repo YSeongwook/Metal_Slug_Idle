@@ -71,6 +71,7 @@ public class UIManager : Singleton<UIManager>
         AddButtonClickEvents();
     }
 
+    /*
     private void Start()
     {
         // 인트로 UI와 로그 버튼을 제외하고 자식 오브젝트 모두 비활성화
@@ -82,6 +83,7 @@ public class UIManager : Singleton<UIManager>
             }
         }
     }
+    */
 
     // 이벤트 리스너 제거
     private void OnDestroy()

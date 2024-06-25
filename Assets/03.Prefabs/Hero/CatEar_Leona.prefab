@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8320211732717095928}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 14.8, y: 0, z: 16.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -215,8 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 8320211732717095923}
-  hpBar: {fileID: 0}
-  cooltimeBar: {fileID: 0}
+  hpBar: {fileID: 787979120539801286}
+  cooltimeBar: {fileID: 2589349414701713886}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &8640806284836267382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,6 +343,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+--- !u!224 &787979120539801286 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9008669702000735152, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+  m_PrefabInstance: {fileID: 8640806284836267382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2589349414701713886 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6054377327705042088, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+  m_PrefabInstance: {fileID: 8640806284836267382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4872126359028631025 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3780502046698430599, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}

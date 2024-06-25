@@ -141,10 +141,10 @@ TextureImporter:
       name: Icon_Rank_A
       rect:
         serializedVersion: 2
-        x: 82
+        x: 76
         y: 90
-        width: 24
-        height: 31
+        width: 36
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: Icon_Rank_B
       rect:
         serializedVersion: 2
-        x: 24
+        x: 18
         y: 46
-        width: 25
-        height: 31
+        width: 36
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +183,10 @@ TextureImporter:
       name: Icon_Rank_D
       rect:
         serializedVersion: 2
-        x: 82
+        x: 76
         y: 50
-        width: 24
-        height: 31
+        width: 36
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: Icon_Rank_C
       rect:
         serializedVersion: 2
-        x: 24
+        x: 18
         y: 6
-        width: 24
-        height: 31
+        width: 36
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

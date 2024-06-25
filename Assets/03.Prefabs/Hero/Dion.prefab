@@ -763,6 +763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 1807524690767059647}
+  hpBar: {fileID: 8007431418704848555}
+  cooltimeBar: {fileID: 5053141260763543987}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &8935840865635645836
 GameObject:
   m_ObjectHideFlags: 0

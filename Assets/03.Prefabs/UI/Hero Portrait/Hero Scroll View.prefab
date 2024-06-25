@@ -435,7 +435,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   needItemCount: 0
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 4054590968609801170, guid: 6d24edc348257dd4f87f3cf09f8509a0, type: 3}
   dynamicItemSize: 0
   layout:
     axis: 1
