@@ -83,8 +83,12 @@ public class IntroManager : MonoBehaviour
         // Loading UI 활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.StartLoading);
 
+        Debug.Log("다음 씬 로드 시작");
+        
         // 다음 씬을 비동기적으로 로드
         await LoadSceneAsync(nextSceneName);
+        
+        Debug.Log("Loading UI 비활성화");
 
         // Loading UI 비활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.EndLoading);

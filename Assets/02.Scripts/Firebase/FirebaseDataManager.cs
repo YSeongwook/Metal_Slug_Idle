@@ -5,6 +5,7 @@ using EnumTypes;
 using EventLibrary;
 using Firebase.Auth;
 using Firebase.Database;
+using Firebase.Extensions;
 using UnityEngine;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
@@ -126,7 +127,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         var userDataTask = _databaseRef.Child("users").Child(userId).GetValueAsync();
         var heroDataTask = _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
 
-        await Task.WhenAll(userDataTask, heroDataTask).ContinueWith(task =>
+        await Task.WhenAll(userDataTask, heroDataTask).ContinueWithOnMainThread(task =>
         {
             if (task.IsCanceled)
             {
@@ -166,9 +167,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public async void ResetUserData(string userId)
+    public void ResetUserData(string userId)
     {
-        await _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWith(task =>
+        _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWithOnMainThread(task =>
         {
             if (task.IsCanceled)
             {
@@ -184,7 +185,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             logger.Log("유저 데이터 리셋 성공.");
         });
 
-        await _databaseRef.Child("user_HeroCollection").Child(userId).RemoveValueAsync().ContinueWith(task =>
+        _databaseRef.Child("user_HeroCollection").Child(userId).RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -201,9 +202,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public async void SyncUserData(string userId)
+    public void SyncUserData(string userId)
     {
-        await _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
+        _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -255,9 +256,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public async void DeleteAllData()
+    public void DeleteAllData()
     {
-        await _databaseRef.RemoveValueAsync().ContinueWith(task =>
+        _databaseRef.RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
