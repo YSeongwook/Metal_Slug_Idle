@@ -27,7 +27,7 @@ public class UserData
 public class UserHeroCollection
 {
     public string userId;
-    public byte[] heroCollection; // 유저가 소유한 캐릭터 정보
+    public string heroCollectionBase64; // Base64로 인코딩된 바이트 배열
 
     // 기본 생성자
     public UserHeroCollection() { }
@@ -36,6 +36,6 @@ public class UserHeroCollection
     public UserHeroCollection(string userId, byte[] heroCollection)
     {
         this.userId = userId;
-        this.heroCollection = heroCollection;
+        this.heroCollectionBase64 = Convert.ToBase64String(heroCollection);
     }
 }

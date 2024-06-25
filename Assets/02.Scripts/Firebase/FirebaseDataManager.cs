@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Firebase.Database;
-using Firebase.Extensions;
 using System.Threading.Tasks;
 using EnumTypes;
 using EventLibrary;
 using Firebase.Auth;
+using Firebase.Database;
 using UnityEngine;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
@@ -61,7 +60,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     // FirebaseUser를 받아 저장하는 메서드
     private async void SaveUserData(FirebaseUser user)
     {
-        byte[] heroCollection = new byte[30]; // 초기값, 실제 게임 로직에 따라 변경
+        byte[] heroCollection = new byte[4]; // 30개의 캐릭터 정보를 저장할 초기값
         var userData = new UserData(user.UserId, user.DisplayName ?? "None", 1, "None", DateTimeOffset.UtcNow.ToUnixTimeSeconds());
         var userHeroCollection = new UserHeroCollection(user.UserId, heroCollection);
         
@@ -100,11 +99,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     // UserHeroCollection을 받아 저장하는 메서드
     private async Task SaveHeroCollection(UserHeroCollection userHeroCollection)
     {
-        byte[] compressedHeroCollection = await CompressionUtility.Compress(Convert.ToBase64String(userHeroCollection.heroCollection));
-        string base64HeroCollection = Convert.ToBase64String(compressedHeroCollection);
         var updates = new Dictionary<string, object>
         {
-            { "heroCollection", base64HeroCollection }
+            { "heroCollection", userHeroCollection.heroCollectionBase64 }
         };
 
         await _databaseRef.Child("user_HeroCollection").Child(userHeroCollection.userId).UpdateChildrenAsync(updates).ContinueWith(task =>
@@ -129,7 +126,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         var userDataTask = _databaseRef.Child("users").Child(userId).GetValueAsync();
         var heroDataTask = _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
 
-        await Task.WhenAll(userDataTask, heroDataTask).ContinueWith(async task =>
+        await Task.WhenAll(userDataTask, heroDataTask).ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -156,9 +153,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                 );
 
                 string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
-                byte[] compressedHeroCollection = Convert.FromBase64String(base64HeroCollection);
-                string decodedHeroCollection = await CompressionUtility.Decompress(compressedHeroCollection);
-                byte[] heroCollection = Convert.FromBase64String(decodedHeroCollection);
+                byte[] heroCollection = Convert.FromBase64String(base64HeroCollection);
                 var userHeroCollection = new UserHeroCollection(userId, heroCollection);
 
                 logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items);
