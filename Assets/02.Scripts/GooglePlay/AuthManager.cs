@@ -58,7 +58,6 @@ public class AuthManager : Singleton<AuthManager>
                 if (!string.IsNullOrEmpty(code))
                 {
                     SignInWithFirebase(code);
-                    // EventManager<GoogleEvents>.TriggerEvent(GoogleEvents.GPGSSignIn);
                     signInText.text = "Success GOOGLE Sign In";
                 }
                 else
@@ -72,7 +71,7 @@ public class AuthManager : Singleton<AuthManager>
             logger.LogError("Google Play Games 로그인 실패");
             signInText.text = "Fail GOOGLE Sign In";
             signInText.text = "GOOGLE LOGIN";
-            UIManager.Instance.EnableSignInUI();
+            UIEventHandlers.Instance.EnableSignInUI();
         }
     }
 
@@ -113,9 +112,6 @@ public class AuthManager : Singleton<AuthManager>
             isSignin = true;
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
-            
-            // 유저 데이터 저장
-            // FirebaseDataManager.Instance.SaveUserData(currentUser);
         });
     }
 
@@ -127,19 +123,14 @@ public class AuthManager : Singleton<AuthManager>
     private void ManualGoogleSignIn()
     {
         signInText.text = "로그인 시도 중...";
-        UIManager.Instance.DisableSignInUI();
+        UIEventHandlers.Instance.DisableSignInUI();
         PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
-    }
-
-    public void OnClick_EmailSignIn()
-    {
-        UIManager.Instance.EnableEmailSignInUI();
     }
 
     private void SignInWithEmail()
     {
-        string email = UIManager.Instance.inputFieldID.text;
-        string password = UIManager.Instance.inputFieldPW.text;
+        string email = UIEventHandlers.Instance.GetEmail();
+        string password = UIEventHandlers.Instance.GetPassword();
 
         Debug.Log($"이메일 로그인 시도: {email}");
 
@@ -166,8 +157,9 @@ public class AuthManager : Singleton<AuthManager>
 
                     logger.LogError(errorMessage);
                     noticeText.text = errorMessage;
-                    UIManager.Instance.EnableEmailSignInUI();
+                    UIEventHandlers.Instance.EnableEmailSignInUI();
                 }
+                return;
             }
 
             currentUser = task.Result.User;
@@ -176,10 +168,7 @@ public class AuthManager : Singleton<AuthManager>
             isSignin = true;
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
-            UIManager.Instance.DisableEmailSignInUI();
-
-            // 유저 데이터 저장
-            // FirebaseDataManager.Instance.SaveUserData(currentUser);
+            UIEventHandlers.Instance.DisableEmailSignInUI();
         });
     }
 
@@ -194,7 +183,7 @@ public class AuthManager : Singleton<AuthManager>
                 string errorMessage = "이메일 회원가입 중 오류 발생: " + task.Exception?.ToString();
                 logger.LogError(errorMessage);
                 noticeText.text = errorMessage;
-                UIManager.Instance.EnableEmailSignInUI();
+                UIEventHandlers.Instance.EnableEmailSignInUI();
                 return;
             }
 
@@ -208,7 +197,7 @@ public class AuthManager : Singleton<AuthManager>
                 {
                     logger.LogError("DisplayName 설정 중 오류 발생: " + updateTask.Exception?.ToString());
                     noticeText.text = "DisplayName 설정 중 오류 발생: " + updateTask.Exception?.ToString();
-                    UIManager.Instance.EnableEmailSignInUI();
+                    UIEventHandlers.Instance.EnableEmailSignInUI();
                     return;
                 }
 
