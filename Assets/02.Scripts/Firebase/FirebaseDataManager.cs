@@ -157,7 +157,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                 var userHeroCollection = new UserHeroCollection(userId, heroCollection);
 
                 logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items);
-                // 여기서 userData와 userHeroCollection을 필요한 곳에 사용하면 됩니다.
+                // 여기서 userData와 userHeroCollection을 필요한 곳에 사용
             }
             else
             {
@@ -166,9 +166,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public void ResetUserData(string userId)
+    public async void ResetUserData(string userId)
     {
-        _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWith(task =>
+        await _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -184,7 +184,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             logger.Log("유저 데이터 리셋 성공.");
         });
 
-        _databaseRef.Child("user_HeroCollection").Child(userId).RemoveValueAsync().ContinueWith(task =>
+        await _databaseRef.Child("user_HeroCollection").Child(userId).RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -201,9 +201,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public void SyncUserData(string userId)
+    public async void SyncUserData(string userId)
     {
-        _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
+        await _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
@@ -255,9 +255,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    public void DeleteAllData()
+    public async void DeleteAllData()
     {
-        _databaseRef.RemoveValueAsync().ContinueWith(task =>
+        await _databaseRef.RemoveValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled)
             {
