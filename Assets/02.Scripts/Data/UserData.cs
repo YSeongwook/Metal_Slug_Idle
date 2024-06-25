@@ -1,6 +1,6 @@
-using UnityEngine;
+using System;
 
-[System.Serializable]
+[Serializable]
 public class UserData
 {
     public string userId;
@@ -23,22 +23,19 @@ public class UserData
     }
 }
 
-public static class JsonUtilityManager
+[Serializable]
+public class UserHeroCollection
 {
-    public static void SaveToJson<T>(T data, string fileName)
-    {
-        string json = JsonUtility.ToJson(data);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/" + fileName, json);
-    }
+    public string userId;
+    public byte[] heroCollection; // 유저가 소유한 캐릭터 정보
 
-    public static T LoadFromJson<T>(string fileName)
+    // 기본 생성자
+    public UserHeroCollection() { }
+
+    // 매개변수를 받는 생성자
+    public UserHeroCollection(string userId, byte[] heroCollection)
     {
-        string path = Application.persistentDataPath + "/" + fileName;
-        if (System.IO.File.Exists(path))
-        {
-            string json = System.IO.File.ReadAllText(path);
-            return JsonUtility.FromJson<T>(json);
-        }
-        return default(T);
+        this.userId = userId;
+        this.heroCollection = heroCollection;
     }
 }

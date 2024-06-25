@@ -18,7 +18,7 @@ public static class HeroDataLoader
         else
         {
             Debug.LogError("File not found: " + filePath);
-            return null;
+            return new List<HeroData>();
         }
     }
 

@@ -11,7 +11,7 @@ public class HeroDataLoaderTest : MonoBehaviour
         
         foreach (var hero in heroes)
         {
-            Debug.Log($"Name: {hero.name}, Grade: {hero.grade}, Level: {hero.level}, Health: {hero.health}, Attack: {hero.attack}, PortraitPath: {hero.portraitPath}");
+            Debug.Log($"Name: {hero.name}, Grade: {hero.rank}, Level: {hero.level}, Health: {hero.health}, Attack: {hero.attack}, PortraitPath: {hero.portraitPath}");
         }
     }
 }

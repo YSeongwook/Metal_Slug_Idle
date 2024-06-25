@@ -1,6 +1,7 @@
 ﻿{
   "heroes": [
     {
+      "id": 0,
       "name": "루이즈",
       "grade": "A",
       "level": 1,
@@ -8,9 +9,10 @@
       "attack": 150,
       "portraitPath": "HeroPortraits/Louise",
       "starLevel": 0,
-      "type": "공격형"
+      "type": "원거리형"
     },
     {
+      "id": 1,
       "name": "만능 군인 랄프",
       "grade": "S",
       "level": 1,
@@ -18,9 +20,10 @@
       "attack": 200,
       "portraitPath": "HeroPortraits/OneMan_Kyle",
       "starLevel": 0,
-      "type": "만능형"
+      "type": "방어형"
     },
     {
+      "id": 2,
       "name": "고양이 귀 레오나",
       "grade": "S",
       "level": 1,
@@ -31,6 +34,7 @@
       "type": "지원형"
     },
     {
+      "id": 3,
       "name": "디온",
       "grade": "S",
       "level": 1,
@@ -38,9 +42,10 @@
       "attack": 300,
       "portraitPath": "HeroPortraits/Dion",
       "starLevel": 0,
-      "type": "공격형"
+      "type": "근거리형"
     },
     {
+      "id": 4,
       "name": "에다",
       "grade": "S",
       "level": 1,
@@ -48,7 +53,7 @@
       "attack": 350,
       "portraitPath": "HeroPortraits/Edda",
       "starLevel": 0,
-      "type": "공격형"
+      "type": "근거리형"
     }
   ]
 }
