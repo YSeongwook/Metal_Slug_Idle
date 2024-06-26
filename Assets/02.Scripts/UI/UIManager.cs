@@ -10,50 +10,71 @@ public class UIManager : Singleton<UIManager>
 {
     #region Inspector Variables
 
-    [FoldoutGroup("Sign In UI")] [PropertySpace(5f, 10f)]
-    public GameObject signInUI;
-
-    [HorizontalGroup("Sign In UI/Horizontal")]
-    [VerticalGroup("Sign In UI/Horizontal/Left")]
-    [BoxGroup("Sign In UI/Horizontal/Left/Buttons", centerLabel: true)]
-    public GameObject signInButtons;
-
-    [VerticalGroup("Sign In UI/Horizontal/Left")] [BoxGroup("Sign In UI/Horizontal/Left/Buttons")]
-    public Button signInGoogle;
-
-    [VerticalGroup("Sign In UI/Horizontal/Left")] [BoxGroup("Sign In UI/Horizontal/Left/Buttons")]
-    public Button signInEmail;
-
-    [VerticalGroup("Sign In UI/Horizontal/Right")]
-    [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In", centerLabel: true)]
-    public GameObject emailSignIn;
-
-    [VerticalGroup("Sign In UI/Horizontal/Right")] [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In")]
-    public TMP_InputField inputFieldID;
-
-    [VerticalGroup("Sign In UI/Horizontal/Right")] [BoxGroup("Sign In UI/Horizontal/Right/Email Sign In")]
-    public TMP_InputField inputFieldPW;
-
-    [FoldoutGroup("Main UI")] [PropertySpace(5f, 10f)]
-    public GameObject mainUI;
-
-    [BoxGroup("Main UI/Buttons", centerLabel: true)]
-    public Button chatButton;
-
-    [TabGroup("Intro UI")] public GameObject introUI;
-
-    [TabGroup("Loading UI")] public GameObject loadingUI;
-
-    [TabGroup("Chat UI")] public GameObject chatUI;
+    [FoldoutGroup("UIs")] public GameObject introUI;
+    [FoldoutGroup("UIs")] public GameObject signInUI;
+    [FoldoutGroup("UIs")] public GameObject mainUI;
+    [FoldoutGroup("UIs")] public GameObject heroUI;
+    [FoldoutGroup("UIs")] public GameObject loadingUI;
+    [FoldoutGroup("UIs")] public GameObject joystickUI;
     
-    [TabGroup("Joystick UI")] public GameObject joystickUI;
+    // Sign In UI
+    [FoldoutGroup("Sign In UI")]
+    [HorizontalGroup("Sign In UI/Horizontal")]
+    [FoldoutGroup("Sign In UI/Horizontal/Buttons")] public GameObject signInButtons;
+    [FoldoutGroup("Sign In UI/Horizontal/Buttons")] public Button signInGoogle;
+    [FoldoutGroup("Sign In UI/Horizontal/Buttons")] public Button signInEmail;
 
-    [TabGroup("Data Panel")] public GameObject dataPanel;
+    [FoldoutGroup("Sign In UI/Horizontal/Email Sign In")] public GameObject emailSignIn;
+    [FoldoutGroup("Sign In UI/Horizontal/Email Sign In")] public TMP_InputField inputFieldID;
+    [FoldoutGroup("Sign In UI/Horizontal/Email Sign In")] public TMP_InputField inputFieldPW;
 
-    [TabGroup("Player Information")] public TextMeshProUGUI displayNameText; // displayName을 표시할 TMP Text
-    [TabGroup("Player Information")] public TextMeshProUGUI levelText; // level을 표시할 TMP Text
-    [TabGroup("Player Information")] public TextMeshProUGUI itemsText; // items를 표시할 TMP Text
+    // Main UI
+    [FoldoutGroup("Main UI")] public GameObject chatUI;
+    [FoldoutGroup("Main UI")] [PropertySpace(0f, 5f)] public GameObject upperBar;
 
+    [FoldoutGroup("Main UI/Buttons")] public Button menuButton;
+    [FoldoutGroup("Main UI/Buttons")] public Button mainBossButton;
+    [FoldoutGroup("Main UI/Buttons")] public Button settingBossButton;
+    [FoldoutGroup("Main UI/Buttons")] public Button autoButton;
+    
+    [HorizontalGroup("Main UI/Upper")] [FoldoutGroup("Main UI/Upper/Panel User Profile")]
+    public GameObject userProfilePanel;
+
+    [HorizontalGroup("Main UI/Upper")] [FoldoutGroup("Main UI/Upper/Panel Stage")]
+    public GameObject stagePanel;
+    
+    [HorizontalGroup("Main UI/Horizontal")]
+    [FoldoutGroup("Main UI/Horizontal/Panel Left Buttons")] [PropertySpace(0f, 5f)]
+    public GameObject leftButtonsPanel;
+    [FoldoutGroup("Main UI/Horizontal/Panel Left Buttons")] public Button getButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Left Buttons")] public Button camButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Left Buttons")] public Button chatButton;
+
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] [PropertySpace(0f, 5f)]
+    public GameObject mainUnderPanel;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainCloseButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainHeroButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainInventoryButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainUpgradeButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainContentsButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainQuestButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Under Buttons")] public Button mainShopButton;
+    
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] [PropertySpace(0f, 5f)]
+    public GameObject rightMenusPanel;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button closeButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button rankingButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button settingButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button sleepButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button messageButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button noticeButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button crewButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button calendarButton;
+
+    [FoldoutGroup("Main UI/Panel Party")] public GameObject partyPanel;
+    [FoldoutGroup("Main UI/Panel Party")] [PropertySpace(5f, 0f)]
+    public GameObject[] heroes;
+    
     [TabGroup("Log Scroll View")] public GameObject logScrollView;
     [TabGroup("Log Scroll View")] public Button logButton;
 
@@ -100,11 +121,7 @@ public class UIManager : Singleton<UIManager>
         inputFieldPW.onEndEdit.RemoveListener(OnEndEdit);
     }
 
-    // 채팅 UI를 토글하는 메서드
-    public void ToggleChatUI()
-    {
-        chatUI.SetActive(!chatUI.activeSelf);
-    }
+    #region Intro UI
 
     // 로그 UI를 토글하는 메서드
     public void ToggleLog()
@@ -117,7 +134,6 @@ public class UIManager : Singleton<UIManager>
     {
         logScrollView.SetActive(false);
         signInUI.SetActive(false);
-        dataPanel.SetActive(true);
     }
 
     // 수동 Google Sign-In 이벤트를 트리거하는 메서드
@@ -172,14 +188,6 @@ public class UIManager : Singleton<UIManager>
         introUI.SetActive(false);
     }
 
-    // 유저 데이터가 로드될 때 호출되는 메서드
-    public void OnUserDataLoaded(User user)
-    {
-        displayNameText.text = $"Name: {user.displayName}";
-        levelText.text = $"Level: {user.level}";
-        itemsText.text = $"Items: {user.items}";
-    }
-
     // InputField의 onEndEdit 이벤트 핸들러
     private void OnEndEdit(string input)
     {
@@ -189,6 +197,23 @@ public class UIManager : Singleton<UIManager>
         }
     }
 
+    #endregion
+
+    #region Main UI
+
+    public void EnableHeroUI()
+    {
+        
+    }
+    
+    // 채팅 UI를 토글하는 메서드
+    public void ToggleChatUI()
+    {
+        chatUI.SetActive(!chatUI.activeSelf);
+    }
+    
+    #endregion
+    
     // 소프트 키보드를 닫는 메서드
     private void CloseSoftKeyboard()
     {

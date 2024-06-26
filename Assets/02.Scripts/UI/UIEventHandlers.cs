@@ -25,7 +25,6 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         EventManager<UIEvents>.StartListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
         EventManager<UIEvents>.StartListening(UIEvents.StartLoading, _uiManager.ShowLoadingUI);
         EventManager<UIEvents>.StartListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
-        EventManager<DataEvents>.StartListening<User>(DataEvents.OnUserDataLoad, _uiManager.OnUserDataLoaded);
     }
 
     // 이벤트 리스너를 제거하는 메서드
@@ -35,7 +34,6 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         EventManager<UIEvents>.StopListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
         EventManager<UIEvents>.StopListening(UIEvents.StartLoading, _uiManager.ShowLoadingUI);
         EventManager<UIEvents>.StopListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
-        EventManager<DataEvents>.StopListening<User>(DataEvents.OnUserDataLoad, _uiManager.OnUserDataLoaded);
     }
 
     // 버튼 클릭 이벤트 리스너를 등록하는 메서드
@@ -126,5 +124,11 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
     public void DisableSignInUI()
     {
         _uiManager.DisableSignInUI();
+    }
+    
+    // MainHeroButton이 눌렸을 때 발생하는 메서드
+    public void OnClickMainHeroButton()
+    {
+        // _uiManager.
     }
 }
