@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame_Setting
+      name: Button_Auto_On
       rect:
         serializedVersion: 2
         x: 2
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Frame_Circle
+      name: Button_Auto_Off
       rect:
         serializedVersion: 2
         x: 2
@@ -1040,6 +1040,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Background_Inven
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 605
+        width: 540
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 200}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38458594f8ae6d4f9568a3a54220f1c
+      internalID: -1718284047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Auto_On
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 1825
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66a30102670a954ab5f3b43295497fd
+      internalID: -601263648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Auto_Off
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 1782
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250a91707a84bcb4d82e2548d35976ec
+      internalID: -890329111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1053,22 +1116,23 @@ TextureImporter:
     nameFileIdTable:
       Animated Arrow: -1962447497
       Arrow_Portrait: 1295741555
+      Background_Inven: -1718284047
       Bar_Background: 694279397
       Bar_Btn: -1045338615
       Bar_Glow_White: 1567129248
       Bar_UserExp: -471300152
       Btn_Auto: 2059654163
+      Button_Auto_Off: 1163601858
+      Button_Auto_On: -1992670987
       Circle_Type: -1062889786
       Deco_MainBack: 2098900686
       Dot_Cam: 1380075240
       Dot_Cam2: 299644772
       Frame_BlueYellow: -1834279502
-      Frame_Circle: 1163601858
       Frame_Gray: 154814926
       Frame_Menu: 1007766267
       Frame_Party: -338084932
       Frame_Portrarit: -784343410
-      Frame_Setting: -1992670987
       Frame_SettingSpread: 1681667513
       Frame_Violet: -2095119926
       Gradation_Black: 842625512
@@ -1076,6 +1140,8 @@ TextureImporter:
       Gradation_MainBoss: 189608460
       Gradation_Red: 916978636
       Gradtion_White: -860316776
+      Icon_Auto_Off: -890329111
+      Icon_Auto_On: -601263648
       Icon_Box: -109754346
       Icon_Calendar: -238866815
       Icon_Cam: 1744224617

@@ -6,14 +6,27 @@ public class SubUI : MonoBehaviour
     public Button button;
     public Sprite passiveSprite;
     public Sprite activeSprite;
-    
+
+    private Image _buttonImage;
+
+    private void Awake()
+    {
+        _buttonImage = button.GetComponent<Image>();
+    }
+
     private void OnEnable()
     {
-        button.GetComponent<Image>().sprite = activeSprite;
+        if (button != null && activeSprite != null)
+        {
+            _buttonImage.sprite = activeSprite;
+        }
     }
 
     private void OnDisable()
     {
-        button.GetComponent<Image>().sprite = passiveSprite;
+        if (button != null && passiveSprite != null)
+        {
+            _buttonImage.sprite = passiveSprite;
+        }
     }
 }

@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using System.Linq;
 using EnumTypes;
 using EventLibrary;
-using UnityEngine;
 using Sirenix.OdinInspector;
 using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -138,28 +137,12 @@ public class UIManager : Singleton<UIManager>
     // 버튼 클릭 이벤트 리스너를 등록하는 메서드
     private void AddButtonEvents()
     {
-        mainHeroButton.onClick.AddListener(() => ToggleUI(heroUI));
-        mainInventoryButton.onClick.AddListener(() => ToggleUI(inventoryUI));
-        mainUpgradeButton.onClick.AddListener(() => ToggleUI(upgradeUI));
-        mainContentsButton.onClick.AddListener(() => ToggleUI(contentsUI));
-        mainQuestButton.onClick.AddListener(() => ToggleUI(questUI));
-        mainShopButton.onClick.AddListener(() => ToggleUI(shopUI));
-        mainCloseButton.onClick.AddListener(CloseAllUIs);
-        
         menuButton.onClick.AddListener(() => EnableUI(rightMenusPanel));
         menuCloseButton.onClick.AddListener(() => DisableUI(rightMenusPanel));
     }
     
     private void RemoveButtonEvents()
     {
-        mainHeroButton.onClick.RemoveListener(() => ToggleUI(heroUI));
-        mainInventoryButton.onClick.RemoveListener(() => ToggleUI(inventoryUI));
-        mainUpgradeButton.onClick.RemoveListener(() => ToggleUI(upgradeUI));
-        mainContentsButton.onClick.RemoveListener(() => ToggleUI(contentsUI));
-        mainQuestButton.onClick.RemoveListener(() => ToggleUI(questUI));
-        mainShopButton.onClick.RemoveListener(() => ToggleUI(shopUI));
-        mainCloseButton.onClick.RemoveListener(CloseAllUIs);
-        
         menuButton.onClick.RemoveListener(() => EnableUI(rightMenusPanel));
         menuCloseButton.onClick.RemoveListener(() => DisableUI(rightMenusPanel));
     }
@@ -276,6 +259,8 @@ public class UIManager : Singleton<UIManager>
         uiObject.SetActive(false);
         activeUIs.Remove(uiObject);
     }
+    
+    
 
     // 특정 UI 오브젝트를 토글하는 메서드
     public void ToggleUI(GameObject uiObject)
@@ -310,6 +295,7 @@ public class UIManager : Singleton<UIManager>
         }
         activeUIs.Clear();
         mainCloseButton.gameObject.SetActive(false);
+        underDeco.SetActive(true);
     }
 
     // 채팅 UI를 토글하는 메서드

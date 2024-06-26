@@ -43,6 +43,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.logButton.onClick.AddListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
+        _uiManager.mainCloseButton.onClick.AddListener(_uiManager.CloseAllUIs);
     }
 
     // 버튼 클릭 이벤트 리스너를 제거하는 메서드
@@ -52,6 +53,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.logButton.onClick.RemoveListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
+        _uiManager.mainCloseButton.onClick.RemoveListener(_uiManager.CloseAllUIs);
     }
 
     // 채팅 버튼 클릭 이벤트 핸들러

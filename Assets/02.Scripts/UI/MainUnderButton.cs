@@ -6,11 +6,11 @@ public class MainUnderButton : MonoBehaviour
     public Sprite passiveSprite;
     public Sprite activeSprite;
     public GameObject activeUI;
+    public GameObject deco;
 
     private UIManager _uiManager;
     private Button _button;
     private Image _image;
-    private bool _isActive;
 
     private void Awake()
     {
@@ -29,13 +29,12 @@ public class MainUnderButton : MonoBehaviour
     private void OnClickButton()
     {
         _uiManager.ToggleUI(activeUI);
-        // 스프라이트 변경
+        ToggleDeco();
     }
 
-    private void SwitchSprite()
+    private void ToggleDeco()
     {
         bool isActive = activeUI.activeSelf;
-
-        _image.sprite = isActive ? activeSprite : passiveSprite;
+        deco.SetActive(!isActive);
     }
 }
