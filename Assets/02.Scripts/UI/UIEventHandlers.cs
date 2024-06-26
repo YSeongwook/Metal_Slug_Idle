@@ -60,6 +60,8 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.ToggleChatUI();
     }
 
+    #region Intro UI
+
     // 로그 버튼 클릭 이벤트 핸들러
     public void OnClickLogButton()
     {
@@ -125,10 +127,12 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
     {
         _uiManager.DisableSignInUI();
     }
+
+    #endregion
+
+    #region Main UI
     
-    // MainHeroButton이 눌렸을 때 발생하는 메서드
-    public void OnClickMainHeroButton()
-    {
-        // _uiManager.
-    }
+
+    #endregion
+
 }
