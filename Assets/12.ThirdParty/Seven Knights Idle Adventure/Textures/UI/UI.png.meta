@@ -351,19 +351,82 @@ TextureImporter:
       name: Frame_SummonSelect
       rect:
         serializedVersion: 2
-        x: 922
+        x: 921
         y: 1819
-        width: 80
+        width: 82
         height: 84
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 39, y: 41, z: 39, w: 41}
+      border: {x: 40, y: 41, z: 40, w: 41}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f7ad39595c1f7e64ca8eae489032d8c9
       internalID: 777923299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_SummonSelect2
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 1335
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 47, y: 47, z: 47, w: 47}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8e103ea43fbf2489da32da0fb97759
+      internalID: 1099410803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_SummonHalf
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 426
+        width: 48
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 41, y: 41, z: 2, w: 42}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a901dc8191058944be872d21cc54efb
+      internalID: -1531198306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deco_LightStar
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1905
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866f9f8ecdec35b42bae4cac4e5fea7a
+      internalID: -515117478
       vertices: []
       indices: 
       edges: []
@@ -381,16 +444,18 @@ TextureImporter:
     nameFileIdTable:
       Btn_BlueBrown: -572814643
       Check_Toggle: 731806022
+      Deco_LightStar: -1478345130
       Frame_ActiveBtn: -1628293404
       Frame_BlueBrown2: 312129121
       Frame_SkyBlue: 1860447653
+      Frame_SummonHalf: -1531198306
       Frame_SummonLevel: 510720863
       Frame_SummonSelect: 777923299
+      Frame_SummonSelect2: -2085214447
       Frame_White: -1975593174
       Frame_White2: -1910936017
       GradationBar_Black: 1750697
       Grdation_Bar: -650706351
-      UI_0: -2085214447
       sactx-1-2048x2048-ASTC 6x6-UI_RenewalAtlas-80ff2fc3_0: 281150282
   spritePackingTag: 
   pSDRemoveMatte: 0

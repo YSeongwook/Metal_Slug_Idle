@@ -1103,6 +1103,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Frame_BlueBlack
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 1632
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 23, y: 22, z: 23, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42b870d49dd17f4d8987c0021441e14
+      internalID: 1145600921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1128,6 +1149,7 @@ TextureImporter:
       Deco_MainBack: 2098900686
       Dot_Cam: 1380075240
       Dot_Cam2: 299644772
+      Frame_BlueBlack: 1145600921
       Frame_BlueYellow: -1834279502
       Frame_Gray: 154814926
       Frame_Menu: 1007766267
