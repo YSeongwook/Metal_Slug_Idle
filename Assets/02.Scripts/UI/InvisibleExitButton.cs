@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class InvisibleExitButton : MonoBehaviour
 {
+    public GameObject deco;
+    
     private Button exitButton;
 
     private void Awake()
@@ -29,5 +31,7 @@ public class InvisibleExitButton : MonoBehaviour
         GameObject parentUI = transform.parent.gameObject;
         parentUI.SetActive(false);
         UIManager.Instance.RemoveUIFromList(parentUI);
+        
+        deco.SetActive(true);
     }
 }

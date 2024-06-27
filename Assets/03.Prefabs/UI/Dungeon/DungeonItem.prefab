@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 38859568787883290}
   - component: {fileID: 3329844515064253146}
   - component: {fileID: 2609111739180994748}
+  - component: {fileID: 2980208461057369611}
   m_Layer: 5
   m_Name: DungeonItem
   m_TagString: Untagged
@@ -278,6 +279,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2980208461057369611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948012369726785960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6570d006ee4ffb4a907d578c553e10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoApplySize: 0
+  background: {fileID: 3232983706318836367}
+  keyIcon: {fileID: 8462290384066083084}
+  nameText: {fileID: 8571091087750084217}
+  explainText: {fileID: 6610589369836077409}
+  keyRemainText: {fileID: 2391314405271372148}
 --- !u!1 &2402292712098966778
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +830,7 @@ GameObject:
   - component: {fileID: 2861158970307446923}
   - component: {fileID: 8571091087750084217}
   m_Layer: 5
-  m_Name: Text_Title
+  m_Name: Text_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -947,7 +966,7 @@ GameObject:
   - component: {fileID: 3232983706318836367}
   - component: {fileID: 1405610508306991946}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

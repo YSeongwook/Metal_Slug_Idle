@@ -4,35 +4,40 @@
       "id": 0,
       "name": "금화 던전",
       "explain": "금화를 대량으로 획득할 수 있습니다.",
-      "keyPath": "KeyIcons/Key_Gold",
+      "backgroundPath": "Dungeon/Background/Dungeon_Gold",
+      "keyIconPath": "Dungeon/KeyIcon/Key_Gold",
       "keyRemain": 3
     },
     {
       "id": 1,
       "name": "영웅 경험치 던전",
       "explain": "영웅 경험치를 대량으로 획득할 수 있습니다.",
-      "keyPath": "KeyIcons/Key_Exp",
+      "backgroundPath": "Dungeon/Background/Dungeon_Exp",
+      "keyIconPath": "Dungeon/KeyIcon/Key_Exp",
       "keyRemain": 3
     },
     {
       "id": 2,
       "name": "기사단 증표 던전",
       "explain": "기사단 증표를 대량으로 획득할 수 있습니다.",
-      "keyPath": "KeyIcons/Key_Party",
+      "backgroundPath": "Dungeon/Background/Dungeon_Party",
+      "keyIconPath": "Dungeon/KeyIcon/Key_Party",
       "keyRemain": 3
     },
     {
       "id": 3,
       "name": "유물 조각 던전",
       "explain": "유물 조각을 대량으로 획득할 수 있습니다.",
-      "keyPath": "KeyIcons/Key_Relic",
+      "backgroundPath": "Dungeon/Background/Dungeon_Relic",
+      "keyIconPath": "Dungeon/KeyIcon/Key_Relic",
       "keyRemain": 3
     },
     {
       "id": 4,
       "name": "펫 경험치 던전",
       "explain": "펫 경험치를 대량으로 획득할 수 있습니다.",
-      "keyPath": "KeyIcons/Key_Pet",
+      "backgroundPath": "Dungeon/Background/Dungeon_Pet",
+      "keyIconPath": "Dungeon/KeyIcon/Key_Pet",
       "keyRemain": 3
     }
   ]
