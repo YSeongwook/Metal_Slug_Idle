@@ -53,7 +53,8 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Main UI/Buttons")] public Button menuButton;
     [FoldoutGroup("Main UI/Buttons")] public Button mainBossButton;
     [FoldoutGroup("Main UI/Buttons")] public Button settingBossButton;
-    [FoldoutGroup("Main UI/Buttons")] public Button autoButton;
+    [FoldoutGroup("Main UI/Buttons")] public Button autoButtonOff;
+    [FoldoutGroup("Main UI/Buttons")] public Button autoButtonOn;
 
     [HorizontalGroup("Main UI/Upper")] [FoldoutGroup("Main UI/Upper/Panel User Profile")]
     public GameObject userProfilePanel;
