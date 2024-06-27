@@ -158,6 +158,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Frame_DungeonList
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1572
+        width: 108
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 52, y: 0, z: 52, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8326e7bda8c1fbf4e862111c7375e580
+      internalID: 716341347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Insert_Dungeon
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 536
+        width: 64
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 31, y: 29, z: 31, w: 29}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb536a194d0b51a44a1cd83236703727
+      internalID: -346559124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -169,8 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Frame_DungeonList: 716341347
       Frame_Gray: 1187370842
       Frame_Violet2: 1368436037
+      Insert_Dungeon: -346559124
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

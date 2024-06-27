@@ -7,7 +7,7 @@ public static class HeroDataLoader
 {
     public static List<HeroData> LoadHeroesFromJson()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, "heroData.json");
+        string filePath = Path.Combine(Application.streamingAssetsPath, "HeroData.json");
 
         if (File.Exists(filePath))
         {
