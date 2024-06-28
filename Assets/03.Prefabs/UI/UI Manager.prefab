@@ -19829,8 +19829,7 @@ MonoBehaviour:
   chatScroll: {fileID: 1586309870625693853}
   chatInputField: {fileID: 8331591566085756537}
   sendButton: {fileID: 912807006342362478}
-  tcpChatServer: {fileID: 0}
-  serverIp: 172.30.1.55
+  serverIp: 127.0.0.1
   port: 8080
 --- !u!1 &3298546876877760790
 GameObject:

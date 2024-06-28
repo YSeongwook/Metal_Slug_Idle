@@ -22,8 +22,6 @@ namespace Chat
         private bool _isUserSignIn;
         private TcpClientManager _tcpClientManager;
 
-        public TcpChatServer tcpChatServer;
-
         [SerializeField]
         private string serverIp = "127.0.0.1"; // 기본값을 로컬호스트로 설정
         [SerializeField]
@@ -39,13 +37,6 @@ namespace Chat
             _scrollRect = chatScroll.GetComponent<ScrollRect>();
             sendButton.onClick.AddListener(OnSendButtonClicked);
             logger = Logger.Instance;
-
-            tcpChatServer = FindObjectOfType<TcpChatServer>();
-            if (tcpChatServer == null)
-            {
-                Debug.LogError("TcpChatServer를 찾을 수 없습니다.");
-                return;
-            }
 
             _tcpClientManager = new TcpClientManager(serverIp, port);
             _tcpClientManager.OnMessageReceived += HandleMessageReceived;
