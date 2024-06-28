@@ -419,7 +419,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,6 +427,27 @@ TextureImporter:
       bones: []
       spriteID: 866f9f8ecdec35b42bae4cac4e5fea7a
       internalID: -515117478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Base_ShopStep
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1725
+        width: 76
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d186f97a373d245945344a852c14bd
+      internalID: 1023960707
       vertices: []
       indices: 
       edges: []
@@ -442,6 +463,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Base_ShopStep: 1023960707
       Btn_BlueBrown: -572814643
       Check_Toggle: 731806022
       Deco_LightStar: -1478345130

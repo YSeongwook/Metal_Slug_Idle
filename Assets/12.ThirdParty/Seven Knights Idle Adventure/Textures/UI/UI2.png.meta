@@ -209,7 +209,7 @@ TextureImporter:
         width: 515
         height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,6 +217,48 @@ TextureImporter:
       bones: []
       spriteID: 4fc6ba6be2856684a8f1e8fcfcef6755
       internalID: 406758503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Background_Blue
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 398
+        width: 72
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 35, y: 28, z: 35, w: 28}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5424cdf226ae77a45a062e516a6cbd0a
+      internalID: 197682716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackBlue2
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 92
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 32, y: 33, z: 32, w: 33}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e1a1ea1950c97498f2807565d5bc26
+      internalID: 1279768492
       vertices: []
       indices: 
       edges: []
@@ -232,6 +274,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      BackBlue2: 1279768492
+      Background_Blue: 197682716
       Frame_DungeonList: 716341347
       Frame_Gray: 1187370842
       Frame_Violet2: 1368436037

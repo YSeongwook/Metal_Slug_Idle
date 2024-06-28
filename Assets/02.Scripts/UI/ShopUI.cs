@@ -5,16 +5,6 @@ using UnityEngine.UI;
 // ShopUI 클래스는 SubUI의 기능을 확장하여 여러 버튼의 스프라이트를 관리합니다.
 public class ShopUI : SubUI
 {
-    // 버튼 UI 요소
-    [TabGroup("MainButton")] public Button button;
-    // 비활성화된 상태의 스프라이트
-    [TabGroup("MainButton")] public Sprite passiveSprite;
-    // 활성화된 상태의 스프라이트
-    [TabGroup("MainButton")] public Sprite activeSprite;
-
-    // 버튼의 이미지 컴포넌트
-    protected Image _buttonImage;
-
     // 추가 버튼들
     [TabGroup("SelectButton")] public Button selectHeroButton;
     [TabGroup("SelectButton")] public Button selectPetButton;

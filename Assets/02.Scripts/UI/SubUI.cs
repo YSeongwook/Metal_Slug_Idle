@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,11 +6,11 @@ using UnityEngine.UI;
 public class SubUI : MonoBehaviour
 {
     // 버튼 UI 요소
-    public Button button;
+    [TabGroup("MainButton")] public Button button;
     // 비활성화된 상태의 스프라이트
-    public Sprite passiveSprite;
+    [TabGroup("MainButton")] public Sprite passiveSprite;
     // 활성화된 상태의 스프라이트
-    public Sprite activeSprite;
+    [TabGroup("MainButton")] public Sprite activeSprite;
 
     // 버튼의 이미지 컴포넌트
     protected Image _buttonImage;
