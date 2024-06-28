@@ -19745,6 +19745,7 @@ GameObject:
   - component: {fileID: 4992001502139492874}
   - component: {fileID: 4367180457805551657}
   - component: {fileID: 2547452698230182550}
+  - component: {fileID: 1004707433955859237}
   m_Layer: 5
   m_Name: Chat UI
   m_TagString: Untagged
@@ -19813,6 +19814,24 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 3
+--- !u!114 &1004707433955859237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266979078610306438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1246aeb359cb9dd4e8c7de8f4cb58b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatScroll: {fileID: 1586309870625693853}
+  chatInputField: {fileID: 8331591566085756537}
+  sendButton: {fileID: 912807006342362478}
+  tcpChatServer: {fileID: 0}
+  serverIp: 172.30.1.55
+  port: 8080
 --- !u!1 &3298546876877760790
 GameObject:
   m_ObjectHideFlags: 0
@@ -39755,8 +39774,20 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3849393753945327616, guid: 84a4f2737880eb7479c94f24d09aebf8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84a4f2737880eb7479c94f24d09aebf8, type: 3}
+--- !u!114 &1586309870625693853 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2020302531514233296, guid: 84a4f2737880eb7479c94f24d09aebf8, type: 3}
+  m_PrefabInstance: {fileID: 723454594963558733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10837ee7ec97f6d48b4db00e8ee75cba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &5112476734877376745 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5546482687532724644, guid: 84a4f2737880eb7479c94f24d09aebf8, type: 3}

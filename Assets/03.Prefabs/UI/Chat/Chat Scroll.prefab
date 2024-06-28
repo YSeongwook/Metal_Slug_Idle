@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5562191672347595559}
   - component: {fileID: 1619048650880773821}
   - component: {fileID: 2020302531514233296}
-  - component: {fileID: 3849393753945327616}
   m_Layer: 5
   m_Name: Chat Scroll
   m_TagString: Untagged
@@ -147,21 +146,6 @@ MonoBehaviour:
     values: []
   padding: 0
   space: 0
---- !u!114 &3849393753945327616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638359646235249490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1246aeb359cb9dd4e8c7de8f4cb58b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chatScroll: {fileID: 2020302531514233296}
-  chatInputField: {fileID: 0}
-  sendButton: {fileID: 0}
 --- !u!1 &1328570502557234325
 GameObject:
   m_ObjectHideFlags: 0

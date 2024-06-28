@@ -1,12 +1,12 @@
 using System;
 using EnumTypes;
-using Firebase.Database;
-using Firebase.Auth;
-using Gpm.Ui;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 using EventLibrary;
+using Firebase.Auth;
+using Gpm.Ui;
+using Newtonsoft.Json;
 
 namespace Chat
 {
@@ -18,63 +18,56 @@ namespace Chat
 
         private Logger logger;
         private ScrollRect _scrollRect;
-        private FirebaseDataManager _firebaseDataManager;
         private FirebaseUser _currentUser; // 현재 로그인한 사용자
-        private DatabaseReference _messagesReference; // 메시지 참조 캐시
-        private bool _isDatabaseInitialized;
         private bool _isUserSignIn;
+        private TcpClientManager _tcpClientManager;
+
+        public TcpChatServer tcpChatServer;
+
+        [SerializeField]
+        private string serverIp = "127.0.0.1"; // 기본값을 로컬호스트로 설정
+        [SerializeField]
+        private int port = 8080;
 
         private void Awake()
         {
-            // Firebase 초기화 완료 이벤트 리스너 등록
-            EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseDatabaseInitialized,
-                OnFirebaseDatabaseInitialized);
-            // Firebase 로그인 완료 이벤트 리스너 등록
             EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
         }
 
-        private void Start()
+        private void OnEnable()
         {
             _scrollRect = chatScroll.GetComponent<ScrollRect>();
-            _firebaseDataManager = FirebaseDataManager.Instance;
-
             sendButton.onClick.AddListener(OnSendButtonClicked);
-
             logger = Logger.Instance;
+
+            tcpChatServer = FindObjectOfType<TcpChatServer>();
+            if (tcpChatServer == null)
+            {
+                Debug.LogError("TcpChatServer를 찾을 수 없습니다.");
+                return;
+            }
+
+            _tcpClientManager = new TcpClientManager(serverIp, port);
+            _tcpClientManager.OnMessageReceived += HandleMessageReceived;
+            Debug.Log("Chat UI 활성화됨 - 서버에 연결");
+        }
+
+        private void OnDisable()
+        {
+            _tcpClientManager?.Disconnect();
+            Debug.Log("Chat UI 비활성화됨 - 서버 연결 해제");
         }
 
         private void OnDestroy()
         {
-            // 이벤트 리스너 해제
-            EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseDatabaseInitialized,
-                OnFirebaseDatabaseInitialized);
             EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
-        }
-
-        private void OnFirebaseDatabaseInitialized()
-        {
-            _isDatabaseInitialized = true;
-            CheckInitializationStatus();
         }
 
         private void OnFirebaseSignIn()
         {
             _currentUser = AuthManager.Instance.GetCurrentUser();
             _isUserSignIn = true;
-            CheckInitializationStatus();
-        }
-
-        private void CheckInitializationStatus()
-        {
-            if (_isDatabaseInitialized && _isUserSignIn)
-            {
-                // messagesReference 캐싱
-                _messagesReference = _firebaseDataManager.DatabaseReference.Child("messages");
-                logger.LogError($"{_messagesReference}");
-
-                // Firebase 초기화 완료 후 메시지 로드
-                // LoadChatMessages();
-            }
+            logger.Log($"사용자 {_currentUser.DisplayName}로 로그인됨");
         }
 
         private void OnSendButtonClicked()
@@ -83,84 +76,33 @@ namespace Chat
             string message = chatInputField.text;
             if (!string.IsNullOrEmpty(message))
             {
-                AddChatMessage(_currentUser.DisplayName, message, DateTime.Now, null); // 현재 사용자 DisplayName을 사용
+                var chatMessage = new ChatMessageData
+                {
+                    userName = _currentUser?.DisplayName,
+                    message = message,
+                    Timestamp = DateTime.Now,
+                    userAvatar = null // 필요에 따라 아바타 설정
+                };
+
+                string jsonMessage = JsonConvert.SerializeObject(chatMessage);
+                _tcpClientManager.SendMessageToServer(jsonMessage);
+                logger.Log("보낸 메시지: " + jsonMessage);
                 chatInputField.text = string.Empty;
+                UpdateChatDisplay(chatMessage);
                 ScrollToBottom();
             }
-            else
-            {
-                message = "InputField가 null";
-                AddChatMessage(_currentUser.DisplayName, message, DateTime.Now, null);
-            }
         }
 
-        private void AddChatMessage(string userName, string message, DateTime timestamp, Sprite userAvatar)
+        private void HandleMessageReceived(string jsonMessage)
         {
-            var data = new ChatMessageData()
-            {
-                userName = userName,
-                message = message,
-                Timestamp = timestamp, // Unix 타임스탬프로 변환하여 저장
-                userAvatar = userAvatar
-            };
-
-            // Firebase에 데이터 저장
-            string key = _messagesReference.Push().Key;
-            _messagesReference.Child(key).SetRawJsonValueAsync(JsonUtility.ToJson(data)).ContinueWith(task =>
-            {
-                if (task.IsCanceled)
-                {
-                    logger.Log("메시지 저장이 취소되었습니다.");
-                    return;
-                }
-
-                if (task.IsFaulted)
-                {
-                    logger.LogError("메시지 저장 중 오류 발생: " + task.Exception);
-                    return;
-                }
-            });
-            
-            chatScroll.InsertData(data);
+            var chatMessage = JsonConvert.DeserializeObject<ChatMessageData>(jsonMessage);
+            logger.Log("받은 메시지: " + jsonMessage);
+            UnityMainThreadDispatcher.Enqueue(() => UpdateChatDisplay(chatMessage));
         }
 
-        private void LoadChatMessages()
+        private void UpdateChatDisplay(ChatMessageData chatMessage)
         {
-            try
-            {
-                _messagesReference.GetValueAsync().ContinueWith(task =>
-                {
-                    if (task.IsCanceled)
-                    {
-                        logger.Log("채팅 메시지 불러오기가 취소되었습니다.");
-                        return;
-                    }
-
-                    if (task.IsFaulted)
-                    {
-                        logger.LogError("채팅 메시지 불러오기 중 오류 발생: " + task.Exception);
-                        return;
-                    }
-
-                    DataSnapshot snapshot = task.Result;
-                    foreach (DataSnapshot messageSnapshot in snapshot.Children)
-                    {
-                        try
-                        {
-                            var data = JsonUtility.FromJson<ChatMessageData>(messageSnapshot.GetRawJsonValue());
-                            chatScroll.InsertData(data);
-                        }
-                        catch (Exception e)
-                        {
-                            logger.LogError("메시지 처리 중 오류 발생: " + e.Message);
-                        }
-                    }
-                });
-            }
-            catch (Exception e)
-            {
-                logger.LogError("채팅 메시지 로드 중 예외 발생: " + e.Message);
-            }
+            chatScroll.InsertData(chatMessage);
         }
 
         private void ScrollToBottom()
