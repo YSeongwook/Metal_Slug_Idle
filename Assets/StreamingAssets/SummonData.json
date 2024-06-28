@@ -1,0 +1,28 @@
+{
+  "summons": [
+    {
+      "id": 0,
+      "name": "Biya",
+      "explain": "소환 버튼 터치 시 영웅 즉시 등장!\nS급 영웅 Biya 확률 UP!\n썸머 페스티벌 픽업 소환 누적 횟수에\n따라 추가 보상을 획득하세요!",
+      "backgroundPath": "Summon/Summon_Biya",
+      "bannerPath": "Summon/Banner_Biya",
+      "endTime": 300
+    },
+    {
+      "id": 1,
+      "name": "썸머 페스티벌",
+      "explain": "소환 버튼 터치 시 영웅 즉시 등장!\nS급 영웅 엘레나 확률 UP!\n썸머 페스티벌 픽업 소환 누적 횟수에\n따라 추가 보상을 획득하세요!",
+      "backgroundPath": "Summon/Summon_Summer",
+      "bannerPath": "Summon/Banner_Summer",
+      "endTime": 300
+    },
+    {
+      "id": 2,
+      "name": "블랙 로즈",
+      "explain": "소환 버튼 터치 시 영웅 즉시 등장!\nS급 영웅 블랙 로즈 확률 UP!\n썸머 페스티벌 픽업 소환 누적 횟수에\n따라 추가 보상을 획득하세요!",
+      "backgroundPath": "Summon/Summon_Black",
+      "bannerPath": "Summon/Banner_Black",
+      "endTime": 300
+    }
+  ]
+}

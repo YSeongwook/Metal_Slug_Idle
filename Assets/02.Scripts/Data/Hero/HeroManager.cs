@@ -8,17 +8,32 @@ public class HeroManager : Singleton<HeroManager>
 
     private Vector2 padding;
     private Vector2 space;
-
-    private void Start()
+    
+    protected override void Awake()
     {
-        List<HeroData> heroes = HeroDataLoader.LoadHeroesFromJson();
-
+        base.Awake();
         padding = new Vector2(60, 30);
         space = new Vector2(120, 30);
-        
-        // 캐릭터 데이터 추가
-        infiniteScroll.InsertData(heroes.ToArray(), true);
+    }
+    
+    private void Start()
+    {
+        LoadData();
+    }
+
+    private void SetPaddingAndSpace()
+    {
         infiniteScroll.SetPadding(padding);
         infiniteScroll.SetSpace(space);
+    }
+
+    public void LoadData()
+    {
+        List<HeroData> heroes = HeroDataLoader.LoadHeroesFromJson();
+        
+        infiniteScroll.ClearData(); // 데이터 초기화
+        infiniteScroll.InsertData(heroes.ToArray(), true); // 데이터 추가
+        SetPaddingAndSpace(); // padding, space 적용
+        infiniteScroll.MoveToFirstData();
     }
 }

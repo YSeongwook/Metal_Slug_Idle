@@ -9,15 +9,16 @@ public class DungeonManager : Singleton<DungeonManager>
     private Vector2 padding;
     private Vector2 space;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         padding = new Vector2(50, 20);
         space = new Vector2(0, 20);
     }
     
     private void Start()
     {
-        LoadScrollView();
+        LoadData();
     }
 
     private void SetPaddingAndSpace()
@@ -26,7 +27,7 @@ public class DungeonManager : Singleton<DungeonManager>
         infiniteScroll.SetSpace(space);
     }
 
-    public void LoadScrollView()
+    public void LoadData()
     {
         List<DungeonData> dungeons = DungeonDataLoader.LoadDungeonsFromJson();
         
