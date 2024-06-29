@@ -7,6 +7,7 @@ using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
@@ -24,6 +25,10 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
 
+        // HeroCollectionUpdated 이벤트 리스너 등록
+        UnityAction<HeroCollection> onHeroCollectionUpdated = OnHeroCollectionUpdated;
+        EventManager<DataEvents>.StartListening(DataEvents.HeroCollectionUpdated, onHeroCollectionUpdated);
+
         logger = Logger.Instance;
     }
 
@@ -31,6 +36,10 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     {
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseInitialized, OnFirebaseInitialized);
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
+
+        // HeroCollectionUpdated 이벤트 리스너 해제
+        UnityAction<HeroCollection> onHeroCollectionUpdated = OnHeroCollectionUpdated;
+        EventManager<DataEvents>.StopListening(DataEvents.HeroCollectionUpdated, onHeroCollectionUpdated);
     }
 
     // Firebase가 초기화될 때 호출
@@ -135,6 +144,26 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 저장 성공."));
         });
+    }
+
+    // HeroCollectionUpdated 이벤트가 발생했을 때 호출되는 메서드
+    private void OnHeroCollectionUpdated(HeroCollection heroCollection)
+    {
+        string userId = GetCurrentUser().UserId;
+        string json = JsonUtility.ToJson(heroCollection);
+
+        _databaseRef.Child("users").Child(userId).Child("heroCollection").SetRawJsonValueAsync(json)
+            .ContinueWith(task =>
+            {
+                if (task.IsCompleted)
+                {
+                    Debug.Log("HeroCollection updated in Firebase Realtime Database.");
+                }
+                else
+                {
+                    Debug.LogError("Failed to update HeroCollection in Firebase Realtime Database: " + task.Exception);
+                }
+            });
     }
 
     // Firebase 데이터베이스에서 사용자 데이터를 로드

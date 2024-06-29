@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-[Serializable]
-public class HeroCollectionItem
-{
-    public int id;
-    public bool owned;
-}
-
 public class HeroCollectionManager : Singleton<HeroCollectionManager>
 {
     private List<HeroCollectionItem> heroCollection;

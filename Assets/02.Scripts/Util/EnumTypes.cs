@@ -33,6 +33,7 @@ namespace EnumTypes
         OnUserDataSave,
         OnUserDataLoad,
         OnUserDataReset,
+        HeroCollectionUpdated,
     }
 
     public enum GoogleEvents
