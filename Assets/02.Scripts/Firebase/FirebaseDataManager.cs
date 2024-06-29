@@ -192,6 +192,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         {
             string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
             var userHeroCollection = new UserHeroCollection(userId, base64HeroCollection);
+            HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
             return userHeroCollection;
         }
         else

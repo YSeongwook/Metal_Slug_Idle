@@ -7,7 +7,11 @@ public static class DataLoader<T> where T : class
     // JSON 파일에서 데이터를 로드합니다.
     public static List<T> LoadDataFromJson(string fileName)
     {
+#if UNITY_EDITOR
         string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+#else
+        string filePath = Path.Combine(Application.persistentDataPath, fileName);
+#endif
 
         // 파일이 존재하면 데이터를 읽고, 존재하지 않으면 빈 리스트를 반환합니다.
         if (File.Exists(filePath))
