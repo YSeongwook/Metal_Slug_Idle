@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Gpm.Ui;
 using UnityEngine;
@@ -13,6 +14,12 @@ public class DataManager<TData> : Singleton<DataManager<TData>> where TData : In
     protected virtual void Start()
     {
         LoadData(); // 데이터 로드
+    }
+
+    protected void OnEnable()
+    {
+        LoadData();
+        Debug.Log("LoadData");
     }
 
     // 데이터를 로드하고 스크롤 뷰에 추가하는 메서드
