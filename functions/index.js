@@ -1,46 +1,107 @@
+const fs = require('fs');
+const path = require('path');
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
-class WeightedRandomPicker {
-    constructor() {
-        this.itemWeightDict = new Map();
-        this.sumOfWeights = 0;
-    }
+// GachaData.json 파일 경로 설정
+const gachaDataPath = path.join(__dirname, 'GachaData.json');
+let gachaData;
 
-    add(item, weight) {
-        if (weight <= 0) throw new Error('Weight must be positive');
-        this.itemWeightDict.set(item, weight);
-        this.sumOfWeights += weight;
+// GachaData.json 파일 읽기 및 초기화
+fs.readFile(gachaDataPath, 'utf8', (err, data) => {
+    if (err) {
+        console.error('Error reading gacha data file:', err);
+        return;
     }
+    const parsedData = JSON.parse(data).data;
+    // 가중치를 할당하여 gachaData 초기화
+    gachaData = parsedData.map(hero => ({
+        id: hero.id,
+        weight: getWeightByRank(hero.rank)
+    }));
+});
 
-    getRandomPick() {
-        let rand = Math.random() * this.sumOfWeights;
-        let cumulativeWeight = 0;
-        for (let [item, weight] of this.itemWeightDict.entries()) {
-            cumulativeWeight += weight;
-            if (rand < cumulativeWeight) {
-                return item;
-            }
-        }
+// 등급에 따른 가중치를 반환하는 함수
+function getWeightByRank(rank) {
+    switch(rank) {
+        case 'S': return 0.01; // 1%
+        case 'A': return 0.04; // 4%
+        case 'B': return 0.15; // 15%
+        case 'C': return 0.30; // 30%
+        case 'D': return 0.50; // 50%
+        default: return 0.0;
     }
 }
 
-const picker = new WeightedRandomPicker();
-picker.add("HeroA", 50);
-picker.add("HeroB", 30);
-picker.add("HeroC", 20);
+// WeightedRandomPicker 클래스 정의
+class WeightedRandomPicker {
+    constructor(items) {
+        this.items = items;
+        // 전체 가중치 합 계산
+        this.totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
+    }
 
+    // 단일 항목을 랜덤하게 선택하는 메서드
+    pick() {
+        const random = Math.random() * this.totalWeight;
+        let weightSum = 0;
+
+        for (const item of this.items) {
+            weightSum += item.weight;
+            if (random < weightSum) {
+                return item.id;
+            }
+        }
+    }
+
+    // 여러 항목을 랜덤하게 선택하는 메서드
+    pickMultiple(count) {
+        let results = [];
+        for (let i = 0; i < count; i++) {
+            results.push(this.pick());
+        }
+        return results;
+    }
+}
+
+// gacha Firebase Function 정의
 exports.gacha = functions.https.onRequest(async (req, res) => {
     const userId = req.body.userId;
-    const gachaResult = picker.getRandomPick();
+    const drawCount = req.body.drawCount || 1; // 기본 뽑기 횟수는 1회
 
-    const userRef = admin.database().ref(`users/${userId}/heroCollection`);
-    const snapshot = await userRef.once('value');
-    const heroCollection = snapshot.val() || [];
+    if (!userId) {
+        return res.status(400).send('Missing userId');
+    }
 
-    heroCollection.push(gachaResult);
-    await userRef.set(heroCollection);
+    if (!gachaData) {
+        return res.status(500).send('Gacha data not initialized');
+    }
 
-    res.json({ result: gachaResult });
+    const picker = new WeightedRandomPicker(gachaData);
+    const heroIds = picker.pickMultiple(drawCount);
+
+    try {
+        const heroCollectionRef = admin.database().ref(`/user_HeroCollection/${userId}`);
+        const heroDataSnapshot = await heroCollectionRef.once('value');
+
+        let heroCollection = heroDataSnapshot.val() || [];
+
+        // 뽑은 영웅을 컬렉션에 추가
+        heroIds.forEach(heroId => {
+            const heroExists = heroCollection.find(hero => hero.id === heroId);
+            if (heroExists) {
+                heroExists.owned = true;
+            } else {
+                heroCollection.push({ id: heroId, owned: true });
+            }
+        });
+
+        await heroCollectionRef.set(heroCollection);
+
+        res.status(200).json({ result: heroIds });
+    } catch (error) {
+        console.error('Error updating hero collection:', error);
+        res.status(500).send('Internal Server Error');
+    }
 });

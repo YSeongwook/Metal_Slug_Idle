@@ -1,0 +1,14 @@
+{
+  "data": [
+    { "id": 0, "rank": "A" },
+    { "id": 1, "rank": "S" },
+    { "id": 2, "rank": "S" },
+    { "id": 3, "rank": "S" },
+    { "id": 4, "rank": "S" },
+    { "id": 5, "rank": "D" },
+    { "id": 6, "rank": "C" },
+    { "id": 7, "rank": "B" },
+    { "id": 8, "rank": "A" },
+    { "id": 9, "rank": "S" }
+  ]
+}
