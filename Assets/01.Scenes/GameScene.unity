@@ -187,7 +187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &379536463
 Transform:
   m_ObjectHideFlags: 0
@@ -642,9 +642,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 899775869}
-  - component: {fileID: 899775870}
+  - component: {fileID: 899775871}
   m_Layer: 0
-  m_Name: DungeonManager
+  m_Name: DungeonDataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -665,7 +665,7 @@ Transform:
   m_Father: {fileID: 379536463}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &899775870
+--- !u!114 &899775871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -674,10 +674,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 899775868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06828f40e7c83f747aa1577004ae7ba8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cd2f92cfeb03d2469bb1795dd1b46b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   infiniteScroll: {fileID: 695279048}
+  padding: {x: 50, y: 20}
+  space: {x: 0, y: 20}
+  fileName: DungeonData.json
 --- !u!1 &972212076
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,9 +788,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1158348759}
-  - component: {fileID: 1158348760}
+  - component: {fileID: 1158348761}
   m_Layer: 0
-  m_Name: HeroManager
+  m_Name: HeroDataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +811,7 @@ Transform:
   m_Father: {fileID: 379536463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158348760
+--- !u!114 &1158348761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -817,10 +820,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158348758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1848c082f94562742856f16478d5dbba, type: 3}
+  m_Script: {fileID: 11500000, guid: 247107a30b8ff5d46b87f472635604dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   infiniteScroll: {fileID: 1079444812753486828}
+  padding: {x: 60, y: 30}
+  space: {x: 120, y: 30}
+  fileName: HeroData.json
 --- !u!4 &1176710590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1134890735426999482, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
@@ -2316,9 +2322,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2118459455}
-  - component: {fileID: 2118459456}
+  - component: {fileID: 2118459457}
   m_Layer: 0
-  m_Name: BannerManager
+  m_Name: BannerDataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2339,7 +2345,7 @@ Transform:
   m_Father: {fileID: 379536463}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2118459456
+--- !u!114 &2118459457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2348,10 +2354,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2118459454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f6fa96051142d43bd4bc3141bf11e3, type: 3}
+  m_Script: {fileID: 11500000, guid: ee64edebe5e21a34ca32e4eeab5698bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   infiniteScroll: {fileID: 1416426222}
+  padding: {x: 0, y: 40}
+  space: {x: 60, y: 0}
+  fileName: SummonData.json
 --- !u!1001 &1079444812753486827
 PrefabInstance:
   m_ObjectHideFlags: 0
