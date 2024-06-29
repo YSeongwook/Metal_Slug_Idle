@@ -1,0 +1,2780 @@
+fileFormatVersion: 2
+guid: 61141456e920d21429cfee292dcc1067
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2971
+        width: 57
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1754386, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3237ea26f06aeb14783aa65b6c06edd3
+      internalID: -1899364059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 2971
+        width: 57
+        height: 45
+      alignment: 9
+      pivot: {x: 0.15789473, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991932b7fca61814ebd0cd05b5003b93
+      internalID: -435133737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2971
+        width: 54
+        height: 45
+      alignment: 9
+      pivot: {x: 0.12962963, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378e187a901132049943f94f04656d98
+      internalID: -291446509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2971
+        width: 52
+        height: 45
+      alignment: 9
+      pivot: {x: 0.115384616, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae90ac47bb497d4ba1ecabe08a28f3d
+      internalID: -577214607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 2971
+        width: 49
+        height: 45
+      alignment: 9
+      pivot: {x: 0.10204082, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baf8832902f31244b84f8b5b6197bb4
+      internalID: 1116818610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 2898
+        width: 44
+        height: 45
+      alignment: 9
+      pivot: {x: 0.11363637, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5620aeadde00600499c36440080d7f38
+      internalID: -160498047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 2898
+        width: 42
+        height: 45
+      alignment: 9
+      pivot: {x: 0.11904762, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813b44ad3ba31024fa59f9da5226d110
+      internalID: -2116500603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2898
+        width: 46
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17391305, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e511b4197de2e844952fd7aa1584308
+      internalID: -1223213716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 2898
+        width: 50
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a71cf6fc10e8b74088c8bdc5f0da7ce
+      internalID: 912699052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 2898
+        width: 56
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17857143, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c01d0cba3c07143be1e79e41ca43bd
+      internalID: 676661774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 2795
+        width: 48
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27083334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e526e8661e49b41b791f2999de9d6e
+      internalID: 544767303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 2794
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27659574, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d98a5bcf10966e48aad1cc90fdbe14e
+      internalID: 1647567810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 2792
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23404256, y: 0.5222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14aa35a0c0ed459448bee5d93e1b9db8
+      internalID: -469897642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_3
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 2793
+        width: 48
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27083334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679b1caa5e2f1ad4dbba74d840bb8b8e
+      internalID: -329722882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 2698
+        width: 48
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27083334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a5ff89915af45419d11aaa199389da
+      internalID: 1725069589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_5
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2697
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27659574, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad5df723b2b2fb43af2f778955f60b3
+      internalID: 1194749753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 2694
+        width: 45
+        height: 45
+      alignment: 9
+      pivot: {x: 0.24444444, y: 0.5222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be3c37dd235f1948b627c30b46386ab
+      internalID: -1892983869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Move_7
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2696
+        width: 48
+        height: 45
+      alignment: 9
+      pivot: {x: 0.27083334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcf3751503fe104f9735bf92c954c0e
+      internalID: 1629615718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 2577
+        width: 57
+        height: 45
+      alignment: 9
+      pivot: {x: 0.15789473, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5bf0bb69050d448927e9b0b38ea66a
+      internalID: -2084514246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2577
+        width: 55
+        height: 45
+      alignment: 9
+      pivot: {x: 0.16363636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae88c6fef5ea4b44d8314e053c2c6db6
+      internalID: 1627692359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2577
+        width: 36
+        height: 52
+      alignment: 9
+      pivot: {x: 0.083333336, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195ea2114fabd1148a3ae42185593cd9
+      internalID: 1060455105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2577
+        width: 32
+        height: 48
+      alignment: 9
+      pivot: {x: 0.125, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6006215eee11544aa32ddd70dbf453e
+      internalID: -941582630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 2477
+        width: 57
+        height: 45
+      alignment: 9
+      pivot: {x: 0.36842105, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211312c352a7411428ec291ce82404e8
+      internalID: 1336736643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 2477
+        width: 55
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8890b222852fd6498a4886e42e06eb1
+      internalID: -318415763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 2477
+        width: 41
+        height: 45
+      alignment: 9
+      pivot: {x: 0.29268292, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6100322aeb0a5041b9e5e89579a80d9
+      internalID: 1991983947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 2477
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.225, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0990299a0464f84a8d8e85a6eabe0c5
+      internalID: 1092496655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 2377
+        width: 41
+        height: 45
+      alignment: 9
+      pivot: {x: 0.29268292, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ac495d6dde3374da508cc39b191af4
+      internalID: -1735990584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 2377
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.28947368, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4971023486c6e9e4c88b9aafe09c78af
+      internalID: -1982303298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 2377
+        width: 108
+        height: 48
+      alignment: 9
+      pivot: {x: 0.25925925, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6616be2a7e9c32a4f9b91a99a53b874a
+      internalID: 2119495800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2377
+        width: 91
+        height: 47
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.4787234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303cb57810596a54992029b790a4556f
+      internalID: 654764546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 2277
+        width: 86
+        height: 48
+      alignment: 9
+      pivot: {x: 0.13953489, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151e73cbbd78a984095ff0a20afbb3d5
+      internalID: -767192794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2277
+        width: 77
+        height: 67
+      alignment: 9
+      pivot: {x: 0.15584415, y: 0.33582088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4796d8fb0a8ae4aa73a8b5f6b56f1c
+      internalID: 2017432074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2277
+        width: 69
+        height: 71
+      alignment: 9
+      pivot: {x: 0.08695652, y: 0.31690142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb312ce7780c05e449eb87bd134a92e3
+      internalID: -1238020754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 2277
+        width: 62
+        height: 72
+      alignment: 9
+      pivot: {x: 0.11290322, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda20f582085b7940a880d33ce1da215
+      internalID: -1863703191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 2177
+        width: 31
+        height: 49
+      alignment: 9
+      pivot: {x: 0.12903225, y: 0.45918366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bccb1fbc22f60740adee4c4cf4ef4a1
+      internalID: -1408579522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2177
+        width: 47
+        height: 48
+      alignment: 9
+      pivot: {x: 0.17021276, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e56b0e746bc8fb40aca106d5190ad81
+      internalID: 561961656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2177
+        width: 100
+        height: 46
+      alignment: 9
+      pivot: {x: 0.24, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3762156c3bdfaea4aaec5d492056da51
+      internalID: -1755987676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 2177
+        width: 98
+        height: 51
+      alignment: 9
+      pivot: {x: 0.24489796, y: 0.44117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe295d0417905b54bb31cfaf959ec072
+      internalID: -1490111996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2077
+        width: 82
+        height: 55
+      alignment: 9
+      pivot: {x: 0.2682927, y: 0.4090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d14acd7700e6fb4f95a0431f63db03f
+      internalID: 1767457341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_21
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 2077
+        width: 99
+        height: 53
+      alignment: 9
+      pivot: {x: 0.3131313, y: 0.4245283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6c39132677a7e48857c18d392e6775
+      internalID: -268048231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_22
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 2077
+        width: 108
+        height: 48
+      alignment: 9
+      pivot: {x: 0.37962964, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6095b9c5927c1e649a29aeea2a1c31be
+      internalID: 468117576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_23
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 2077
+        width: 69
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6086956, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3cfe4aa0dfbf7d40b00356cbed05bf4
+      internalID: 1992568477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1977
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.36842105, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55890ada2d91d344fbe70aa9c6a786df
+      internalID: 527343444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_25
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1977
+        width: 105
+        height: 48
+      alignment: 9
+      pivot: {x: 0.2952381, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347a9c8ace0652748972d5dfdaf061e3
+      internalID: -195655290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_26
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1977
+        width: 91
+        height: 47
+      alignment: 9
+      pivot: {x: 0.17582418, y: 0.4787234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f41c74ca1f0cef448479663020c7082
+      internalID: -1807308122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_27
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1977
+        width: 86
+        height: 47
+      alignment: 9
+      pivot: {x: 0.15116279, y: 0.4787234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b378f094ce711749b8bff709521f442
+      internalID: -948010773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_28
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1877
+        width: 77
+        height: 67
+      alignment: 9
+      pivot: {x: 0.18181819, y: 0.33582088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad0f09101bb68644a69f4118e9a9868
+      internalID: 574062630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_29
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 1877
+        width: 69
+        height: 71
+      alignment: 9
+      pivot: {x: 0.11594203, y: 0.31690142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 765cdaa3e28d92d47904076de6d7fbbd
+      internalID: -608239712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_30
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1877
+        width: 62
+        height: 72
+      alignment: 9
+      pivot: {x: 0.14516129, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e49549c2b4f4794e99ac7e747e0ba83
+      internalID: 35421514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_31
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1877
+        width: 31
+        height: 49
+      alignment: 9
+      pivot: {x: 0.19354838, y: 0.45918366}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9238f61dcefd8842977a11735069d0d
+      internalID: 1002844013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1777
+        width: 47
+        height: 48
+      alignment: 9
+      pivot: {x: 0.21276596, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3645570cbd67f0439a36017681df7bf
+      internalID: -473000373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_33
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1777
+        width: 98
+        height: 46
+      alignment: 9
+      pivot: {x: 0.25510204, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf18f5b9381e5d47b9ce7bf6fad4332
+      internalID: -594782701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_34
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1777
+        width: 98
+        height: 51
+      alignment: 9
+      pivot: {x: 0.26530612, y: 0.44117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b338d9979c220429c07011e3cfc08c
+      internalID: 1105151920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_35
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1777
+        width: 82
+        height: 55
+      alignment: 9
+      pivot: {x: 0.29268292, y: 0.4090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce225b23c6de0a439f6da880ae20964
+      internalID: 52390142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_36
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1677
+        width: 99
+        height: 53
+      alignment: 9
+      pivot: {x: 0.34343433, y: 0.4245283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c3a7bf4ee487a4b80dade89775c1ab
+      internalID: -1529661705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_37
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 1677
+        width: 108
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4074074, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7bee344d8f1ad499f06baf0d72299b
+      internalID: 285999665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_38
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1677
+        width: 66
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155f7492a98d94a49b5c35708da5b6ed
+      internalID: 697899554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_39
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1677
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.42105263, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a2a20e4fdda084a9fb0d48acdb8513
+      internalID: 1750810577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_40
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1577
+        width: 33
+        height: 45
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2747a69982cb86e4692aa11dab47c02f
+      internalID: -983034554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_41
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1577
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1599fc587767a646861cf796e18a7cd
+      internalID: 2086649350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_42
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1577
+        width: 104
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d69535454476fa247b0175963944c499
+      internalID: -496033579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_43
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1577
+        width: 115
+        height: 45
+      alignment: 9
+      pivot: {x: 0.31304348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c41119237aea0a4abe451e9de9f6680
+      internalID: -1069134068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_44
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1477
+        width: 103
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2815534, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20a9b9a525ba5648be94c923456e9bf
+      internalID: -1593993679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_45
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1477
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab76c88c55e0a447b8182def821622b
+      internalID: 1174830398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_46
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1477
+        width: 101
+        height: 45
+      alignment: 9
+      pivot: {x: 0.25742576, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc121de8a453c34d9c0e5cd788d91eb
+      internalID: 767440337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_47
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1477
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e437fa3bb6898479f6eb361c47692a
+      internalID: -532318421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_48
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1377
+        width: 104
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f708c92f1cbdc48a52d154e7c5cd65
+      internalID: -510467170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_49
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1377
+        width: 115
+        height: 45
+      alignment: 9
+      pivot: {x: 0.31304348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2527f812eab6e74fa33488b1b3a4231
+      internalID: 1226692031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_50
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1377
+        width: 103
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2815534, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53de92971c92d74195b5df8ea1121ef
+      internalID: 2043962290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_51
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1377
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d496a8d9fa04ff4aa47c5075092e769
+      internalID: -1089032686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_52
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1277
+        width: 101
+        height: 45
+      alignment: 9
+      pivot: {x: 0.25742576, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020b45107f19ec24e8bade112037f64d
+      internalID: -1564531037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_53
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1277
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda294fd5ad31b647a60f356289a83e7
+      internalID: 183039309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_54
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1277
+        width: 104
+        height: 45
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aecdd35c8ce96b040b736ba6f1d875be
+      internalID: 682059125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_55
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1277
+        width: 115
+        height: 45
+      alignment: 9
+      pivot: {x: 0.31304348, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71458748fde5a142918aaecded55654
+      internalID: -1791801901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_56
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1177
+        width: 103
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2815534, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad068222bc551a4bb22ce18b323bfde
+      internalID: -1382045938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_57
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1177
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.32110092, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31ff779a52ea1b4aaa9abd9ade9b9db
+      internalID: 1401121843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_58
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1177
+        width: 101
+        height: 45
+      alignment: 9
+      pivot: {x: 0.25742576, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c30ccdbb2384948aa0598a8c4f68f7
+      internalID: 463592895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_59
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 1177
+        width: 95
+        height: 45
+      alignment: 9
+      pivot: {x: 0.18947369, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c04df8147e51874c820f19093abdd3c
+      internalID: 561529452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_60
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1077
+        width: 47
+        height: 45
+      alignment: 9
+      pivot: {x: 0.21276596, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00e4a63901652f489a4fe6911dd0406
+      internalID: 442581123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_61
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 1077
+        width: 46
+        height: 48
+      alignment: 9
+      pivot: {x: 0.1521739, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda5defa7774bcc47ba67c61a55e5ad1
+      internalID: -1984842217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_62
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1077
+        width: 83
+        height: 45
+      alignment: 9
+      pivot: {x: 0.09638554, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929e1375c9a73b4498e7ead544e09a6c
+      internalID: 749074184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_63
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1078
+        width: 117
+        height: 45
+      alignment: 9
+      pivot: {x: 0.15384616, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8927ed447a85742bb7d38757a7f653
+      internalID: -558478277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_64
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 955
+        width: 98
+        height: 45
+      alignment: 9
+      pivot: {x: 0.06122449, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1556abc485b6d3f48b35a89522fb2b14
+      internalID: -2046121401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_65
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 955
+        width: 44
+        height: 45
+      alignment: 9
+      pivot: {x: 0.13636364, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d216cd8f96634043885ff85ac9b3e03
+      internalID: -1168353774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_66
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 954
+        width: 27
+        height: 45
+      alignment: 9
+      pivot: {x: 0.074074075, y: 0.5222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122388f0f0452b8429dac30f885c1c3b
+      internalID: 2064766848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_67
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 945
+        width: 76
+        height: 87
+      alignment: 9
+      pivot: {x: 0.15789473, y: 0.37356323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce0795046671fc49b4f074f59ef69e8
+      internalID: -669196864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_68
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 794
+        width: 83
+        height: 87
+      alignment: 9
+      pivot: {x: 0.26506025, y: 0.18965517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c310a651a81f6a44493abbc5382a4a43
+      internalID: -1774184943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_69
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 796
+        width: 80
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25862068}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d249d259f1bc14c80186d9c783a4f3
+      internalID: 1948255939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_70
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 796
+        width: 23
+        height: 87
+      alignment: 9
+      pivot: {x: 0.8695652, y: 0.3045977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bd5dc5f30a41d64fa72052e0d483ebc
+      internalID: 1757759077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_71
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 796
+        width: 100
+        height: 97
+      alignment: 9
+      pivot: {x: 0.28, y: 0.28865978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fd8427fef8e2a44a415b0ed192a992
+      internalID: -433722355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_72
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 707
+        width: 126
+        height: 47
+      alignment: 9
+      pivot: {x: 0.34920636, y: 0.30851063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5152b805ac12c0947872ae0efde87586
+      internalID: -797744281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_73
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 688
+        width: 92
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33673468}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bcc0f865ec5144bb5999bb6b706a40
+      internalID: 1131472235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_74
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 686
+        width: 39
+        height: 53
+      alignment: 9
+      pivot: {x: 0.7307692, y: 0.4245283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853b541c66a350e479670cd67580cd24
+      internalID: 1632974602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_75
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 686
+        width: 43
+        height: 45
+      alignment: 9
+      pivot: {x: 0.6627907, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1766f1fd65847214c9491937c87a075a
+      internalID: 709479387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_76
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 588
+        width: 83
+        height: 55
+      alignment: 9
+      pivot: {x: 0.16867469, y: 0.37272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d237c3fa02da9409cdcb2c42962284
+      internalID: 242564043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_77
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 593
+        width: 113
+        height: 45
+      alignment: 9
+      pivot: {x: 0.38938054, y: 0.45555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda3efc1b5d693a48816e16f90d5ee2e
+      internalID: -1970463511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_78
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 595
+        width: 74
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5675676, y: 0.39130434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b60fcf8c7abd8b4b99b0d3178e94830
+      internalID: 202759757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_79
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 597
+        width: 85
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.41111112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cef92af74e1db743b5bd0326dac2136
+      internalID: 471189573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_82
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 486
+        width: 93
+        height: 53
+      alignment: 9
+      pivot: {x: 0.043010753, y: 0.4245283}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e466a0ef303692c4cb5d1630d2e4204a
+      internalID: -1563671996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_80
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 495
+        width: 116
+        height: 45
+      alignment: 9
+      pivot: {x: 0.25862068, y: 0.41111112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184f221ab20b1a543b40b12182d28bb9
+      internalID: -1400477935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_81
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 488
+        width: 81
+        height: 48
+      alignment: 9
+      pivot: {x: 0.37037036, y: 0.39583334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c9bb3b2c4ec5443b70284425e330ea
+      internalID: -1427234578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_83
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 486
+        width: 126
+        height: 61
+      alignment: 9
+      pivot: {x: 0.2936508, y: 0.36885247}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202ca29e9e9c1db499fa18c8430db76c
+      internalID: -492142654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_84
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 386
+        width: 126
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2936508, y: 0.38135594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd15540f6b9c43448fe2e126fdfd290
+      internalID: -1492905273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_85
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 386
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.13559322, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca2d79442d9b0044b0915448291fb2e
+      internalID: -674163530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_86
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 386
+        width: 59
+        height: 45
+      alignment: 9
+      pivot: {x: 0.118644066, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdb993f61496fd4ca8f47566c387cce
+      internalID: -165316888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_Attack_87
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 386
+        width: 56
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17857143, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d709020977061bc4cb635d7c477d222c
+      internalID: -1174788330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_133
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 253
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c66ad2836d9464d9c71c7e06a26073
+      internalID: -1869566729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_134
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 264
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef8a9a65bbbf3aa4f816c5d7db349cdd
+      internalID: -1619471741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_135
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 256
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56bc3431229e4c44830f105634d1456
+      internalID: -1236550591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_136
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 233
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae101704cf1dff49834be58a505b37d
+      internalID: 1721016826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_137
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 218
+        width: 92
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f60b2adc0655d44900fa69035d61b6
+      internalID: -774898234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_138
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 267
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 204c2724e6278a349b204a3f1ec635c7
+      internalID: -271424808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_139
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 218
+        width: 51
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a665001dab26925418dec886fc199d3e
+      internalID: -1166429334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_140
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 218
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b73d74f3dc902dc46a6bfab3b47dc2d7
+      internalID: 974994999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_141
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 218
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f956425cefc724784bf9cc488317a8
+      internalID: -1849470572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_142
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 243
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3da57f8d1feda6478c0697ac8653966
+      internalID: -519606370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_143
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 218
+        width: 62
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6c4b4b70e19394cbfa8bca3623b8e4
+      internalID: -2049999354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_144
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 233
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decd8981b5aadee41a313111ae7e0fd2
+      internalID: 426265061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Elena_145
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 158
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4926629e1331fa419b5053b9b86a547
+      internalID: 1928986812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 62e030a4a9260e945a9057ee0b6274ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Summer_Elena_103: 1586839953
+      Summer_Elena_107: -1787908791
+      Summer_Elena_108: -757838150
+      Summer_Elena_109: 1407456890
+      Summer_Elena_119: -487573316
+      Summer_Elena_123: -2028324103
+      Summer_Elena_124: 681492751
+      Summer_Elena_125: 2076489358
+      Summer_Elena_126: -1246930096
+      Summer_Elena_127: 1330279837
+      Summer_Elena_129: -222685247
+      Summer_Elena_133: -1869566729
+      Summer_Elena_134: -1619471741
+      Summer_Elena_135: -1236550591
+      Summer_Elena_136: 1721016826
+      Summer_Elena_137: -774898234
+      Summer_Elena_138: -271424808
+      Summer_Elena_139: -1166429334
+      Summer_Elena_140: 974994999
+      Summer_Elena_141: -1849470572
+      Summer_Elena_142: -519606370
+      Summer_Elena_143: -2049999354
+      Summer_Elena_144: 426265061
+      Summer_Elena_145: 1928986812
+      Summer_Elena_29: -1154869313
+      Summer_Elena_32: 2119849739
+      Summer_Elena_35: -129648188
+      Summer_Elena_37: -684819838
+      Summer_Elena_41: 732359261
+      Summer_Elena_46: -1186411523
+      Summer_Elena_50: -212183780
+      Summer_Elena_53: 656270441
+      Summer_Elena_56: -1354938438
+      Summer_Elena_58: 1703597566
+      Summer_Elena_62: -2105421130
+      Summer_Elena_67: 281966258
+      Summer_Elena_74: -539019590
+      Summer_Elena_81: 768425573
+      Summer_Elena_88: 378226949
+      Summer_Elena_93: -1702194017
+      Summer_Elena_Attack_0: -2084514246
+      Summer_Elena_Attack_1: 1627692359
+      Summer_Elena_Attack_10: 2119495800
+      Summer_Elena_Attack_11: 654764546
+      Summer_Elena_Attack_12: -767192794
+      Summer_Elena_Attack_13: 2017432074
+      Summer_Elena_Attack_14: -1238020754
+      Summer_Elena_Attack_15: -1863703191
+      Summer_Elena_Attack_16: -1408579522
+      Summer_Elena_Attack_17: 561961656
+      Summer_Elena_Attack_18: -1755987676
+      Summer_Elena_Attack_19: -1490111996
+      Summer_Elena_Attack_2: 1060455105
+      Summer_Elena_Attack_20: 1767457341
+      Summer_Elena_Attack_21: -268048231
+      Summer_Elena_Attack_22: 468117576
+      Summer_Elena_Attack_23: 1992568477
+      Summer_Elena_Attack_24: 527343444
+      Summer_Elena_Attack_25: -195655290
+      Summer_Elena_Attack_26: -1807308122
+      Summer_Elena_Attack_27: -948010773
+      Summer_Elena_Attack_28: 574062630
+      Summer_Elena_Attack_29: -608239712
+      Summer_Elena_Attack_3: -941582630
+      Summer_Elena_Attack_30: 35421514
+      Summer_Elena_Attack_31: 1002844013
+      Summer_Elena_Attack_32: -473000373
+      Summer_Elena_Attack_33: -594782701
+      Summer_Elena_Attack_34: 1105151920
+      Summer_Elena_Attack_35: 52390142
+      Summer_Elena_Attack_36: -1529661705
+      Summer_Elena_Attack_37: 285999665
+      Summer_Elena_Attack_38: 697899554
+      Summer_Elena_Attack_39: 1750810577
+      Summer_Elena_Attack_4: 1336736643
+      Summer_Elena_Attack_40: -983034554
+      Summer_Elena_Attack_41: 2086649350
+      Summer_Elena_Attack_42: -496033579
+      Summer_Elena_Attack_43: -1069134068
+      Summer_Elena_Attack_44: -1593993679
+      Summer_Elena_Attack_45: 1174830398
+      Summer_Elena_Attack_46: 767440337
+      Summer_Elena_Attack_47: -532318421
+      Summer_Elena_Attack_48: -510467170
+      Summer_Elena_Attack_49: 1226692031
+      Summer_Elena_Attack_5: -318415763
+      Summer_Elena_Attack_50: 2043962290
+      Summer_Elena_Attack_51: -1089032686
+      Summer_Elena_Attack_52: -1564531037
+      Summer_Elena_Attack_53: 183039309
+      Summer_Elena_Attack_54: 682059125
+      Summer_Elena_Attack_55: -1791801901
+      Summer_Elena_Attack_56: -1382045938
+      Summer_Elena_Attack_57: 1401121843
+      Summer_Elena_Attack_58: 463592895
+      Summer_Elena_Attack_59: 561529452
+      Summer_Elena_Attack_6: 1991983947
+      Summer_Elena_Attack_60: 442581123
+      Summer_Elena_Attack_61: -1984842217
+      Summer_Elena_Attack_62: 749074184
+      Summer_Elena_Attack_63: -558478277
+      Summer_Elena_Attack_64: -2046121401
+      Summer_Elena_Attack_65: -1168353774
+      Summer_Elena_Attack_66: 2064766848
+      Summer_Elena_Attack_67: -669196864
+      Summer_Elena_Attack_68: -1774184943
+      Summer_Elena_Attack_69: 1948255939
+      Summer_Elena_Attack_7: 1092496655
+      Summer_Elena_Attack_70: 1757759077
+      Summer_Elena_Attack_71: -433722355
+      Summer_Elena_Attack_72: -797744281
+      Summer_Elena_Attack_73: 1131472235
+      Summer_Elena_Attack_74: 1632974602
+      Summer_Elena_Attack_75: 709479387
+      Summer_Elena_Attack_76: 242564043
+      Summer_Elena_Attack_77: -1970463511
+      Summer_Elena_Attack_78: 202759757
+      Summer_Elena_Attack_79: 471189573
+      Summer_Elena_Attack_8: -1735990584
+      Summer_Elena_Attack_80: -1400477935
+      Summer_Elena_Attack_81: -1427234578
+      Summer_Elena_Attack_82: -1563671996
+      Summer_Elena_Attack_83: -492142654
+      Summer_Elena_Attack_84: -1492905273
+      Summer_Elena_Attack_85: -674163530
+      Summer_Elena_Attack_86: -165316888
+      Summer_Elena_Attack_87: -1174788330
+      Summer_Elena_Attack_9: -1982303298
+      Summer_Elena_Idle_0: -1899364059
+      Summer_Elena_Idle_1: -435133737
+      Summer_Elena_Idle_2: -291446509
+      Summer_Elena_Idle_3: -577214607
+      Summer_Elena_Idle_4: 1116818610
+      Summer_Elena_Idle_5: -160498047
+      Summer_Elena_Idle_6: -2116500603
+      Summer_Elena_Idle_7: -1223213716
+      Summer_Elena_Idle_8: 912699052
+      Summer_Elena_Idle_9: 676661774
+      Summer_Elena_Move_0: 544767303
+      Summer_Elena_Move_1: 1647567810
+      Summer_Elena_Move_2: -469897642
+      Summer_Elena_Move_3: -329722882
+      Summer_Elena_Move_4: 1725069589
+      Summer_Elena_Move_5: 1194749753
+      Summer_Elena_Move_6: -1892983869
+      Summer_Elena_Move_7: 1629615718
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
