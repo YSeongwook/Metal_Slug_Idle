@@ -1,0 +1,950 @@
+fileFormatVersion: 2
+guid: d9701d12707215d4fbfd9aca2790123f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 356
+        width: 43
+        height: 45
+      alignment: 9
+      pivot: {x: 0.069767445, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bb1204acf575b4ea560718d624e1ba
+      internalID: 1638173446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 356
+        width: 41
+        height: 45
+      alignment: 9
+      pivot: {x: 0.048780486, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21091a9c33a537a41beea379cc24e90c
+      internalID: -1020177048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 356
+        width: 48
+        height: 45
+      alignment: 9
+      pivot: {x: 0.125, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2750411c0257d31499b220ac1f5ffb6d
+      internalID: 198744654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 356
+        width: 51
+        height: 45
+      alignment: 9
+      pivot: {x: 0.09803922, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b072d1c10eea05849835c4bc627de804
+      internalID: -72686844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 356
+        width: 50
+        height: 45
+      alignment: 9
+      pivot: {x: 0.06, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46c5a64b529740469c2abaa84045291
+      internalID: 658646427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 356
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e03f01c84ce92347a1b082b2bb0fb4e
+      internalID: -1821934383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 356
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f89ef4e8f662d7a499843113680e024d
+      internalID: -1462556697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 169
+        width: 39
+        height: 45
+      alignment: 9
+      pivot: {x: 0.17948718, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c7baf4323219f4b9b5b3c5b94bb592
+      internalID: 419841650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_19
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 169
+        width: 33
+        height: 45
+      alignment: 9
+      pivot: {x: 0.030303031, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9be2fd08eab864fa1b06def3df2ae0
+      internalID: 563235310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_18
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 169
+        width: 32
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f96bb56d64ff29b458845388a1f005fe
+      internalID: 829156062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_17
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 145
+        width: 36
+        height: 76
+      alignment: 9
+      pivot: {x: 0.055555556, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fca4b5d78abe614ab955b14f58fde14
+      internalID: -1169830863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_16
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 145
+        width: 41
+        height: 76
+      alignment: 9
+      pivot: {x: 0, y: 0.21052632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374ad39e691324947a14a446fd4e45ec
+      internalID: -163294915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_15
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 145
+        width: 48
+        height: 70
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af77ff6d07d949d46b290a5aa3e8ae76
+      internalID: 1067428422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 226
+        width: 65
+        height: 88
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89391434f99a87a4c98ddf6844467b94
+      internalID: 15825279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 235
+        width: 69
+        height: 84
+      alignment: 9
+      pivot: {x: 0.014084507, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78ee1ad095a0904c879ca81bd0f2daf
+      internalID: 1114769108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 236
+        width: 60
+        height: 84
+      alignment: 9
+      pivot: {x: 0.016129032, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285b3e7b0fe619e4cbbdba5a03fdf99d
+      internalID: -1285459850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 235
+        width: 52
+        height: 84
+      alignment: 9
+      pivot: {x: 0.018518519, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e30d264374b91544a066f8bc8f5803d
+      internalID: -1080305842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 264
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507299d38b64d1c498de1e88f4a01f7d
+      internalID: 1984861299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 264
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.05, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4b1cf99ca378a478cb16b35c354418
+      internalID: -1347793195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 264
+        width: 41
+        height: 45
+      alignment: 9
+      pivot: {x: 0.12195122, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944e08a14817218478412764e955c403
+      internalID: -458119124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 264
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a00266880b32840b738160a0e34bac
+      internalID: 2122763984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 520
+        width: 36
+        height: 45
+      alignment: 9
+      pivot: {x: 0.027777778, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af244780b5081344bc42c8817495382
+      internalID: 979468938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 520
+        width: 37
+        height: 45
+      alignment: 9
+      pivot: {x: 0.054054055, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f2c4184e71b4740951466a877058ef
+      internalID: 1247997441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 520
+        width: 36
+        height: 45
+      alignment: 9
+      pivot: {x: 0.055555556, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d5fd9de2577b24aa89eadb930535ce
+      internalID: -1055135826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 520
+        width: 35
+        height: 45
+      alignment: 9
+      pivot: {x: 0.028571429, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee43eb44e0bbfb46b42cbab08bc1d06
+      internalID: 1252221602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 520
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe5f8e3968f283498ac65e347cbc977
+      internalID: -408651688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 520
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b35cb31d91f88c4c89fb13468d24b3a
+      internalID: 1325751742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 520
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b6408d27139a048a2ef05ca3a94062
+      internalID: -1363027010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 520
+        width: 34
+        height: 45
+      alignment: 9
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb35e8e6ab47d846aaa2603bebe4471
+      internalID: 240538837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 433
+        width: 39
+        height: 46
+      alignment: 9
+      pivot: {x: 0.102564104, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c6e5880926f1414880483afb31f9a77
+      internalID: -675696479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_6
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 433
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8241fa4e4f9970f4ba8a44dbf6009fe1
+      internalID: 1518094548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_5
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 433
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeddaca9fcb19947ab41bc75fa34f5b
+      internalID: -1179955677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_4
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 433
+        width: 39
+        height: 45
+      alignment: 9
+      pivot: {x: 0.102564104, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98dd2824794ea14b9bafd8361d355a7
+      internalID: -946508975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_3
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 433
+        width: 39
+        height: 45
+      alignment: 9
+      pivot: {x: 0.102564104, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17cc71a3ff35854cb9abacc7306f709
+      internalID: -561547759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_2
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 433
+        width: 38
+        height: 45
+      alignment: 9
+      pivot: {x: 0.10526316, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc79a57703b84449a6987bfc2851dec
+      internalID: -768531365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_1
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 433
+        width: 37
+        height: 46
+      alignment: 9
+      pivot: {x: 0.10810811, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b5c92c24efba445bf60c04f6ec1237
+      internalID: 1612642465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Rocky_Move_0
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 433
+        width: 38
+        height: 46
+      alignment: 9
+      pivot: {x: 0.10526316, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8291f4e431de6274e917d1e63efb28f3
+      internalID: 290186542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1718bdad7d079d947be006d38453abc8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Summer_Rocky_16: -1170779566
+      Summer_Rocky_Attack_0: -1462556697
+      Summer_Rocky_Attack_1: -1821934383
+      Summer_Rocky_Attack_10: 1984861299
+      Summer_Rocky_Attack_11: -1080305842
+      Summer_Rocky_Attack_12: -1285459850
+      Summer_Rocky_Attack_13: 1114769108
+      Summer_Rocky_Attack_14: 15825279
+      Summer_Rocky_Attack_15: 1067428422
+      Summer_Rocky_Attack_16: -163294915
+      Summer_Rocky_Attack_17: -1169830863
+      Summer_Rocky_Attack_18: 829156062
+      Summer_Rocky_Attack_19: 563235310
+      Summer_Rocky_Attack_2: 658646427
+      Summer_Rocky_Attack_20: 419841650
+      Summer_Rocky_Attack_3: -72686844
+      Summer_Rocky_Attack_4: 198744654
+      Summer_Rocky_Attack_5: -1020177048
+      Summer_Rocky_Attack_6: 1638173446
+      Summer_Rocky_Attack_7: 2122763984
+      Summer_Rocky_Attack_8: -458119124
+      Summer_Rocky_Attack_9: -1347793195
+      Summer_Rocky_Idle_0: 240538837
+      Summer_Rocky_Idle_1: -1363027010
+      Summer_Rocky_Idle_2: 1325751742
+      Summer_Rocky_Idle_3: -408651688
+      Summer_Rocky_Idle_4: 1252221602
+      Summer_Rocky_Idle_5: -1055135826
+      Summer_Rocky_Idle_6: 1247997441
+      Summer_Rocky_Idle_7: 979468938
+      Summer_Rocky_Move_0: 290186542
+      Summer_Rocky_Move_1: 1612642465
+      Summer_Rocky_Move_2: -768531365
+      Summer_Rocky_Move_3: -561547759
+      Summer_Rocky_Move_4: -946508975
+      Summer_Rocky_Move_5: -1179955677
+      Summer_Rocky_Move_6: 1518094548
+      Summer_Rocky_Move_7: -675696479
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

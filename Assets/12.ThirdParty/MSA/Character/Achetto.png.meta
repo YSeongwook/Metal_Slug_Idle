@@ -1,0 +1,1025 @@
+fileFormatVersion: 2
+guid: e9f5c087f1d2ccb47b8f759187b8124c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Achetto_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 930
+        width: 53
+        height: 81
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.2777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f835d709a927a04ca4ef1a939b39000
+      internalID: -2033139186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 930
+        width: 54
+        height: 74
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.30405405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f44d0e862dd6614aa6b66085b149d1f
+      internalID: 1638944287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 930
+        width: 53
+        height: 71
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.31690142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b53d8e151358540a2df47b4b92745b
+      internalID: 961983343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 930
+        width: 54
+        height: 70
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.32142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fffba75fe1915744a3f7d5124003851
+      internalID: -52811470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 930
+        width: 54
+        height: 72
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95246f9a02a5c0645b88e951ac0aca98
+      internalID: -1701539058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 930
+        width: 53
+        height: 70
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.32142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b720e5ae1d5d3545a6f7972155e4c44
+      internalID: 544894815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 839
+        width: 53
+        height: 81
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.2777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95baddd4110f88b46bb9ba9842eba2b0
+      internalID: 1892722990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 839
+        width: 54
+        height: 74
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.30405405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9364bb8adf1a5a24fbec1f5d71f2ec63
+      internalID: -51110452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 839
+        width: 53
+        height: 71
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.31690142}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8596491003197054eafaa60012b5af08
+      internalID: -903657873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 839
+        width: 54
+        height: 70
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.32142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e926cd814ae464546a646f3da9dc3fb9
+      internalID: 1570753142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 839
+        width: 54
+        height: 72
+      alignment: 9
+      pivot: {x: 0.24074075, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e5cd74d4da557468741f955ee52f18
+      internalID: 135921398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 839
+        width: 53
+        height: 70
+      alignment: 9
+      pivot: {x: 0.2264151, y: 0.32142857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f49756cd4524744a7038266cade966
+      internalID: 724233922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_4
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 734
+        width: 57
+        height: 74
+      alignment: 9
+      pivot: {x: 0.2982456, y: 0.30405405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ae4fba7a8cc084a81df5761ccd57a0
+      internalID: 1887448391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 734
+        width: 56
+        height: 77
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58188cb207c4c147b7cd6ede3c76455
+      internalID: -1931168941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_5
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 734
+        width: 59
+        height: 73
+      alignment: 9
+      pivot: {x: 0.30508474, y: 0.30821916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7d18a6cfb9aef4ab71535348cd670b
+      internalID: 1633614801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 734
+        width: 57
+        height: 77
+      alignment: 9
+      pivot: {x: 0.28070176, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7057c078e10e8d948876f8813b939dae
+      internalID: -133357242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 734
+        width: 54
+        height: 77
+      alignment: 9
+      pivot: {x: 0.2777778, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0c68c4beebe104381e521f184c9920
+      internalID: 29141368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_0
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 734
+        width: 59
+        height: 77
+      alignment: 9
+      pivot: {x: 0.30508474, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998a4d6f1d0980840a62162eaea2ba49
+      internalID: -9765570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 646
+        width: 57
+        height: 74
+      alignment: 9
+      pivot: {x: 0.31578946, y: 0.30405405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb64fead3a5deb4e80e6f89459acd5c
+      internalID: -702420355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_7
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 646
+        width: 59
+        height: 77
+      alignment: 9
+      pivot: {x: 0.30508474, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffedc30c20902534f9c099813418c394
+      internalID: 2039327609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_11
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 646
+        width: 58
+        height: 72
+      alignment: 9
+      pivot: {x: 0.3275862, y: 0.3125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c1168770ec77248a571236f3543c87
+      internalID: -207227770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_9
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 646
+        width: 56
+        height: 77
+      alignment: 9
+      pivot: {x: 0.30357143, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c641a26c3a83d1b4cb5e7733dd643e85
+      internalID: -853271554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_8
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 646
+        width: 57
+        height: 77
+      alignment: 9
+      pivot: {x: 0.2982456, y: 0.29220778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8247f1311276c4181cd0e98715cded
+      internalID: -493334053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Move_6
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 646
+        width: 60
+        height: 73
+      alignment: 9
+      pivot: {x: 0.3, y: 0.30821916}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a76f25011bcbc64492b734082df7e75
+      internalID: 76529465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 125
+        width: 66
+        height: 57
+      alignment: 9
+      pivot: {x: 0, y: 0.39473686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529d7150fdf582c4db5b01d6bba16e0d
+      internalID: -274428572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 125
+        width: 73
+        height: 57
+      alignment: 9
+      pivot: {x: 0, y: 0.39473686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a145643ac7de7d549887cf12a1bb9d06
+      internalID: -855560503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 125
+        width: 96
+        height: 50
+      alignment: 9
+      pivot: {x: 0.33333334, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56a5a980f79f764e8ca8ff552ce4359
+      internalID: 1026398042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 125
+        width: 99
+        height: 48
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038cdf243a104fe4aa3fb085f9d4aa61
+      internalID: -622546458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 69
+        width: 84
+        height: 46
+      alignment: 9
+      pivot: {x: 0.41666666, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f017f42dfba419248ab0693b136ec79e
+      internalID: 587501605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 69
+        width: 112
+        height: 47
+      alignment: 9
+      pivot: {x: 0.2857143, y: 0.4787234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b737f247003294d8e3893d0320efb9
+      internalID: 1243160939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 69
+        width: 110
+        height: 45
+      alignment: 9
+      pivot: {x: 0.16363636, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce153fdf2bc5fe34e8dc3da89f8765bc
+      internalID: -698752543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 14
+        width: 109
+        height: 45
+      alignment: 9
+      pivot: {x: 0.16513762, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b6d1966162745408c991dcff5cf3ec
+      internalID: 1222771589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achetto_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 14
+        width: 102
+        height: 50
+      alignment: 9
+      pivot: {x: 0.24509804, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff8b195c7f41c34694c4d4a65eff238
+      internalID: 1457357675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 34feda4b539d10e4e8e124e2b97acbca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Achetto_0: -1632820501
+      Achetto_100: -1543383468
+      Achetto_101: -636171826
+      Achetto_102: 1544528069
+      Achetto_103: 1605347735
+      Achetto_104: 1317708651
+      Achetto_105: 218475601
+      Achetto_106: 1519202647
+      Achetto_107: -1497690723
+      Achetto_108: -1123049263
+      Achetto_109: 1166578309
+      Achetto_110: -1335088689
+      Achetto_111: -246120042
+      Achetto_112: -705165433
+      Achetto_113: -747313304
+      Achetto_114: -1366340511
+      Achetto_115: 789714216
+      Achetto_116: -527079623
+      Achetto_117: 1100240357
+      Achetto_118: -339843563
+      Achetto_119: -2115051444
+      Achetto_120: -654406706
+      Achetto_121: 83266760
+      Achetto_122: -1634146376
+      Achetto_123: -1999983004
+      Achetto_124: -363292265
+      Achetto_125: 1239218539
+      Achetto_126: -203090499
+      Achetto_127: -1852075427
+      Achetto_128: 1509168014
+      Achetto_129: -1446686369
+      Achetto_130: 1222642194
+      Achetto_131: -389169220
+      Achetto_132: -123452932
+      Achetto_133: 182509754
+      Achetto_134: 2134920013
+      Achetto_135: 534387275
+      Achetto_136: 1936665596
+      Achetto_137: -1198372473
+      Achetto_138: 1768393514
+      Achetto_139: 1119771770
+      Achetto_140: -1945244102
+      Achetto_141: -1289933751
+      Achetto_142: -480748189
+      Achetto_143: 1033090326
+      Achetto_144: 1946220553
+      Achetto_145: 1079309823
+      Achetto_146: -1781319902
+      Achetto_147: -1720623202
+      Achetto_148: -1123712925
+      Achetto_149: -693341141
+      Achetto_15: -1043479848
+      Achetto_150: -226454047
+      Achetto_151: -542486146
+      Achetto_152: 250323626
+      Achetto_153: -1428755812
+      Achetto_154: 1303140657
+      Achetto_155: -804689857
+      Achetto_156: -1977420724
+      Achetto_157: 229281520
+      Achetto_158: -2064289361
+      Achetto_159: -1425074639
+      Achetto_16: -2060589055
+      Achetto_160: 1101347024
+      Achetto_161: -42304528
+      Achetto_162: 1179165064
+      Achetto_163: -71561797
+      Achetto_164: 1470966527
+      Achetto_165: -367637505
+      Achetto_166: -875173773
+      Achetto_167: 1672746085
+      Achetto_168: 1288330888
+      Achetto_169: -312436473
+      Achetto_17: 140045005
+      Achetto_170: -1728988601
+      Achetto_171: 596534909
+      Achetto_172: -77687157
+      Achetto_173: -1403897589
+      Achetto_174: 1288636269
+      Achetto_175: 1897553925
+      Achetto_176: -863977506
+      Achetto_177: 2096004010
+      Achetto_178: -404225743
+      Achetto_179: -1233414064
+      Achetto_18: 2142570631
+      Achetto_183: -1835055304
+      Achetto_187: -1811933340
+      Achetto_189: 441559795
+      Achetto_190: 659281331
+      Achetto_191: -925008388
+      Achetto_192: 1552048091
+      Achetto_193: 2142751548
+      Achetto_194: -1910492842
+      Achetto_197: 1431360084
+      Achetto_2: 792242018
+      Achetto_23: -1893162350
+      Achetto_24: -343180974
+      Achetto_25: -292751635
+      Achetto_26: -1768984638
+      Achetto_28: -97382362
+      Achetto_29: 889225438
+      Achetto_30: 821974754
+      Achetto_32: -1721959020
+      Achetto_34: 151315658
+      Achetto_35: -1669616761
+      Achetto_39: 516002069
+      Achetto_40: 420297755
+      Achetto_42: 841778012
+      Achetto_43: -919132793
+      Achetto_44: 250156894
+      Achetto_46: 1211834993
+      Achetto_48: 2074998955
+      Achetto_49: 959480725
+      Achetto_5: 1159695846
+      Achetto_53: -1890289532
+      Achetto_54: 1872611565
+      Achetto_55: -2022479813
+      Achetto_56: -1168092821
+      Achetto_57: 1701503427
+      Achetto_58: -1579970054
+      Achetto_59: -598654910
+      Achetto_6: 603279876
+      Achetto_60: 1916777590
+      Achetto_61: 1839586407
+      Achetto_62: -1027484344
+      Achetto_63: -1599791218
+      Achetto_64: 167566395
+      Achetto_65: -2108660852
+      Achetto_66: -144803909
+      Achetto_67: 155626192
+      Achetto_68: -1840888691
+      Achetto_69: -577424154
+      Achetto_7: -1701130394
+      Achetto_70: -714501987
+      Achetto_71: -1290866231
+      Achetto_72: -1361324747
+      Achetto_73: -1547242337
+      Achetto_74: -721864640
+      Achetto_75: -1867448225
+      Achetto_76: 239741378
+      Achetto_77: -1477639338
+      Achetto_78: 1267644075
+      Achetto_79: 109671547
+      Achetto_8: -1939761375
+      Achetto_80: -1466166792
+      Achetto_81: 1688868058
+      Achetto_82: -191550682
+      Achetto_83: -822087048
+      Achetto_84: -326217069
+      Achetto_85: -1592081805
+      Achetto_86: -1531670793
+      Achetto_87: 1517086377
+      Achetto_88: -1358415960
+      Achetto_89: 577195978
+      Achetto_90: 1438544972
+      Achetto_91: -1661289911
+      Achetto_92: -1548305257
+      Achetto_93: -894687022
+      Achetto_94: 2033637881
+      Achetto_95: 249990402
+      Achetto_96: -1501961514
+      Achetto_97: -1683875926
+      Achetto_98: 1262426934
+      Achetto_99: -1257519589
+      Achetto_Attack_0: -274428572
+      Achetto_Attack_1: -855560503
+      Achetto_Attack_2: 1026398042
+      Achetto_Attack_3: -622546458
+      Achetto_Attack_4: 587501605
+      Achetto_Attack_5: 1243160939
+      Achetto_Attack_6: -698752543
+      Achetto_Attack_7: 1222771589
+      Achetto_Attack_8: 1457357675
+      Achetto_Idle_0: -2033139186
+      Achetto_Idle_1: 961983343
+      Achetto_Idle_10: 135921398
+      Achetto_Idle_11: 724233922
+      Achetto_Idle_2: 1638944287
+      Achetto_Idle_3: -52811470
+      Achetto_Idle_4: -1701539058
+      Achetto_Idle_5: 544894815
+      Achetto_Idle_6: 1892722990
+      Achetto_Idle_7: -903657873
+      Achetto_Idle_8: -51110452
+      Achetto_Idle_9: 1570753142
+      Achetto_Move_0: -9765570
+      Achetto_Move_1: -1931168941
+      Achetto_Move_10: -702420355
+      Achetto_Move_11: -207227770
+      Achetto_Move_2: 29141368
+      Achetto_Move_3: -133357242
+      Achetto_Move_4: 1887448391
+      Achetto_Move_5: 1633614801
+      Achetto_Move_6: 76529465
+      Achetto_Move_7: 2039327609
+      Achetto_Move_8: -493334053
+      Achetto_Move_9: -853271554
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

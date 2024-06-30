@@ -1,0 +1,850 @@
+fileFormatVersion: 2
+guid: 1cc1601578a2447489bc3cad0c4a1bc5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 752
+        width: 68
+        height: 54
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db9791171116cf43863977341ac5b49
+      internalID: -1368811094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 752
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e027d52f2b92a4c98226cf63cd7ce3
+      internalID: -1537055675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 752
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fd541e12d14904a93c17d8eab598f7
+      internalID: -1004401692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 752
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7221c15aa9de4c84db0a7e6e8b5d1b9f
+      internalID: 1291509416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_4
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 752
+        width: 68
+        height: 54
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541ddfb90372b584fb0ad4ec344ed472
+      internalID: 1768683545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Move_5
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 752
+        width: 67
+        height: 57
+      alignment: 9
+      pivot: {x: 0.29850745, y: 0.39473686}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a79541656611c4da176146d60c01b9
+      internalID: 51739487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 666
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a2ec5f2b6249541b7cf2e880bec8b7
+      internalID: -395755209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 666
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d997211159050bc419dc064f39a519ac
+      internalID: -1205109862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 664
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09f91059f877bc4db469cfc99afef48
+      internalID: 1548882819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 664
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2377cc1ba68565b498d2f81e9ec0529f
+      internalID: 1769073596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 665
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d57517efba3823459e263ed5f288648
+      internalID: 573928129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 665
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bda3c74bd77ccb41a6b5415d7f333fc
+      internalID: 1428524273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 570
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1353a10e722f6764fa7786966643a257
+      internalID: -1341805441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 574
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324d3cc5ff086374490a8a23f6ea0797
+      internalID: -1412271821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 575
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2156625af0bc2428a0fb9944796f15
+      internalID: 1793320788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 577
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d56185ea33a9f64fb7358e74df7904d
+      internalID: 882878929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 570
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cceef3224d88b6e4fa28b0679f421dfa
+      internalID: 743749858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 571
+        width: 68
+        height: 52
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788f681942888a146bef3df9f95262c1
+      internalID: -1712338018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 181
+        width: 73
+        height: 55
+      alignment: 9
+      pivot: {x: 0.16438356, y: 0.4090909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc54d4af9bbc6364e9bb21a63fb9eca5
+      internalID: -475310573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 181
+        width: 82
+        height: 50
+      alignment: 9
+      pivot: {x: 0.17073171, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba113152d9197e41acdeb006100badf
+      internalID: 976625974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 181
+        width: 86
+        height: 48
+      alignment: 9
+      pivot: {x: 0.1744186, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44f3e545c12b60479b7de2e02ad2443
+      internalID: -42025679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 181
+        width: 80
+        height: 46
+      alignment: 9
+      pivot: {x: 0.175, y: 0.48913044}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784b67df823692c498afc18b71250cc3
+      internalID: -56776623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 181
+        width: 70
+        height: 45
+      alignment: 9
+      pivot: {x: 0.15714286, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448fec1ceb1b2d64ab3c142c13cc848c
+      internalID: -708923735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 181
+        width: 46
+        height: 45
+      alignment: 9
+      pivot: {x: 0.2173913, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa7df9db2b45584b8a2913724278aab
+      internalID: 1961383632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 181
+        width: 74
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5810811, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebcb7d1de7a30d2478c6308470576573
+      internalID: -1841945612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 76
+        width: 75
+        height: 48
+      alignment: 9
+      pivot: {x: 0, y: 0.46875}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3420254517c4ba4fba8d6494aff3f50
+      internalID: 931294905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 76
+        width: 96
+        height: 54
+      alignment: 9
+      pivot: {x: 0.041666668, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a953f31d4e4ab034285ab284f861259c
+      internalID: -1576173949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_9
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 76
+        width: 76
+        height: 58
+      alignment: 9
+      pivot: {x: 0.05263158, y: 0.38793105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab522266f32497b429aed37081fe72aa
+      internalID: 1544799783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_10
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 76
+        width: 65
+        height: 52
+      alignment: 9
+      pivot: {x: 0.26153848, y: 0.43269232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0cb1fab06579c4a9aff666642a901b
+      internalID: -1212991296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_11
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 76
+        width: 68
+        height: 56
+      alignment: 9
+      pivot: {x: 0.30882353, y: 0.4017857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8137b1ad0b125fa44bc812c97f27d044
+      internalID: -897016997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Summer_Yoshino_Attack_12
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 76
+        width: 68
+        height: 54
+      alignment: 9
+      pivot: {x: 0.29411766, y: 0.41666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb3edb1c8196c94da9ad382cf64ee6c
+      internalID: -1787506104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 32993935c47dd694d8053861d2bfbd4c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Summer_Yoshino_0: 1549052895
+      Summer_Yoshino_1: 1717707999
+      Summer_Yoshino_20: -948076362
+      Summer_Yoshino_21: 847296216
+      Summer_Yoshino_22: 1173813965
+      Summer_Yoshino_23: -2085118807
+      Summer_Yoshino_24: -280218189
+      Summer_Yoshino_25: 1785487779
+      Summer_Yoshino_26: -784975551
+      Summer_Yoshino_27: -479616045
+      Summer_Yoshino_28: 1102190212
+      Summer_Yoshino_29: 1137796710
+      Summer_Yoshino_30: -1513618787
+      Summer_Yoshino_31: 434677754
+      Summer_Yoshino_32: 1905471438
+      Summer_Yoshino_33: 853822812
+      Summer_Yoshino_34: -1073668110
+      Summer_Yoshino_35: 1499563480
+      Summer_Yoshino_36: -2105638876
+      Summer_Yoshino_37: -937197563
+      Summer_Yoshino_38: 1891003959
+      Summer_Yoshino_39: -937013421
+      Summer_Yoshino_40: -999385048
+      Summer_Yoshino_41: 445364514
+      Summer_Yoshino_42: -908437676
+      Summer_Yoshino_43: 1330723884
+      Summer_Yoshino_44: 2104210074
+      Summer_Yoshino_45: 1104241196
+      Summer_Yoshino_46: -1106812547
+      Summer_Yoshino_47: -111907240
+      Summer_Yoshino_48: 1904845209
+      Summer_Yoshino_49: 1814475697
+      Summer_Yoshino_50: 405914874
+      Summer_Yoshino_Attack_0: -475310573
+      Summer_Yoshino_Attack_1: 976625974
+      Summer_Yoshino_Attack_10: -1212991296
+      Summer_Yoshino_Attack_11: -897016997
+      Summer_Yoshino_Attack_12: -1787506104
+      Summer_Yoshino_Attack_2: -42025679
+      Summer_Yoshino_Attack_3: -56776623
+      Summer_Yoshino_Attack_4: -708923735
+      Summer_Yoshino_Attack_5: 1961383632
+      Summer_Yoshino_Attack_6: -1841945612
+      Summer_Yoshino_Attack_7: 931294905
+      Summer_Yoshino_Attack_8: -1576173949
+      Summer_Yoshino_Attack_9: 1544799783
+      Summer_Yoshino_Idle_0: -395755209
+      Summer_Yoshino_Idle_1: -1205109862
+      Summer_Yoshino_Idle_10: 743749858
+      Summer_Yoshino_Idle_11: -1712338018
+      Summer_Yoshino_Idle_2: 1548882819
+      Summer_Yoshino_Idle_3: 1769073596
+      Summer_Yoshino_Idle_4: 573928129
+      Summer_Yoshino_Idle_5: 1428524273
+      Summer_Yoshino_Idle_6: -1341805441
+      Summer_Yoshino_Idle_7: -1412271821
+      Summer_Yoshino_Idle_8: 1793320788
+      Summer_Yoshino_Idle_9: 882878929
+      Summer_Yoshino_Move_0: -1368811094
+      Summer_Yoshino_Move_1: -1537055675
+      Summer_Yoshino_Move_2: -1004401692
+      Summer_Yoshino_Move_3: 1291509416
+      Summer_Yoshino_Move_4: 1768683545
+      Summer_Yoshino_Move_5: 51739487
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
