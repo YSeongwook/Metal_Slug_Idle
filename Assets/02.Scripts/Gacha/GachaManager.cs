@@ -1,6 +1,7 @@
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Collections;
+using System.Collections.Generic;
 using EnumTypes;
 using EventLibrary;
 using UnityEngine.Networking;
@@ -8,6 +9,8 @@ using UnityEngine.Networking;
 public class GachaManager : MonoBehaviour
 {
     private string gachaUrl = "https://us-central1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
+    public SummonResultManager summonResultManager; // SummonResultManager 컴포넌트 참조
+    public HeroCollectionManager heroCollectionManager; // HeroCollectionManager 컴포넌트 참조
 
     private void OnEnable()
     {
@@ -44,6 +47,7 @@ public class GachaManager : MonoBehaviour
         {
             var result = JsonConvert.DeserializeObject<GachaResult>(request.downloadHandler.text); // 응답 데이터 파싱
             UpdateUIWithGachaResult(result.result); // UI 업데이트
+            UpdateHeroCollection(result.result); // HeroCollection 업데이트
         }
         else
         {
@@ -53,7 +57,40 @@ public class GachaManager : MonoBehaviour
 
     private void UpdateUIWithGachaResult(int[] heroIds)
     {
-        // 결과를 UI에 업데이트하는 로직을 구현
+        Dictionary<int, int> heroCountMap = new Dictionary<int, int>();
+
+        // 영웅 ID를 카운트하여 중복 처리
+        foreach (int heroId in heroIds)
+        {
+            if (heroCountMap.ContainsKey(heroId))
+            {
+                heroCountMap[heroId]++;
+            }
+            else
+            {
+                heroCountMap[heroId] = 1;
+            }
+        }
+
+        List<SummonResultData> summonResults = new List<SummonResultData>();
+
+        // SummonResultData 리스트 생성
+        foreach (var entry in heroCountMap)
+        {
+            summonResults.Add(new SummonResultData
+            {
+                id = entry.Key,
+                portraitPath = $"HeroImages/{entry.Key}",
+                count = entry.Value // 획득한 개수 설정
+            });
+        }
+
+        summonResultManager.UpdateSummonResults(summonResults);
+    }
+
+    private void UpdateHeroCollection(int[] heroIds)
+    {
+        heroCollectionManager.UpdateHeroCollection(heroIds);
     }
 
     [System.Serializable]

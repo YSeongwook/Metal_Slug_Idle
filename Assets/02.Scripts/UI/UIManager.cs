@@ -106,9 +106,14 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Main UI/Panel Party")] [PropertySpace(5f, 0f)]
     public GameObject[] heroes;
 
-    [FoldoutGroup("Shop UI")] public Button summonSingleButton;
-    [FoldoutGroup("Shop UI")] public Button summonTenButton;
-    [FoldoutGroup("Shop UI")] public Button summonThirtyButton;
+    [FoldoutGroup("Shop UI")] [HorizontalGroup("Shop UI/Horizontal")]
+    [FoldoutGroup("Shop UI/Horizontal/Shop")] public Button summonSingleButton;
+    [FoldoutGroup("Shop UI/Horizontal/Shop")] public Button summonTenButton;
+    [FoldoutGroup("Shop UI/Horizontal/Shop")] public Button summonThirtyButton;
+
+    [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public GameObject panelSummonResult;
+    [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public Button summonResultTenButton;
+    [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public Button summonResultThirtyButton;
     
     [FoldoutGroup("Log Scroll View")] public GameObject logScrollView;
     [FoldoutGroup("Log Scroll View")] public Button logButton;

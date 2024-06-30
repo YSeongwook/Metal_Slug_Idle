@@ -270,3 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a34ab0ac4a513e42ab250351486b78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoApplySize: 0
+  portrait: {fileID: 8093663860123068151}
+  count: {fileID: 2298607870549336531}
+  id: 0

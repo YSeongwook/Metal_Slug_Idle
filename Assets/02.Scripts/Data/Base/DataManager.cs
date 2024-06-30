@@ -34,7 +34,7 @@ public class DataManager<TData> : Singleton<DataManager<TData>> where TData : In
     }
 
     // 패딩과 스페이스 설정 메서드
-    private void SetPaddingAndSpace()
+    protected void SetPaddingAndSpace()
     {
         infiniteScroll.SetPadding(padding);
         infiniteScroll.SetSpace(space);

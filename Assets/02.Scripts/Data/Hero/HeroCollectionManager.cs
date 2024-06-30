@@ -53,6 +53,14 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
         SaveCollection();
     }
 
+    public void UpdateHeroCollection(int[] heroIds)
+    {
+        foreach (int heroId in heroIds)
+        {
+            AddHero(heroId);
+        }
+    }
+
     private void InitializeCollection()
     {
 #if UNITY_EDITOR
