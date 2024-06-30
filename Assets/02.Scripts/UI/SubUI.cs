@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class SubUI : MonoBehaviour
 {
     // 버튼 UI 요소
-    [TabGroup("MainButton")] public Button button;
+    [FoldoutGroup("MainButton")] public Button button;
+
     // 비활성화된 상태의 스프라이트
-    [TabGroup("MainButton")] public Sprite passiveSprite;
+    [FoldoutGroup("MainButton")] public Sprite passiveSprite;
+
     // 활성화된 상태의 스프라이트
-    [TabGroup("MainButton")] public Sprite activeSprite;
+    [FoldoutGroup("MainButton")] public Sprite activeSprite;
+
+    public Vector3 upperBarPosition;
 
     // 버튼의 이미지 컴포넌트
     protected Image _buttonImage;
@@ -28,9 +32,11 @@ public class SubUI : MonoBehaviour
         // 버튼과 활성화 스프라이트가 null이 아닌 경우
         if (button != null && activeSprite != null)
         {
-            // 버튼의 스프라이트를 활성화 스프라이트로 변경합니다.
+            // 버튼의 스프라이트를 활성화 스프라이트로 변경
             _buttonImage.sprite = activeSprite;
         }
+
+        UIManager.Instance.SetUpperBarPosition(upperBarPosition);
     }
 
     // 오브젝트가 비활성화될 때 호출됩니다.
@@ -42,5 +48,7 @@ public class SubUI : MonoBehaviour
             // 버튼의 스프라이트를 비활성화 스프라이트로 변경합니다.
             _buttonImage.sprite = passiveSprite;
         }
+
+        UIManager.Instance.SetUpperBarPosition(new Vector3(0, -760, 0));
     }
 }

@@ -25,6 +25,9 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         EventManager<UIEvents>.StartListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
         EventManager<UIEvents>.StartListening(UIEvents.StartLoading, _uiManager.ShowLoadingUI);
         EventManager<UIEvents>.StartListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
+        EventManager<GachaEvents>.StartListening(GachaEvents.GachaSingle, _uiManager.OnClickSummonButton);
+        EventManager<GachaEvents>.StartListening(GachaEvents.GachaTen, _uiManager.OnClickSummonButton);
+        EventManager<GachaEvents>.StartListening(GachaEvents.GachaThirty, _uiManager.OnClickSummonButton);
     }
 
     // 이벤트 리스너를 제거하는 메서드
@@ -34,6 +37,9 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         EventManager<UIEvents>.StopListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
         EventManager<UIEvents>.StopListening(UIEvents.StartLoading, _uiManager.ShowLoadingUI);
         EventManager<UIEvents>.StopListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
+        EventManager<GachaEvents>.StopListening(GachaEvents.GachaSingle, _uiManager.OnClickSummonButton);
+        EventManager<GachaEvents>.StopListening(GachaEvents.GachaTen, _uiManager.OnClickSummonButton);
+        EventManager<GachaEvents>.StopListening(GachaEvents.GachaThirty, _uiManager.OnClickSummonButton);
     }
 
     // 버튼 클릭 이벤트 리스너를 등록하는 메서드
@@ -44,6 +50,9 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.AddListener(_uiManager.CloseAllUIs);
+        _uiManager.summonSingleButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
+        _uiManager.summonTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
+        _uiManager.summonThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
     }
 
     // 버튼 클릭 이벤트 리스너를 제거하는 메서드
@@ -54,6 +63,9 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(_uiManager.CloseAllUIs);
+        _uiManager.summonSingleButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
+        _uiManager.summonTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
+        _uiManager.summonThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
     }
 
     // 채팅 버튼 클릭 이벤트 핸들러

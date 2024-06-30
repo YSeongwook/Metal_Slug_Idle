@@ -36,6 +36,13 @@ namespace EnumTypes
         HeroCollectionUpdated,
     }
 
+    public enum GachaEvents
+    {
+        GachaSingle,
+        GachaTen,
+        GachaThirty
+    }
+
     public enum GoogleEvents
     {
         GPGSSignIn,

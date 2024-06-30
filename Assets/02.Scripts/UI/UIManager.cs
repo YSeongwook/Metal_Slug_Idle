@@ -47,8 +47,14 @@ public class UIManager : Singleton<UIManager>
     // Main UI
     [FoldoutGroup("Main UI")] public GameObject chatUI;
 
-    [FoldoutGroup("Main UI")] [PropertySpace(0f, 5f)]
-    public GameObject upperBar;
+    [FoldoutGroup("Main UI/UpperBar")] public GameObject upperBar;
+    [FoldoutGroup("Main UI/UpperBar")] public GameObject upperPower;
+    [FoldoutGroup("Main UI/UpperBar")] public GameObject upperCard;
+    [FoldoutGroup("Main UI/UpperBar")] public GameObject upperDeco;
+    [FoldoutGroup("Main UI/UpperBar")] public TMP_Text textPower;
+    [FoldoutGroup("Main UI/UpperBar")] public TMP_Text textCard;
+    [FoldoutGroup("Main UI/UpperBar")] public TMP_Text textRuby;
+    [FoldoutGroup("Main UI/UpperBar")] public TMP_Text textGold;
 
     [FoldoutGroup("Main UI/Buttons")] public Button menuButton;
     [FoldoutGroup("Main UI/Buttons")] public Button mainBossButton;
@@ -100,9 +106,13 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Main UI/Panel Party")] [PropertySpace(5f, 0f)]
     public GameObject[] heroes;
 
+    [FoldoutGroup("Shop UI")] public Button summonSingleButton;
+    [FoldoutGroup("Shop UI")] public Button summonTenButton;
+    [FoldoutGroup("Shop UI")] public Button summonThirtyButton;
+    
     [FoldoutGroup("Log Scroll View")] public GameObject logScrollView;
     [FoldoutGroup("Log Scroll View")] public Button logButton;
-
+    
     private bool _isActiveChatUI;
     private List<GameObject> activeUIs = new List<GameObject>();
 
@@ -135,13 +145,12 @@ public class UIManager : Singleton<UIManager>
         RemoveInputFieldEvents(); // InputField 이벤트 제거
     }
     
-    // 버튼 클릭 이벤트 리스너를 등록하는 메서드
     private void AddButtonEvents()
     {
         menuButton.onClick.AddListener(() => EnableUI(rightMenusPanel));
         menuCloseButton.onClick.AddListener(() => DisableUI(rightMenusPanel));
     }
-    
+
     private void RemoveButtonEvents()
     {
         menuButton.onClick.RemoveListener(() => EnableUI(rightMenusPanel));
@@ -261,8 +270,6 @@ public class UIManager : Singleton<UIManager>
         activeUIs.Remove(uiObject);
     }
     
-    
-
     // 특정 UI 오브젝트를 토글하는 메서드
     public void ToggleUI(GameObject uiObject)
     {
@@ -298,11 +305,67 @@ public class UIManager : Singleton<UIManager>
         mainCloseButton.gameObject.SetActive(false);
         underDeco.SetActive(true);
     }
+    
+    // 메인 하단 버튼들 토글
+    public void ToggleMainUnderButtons()
+    {
+        bool isActive = mainBossButton.gameObject.activeSelf;
+        
+        mainHeroButton.gameObject.SetActive(!isActive);
+        mainInventoryButton.gameObject.SetActive(!isActive);
+        mainUpgradeButton.gameObject.SetActive(!isActive);
+        mainContentsButton.gameObject.SetActive(!isActive);
+        mainQuestButton.gameObject.SetActive(!isActive);
+        mainShopButton.gameObject.SetActive(!isActive);
+    }
+    
+    public void EnableMainCloseButton()
+    {
+        mainCloseButton.gameObject.SetActive(true);
+        underDeco.SetActive(false);
+    }
 
     // 채팅 UI를 토글하는 메서드
     public void ToggleChatUI()
     {
         chatUI.SetActive(!chatUI.activeSelf);
+    }
+
+    #endregion
+
+    #region Shop UI
+
+    public void OnClickSummonButton()
+    {
+        // 10회뽑, 30회뽑, 자동 소환 버튼 활성화
+
+        ToggleMainUnderButtons(); // 하단 버튼들 토글
+        EnableMainCloseButton(); // 하단 닫기 버튼 활성화, 하단 데코 비활성화
+        upperDeco.SetActive(false); // 상단바 데코 비활성화
+    }
+
+    #endregion
+
+    #region Upper Bar Position and Visibility
+
+    // upperBar의 위치를 변경하는 메서드
+    public void SetUpperBarPosition(Vector3 position)
+    {
+        upperBar.transform.localPosition = position;
+    }
+
+    // ShopUI가 활성화될 때 upperCard와 upperPower의 가시성을 변경하는 메서드
+    public void OnShopUIEnable()
+    {
+        upperPower.SetActive(false);
+        upperCard.SetActive(true);
+    }
+
+    // ShopUI가 비활성화될 때 upperCard와 upperPower의 가시성을 변경하는 메서드
+    public void OnShopUIDisable()
+    {
+        upperPower.SetActive(true);
+        upperCard.SetActive(false);
     }
 
     #endregion
@@ -331,4 +394,5 @@ public class UIManager : Singleton<UIManager>
             mainCloseButton.gameObject.SetActive(false);
         }
     }
+
 }

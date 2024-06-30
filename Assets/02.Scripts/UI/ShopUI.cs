@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ShopUI : SubUI
 {
     // 추가 버튼들
-    [TabGroup("SelectButton")] public Button selectHeroButton;
-    [TabGroup("SelectButton")] public Button selectPetButton;
+    [FoldoutGroup("SelectButton")] public Button selectHeroButton;
+    [FoldoutGroup("SelectButton")] public Button selectPetButton;
 
     // 버튼의 이미지 컴포넌트들
     private Image _selectHeroImage;
@@ -28,6 +28,8 @@ public class ShopUI : SubUI
         base.OnEnable();
         // 버튼 클릭 이벤트에 메서드를 등록
         RegisterButtonListeners(true);
+        
+        UIManager.Instance.OnShopUIEnable();
     }
     
     protected override void OnDisable()
@@ -36,6 +38,8 @@ public class ShopUI : SubUI
         base.OnDisable();
         // 버튼 클릭 이벤트에서 메서드를 제거
         RegisterButtonListeners(false);
+        
+        UIManager.Instance.OnShopUIDisable();
     }
 
     // 버튼 클릭 이벤트 등록/해제 메서드
