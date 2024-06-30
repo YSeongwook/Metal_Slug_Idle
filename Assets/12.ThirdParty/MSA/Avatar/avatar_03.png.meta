@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Avatar_Elena
+      name: Avatar_Elena_Summer
       rect:
         serializedVersion: 2
         x: 635
@@ -167,7 +167,7 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,6 +175,48 @@ TextureImporter:
       bones: []
       spriteID: 9dc439c02f6477f478c4b84027578398
       internalID: 977929710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avatar_Achetto_Special
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 652
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ebee620f859ae449baec1de8c32fa7
+      internalID: -1086257110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avatar_Owen
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 1668
+        width: 126
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc56fff5150a154e976394f300a66a4
+      internalID: 2037963594
       vertices: []
       indices: 
       edges: []
@@ -191,8 +233,10 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Avatar_1Man_Ralf: 455436977
-      Avatar_Elena: 1274076193
+      Avatar_Achetto_Special: -1086257110
+      Avatar_Elena_Summer: 977929710
       Avatar_Louise: 746709391
+      Avatar_Owen: 2037963594
       avatar_03_1: -275484164
       avatar_03_10: -1812018530
       avatar_03_11: -974092206

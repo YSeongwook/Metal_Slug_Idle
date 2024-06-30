@@ -13,7 +13,7 @@
     },
     {
       "id": 1,
-      "name": "만능 군인 랄프",
+      "name": "랄프(만능 군인)",
       "rank": "S",
       "level": 1,
       "health": 1500,
@@ -24,7 +24,7 @@
     },
     {
       "id": 2,
-      "name": "고양이 귀 레오나",
+      "name": "레오나(고양이 귀)",
       "rank": "S",
       "level": 1,
       "health": 1000,
@@ -109,6 +109,61 @@
       "portraitPath": "HeroPortraits/Avatar_Marco",
       "starLevel": 0,
       "type": "만능형"
+    },
+    {
+      "id": 10,
+      "name": "엘레나(수영복)",
+      "rank": "S",
+      "level": 1,
+      "health": 1250,
+      "attack": 400,
+      "portraitPath": "HeroPortraits/Avatar_Elena_Summer",
+      "starLevel": 0,
+      "type": "근거리형"
+    },
+    {
+      "id": 11,
+      "name": "록키(수영복)",
+      "rank": "S",
+      "level": 1,
+      "health": 1550,
+      "attack": 350,
+      "portraitPath": "HeroPortraits/Avatar_Rocky_Summer",
+      "starLevel": 0,
+      "type": "근거리형"
+    },
+    {
+      "id": 12,
+      "name": "요시노(수영복)",
+      "rank": "S",
+      "level": 1,
+      "health": 1800,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Yoshino(Summer)",
+      "starLevel": 0,
+      "type": "근거리형"
+    },
+    {
+      "id": 13,
+      "name": "아체트(특무)",
+      "rank": "S",
+      "level": 1,
+      "health": 1500,
+      "attack": 350,
+      "portraitPath": "HeroPortraits/Avatar_Achetto_Special",
+      "starLevel": 0,
+      "type": "근거리형"
+    },
+    {
+      "id": 14,
+      "name": "오언",
+      "rank": "A",
+      "level": 1,
+      "health": 1250,
+      "attack": 300,
+      "portraitPath": "HeroPortraits/Avatar_Owen",
+      "starLevel": 0,
+      "type": "근거리형"
     }
   ]
 }

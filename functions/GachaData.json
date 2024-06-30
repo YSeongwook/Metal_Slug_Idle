@@ -9,6 +9,11 @@
     { "id": 6, "rank": "C" },
     { "id": 7, "rank": "B" },
     { "id": 8, "rank": "A" },
-    { "id": 9, "rank": "S" }
+    { "id": 9, "rank": "S" },
+    { "id": 10, "rank": "S" },
+    { "id": 11, "rank": "S" },
+    { "id": 12, "rank": "S" },
+    { "id": 13, "rank": "S" },
+    { "id": 14, "rank": "A" }
   ]
 }
