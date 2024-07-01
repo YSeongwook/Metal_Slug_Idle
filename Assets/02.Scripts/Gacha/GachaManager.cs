@@ -36,7 +36,7 @@ public class GachaManager : MonoBehaviour
     public void LoadHeroData()
     {
         // HeroData를 Firebase에서 불러오도록 수정
-        FirebaseDataManager.Instance.LoadHeroDataFromFirebase(data => {
+        DatabaseManager.Instance.LoadHeroDataFromFirebase(data => {
             heroDataDict = new Dictionary<int, HeroData>();
             foreach (var hero in data.data)
             {
@@ -78,7 +78,7 @@ public class GachaManager : MonoBehaviour
             if (result != null)
             {
                 UpdateUIWithGachaResult(result); // UI 업데이트
-                FirebaseDataManager.Instance.UpdateHeroCollection(result); // Firebase 데이터 업데이트 및 HeroCollection 수정
+                await UpdateHeroCollection(result, userId); // Firebase 데이터 업데이트 및 HeroCollection 수정
             }
         }
         else
@@ -145,6 +145,13 @@ public class GachaManager : MonoBehaviour
         {
             Debug.LogError("summonResultManager가 초기화되지 않았습니다.");
         }
+    }
+
+    private async Task UpdateHeroCollection(int[] heroIds, string userId)
+    {
+        await DatabaseManager.Instance.UpdateHeroCollection(userId, heroIds); // Firebase 데이터 업데이트
+        string base64HeroCollection = HeroCollectionManager.Instance.ToBase64();
+        LocalFileManager.Instance.SaveHeroCollectionToLocalFile(base64HeroCollection); // 로컬 파일 업데이트
     }
 
     [Serializable]

@@ -19,7 +19,7 @@ public class DataManager<TData> : Singleton<DataManager<TData>> where TData : In
     protected void OnEnable()
     {
         LoadData();
-        Debug.Log("LoadData");
+        Debug.Log("LoadData called in OnEnable"); // 디버그 로그 추가
     }
 
     // 데이터를 로드하고 스크롤 뷰에 추가하는 메서드
