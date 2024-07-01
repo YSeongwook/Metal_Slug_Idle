@@ -5,16 +5,17 @@ using UnityEngine.UI;
 // SubUI 클래스는 버튼의 스프라이트를 변경하는 기본 기능을 제공합니다.
 public class SubUI : MonoBehaviour
 {
+    [PropertySpace(5f, 5f)] public Vector3 upperBarPosition;
+    
+    [TitleGroup("Buttons")]
     // 버튼 UI 요소
-    [FoldoutGroup("MainButton")] public Button button;
+    [FoldoutGroup("Buttons/MainButton")] public Button button;
 
     // 비활성화된 상태의 스프라이트
-    [FoldoutGroup("MainButton")] public Sprite passiveSprite;
+    [FoldoutGroup("Buttons/MainButton")] public Sprite passiveSprite;
 
     // 활성화된 상태의 스프라이트
-    [FoldoutGroup("MainButton")] public Sprite activeSprite;
-
-    public Vector3 upperBarPosition;
+    [FoldoutGroup("Buttons/MainButton")] public Sprite activeSprite;
 
     // 버튼의 이미지 컴포넌트
     protected Image _buttonImage;

@@ -1,3 +1,5 @@
+using EnumTypes;
+using EventLibrary;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,9 +11,23 @@ public class ShopUI : SubUI
     [FoldoutGroup("SelectButton")] public Button selectHeroButton;
     [FoldoutGroup("SelectButton")] public Button selectPetButton;
 
+    [FoldoutGroup("SummonButton")] public Button summonSingleButton;
+    [FoldoutGroup("SummonButton")] public Button summonTenButton;
+    [FoldoutGroup("SummonButton")] public Button summonThirtyButton;
+
+    [FoldoutGroup("SummonResult")] public GameObject summonResultPanel;
+    [FoldoutGroup("SummonResult")] public Button summonResultTenButton;
+    [FoldoutGroup("SummonResult")] public Button summonResultThirtyButton;
+    [FoldoutGroup("SummonResult")] public Button summonResultCloseButton;
+    [FoldoutGroup("SummonResult")] public Button toggleAutoSummonButton;
+    [FoldoutGroup("SummonResult")] public GameObject autoSummonCheck;
+
     // 버튼의 이미지 컴포넌트들
     private Image _selectHeroImage;
     private Image _selectPetImage;
+    
+    // 자동 소환
+    private bool activeAutoSummon;
     
     protected override void Awake()
     {
@@ -49,11 +65,27 @@ public class ShopUI : SubUI
         {
             selectHeroButton.onClick.AddListener(OnSelectHeroButtonClicked);
             selectPetButton.onClick.AddListener(OnSelectPetButtonClicked);
+            summonResultCloseButton.onClick.AddListener(OnClickCloseButton);
+            toggleAutoSummonButton.onClick.AddListener(OnClickToggleAutoSummonButton);
+            
+            summonSingleButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
+            summonTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
+            summonThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
         }
         else
         {
             selectHeroButton.onClick.RemoveListener(OnSelectHeroButtonClicked);
             selectPetButton.onClick.RemoveListener(OnSelectPetButtonClicked);
+            summonResultCloseButton.onClick.RemoveListener(OnClickCloseButton);
+            toggleAutoSummonButton.onClick.AddListener(OnClickToggleAutoSummonButton);
+            
+            summonSingleButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
+            summonTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
+            summonThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
         }
     }
 
@@ -71,6 +103,22 @@ public class ShopUI : SubUI
         SetImageAlpha(_selectPetImage, 1f); // 알파값을 1로 설정 (255)
     }
 
+    public void OnClickCloseButton()
+    {
+        summonResultPanel.SetActive(false);
+        activeAutoSummon = false;
+    }
+
+    public void OnClickToggleAutoSummonButton()
+    {
+        bool isActive = autoSummonCheck.activeSelf; // 현재 체크 표시가 활성화 상태인지
+        
+        autoSummonCheck.SetActive(!isActive); // 비활성화 => 활성화, 활성화 => 비활성화
+        activeAutoSummon = !isActive;
+    }
+
+    // TODO: 재화가 다 떨어지기 전까지 계속 소환, UserData에서 Card수와 루비 수를 읽어서 결정
+    
     // 이미지의 알파 값을 설정하는 메서드
     private void SetImageAlpha(Image image, float alpha)
     {

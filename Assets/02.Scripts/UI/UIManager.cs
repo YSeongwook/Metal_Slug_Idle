@@ -114,6 +114,7 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public GameObject panelSummonResult;
     [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public Button summonResultTenButton;
     [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public Button summonResultThirtyButton;
+    [FoldoutGroup("Shop UI/Horizontal/SummonResult")] public Button summonResultCloseButton;
     
     [FoldoutGroup("Log Scroll View")] public GameObject logScrollView;
     [FoldoutGroup("Log Scroll View")] public Button logButton;
@@ -399,5 +400,4 @@ public class UIManager : Singleton<UIManager>
             mainCloseButton.gameObject.SetActive(false);
         }
     }
-
 }
