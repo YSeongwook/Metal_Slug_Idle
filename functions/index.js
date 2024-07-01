@@ -66,7 +66,7 @@ class WeightedRandomPicker {
 }
 
 // gacha Firebase Function 정의
-exports.gacha = functions.https.onRequest(async (req, res) => {
+exports.gacha = functions.region('asia-northeast1').https.onRequest(async (req, res) => {
     const userId = req.body.userId;
     const drawCount = req.body.drawCount || 1; // 기본 뽑기 횟수는 1회
 

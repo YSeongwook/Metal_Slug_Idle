@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Gpm.Ui;
 
 [Serializable]
@@ -13,4 +14,10 @@ public class HeroData : InfiniteScrollData
     public string portraitPath; // 초상화 경로
     public int starLevel; // 강화 단계 (1~4성)
     public string type; // 캐릭터 타입 (공격형, 방어형, 지원형, 만능형)
+}
+
+[Serializable]
+public class HeroDataWrapper
+{
+    public List<HeroData> data;
 }

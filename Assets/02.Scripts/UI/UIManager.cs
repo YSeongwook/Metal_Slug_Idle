@@ -218,6 +218,7 @@ public class UIManager : Singleton<UIManager>
         introUI.SetActive(false);
         mainUI.SetActive(true);
         joystickUI.SetActive(true);
+        upperBar.SetActive(true);
     }
 
     // 로그인 UI를 활성화하는 메서드

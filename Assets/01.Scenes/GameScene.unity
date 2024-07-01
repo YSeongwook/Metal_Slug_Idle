@@ -2185,7 +2185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summonResultManager: {fileID: 1079444812753486828}
-  heroCollectionManager: {fileID: 1040988763}
 --- !u!1 &2094998675
 GameObject:
   m_ObjectHideFlags: 0

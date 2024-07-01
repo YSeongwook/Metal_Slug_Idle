@@ -25509,7 +25509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6892998926624738493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38001,6 +38001,10 @@ PrefabInstance:
       propertyPath: m_Horizontal
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4069603297225759183, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
+      propertyPath: m_MovementType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6751424987196524662, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -38085,6 +38089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summonResultScroll: {fileID: 2414695022901326346}
+  padding: {x: 30, y: 80}
+  space: {x: 60, y: 30}
 --- !u!224 &5449269456356652850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1182463843471085106, guid: d82bd981ae4976c489f543b0184dd350, type: 3}

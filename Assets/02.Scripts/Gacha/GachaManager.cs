@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using EnumTypes;
@@ -10,8 +11,33 @@ using UnityEngine.Networking;
 
 public class GachaManager : MonoBehaviour
 {
-    private string gachaUrl = "https://us-central1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
+    private string gachaUrl = "https://asia-northeast1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
     public SummonResultManager summonResultManager; // SummonResultManager 컴포넌트 참조
+    private Dictionary<int, HeroData> heroDataDict;
+
+    private void Awake()
+    {
+        LoadHeroData();
+    }
+
+    private void LoadHeroData()
+    {
+        string filePath = Path.Combine(Application.streamingAssetsPath, "HeroData.json");
+        if (File.Exists(filePath))
+        {
+            string jsonData = File.ReadAllText(filePath);
+            HeroDataWrapper dataWrapper = JsonConvert.DeserializeObject<HeroDataWrapper>(jsonData);
+            heroDataDict = new Dictionary<int, HeroData>();
+            foreach (var hero in dataWrapper.data)
+            {
+                heroDataDict[hero.id] = hero;
+            }
+        }
+        else
+        {
+            Debug.LogError("HeroData.json 파일을 찾을 수 없습니다.");
+        }
+    }
 
     private void OnEnable()
     {
@@ -80,14 +106,30 @@ public class GachaManager : MonoBehaviour
         List<SummonResultData> summonResults = new List<SummonResultData>();
         foreach (int heroId in heroIds)
         {
-            summonResults.Add(new SummonResultData
+            if (heroDataDict.TryGetValue(heroId, out HeroData heroData))
             {
-                id = heroId,
-                portraitPath = $"HeroImages/{heroId}",
-                count = 1 // 획득한 개수를 1로 설정
-            });
+                summonResults.Add(new SummonResultData
+                {
+                    id = heroId,
+                    portraitPath = heroData.portraitPath,
+                    rank = heroData.rank,
+                    count = 1 // 획득한 개수를 1로 설정
+                });
+            }
+            else
+            {
+                Debug.LogError($"영웅 ID {heroId}에 해당하는 데이터를 찾을 수 없습니다.");
+            }
         }
-        summonResultManager.UpdateSummonResults(summonResults);
+
+        if (summonResultManager != null)
+        {
+            summonResultManager.UpdateSummonResults(summonResults);
+        }
+        else
+        {
+            Debug.LogError("summonResultManager가 초기화되지 않았습니다.");
+        }
     }
 
     [Serializable]
