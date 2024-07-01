@@ -1,18 +1,17 @@
 using System.Collections.Generic;
+using Gpm.Ui;
+using UnityEngine;
 
-public class SummonResultManager : DataManager<SummonResultData>
+public class SummonResultManager : MonoBehaviour
 {
-    public override void LoadData()
-    {
-    }
+    public InfiniteScroll summonResultScroll; // InfiniteScroll 컴포넌트 참조
 
-    // 가챠 결과 데이터를 업데이트하는 메서드
     public void UpdateSummonResults(List<SummonResultData> newResults)
     {
-        data = newResults;
-        infiniteScroll.ClearData();
-        infiniteScroll.InsertData(data.ToArray(), true);
-        SetPaddingAndSpace();
-        infiniteScroll.MoveToFirstData();
+        summonResultScroll.ClearData();
+        foreach (var result in newResults)
+        {
+            summonResultScroll.InsertData(result, true);
+        }
     }
 }

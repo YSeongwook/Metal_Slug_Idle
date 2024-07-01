@@ -42,7 +42,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         EventManager<DataEvents>.StopListening(DataEvents.HeroCollectionUpdated, onHeroCollectionUpdated);
     }
 
-    // Firebase가 초기화될 때 호출
     private void OnFirebaseInitialized() 
     {
         _auth = FirebaseAuth.DefaultInstance;
@@ -60,17 +59,14 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     private void OnFirebaseSignIn() 
     {
         currentUser = AuthManager.Instance.GetCurrentUser();
-        
         SaveUserData(currentUser);
     }
 
-    // 현재 Firebase 사용자를 반환
     public FirebaseUser GetCurrentUser() 
     {
         return currentUser;
     }
 
-    // FirebaseUser 데이터를 저장
     private async void SaveUserData(FirebaseUser user)
     {
         var userId = user.UserId;
@@ -93,7 +89,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         }
     }
 
-    // UserData 객체를 Firebase 데이터베이스에 저장
     private async Task SaveUserData(UserData userData)
     {
         var updates = new Dictionary<string, object>
@@ -121,7 +116,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    // UserHeroCollection 객체를 Firebase 데이터베이스에 저장
     private async Task SaveHeroCollection(UserHeroCollection userHeroCollection)
     {
         var updates = new Dictionary<string, object>
@@ -146,13 +140,12 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    // HeroCollectionUpdated 이벤트가 발생했을 때 호출되는 메서드
     private void OnHeroCollectionUpdated(HeroCollection heroCollection)
     {
         string userId = GetCurrentUser().UserId;
-        string json = JsonUtility.ToJson(heroCollection);
+        string base64HeroCollection = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(heroCollection)));
 
-        _databaseRef.Child("users").Child(userId).Child("heroCollection").SetRawJsonValueAsync(json)
+        _databaseRef.Child("users").Child(userId).Child("heroCollection").SetRawJsonValueAsync(base64HeroCollection)
             .ContinueWith(task =>
             {
                 if (task.IsCompleted)
@@ -166,7 +159,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             });
     }
 
-    // Firebase 데이터베이스에서 사용자 데이터를 로드
     public async void LoadUserData(string userId)
     {
         var userDataTask = _databaseRef.Child("users").Child(userId).GetValueAsync();
@@ -200,10 +192,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
                 string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
                 HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
-                var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
+                var userHeroCollection = new UserHeroCollection(userId, base64HeroCollection);
 
                 UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items));
-                // 여기서 userData와 userHeroCollection을 필요한 곳에 사용
             }
             else
             {
@@ -211,8 +202,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             }
         });
     }
-    
-    // user_HeroCollection만 로드
+
     public async Task<UserHeroCollection> LoadHeroCollection(string userId)
     {
         var heroDataSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
@@ -231,7 +221,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         }
     }
 
-    // 사용자 데이터를 초기화
     public void ResetUserData(string userId)
     {
         _databaseRef.Child("users").Child(userId).RemoveValueAsync().ContinueWithOnMainThread(task =>
@@ -267,7 +256,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    // 사용자 데이터를 동기화
     public void SyncUserData(string userId)
     {
         _databaseRef.Child("users").Child(userId).GetValueAsync().ContinueWith(task =>
@@ -322,7 +310,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    // 모든 데이터를 삭제
     public void DeleteAllData()
     {
         _databaseRef.RemoveValueAsync().ContinueWith(task =>
@@ -342,7 +329,6 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         });
     }
 
-    // 유저가 새로운 영웅을 획득할 때 호출되는 메서드
     public async void AddHeroToCollection(string userId, int heroId)
     {
         var heroDataSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
@@ -354,6 +340,30 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             
             HeroCollectionManager.Instance.AddHero(heroId);
             
+            var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
+            await SaveHeroCollection(userHeroCollection);
+        }
+        else
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 데이터가 존재하지 않습니다."));
+        }
+    }
+
+    public async Task UpdateHeroCollection(int[] heroIds)
+    {
+        string userId = GetCurrentUser().UserId;
+        var heroDataSnapshot = await _databaseRef.Child("user_HeroCollection").Child(userId).GetValueAsync();
+
+        if (heroDataSnapshot.Exists)
+        {
+            string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
+            HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
+
+            foreach (int heroId in heroIds)
+            {
+                HeroCollectionManager.Instance.AddHero(heroId);
+            }
+
             var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
             await SaveHeroCollection(userHeroCollection);
         }

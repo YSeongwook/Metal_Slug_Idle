@@ -327,7 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summonResultManager: {fileID: 2111510752}
-  heroCollectionManager: {fileID: 15708817}
 --- !u!1 &837093192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1052,10 @@ PrefabInstance:
     - target: {fileID: 5617364716133085598, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727741931749894317, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: summonResultScroll
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5938522469322044577, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x

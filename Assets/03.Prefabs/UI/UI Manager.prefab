@@ -474,7 +474,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10190,7 +10190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1806965569627735509
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33197,7 +33197,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -34911,15 +34911,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6751424987196524662, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6751424987196524662, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6751424987196524662, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -17
       objectReference: {fileID: 0}
     - target: {fileID: 8824237768327531274, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: itemPrefab
@@ -34939,11 +34939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973329999995274385, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8973329999995274385, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8973329999995274385, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMin.y
@@ -38084,10 +38084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a33522538ef4f9745a328cbf4aba0038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infiniteScroll: {fileID: 2414695022901326346}
-  padding: {x: 0, y: 0}
-  space: {x: 0, y: 0}
-  fileName: 
+  summonResultScroll: {fileID: 2414695022901326346}
 --- !u!224 &5449269456356652850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1182463843471085106, guid: d82bd981ae4976c489f543b0184dd350, type: 3}

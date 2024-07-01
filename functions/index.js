@@ -85,7 +85,7 @@ exports.gacha = functions.https.onRequest(async (req, res) => {
         const heroCollectionRef = admin.database().ref(`/user_HeroCollection/${userId}`);
         const heroDataSnapshot = await heroCollectionRef.once('value');
 
-        let heroCollection = heroDataSnapshot.val() || {};
+        let heroCollection = heroDataSnapshot.val() || [];
 
         // heroCollection이 객체일 경우 배열로 변환
         if (!Array.isArray(heroCollection)) {
@@ -102,7 +102,9 @@ exports.gacha = functions.https.onRequest(async (req, res) => {
             }
         });
 
-        await heroCollectionRef.set(heroCollection);
+        const base64HeroCollection = Buffer.from(JSON.stringify(heroCollection)).toString('base64');
+
+        await heroCollectionRef.set({ heroCollection: base64HeroCollection });
 
         res.status(200).json({ result: heroIds });
     } catch (error) {

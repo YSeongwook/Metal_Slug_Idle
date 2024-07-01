@@ -1,16 +1,17 @@
-using UnityEngine;
-using Newtonsoft.Json;
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 using EnumTypes;
 using EventLibrary;
+using Newtonsoft.Json;
+using UnityEngine;
 using UnityEngine.Networking;
 
 public class GachaManager : MonoBehaviour
 {
     private string gachaUrl = "https://us-central1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
     public SummonResultManager summonResultManager; // SummonResultManager 컴포넌트 참조
-    public HeroCollectionManager heroCollectionManager; // HeroCollectionManager 컴포넌트 참조
 
     private void OnEnable()
     {
@@ -26,74 +27,70 @@ public class GachaManager : MonoBehaviour
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaThirty, () => PerformGacha(30));
     }
 
-    public void PerformGacha(int drawCount)
+    public async void PerformGacha(int drawCount)
     {
-        string userId = AuthManager.Instance.GetCurrentUser().UserId; // 현재 사용자 ID 가져오기
-        StartCoroutine(GachaCoroutine(userId, drawCount)); // 가챠 코루틴 실행
+        var currentUser = AuthManager.Instance.GetCurrentUser();
+        if (currentUser != null)
+        {
+            string userId = currentUser.UserId; // 현재 사용자 ID 가져오기
+            var result = await GachaRequestAsync(userId, drawCount); // 가챠 요청을 비동기로 처리
+            if (result != null)
+            {
+                UpdateUIWithGachaResult(result); // UI 업데이트
+                FirebaseDataManager.Instance.UpdateHeroCollection(result); // Firebase 데이터 업데이트 및 HeroCollection 수정
+            }
+        }
+        else
+        {
+            Debug.LogError("유저가 로그인되어 있지 않습니다.");
+        }
     }
 
-    private IEnumerator GachaCoroutine(string userId, int drawCount)
+    private async Task<int[]> GachaRequestAsync(string userId, int drawCount)
     {
         var json = JsonConvert.SerializeObject(new { userId = userId, drawCount = drawCount }); // 요청 데이터를 JSON으로 직렬화
         var request = new UnityWebRequest(gachaUrl, "POST"); // POST 요청 생성
-        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(json); // 요청 바디 설정
+        byte[] bodyRaw = Encoding.UTF8.GetBytes(json); // 요청 바디 설정
         request.uploadHandler = new UploadHandlerRaw(bodyRaw); // 업로드 핸들러 설정
         request.downloadHandler = new DownloadHandlerBuffer(); // 다운로드 핸들러 설정
         request.SetRequestHeader("Content-Type", "application/json"); // 요청 헤더 설정
 
-        yield return request.SendWebRequest(); // 요청 전송 및 응답 대기
+        var operation = request.SendWebRequest(); // 요청 전송
+        while (!operation.isDone)
+        {
+            await Task.Yield(); // 비동기 대기
+        }
 
         if (request.result == UnityWebRequest.Result.Success)
         {
             var result = JsonConvert.DeserializeObject<GachaResult>(request.downloadHandler.text); // 응답 데이터 파싱
-            UpdateUIWithGachaResult(result.result); // UI 업데이트
-            UpdateHeroCollection(result.result); // HeroCollection 업데이트
+            return result.result;
         }
         else
         {
             Debug.LogError("Gacha request failed: " + request.error); // 에러 처리
+            return null;
         }
     }
 
     private void UpdateUIWithGachaResult(int[] heroIds)
     {
-        Dictionary<int, int> heroCountMap = new Dictionary<int, int>();
-
-        // 영웅 ID를 카운트하여 중복 처리
-        foreach (int heroId in heroIds)
-        {
-            if (heroCountMap.ContainsKey(heroId))
-            {
-                heroCountMap[heroId]++;
-            }
-            else
-            {
-                heroCountMap[heroId] = 1;
-            }
-        }
+        UIManager.Instance.panelSummonResult.SetActive(true); // SummonResult 패널 활성화
 
         List<SummonResultData> summonResults = new List<SummonResultData>();
-
-        // SummonResultData 리스트 생성
-        foreach (var entry in heroCountMap)
+        foreach (int heroId in heroIds)
         {
             summonResults.Add(new SummonResultData
             {
-                id = entry.Key,
-                portraitPath = $"HeroImages/{entry.Key}",
-                count = entry.Value // 획득한 개수 설정
+                id = heroId,
+                portraitPath = $"HeroImages/{heroId}",
+                count = 1 // 획득한 개수를 1로 설정
             });
         }
-
         summonResultManager.UpdateSummonResults(summonResults);
     }
 
-    private void UpdateHeroCollection(int[] heroIds)
-    {
-        heroCollectionManager.UpdateHeroCollection(heroIds);
-    }
-
-    [System.Serializable]
+    [Serializable]
     public class GachaResult
     {
         public int[] result; // 가챠 결과로 얻은 영웅 ID 배열

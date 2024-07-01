@@ -343,8 +343,7 @@ public class UIManager : Singleton<UIManager>
 
     public void OnClickSummonButton()
     {
-        // 10회뽑, 30회뽑, 자동 소환 버튼 활성화
-
+        panelSummonResult.SetActive(true); // 소환 결과 패널 활성화
         ToggleMainUnderButtons(); // 하단 버튼들 토글
         EnableMainCloseButton(); // 하단 닫기 버튼 활성화, 하단 데코 비활성화
         upperDeco.SetActive(false); // 상단바 데코 비활성화
