@@ -19,7 +19,6 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     {
         if (heroId >= 0 && heroId < heroCollection.Length)
         {
-            Debug.Log($"Hero {heroId} owned: {heroCollection[heroId]}"); // 디버그 로그 추가
             return heroCollection[heroId];
         }
         return false;
@@ -79,18 +78,25 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
             string json = File.ReadAllText(filePath);
             if (!string.IsNullOrEmpty(json))
             {
-                HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
-                if (wrapper != null && wrapper.heroCollection != null)
+                try
                 {
-                    heroCollection = new bool[wrapper.heroCollection.Length];
-                    for (int i = 0; i < wrapper.heroCollection.Length; i++)
+                    HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
+                    if (wrapper != null && wrapper.heroCollection != null)
                     {
-                        heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
+                        heroCollection = new bool[wrapper.heroCollection.Length];
+                        for (int i = 0; i < wrapper.heroCollection.Length; i++)
+                        {
+                            heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
+                        }
+                    }
+                    else
+                    {
+                        Initialize(15); // 데이터가 유효하지 않을 경우 초기화
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Initialize(15); // 데이터가 유효하지 않을 경우 초기화
+                    Initialize(15); // JSON 파싱 중 오류 발생 시 초기화
                 }
             }
             else
@@ -137,11 +143,18 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     {
         byte[] jsonBytes = Convert.FromBase64String(base64);
         string json = System.Text.Encoding.UTF8.GetString(jsonBytes);
-        HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
-        heroCollection = new bool[wrapper.heroCollection.Length];
-        for (int i = 0; i < wrapper.heroCollection.Length; i++)
+        try
         {
-            heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
+            HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
+            heroCollection = new bool[wrapper.heroCollection.Length];
+            for (int i = 0; i < wrapper.heroCollection.Length; i++)
+            {
+                heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
+            }
+        }
+        catch (Exception ex)
+        {
+            Initialize(15); // JSON 파싱 중 오류 발생 시 초기화
         }
     }
 

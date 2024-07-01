@@ -58,7 +58,7 @@ public class GachaManager : MonoBehaviour
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaTen, () => PerformGacha(10));
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaThirty, () => PerformGacha(30));
     }
-    
+
     public void SetHeroData(HeroDataWrapper heroData)
     {
         heroDataDict = new Dictionary<int, HeroData>();
@@ -90,27 +90,29 @@ public class GachaManager : MonoBehaviour
     private async Task<int[]> GachaRequestAsync(string userId, int drawCount)
     {
         var json = JsonConvert.SerializeObject(new { userId = userId, drawCount = drawCount }); // 요청 데이터를 JSON으로 직렬화
-        var request = new UnityWebRequest(gachaUrl, "POST"); // POST 요청 생성
-        byte[] bodyRaw = Encoding.UTF8.GetBytes(json); // 요청 바디 설정
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw); // 업로드 핸들러 설정
-        request.downloadHandler = new DownloadHandlerBuffer(); // 다운로드 핸들러 설정
-        request.SetRequestHeader("Content-Type", "application/json"); // 요청 헤더 설정
+        using (var request = new UnityWebRequest(gachaUrl, "POST")) // POST 요청 생성 및 using 구문 사용
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(json); // 요청 바디 설정
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw); // 업로드 핸들러 설정
+            request.downloadHandler = new DownloadHandlerBuffer(); // 다운로드 핸들러 설정
+            request.SetRequestHeader("Content-Type", "application/json"); // 요청 헤더 설정
 
-        var operation = request.SendWebRequest(); // 요청 전송
-        while (!operation.isDone)
-        {
-            await Task.Yield(); // 비동기 대기
-        }
+            var operation = request.SendWebRequest(); // 요청 전송
+            while (!operation.isDone)
+            {
+                await Task.Yield(); // 비동기 대기
+            }
 
-        if (request.result == UnityWebRequest.Result.Success)
-        {
-            var result = JsonConvert.DeserializeObject<GachaResult>(request.downloadHandler.text); // 응답 데이터 파싱
-            return result.result;
-        }
-        else
-        {
-            Debug.LogError("Gacha request failed: " + request.error); // 에러 처리
-            return null;
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                var result = JsonConvert.DeserializeObject<GachaResult>(request.downloadHandler.text); // 응답 데이터 파싱
+                return result.result;
+            }
+            else
+            {
+                Debug.LogError("Gacha request failed: " + request.error); // 에러 처리
+                return null;
+            }
         }
     }
 

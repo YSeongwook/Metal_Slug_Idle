@@ -1,19 +1,64 @@
 {
-  "heroCollection": [
-    { "id": 0, "owned": true },
-    { "id": 1, "owned": true },
-    { "id": 2, "owned": true },
-    { "id": 3, "owned": true },
-    { "id": 4, "owned": true },
-    { "id": 5, "owned": true },
-    { "id": 6, "owned": false },
-    { "id": 7, "owned": true },
-    { "id": 8, "owned": false },
-    { "id": 9, "owned": true },
-    { "id": 10, "owned": false },
-    { "id": 11, "owned": false },
-    { "id": 12, "owned": false },
-    { "id": 13, "owned": false },
-    { "id": 14, "owned": false }
-  ]
+    "heroCollection": [
+        {
+            "id": 0,
+            "owned": true
+        },
+        {
+            "id": 1,
+            "owned": true
+        },
+        {
+            "id": 2,
+            "owned": true
+        },
+        {
+            "id": 3,
+            "owned": true
+        },
+        {
+            "id": 4,
+            "owned": true
+        },
+        {
+            "id": 5,
+            "owned": true
+        },
+        {
+            "id": 6,
+            "owned": true
+        },
+        {
+            "id": 7,
+            "owned": true
+        },
+        {
+            "id": 8,
+            "owned": true
+        },
+        {
+            "id": 9,
+            "owned": true
+        },
+        {
+            "id": 10,
+            "owned": true
+        },
+        {
+            "id": 11,
+            "owned": true
+        },
+        {
+            "id": 12,
+            "owned": true
+        },
+        {
+            "id": 13,
+            "owned": true
+        },
+        {
+            "id": 14,
+            "owned": true
+        }
+    ]
 }
