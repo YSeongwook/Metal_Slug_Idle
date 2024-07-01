@@ -137,7 +137,7 @@ public class UIManager : Singleton<UIManager>
         // 인트로 UI와 로그 버튼을 제외하고 자식 오브젝트 모두 비활성화
         foreach (Transform child in transform)
         {
-            if (child.gameObject != introUI && child.gameObject != logButton.gameObject)
+            if (child.gameObject != introUI && child.gameObject != logButton.gameObject && child.gameObject != upperBar)
             {
                 child.gameObject.SetActive(false);
             }
@@ -315,7 +315,7 @@ public class UIManager : Singleton<UIManager>
     // 메인 하단 버튼들 토글
     public void ToggleMainUnderButtons()
     {
-        bool isActive = mainBossButton.gameObject.activeSelf;
+        bool isActive = mainHeroButton.gameObject.activeSelf;
         
         mainHeroButton.gameObject.SetActive(!isActive);
         mainInventoryButton.gameObject.SetActive(!isActive);

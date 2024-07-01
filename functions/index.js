@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
+const fs = require('fs');
+const path = require('path');
 
 // GachaData.json 파일 경로 설정
 const gachaDataPath = path.join(__dirname, 'GachaData.json');
@@ -85,7 +85,12 @@ exports.gacha = functions.https.onRequest(async (req, res) => {
         const heroCollectionRef = admin.database().ref(`/user_HeroCollection/${userId}`);
         const heroDataSnapshot = await heroCollectionRef.once('value');
 
-        let heroCollection = heroDataSnapshot.val() || [];
+        let heroCollection = heroDataSnapshot.val() || {};
+
+        // heroCollection이 객체일 경우 배열로 변환
+        if (!Array.isArray(heroCollection)) {
+            heroCollection = Object.values(heroCollection);
+        }
 
         // 뽑은 영웅을 컬렉션에 추가
         heroIds.forEach(heroId => {
