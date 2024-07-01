@@ -38089,8 +38089,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   summonResultScroll: {fileID: 2414695022901326346}
-  padding: {x: 30, y: 80}
-  space: {x: 60, y: 30}
+  padding: {x: 40, y: 80}
+  space: {x: 60, y: 20}
 --- !u!224 &5449269456356652850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1182463843471085106, guid: d82bd981ae4976c489f543b0184dd350, type: 3}

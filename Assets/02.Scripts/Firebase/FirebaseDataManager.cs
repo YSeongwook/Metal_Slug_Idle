@@ -8,6 +8,8 @@ using Firebase.Database;
 using Firebase.Extensions;
 using UnityEngine;
 using UnityEngine.Events;
+using System.IO;
+using System.Text;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
@@ -140,6 +142,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 저장 성공."));
         });
+
+        // 로컬 파일 업데이트
+        SaveHeroCollectionToLocalFile(userHeroCollection.heroCollectionBase64);
     }
 
     private void OnHeroCollectionUpdated(HeroCollection heroCollection)
@@ -147,7 +152,7 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         string userId = GetCurrentUser().UserId;
         string base64HeroCollection = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(JsonUtility.ToJson(heroCollection)));
 
-        _databaseRef.Child("users").Child(userId).Child("heroCollection").SetRawJsonValueAsync(base64HeroCollection)
+        _databaseRef.Child("user_HeroCollection").Child(userId).Child("heroCollection").SetRawJsonValueAsync(base64HeroCollection)
             .ContinueWith(task =>
             {
                 if (task.IsCompleted)
@@ -159,6 +164,17 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                     Debug.LogError("Failed to update HeroCollection in Firebase Realtime Database: " + task.Exception);
                 }
             });
+
+        // 로컬 파일 업데이트
+        SaveHeroCollectionToLocalFile(base64HeroCollection);
+    }
+
+    private void SaveHeroCollectionToLocalFile(string base64HeroCollection)
+    {
+        string json = Encoding.UTF8.GetString(Convert.FromBase64String(base64HeroCollection));
+        string path = Path.Combine(Application.persistentDataPath, "HeroCollection.json");
+        File.WriteAllText(path, json);
+        Debug.Log("HeroCollection saved to local file.");
     }
 
     public async void LoadUserData(string userId)
@@ -197,6 +213,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
                 var userHeroCollection = new UserHeroCollection(userId, base64HeroCollection);
 
                 UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 데이터 불러오기 성공: " + userData.displayName + ", " + userData.level + ", " + userData.items));
+
+                // 로컬 파일 업데이트
+                SaveHeroCollectionToLocalFile(base64HeroCollection);
             }
             else
             {
@@ -214,6 +233,10 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             string base64HeroCollection = heroDataSnapshot.Child("heroCollection").Value.ToString();
             var userHeroCollection = new UserHeroCollection(userId, base64HeroCollection);
             HeroCollectionManager.Instance.FromBase64(base64HeroCollection);
+
+            // 로컬 파일 업데이트
+            SaveHeroCollectionToLocalFile(base64HeroCollection);
+
             return userHeroCollection;
         }
         else
@@ -256,6 +279,19 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 리셋 성공."));
         });
+
+        // 로컬 파일 삭제
+        DeleteLocalHeroCollectionFile();
+    }
+
+    private void DeleteLocalHeroCollectionFile()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "HeroCollection.json");
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            Debug.Log("HeroCollection local file deleted.");
+        }
     }
 
     public void SyncUserData(string userId)
@@ -329,6 +365,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("모든 데이터 삭제 성공."));
         });
+
+        // 로컬 파일 삭제
+        DeleteLocalHeroCollectionFile();
     }
 
     public async void AddHeroToCollection(string userId, int heroId)
@@ -344,6 +383,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
             
             var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
             await SaveHeroCollection(userHeroCollection);
+
+            // 로컬 파일 업데이트
+            SaveHeroCollectionToLocalFile(userHeroCollection.heroCollectionBase64);
         }
         else
         {
@@ -390,6 +432,9 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
 
             var userHeroCollection = new UserHeroCollection(userId, HeroCollectionManager.Instance.ToBase64());
             await SaveHeroCollection(userHeroCollection);
+
+            // 로컬 파일 업데이트
+            SaveHeroCollectionToLocalFile(userHeroCollection.heroCollectionBase64);
         }
         else
         {

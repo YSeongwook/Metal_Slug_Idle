@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HeroCollectionManager : Singleton<HeroCollectionManager>
 {
-    private List<HeroCollectionItem> heroCollection;
+    private bool[] heroCollection; // 보유 상태를 저장하는 배열
     private string fileName = "HeroCollection.json";
 
     protected override void Awake()
@@ -17,28 +17,24 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 
     public bool HasHero(int heroId)
     {
-        if (heroId >= 0 && heroId < heroCollection.Count)
+        if (heroId >= 0 && heroId < heroCollection.Length)
         {
-            return heroCollection[heroId].owned;
+            return heroCollection[heroId];
         }
         return false;
     }
 
     public void Initialize(int maxHeroes)
     {
-        heroCollection = new List<HeroCollectionItem>();
-        for (int i = 0; i < maxHeroes; i++)
-        {
-            heroCollection.Add(new HeroCollectionItem { id = i, owned = false });
-        }
+        heroCollection = new bool[maxHeroes];
         SaveCollection();
     }
 
     public void AddHero(int heroId)
     {
-        if (heroId >= 0 && heroId < heroCollection.Count)
+        if (heroId >= 0 && heroId < heroCollection.Length)
         {
-            heroCollection[heroId].owned = true;
+            heroCollection[heroId] = true;
             SaveCollection();
         }
     }
@@ -121,6 +117,6 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     [Serializable]
     private class HeroCollectionWrapper
     {
-        public List<HeroCollectionItem> heroCollection;
+        public bool[] heroCollection;
     }
 }
