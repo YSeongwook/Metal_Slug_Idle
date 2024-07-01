@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using EnumTypes;
@@ -14,29 +13,36 @@ public class GachaManager : MonoBehaviour
     private string gachaUrl = "https://asia-northeast1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
     public SummonResultManager summonResultManager; // SummonResultManager 컴포넌트 참조
     private Dictionary<int, HeroData> heroDataDict;
+    private static GachaManager _instance;
+
+    public static GachaManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<GachaManager>();
+            }
+            return _instance;
+        }
+    }
 
     private void Awake()
     {
-        LoadHeroData();
+        // Firebase 및 GPGS 로그인 완료 이벤트 리스너 등록
+        EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, LoadHeroData);
     }
 
-    private void LoadHeroData()
+    public void LoadHeroData()
     {
-        string filePath = Path.Combine(Application.streamingAssetsPath, "HeroData.json");
-        if (File.Exists(filePath))
-        {
-            string jsonData = File.ReadAllText(filePath);
-            HeroDataWrapper dataWrapper = JsonConvert.DeserializeObject<HeroDataWrapper>(jsonData);
+        // HeroData를 Firebase에서 불러오도록 수정
+        FirebaseDataManager.Instance.LoadHeroDataFromFirebase(data => {
             heroDataDict = new Dictionary<int, HeroData>();
-            foreach (var hero in dataWrapper.data)
+            foreach (var hero in data.data)
             {
                 heroDataDict[hero.id] = hero;
             }
-        }
-        else
-        {
-            Debug.LogError("HeroData.json 파일을 찾을 수 없습니다.");
-        }
+        });
     }
 
     private void OnEnable()
@@ -51,6 +57,15 @@ public class GachaManager : MonoBehaviour
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaSingle, () => PerformGacha(1));
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaTen, () => PerformGacha(10));
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaThirty, () => PerformGacha(30));
+    }
+    
+    public void SetHeroData(HeroDataWrapper heroData)
+    {
+        heroDataDict = new Dictionary<int, HeroData>();
+        foreach (var hero in heroData.data)
+        {
+            heroDataDict[hero.id] = hero;
+        }
     }
 
     public async void PerformGacha(int drawCount)

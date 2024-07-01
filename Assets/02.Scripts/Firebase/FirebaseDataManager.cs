@@ -11,8 +11,6 @@ using UnityEngine.Events;
 
 public class FirebaseDataManager : Singleton<FirebaseDataManager>
 {
-    public DatabaseReference DatabaseReference => _databaseRef; // 데이터베이스 참조
-    
     private DatabaseReference _databaseRef;
     private FirebaseAuth _auth;
     private FirebaseUser currentUser;
@@ -60,6 +58,10 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
     {
         currentUser = AuthManager.Instance.GetCurrentUser();
         SaveUserData(currentUser);
+        LoadHeroDataFromFirebase(heroData => {
+            // Firebase에서 불러온 데이터를 GachaManager에 전달합니다.
+            GachaManager.Instance.SetHeroData(heroData);
+        });
     }
 
     public FirebaseUser GetCurrentUser() 
@@ -346,6 +348,28 @@ public class FirebaseDataManager : Singleton<FirebaseDataManager>
         else
         {
             UnityMainThreadDispatcher.Enqueue(() => logger.Log("유저 히어로 컬렉션 데이터가 존재하지 않습니다."));
+        }
+    }
+    
+    public async void LoadHeroDataFromFirebase(Action<HeroDataWrapper> callback)
+    {
+        if (_databaseRef == null || currentUser == null)
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.LogError("Firebase Database or User not initialized."));
+            return;
+        }
+
+        var heroDataSnapshot = await _databaseRef.Child("HeroData").GetValueAsync();
+
+        if (heroDataSnapshot.Exists)
+        {
+            var heroDataJson = heroDataSnapshot.GetRawJsonValue();
+            var heroDataWrapper = JsonUtility.FromJson<HeroDataWrapper>(heroDataJson);
+            callback(heroDataWrapper);
+        }
+        else
+        {
+            UnityMainThreadDispatcher.Enqueue(() => logger.Log("HeroData not found in Firebase Realtime Database."));
         }
     }
 

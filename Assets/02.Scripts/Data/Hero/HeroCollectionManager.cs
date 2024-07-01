@@ -17,12 +17,9 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 
     public bool HasHero(int heroId)
     {
-        foreach (var hero in heroCollection)
+        if (heroId >= 0 && heroId < heroCollection.Count)
         {
-            if (hero.id == heroId)
-            {
-                return hero.owned;
-            }
+            return heroCollection[heroId].owned;
         }
         return false;
     }
@@ -39,18 +36,11 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 
     public void AddHero(int heroId)
     {
-        foreach (var hero in heroCollection)
+        if (heroId >= 0 && heroId < heroCollection.Count)
         {
-            if (hero.id == heroId)
-            {
-                hero.owned = true;
-                SaveCollection();
-                return;
-            }
+            heroCollection[heroId].owned = true;
+            SaveCollection();
         }
-
-        heroCollection.Add(new HeroCollectionItem { id = heroId, owned = true });
-        SaveCollection();
     }
 
     public void UpdateHeroCollection(int[] heroIds)
@@ -78,7 +68,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
         else if (!File.Exists(persistentFilePath))
         {
             Debug.LogError("StreamingAssets에 기본 HeroCollection.json 파일이 없습니다.");
-            Initialize(10); // 파일이 없을 경우 초기화
+            Initialize(15); // 파일이 없을 경우 초기화
         }
     }
 
@@ -97,7 +87,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
         }
         else
         {
-            Initialize(10); // 파일이 없을 경우 초기화
+            Initialize(15); // 파일이 없을 경우 초기화
         }
     }
 
@@ -115,30 +105,17 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 
     public string ToBase64()
     {
-        byte[] heroCollectionBytes = new byte[(heroCollection.Count + 7) / 8];
-        foreach (var hero in heroCollection)
-        {
-            if (hero.owned)
-            {
-                int byteIndex = hero.id / 8;
-                int bitIndex = hero.id % 8;
-                heroCollectionBytes[byteIndex] |= (byte)(1 << bitIndex);
-            }
-        }
-        return Convert.ToBase64String(heroCollectionBytes);
+        string json = JsonUtility.ToJson(new HeroCollectionWrapper { heroCollection = heroCollection });
+        byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(json);
+        return Convert.ToBase64String(jsonBytes);
     }
 
     public void FromBase64(string base64)
     {
-        byte[] heroCollectionBytes = Convert.FromBase64String(base64);
-        heroCollection = new List<HeroCollectionItem>();
-        for (int i = 0; i < heroCollectionBytes.Length * 8; i++)
-        {
-            int byteIndex = i / 8;
-            int bitIndex = i % 8;
-            bool owned = (heroCollectionBytes[byteIndex] & (1 << bitIndex)) != 0;
-            heroCollection.Add(new HeroCollectionItem { id = i, owned = owned });
-        }
+        byte[] jsonBytes = Convert.FromBase64String(base64);
+        string json = System.Text.Encoding.UTF8.GetString(jsonBytes);
+        HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
+        heroCollection = wrapper.heroCollection;
     }
 
     [Serializable]

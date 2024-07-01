@@ -1,26 +1,7 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
-const fs = require('fs');
-const path = require('path');
-
-// GachaData.json 파일 경로 설정
-const gachaDataPath = path.join(__dirname, 'GachaData.json');
-let gachaData;
-
-// GachaData.json 파일 읽기 및 초기화
-fs.readFile(gachaDataPath, 'utf8', (err, data) => {
-    if (err) {
-        console.error('Error reading gacha data file:', err);
-        return;
-    }
-    const parsedData = JSON.parse(data).data;
-    // 가중치를 할당하여 gachaData 초기화
-    gachaData = parsedData.map(hero => ({
-        id: hero.id,
-        weight: getWeightByRank(hero.rank)
-    }));
-});
+const db = admin.database();
 
 // 등급에 따른 가중치를 반환하는 함수
 function getWeightByRank(rank) {
@@ -74,31 +55,36 @@ exports.gacha = functions.region('asia-northeast1').https.onRequest(async (req, 
         return res.status(400).send('Missing userId');
     }
 
-    if (!gachaData) {
-        return res.status(500).send('Gacha data not initialized');
-    }
-
-    const picker = new WeightedRandomPicker(gachaData);
-    const heroIds = picker.pickMultiple(drawCount);
-
     try {
-        const heroCollectionRef = admin.database().ref(`/user_HeroCollection/${userId}`);
+        // Firebase Realtime Database에서 GachaData 읽어오기
+        const gachaDataSnapshot = await db.ref('GachaData').once('value');
+        const gachaData = gachaDataSnapshot.val().data;
+
+        if (!gachaData) {
+            return res.status(500).send('Gacha data not found');
+        }
+
+        // 가중치를 할당하여 gachaData 초기화
+        const weightedGachaData = gachaData.map(hero => ({
+            id: hero.id,
+            weight: getWeightByRank(hero.rank)
+        }));
+
+        const picker = new WeightedRandomPicker(weightedGachaData);
+        const heroIds = picker.pickMultiple(drawCount);
+
+        const heroCollectionRef = db.ref(`/user_HeroCollection/${userId}`);
         const heroDataSnapshot = await heroCollectionRef.once('value');
 
-        let heroCollection = heroDataSnapshot.val() || [];
-
-        // heroCollection이 객체일 경우 배열로 변환
+        let heroCollection = heroDataSnapshot.val().heroCollection || [];
         if (!Array.isArray(heroCollection)) {
-            heroCollection = Object.values(heroCollection);
+            heroCollection = new Array(15).fill().map((_, index) => ({ id: index, owned: false }));
         }
 
         // 뽑은 영웅을 컬렉션에 추가
         heroIds.forEach(heroId => {
-            const heroExists = heroCollection.find(hero => hero.id === heroId);
-            if (heroExists) {
-                heroExists.owned = true;
-            } else {
-                heroCollection.push({ id: heroId, owned: true });
+            if (heroId >= 0 && heroId < heroCollection.length) {
+                heroCollection[heroId].owned = true;
             }
         });
 
@@ -108,7 +94,7 @@ exports.gacha = functions.region('asia-northeast1').https.onRequest(async (req, 
 
         res.status(200).json({ result: heroIds });
     } catch (error) {
-        console.error('Error updating hero collection:', error);
+        console.error('Error processing gacha:', error);
         res.status(500).send('Internal Server Error');
     }
 });

@@ -1,19 +1,124 @@
-﻿{
-  "heroCollection": [
-    { "id": 0, "owned": true },
-    { "id": 1, "owned": true },
-    { "id": 2, "owned": true },
-    { "id": 3, "owned": true },
-    { "id": 4, "owned": true },
-    { "id": 5, "owned": true },
-    { "id": 6, "owned": false },
-    { "id": 7, "owned": true },
-    { "id": 8, "owned": false },
-    { "id": 9, "owned": true },
-    { "id": 10, "owned": false },
-    { "id": 11, "owned": false },
-    { "id": 12, "owned": false },
-    { "id": 13, "owned": false },
-    { "id": 14, "owned": false }
-  ]
+{
+    "heroCollection": [
+        {
+            "id": 0,
+            "owned": false
+        },
+        {
+            "id": 1,
+            "owned": false
+        },
+        {
+            "id": 2,
+            "owned": false
+        },
+        {
+            "id": 3,
+            "owned": false
+        },
+        {
+            "id": 4,
+            "owned": false
+        },
+        {
+            "id": 5,
+            "owned": false
+        },
+        {
+            "id": 6,
+            "owned": false
+        },
+        {
+            "id": 7,
+            "owned": false
+        },
+        {
+            "id": 8,
+            "owned": false
+        },
+        {
+            "id": 9,
+            "owned": false
+        },
+        {
+            "id": 10,
+            "owned": false
+        },
+        {
+            "id": 11,
+            "owned": false
+        },
+        {
+            "id": 12,
+            "owned": false
+        },
+        {
+            "id": 13,
+            "owned": false
+        },
+        {
+            "id": 14,
+            "owned": false
+        },
+        {
+            "id": 15,
+            "owned": false
+        },
+        {
+            "id": 16,
+            "owned": false
+        },
+        {
+            "id": 17,
+            "owned": false
+        },
+        {
+            "id": 18,
+            "owned": false
+        },
+        {
+            "id": 19,
+            "owned": false
+        },
+        {
+            "id": 20,
+            "owned": false
+        },
+        {
+            "id": 21,
+            "owned": false
+        },
+        {
+            "id": 22,
+            "owned": false
+        },
+        {
+            "id": 23,
+            "owned": false
+        },
+        {
+            "id": 24,
+            "owned": false
+        },
+        {
+            "id": 25,
+            "owned": false
+        },
+        {
+            "id": 26,
+            "owned": false
+        },
+        {
+            "id": 27,
+            "owned": false
+        },
+        {
+            "id": 28,
+            "owned": false
+        },
+        {
+            "id": 29,
+            "owned": false
+        }
+    ]
 }
