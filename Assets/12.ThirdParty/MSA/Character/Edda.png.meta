@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_9
+      name: Edda_Move_0
       rect:
         serializedVersion: 2
         x: 31
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_10
+      name: Edda_Move_1
       rect:
         serializedVersion: 2
         x: 136
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_11
+      name: Edda_Move_2
       rect:
         serializedVersion: 2
         x: 258
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_12
+      name: Edda_Move_3
       rect:
         serializedVersion: 2
         x: 378
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_13
+      name: Edda_Move_4
       rect:
         serializedVersion: 2
         x: 29
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_14
+      name: Edda_Move_5
       rect:
         serializedVersion: 2
         x: 137
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_15
+      name: Edda_Move_6
       rect:
         serializedVersion: 2
         x: 262
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_16
+      name: Edda_Move_7
       rect:
         serializedVersion: 2
         x: 385
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_230
+      name: Edda_Attack_0
       rect:
         serializedVersion: 2
         x: 87
@@ -461,7 +461,7 @@ TextureImporter:
         width: 76
         height: 49
       alignment: 9
-      pivot: {x: 0.6315789, y: 0.56122446}
+      pivot: {x: 0.65789473, y: 0.56122446}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_231
+      name: Edda_Attack_1
       rect:
         serializedVersion: 2
         x: 200
@@ -482,7 +482,7 @@ TextureImporter:
         width: 77
         height: 49
       alignment: 9
-      pivot: {x: 0.6363636, y: 0.5}
+      pivot: {x: 0.66233766, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_232
+      name: Edda_Attack_2
       rect:
         serializedVersion: 2
         x: 335
@@ -503,7 +503,7 @@ TextureImporter:
         width: 63
         height: 72
       alignment: 9
-      pivot: {x: 0.5555556, y: 0.3402778}
+      pivot: {x: 0.5873016, y: 0.3402778}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_233
+      name: Edda_Attack_3
       rect:
         serializedVersion: 2
         x: 444
@@ -524,7 +524,7 @@ TextureImporter:
         width: 83
         height: 72
       alignment: 9
-      pivot: {x: 0.39759037, y: 0.3402778}
+      pivot: {x: 0.42168674, y: 0.3402778}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_234
+      name: Edda_Attack_4
       rect:
         serializedVersion: 2
         x: 569
@@ -545,7 +545,7 @@ TextureImporter:
         width: 117
         height: 83
       alignment: 9
-      pivot: {x: 0.25641027, y: 0.3313253}
+      pivot: {x: 0.2735043, y: 0.3313253}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_235
+      name: Edda_Attack_5
       rect:
         serializedVersion: 2
         x: 115
@@ -566,7 +566,7 @@ TextureImporter:
         width: 91
         height: 81
       alignment: 9
-      pivot: {x: 0.043956045, y: 0.33950618}
+      pivot: {x: 0.06593407, y: 0.33950618}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,7 +579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_236
+      name: Edda_Attack_6
       rect:
         serializedVersion: 2
         x: 251
@@ -587,7 +587,7 @@ TextureImporter:
         width: 91
         height: 54
       alignment: 9
-      pivot: {x: 0.043956045, y: 0.5092593}
+      pivot: {x: 0.06593407, y: 0.5092593}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -600,7 +600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_237
+      name: Edda_Attack_7
       rect:
         serializedVersion: 2
         x: 400
@@ -608,7 +608,7 @@ TextureImporter:
         width: 88
         height: 49
       alignment: 9
-      pivot: {x: 0.045454547, y: 0.56122446}
+      pivot: {x: 0.06818182, y: 0.56122446}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -621,7 +621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_239
+      name: Edda_Attack_8
       rect:
         serializedVersion: 2
         x: 76
@@ -629,7 +629,7 @@ TextureImporter:
         width: 73
         height: 54
       alignment: 9
-      pivot: {x: 0.05479452, y: 0.8240741}
+      pivot: {x: 0.08219178, y: 0.8240741}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_240
+      name: Edda_Attack_9
       rect:
         serializedVersion: 2
         x: 215
@@ -650,7 +650,7 @@ TextureImporter:
         width: 123
         height: 87
       alignment: 9
-      pivot: {x: 0.4715447, y: 0.5}
+      pivot: {x: 0.4878049, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -663,7 +663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_241
+      name: Edda_Attack_10
       rect:
         serializedVersion: 2
         x: 397
@@ -671,7 +671,7 @@ TextureImporter:
         width: 95
         height: 68
       alignment: 9
-      pivot: {x: 0.57894737, y: 0.3602941}
+      pivot: {x: 0.6, y: 0.3602941}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -684,7 +684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_242
+      name: Edda_Attack_11
       rect:
         serializedVersion: 2
         x: 58
@@ -692,7 +692,7 @@ TextureImporter:
         width: 86
         height: 68
       alignment: 9
-      pivot: {x: 0.5697674, y: 0.3602941}
+      pivot: {x: 0.59302324, y: 0.3602941}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -705,7 +705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_243
+      name: Edda_Attack_12
       rect:
         serializedVersion: 2
         x: 199
@@ -713,7 +713,7 @@ TextureImporter:
         width: 77
         height: 68
       alignment: 9
-      pivot: {x: 0.5584416, y: 0.3602941}
+      pivot: {x: 0.58441556, y: 0.3602941}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -726,7 +726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_244
+      name: Edda_Attack_13
       rect:
         serializedVersion: 2
         x: 363
@@ -734,7 +734,7 @@ TextureImporter:
         width: 68
         height: 49
       alignment: 9
-      pivot: {x: 0.16176471, y: 0.5}
+      pivot: {x: 0.19117647, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -747,7 +747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_245
+      name: Edda_Attack_14
       rect:
         serializedVersion: 2
         x: 74
@@ -755,7 +755,7 @@ TextureImporter:
         width: 97
         height: 49
       alignment: 9
-      pivot: {x: 0.11340206, y: 0.5}
+      pivot: {x: 0.13402061, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -768,7 +768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_246
+      name: Edda_Attack_15
       rect:
         serializedVersion: 2
         x: 200
@@ -776,7 +776,7 @@ TextureImporter:
         width: 110
         height: 49
       alignment: 9
-      pivot: {x: 0.21818182, y: 0.5}
+      pivot: {x: 0.23636363, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -789,7 +789,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_247
+      name: Edda_Attack_16
       rect:
         serializedVersion: 2
         x: 386
@@ -797,7 +797,7 @@ TextureImporter:
         width: 123
         height: 49
       alignment: 9
-      pivot: {x: 0.30081302, y: 0.5}
+      pivot: {x: 0.31707317, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -810,7 +810,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_248
+      name: Edda_Attack_17
       rect:
         serializedVersion: 2
         x: 81
@@ -818,7 +818,7 @@ TextureImporter:
         width: 83
         height: 49
       alignment: 9
-      pivot: {x: 0.036144577, y: 0.5}
+      pivot: {x: 0.060240965, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -831,7 +831,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_249
+      name: Edda_Attack_18
       rect:
         serializedVersion: 2
         x: 222
@@ -839,7 +839,7 @@ TextureImporter:
         width: 44
         height: 72
       alignment: 9
-      pivot: {x: 0.09090909, y: 0.3402778}
+      pivot: {x: 0.13636364, y: 0.3402778}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -852,7 +852,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_250
+      name: Edda_Attack_19
       rect:
         serializedVersion: 2
         x: 344
@@ -860,7 +860,7 @@ TextureImporter:
         width: 75
         height: 49
       alignment: 9
-      pivot: {x: 0.61333334, y: 0.5}
+      pivot: {x: 0.64, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -883,7 +883,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Edda_10: -1205776662
       Edda_100: 894082920
       Edda_101: 207237598
       Edda_102: 1683406218
@@ -894,7 +893,6 @@ TextureImporter:
       Edda_107: -462656803
       Edda_108: -399319900
       Edda_109: 1081415360
-      Edda_11: 1060505909
       Edda_110: 169806640
       Edda_111: 46698784
       Edda_112: 1463010670
@@ -905,7 +903,6 @@ TextureImporter:
       Edda_117: 2130727183
       Edda_118: 66072809
       Edda_119: 1882585039
-      Edda_12: -1428995473
       Edda_120: 1137220480
       Edda_121: 1789699243
       Edda_122: 204502208
@@ -916,7 +913,6 @@ TextureImporter:
       Edda_127: -283740772
       Edda_128: -746732481
       Edda_129: 46977949
-      Edda_13: 946125547
       Edda_130: -1718445240
       Edda_131: -1696658210
       Edda_132: 847822997
@@ -927,7 +923,6 @@ TextureImporter:
       Edda_137: 449249180
       Edda_138: 2814334
       Edda_139: -170784974
-      Edda_14: 18604862
       Edda_140: 1166174034
       Edda_141: 1992704680
       Edda_142: 652222431
@@ -938,7 +933,6 @@ TextureImporter:
       Edda_147: -851918597
       Edda_148: -1806631810
       Edda_149: 652191283
-      Edda_15: 400111004
       Edda_150: -1551213629
       Edda_151: 1794905027
       Edda_152: 1609703653
@@ -949,7 +943,6 @@ TextureImporter:
       Edda_157: 928438160
       Edda_158: -2075697946
       Edda_159: -2089772378
-      Edda_16: -1349954984
       Edda_160: 1234675694
       Edda_161: -172184807
       Edda_162: -745277974
@@ -1026,30 +1019,9 @@ TextureImporter:
       Edda_227: 173899931
       Edda_228: 648898623
       Edda_229: 1087016263
-      Edda_23: -1523854140
-      Edda_230: 1373705387
-      Edda_231: -564608547
-      Edda_232: -2032121447
-      Edda_233: 1406419944
-      Edda_234: 620863575
-      Edda_235: 1726679414
-      Edda_236: 414245812
-      Edda_237: 1469590273
       Edda_238: -1815459994
-      Edda_239: -335060863
       Edda_24: 2002633199
-      Edda_240: -69307711
-      Edda_241: -1023938588
-      Edda_242: -1963142537
-      Edda_243: 1371310803
-      Edda_244: 215852045
-      Edda_245: -612282549
-      Edda_246: -1587544334
-      Edda_247: 942915602
-      Edda_248: -429134111
-      Edda_249: -1074638486
       Edda_25: 1527324290
-      Edda_250: -363485940
       Edda_251: -168695761
       Edda_252: -1728453263
       Edda_253: 1067302006
@@ -1281,7 +1253,6 @@ TextureImporter:
       Edda_87: 1207045451
       Edda_88: -1813065592
       Edda_89: 600570611
-      Edda_9: 604386134
       Edda_91: 1941473449
       Edda_92: 113959689
       Edda_93: 772150895
@@ -1291,6 +1262,26 @@ TextureImporter:
       Edda_97: 2073499405
       Edda_98: -432298342
       Edda_99: -367483671
+      Edda_Attack_0: 1373705387
+      Edda_Attack_1: -564608547
+      Edda_Attack_10: -1023938588
+      Edda_Attack_11: -1963142537
+      Edda_Attack_12: 1371310803
+      Edda_Attack_13: 215852045
+      Edda_Attack_14: -612282549
+      Edda_Attack_15: -1587544334
+      Edda_Attack_16: 942915602
+      Edda_Attack_17: -429134111
+      Edda_Attack_18: -1074638486
+      Edda_Attack_19: -363485940
+      Edda_Attack_2: -2032121447
+      Edda_Attack_3: 1406419944
+      Edda_Attack_4: 620863575
+      Edda_Attack_5: 1726679414
+      Edda_Attack_6: 414245812
+      Edda_Attack_7: 1469590273
+      Edda_Attack_8: -335060863
+      Edda_Attack_9: -69307711
       Edda_Idle_0: -518009009
       Edda_Idle_1: 393360240
       Edda_Idle_2: 714261034
@@ -1299,6 +1290,14 @@ TextureImporter:
       Edda_Idle_5: 1198638010
       Edda_Idle_6: 1947285253
       Edda_Idle_7: -1860733361
+      Edda_Move_0: 604386134
+      Edda_Move_1: -1205776662
+      Edda_Move_2: 1060505909
+      Edda_Move_3: -1428995473
+      Edda_Move_4: 946125547
+      Edda_Move_5: 18604862
+      Edda_Move_6: 400111004
+      Edda_Move_7: -1349954984
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

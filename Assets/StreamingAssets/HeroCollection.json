@@ -2,35 +2,35 @@
     "heroCollection": [
         {
             "id": 0,
-            "owned": false
+            "owned": true
         },
         {
             "id": 1,
-            "owned": false
+            "owned": true
         },
         {
             "id": 2,
-            "owned": false
+            "owned": true
         },
         {
             "id": 3,
-            "owned": false
+            "owned": true
         },
         {
             "id": 4,
-            "owned": false
+            "owned": true
         },
         {
             "id": 5,
-            "owned": true
+            "owned": false
         },
         {
             "id": 6,
-            "owned": true
+            "owned": false
         },
         {
             "id": 7,
-            "owned": true
+            "owned": false
         },
         {
             "id": 8,
@@ -58,7 +58,7 @@
         },
         {
             "id": 14,
-            "owned": true
+            "owned": false
         }
     ]
 }

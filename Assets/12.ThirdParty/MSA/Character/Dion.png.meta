@@ -125,7 +125,7 @@ TextureImporter:
         width: 70
         height: 49
       alignment: 9
-      pivot: {x: 0.08571429, y: 0.5}
+      pivot: {x: 0.17142858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 70
         height: 49
       alignment: 9
-      pivot: {x: 0.08571429, y: 0.5}
+      pivot: {x: 0.17142858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
         width: 71
         height: 49
       alignment: 9
-      pivot: {x: 0.09859155, y: 0.5}
+      pivot: {x: 0.18309858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +188,7 @@ TextureImporter:
         width: 72
         height: 49
       alignment: 9
-      pivot: {x: 0.11111111, y: 0.5}
+      pivot: {x: 0.19444445, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
         width: 71
         height: 49
       alignment: 9
-      pivot: {x: 0.09859155, y: 0.5}
+      pivot: {x: 0.18309858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,7 +230,7 @@ TextureImporter:
         width: 71
         height: 49
       alignment: 9
-      pivot: {x: 0.09859155, y: 0.5}
+      pivot: {x: 0.18309858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -251,7 +251,7 @@ TextureImporter:
         width: 70
         height: 49
       alignment: 9
-      pivot: {x: 0.08571429, y: 0.5}
+      pivot: {x: 0.17142858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -272,7 +272,7 @@ TextureImporter:
         width: 70
         height: 49
       alignment: 9
-      pivot: {x: 0.08571429, y: 0.5}
+      pivot: {x: 0.17142858, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_18
+      name: Dion_Walk_9
       rect:
         serializedVersion: 2
         x: 387
@@ -293,7 +293,7 @@ TextureImporter:
         width: 79
         height: 49
       alignment: 9
-      pivot: {x: 0.18987341, y: 0.5}
+      pivot: {x: 0.2278481, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_17
+      name: Dion_Walk_8
       rect:
         serializedVersion: 2
         x: 471
@@ -314,7 +314,7 @@ TextureImporter:
         width: 80
         height: 49
       alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_16
+      name: Dion_Walk_7
       rect:
         serializedVersion: 2
         x: 556
@@ -335,7 +335,7 @@ TextureImporter:
         width: 79
         height: 49
       alignment: 9
-      pivot: {x: 0.18987341, y: 0.5}
+      pivot: {x: 0.25316456, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_15
+      name: Dion_Walk_6
       rect:
         serializedVersion: 2
         x: 640
@@ -356,7 +356,7 @@ TextureImporter:
         width: 80
         height: 49
       alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      pivot: {x: 0.2625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_14
+      name: Dion_Walk_5
       rect:
         serializedVersion: 2
         x: 724
@@ -377,7 +377,7 @@ TextureImporter:
         width: 83
         height: 49
       alignment: 9
-      pivot: {x: 0.22891566, y: 0.5}
+      pivot: {x: 0.27710843, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_13
+      name: Dion_Walk_4
       rect:
         serializedVersion: 2
         x: 811
@@ -398,7 +398,7 @@ TextureImporter:
         width: 82
         height: 49
       alignment: 9
-      pivot: {x: 0.2195122, y: 0.5}
+      pivot: {x: 0.2682927, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_12
+      name: Dion_Walk_3
       rect:
         serializedVersion: 2
         x: 898
@@ -419,7 +419,7 @@ TextureImporter:
         width: 80
         height: 49
       alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      pivot: {x: 0.25, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_11
+      name: Dion_Walk_2
       rect:
         serializedVersion: 2
         x: 982
@@ -440,7 +440,7 @@ TextureImporter:
         width: 80
         height: 49
       alignment: 9
-      pivot: {x: 0.2, y: 0.5}
+      pivot: {x: 0.2625, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_10
+      name: Dion_Walk_1
       rect:
         serializedVersion: 2
         x: 1066
@@ -461,7 +461,7 @@ TextureImporter:
         width: 78
         height: 49
       alignment: 9
-      pivot: {x: 0.17948718, y: 0.5}
+      pivot: {x: 0.24358974, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_9
+      name: Dion_Walk_0
       rect:
         serializedVersion: 2
         x: 1150
@@ -482,7 +482,7 @@ TextureImporter:
         width: 76
         height: 49
       alignment: 9
-      pivot: {x: 0.15789473, y: 0.5}
+      pivot: {x: 0.23684211, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -789,7 +789,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_51
+      name: Dion_Attack_16
       rect:
         serializedVersion: 2
         x: 38
@@ -797,7 +797,7 @@ TextureImporter:
         width: 63
         height: 49
       alignment: 9
-      pivot: {x: 0.031746034, y: 0.5}
+      pivot: {x: 0.12698413, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -810,7 +810,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_50
+      name: Dion_Attack_15
       rect:
         serializedVersion: 2
         x: 106
@@ -818,7 +818,7 @@ TextureImporter:
         width: 82
         height: 49
       alignment: 9
-      pivot: {x: 0.07317073, y: 0.5}
+      pivot: {x: 0.14634146, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -831,7 +831,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_49
+      name: Dion_Attack_14
       rect:
         serializedVersion: 2
         x: 195
@@ -839,7 +839,7 @@ TextureImporter:
         width: 88
         height: 49
       alignment: 9
-      pivot: {x: 0.056818184, y: 0.5}
+      pivot: {x: 0.125, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -852,15 +852,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_48
+      name: Dion_Attack_13
       rect:
         serializedVersion: 2
         x: 289
-        y: 1031
+        y: 1030
         width: 92
         height: 49
       alignment: 9
-      pivot: {x: 0.097826086, y: 0.5}
+      pivot: {x: 0.16304348, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -873,7 +873,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_47
+      name: Dion_Attack_12
       rect:
         serializedVersion: 2
         x: 386
@@ -881,7 +881,7 @@ TextureImporter:
         width: 57
         height: 49
       alignment: 9
-      pivot: {x: 0.14035088, y: 0.5}
+      pivot: {x: 0.24561404, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -894,15 +894,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_46
+      name: Dion_Attack_11
       rect:
         serializedVersion: 2
         x: 456
-        y: 1031
+        y: 1030
         width: 51
         height: 49
       alignment: 9
-      pivot: {x: 0.039215688, y: 0.5}
+      pivot: {x: 0.15686275, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -915,15 +915,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_45
+      name: Dion_Attack_10
       rect:
         serializedVersion: 2
-        x: 514
+        x: 515
         y: 1032
         width: 82
         height: 49
       alignment: 9
-      pivot: {x: 0.09756097, y: 0.5}
+      pivot: {x: 0.17073171, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -936,7 +936,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_44
+      name: Dion_Attack_9
       rect:
         serializedVersion: 2
         x: 601
@@ -944,7 +944,7 @@ TextureImporter:
         width: 94
         height: 49
       alignment: 9
-      pivot: {x: 0.08510638, y: 0.5}
+      pivot: {x: 0.14893617, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -957,7 +957,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_43
+      name: Dion_Attack_8
       rect:
         serializedVersion: 2
         x: 700
@@ -965,7 +965,7 @@ TextureImporter:
         width: 92
         height: 49
       alignment: 9
-      pivot: {x: 0.06521739, y: 0.5}
+      pivot: {x: 0.13043478, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -978,7 +978,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_42
+      name: Dion_Attack_7
       rect:
         serializedVersion: 2
         x: 796
@@ -986,7 +986,7 @@ TextureImporter:
         width: 96
         height: 49
       alignment: 9
-      pivot: {x: 0.083333336, y: 0.5}
+      pivot: {x: 0.14583333, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -999,7 +999,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_41
+      name: Dion_Attack_6
       rect:
         serializedVersion: 2
         x: 896
@@ -1007,7 +1007,7 @@ TextureImporter:
         width: 57
         height: 49
       alignment: 9
-      pivot: {x: 0.14035088, y: 0.5}
+      pivot: {x: 0.24561404, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1020,7 +1020,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_40
+      name: Dion_Attack_5
       rect:
         serializedVersion: 2
         x: 966
@@ -1028,7 +1028,7 @@ TextureImporter:
         width: 51
         height: 49
       alignment: 9
-      pivot: {x: 0.039215688, y: 0.5}
+      pivot: {x: 0.15686275, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1041,7 +1041,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_39
+      name: Dion_Attack_4
       rect:
         serializedVersion: 2
         x: 1023
@@ -1049,7 +1049,7 @@ TextureImporter:
         width: 82
         height: 49
       alignment: 9
-      pivot: {x: 0.07317073, y: 0.5}
+      pivot: {x: 0.14634146, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1062,7 +1062,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_38
+      name: Dion_Attack_3
       rect:
         serializedVersion: 2
         x: 1112
@@ -1070,7 +1070,7 @@ TextureImporter:
         width: 88
         height: 49
       alignment: 9
-      pivot: {x: 0.06818182, y: 0.5}
+      pivot: {x: 0.13636364, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1083,7 +1083,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_37
+      name: Dion_Attack_2
       rect:
         serializedVersion: 2
         x: 1206
@@ -1091,7 +1091,7 @@ TextureImporter:
         width: 92
         height: 49
       alignment: 9
-      pivot: {x: 0.08695652, y: 0.5}
+      pivot: {x: 0.1521739, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1104,7 +1104,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_36
+      name: Dion_Attack_1
       rect:
         serializedVersion: 2
         x: 1303
@@ -1112,7 +1112,7 @@ TextureImporter:
         width: 57
         height: 49
       alignment: 9
-      pivot: {x: 0.14035088, y: 0.5}
+      pivot: {x: 0.24561404, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1125,7 +1125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_35
+      name: Dion_Attack_0
       rect:
         serializedVersion: 2
         x: 1373
@@ -1133,7 +1133,7 @@ TextureImporter:
         width: 51
         height: 49
       alignment: 9
-      pivot: {x: 0.039215688, y: 0.5}
+      pivot: {x: 0.15686275, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1141,2652 +1141,6 @@ TextureImporter:
       bones: []
       spriteID: 2ddc3855e6228f84a9c5b48f23996315
       internalID: 1998736548
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_61
-      rect:
-        serializedVersion: 2
-        x: 525
-        y: 846
-        width: 63
-        height: 49
-      alignment: 9
-      pivot: {x: 0.031746034, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b9b1ed245d82df428b00df44d7e7e7a
-      internalID: 1260358389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_60
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 846
-        width: 46
-        height: 49
-      alignment: 9
-      pivot: {x: 0.1521739, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2defb321d5232744480037a51ea74be8
-      internalID: 1077226274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_59
-      rect:
-        serializedVersion: 2
-        x: 652
-        y: 846
-        width: 65
-        height: 49
-      alignment: 9
-      pivot: {x: 0.10769231, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3216f78dcf02494591a7d961561cd78
-      internalID: -1492438849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_58
-      rect:
-        serializedVersion: 2
-        x: 723
-        y: 846
-        width: 57
-        height: 52
-      alignment: 9
-      pivot: {x: 0.12280702, y: 0.47115386}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c17b36414c7b0b44c849ef8ed1f0f00d
-      internalID: -253294551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_57
-      rect:
-        serializedVersion: 2
-        x: 791
-        y: 846
-        width: 78
-        height: 54
-      alignment: 9
-      pivot: {x: 0.08974359, y: 0.4537037}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 452ca6b84a90e2d428d7ac3621243f89
-      internalID: -706365080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_56
-      rect:
-        serializedVersion: 2
-        x: 878
-        y: 846
-        width: 81
-        height: 51
-      alignment: 9
-      pivot: {x: 0.086419754, y: 0.48039216}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77feaebf10921f343834540d3e0b146b
-      internalID: -1176403986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_55
-      rect:
-        serializedVersion: 2
-        x: 966
-        y: 847
-        width: 79
-        height: 49
-      alignment: 9
-      pivot: {x: 0.088607594, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5bf1471214d6e264a80e7ceb568fe344
-      internalID: 1321165335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_54
-      rect:
-        serializedVersion: 2
-        x: 1053
-        y: 847
-        width: 65
-        height: 49
-      alignment: 9
-      pivot: {x: 0.10769231, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 929d973c7d132f845b93127d0973a51f
-      internalID: 49299251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_53
-      rect:
-        serializedVersion: 2
-        x: 1125
-        y: 848
-        width: 46
-        height: 49
-      alignment: 9
-      pivot: {x: 0.04347826, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2d7a2a259ea1124493f897cae8c0402
-      internalID: 545167079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_107
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 682
-        width: 73
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7e980c14da4df14eb310da7acf895e0
-      internalID: -362197023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_108
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 691
-        width: 22
-        height: 14
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd426d26b020a7943b226384d805cd7d
-      internalID: -573556282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_109
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 681
-        width: 94
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bf0f7cc9e83c6242bf7ebc96ef8fc05
-      internalID: 983415545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_110
-      rect:
-        serializedVersion: 2
-        x: 214
-        y: 682
-        width: 91
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5bf0af63cd18ee4bb041ca4b7440806
-      internalID: 241951252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_111
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 683
-        width: 95
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da2717c19d07e1541b8d74ac5507cf6a
-      internalID: -710599240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_112
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 686
-        width: 48
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d21c6f9ed68d1b7449d8857c52477808
-      internalID: -1882659099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_113
-      rect:
-        serializedVersion: 2
-        x: 461
-        y: 686
-        width: 47
-        height: 44
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c7acd10f99d8ca4ab20086ca06e19e1
-      internalID: -1778052431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_114
-      rect:
-        serializedVersion: 2
-        x: 515
-        y: 686
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f863a8e3f8f17204ea7be5e4ed14f64c
-      internalID: -1990789356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_115
-      rect:
-        serializedVersion: 2
-        x: 582
-        y: 686
-        width: 46
-        height: 44
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea17b18407047d6409c809c7b6a8167e
-      internalID: 842090125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_116
-      rect:
-        serializedVersion: 2
-        x: 633
-        y: 687
-        width: 53
-        height: 39
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38a9485a0b574244bacc4771cd6687a0
-      internalID: -369669540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_117
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 687
-        width: 53
-        height: 38
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb05afe41a6d3fa48a82b9e2b3e075ff
-      internalID: 209977964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_118
-      rect:
-        serializedVersion: 2
-        x: 753
-        y: 687
-        width: 53
-        height: 39
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44bad288d581d4643b6c4a74352da04d
-      internalID: 1964903869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_119
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 687
-        width: 53
-        height: 38
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b08af9c2149910a49bc37e778a5a94d3
-      internalID: 1397181227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_120
-      rect:
-        serializedVersion: 2
-        x: 869
-        y: 687
-        width: 53
-        height: 39
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 606e42a45af29974db28af8bd71f826f
-      internalID: 1305101015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_121
-      rect:
-        serializedVersion: 2
-        x: 929
-        y: 687
-        width: 53
-        height: 38
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 716afd6fd57c21343a174a53c7e348bb
-      internalID: -33765691
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_122
-      rect:
-        serializedVersion: 2
-        x: 987
-        y: 687
-        width: 53
-        height: 39
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c67ec0812f63c04fa302d511db38043
-      internalID: 537356050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_123
-      rect:
-        serializedVersion: 2
-        x: 1046
-        y: 687
-        width: 53
-        height: 38
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d255635ef76cb747b5e7bb8bbda3283
-      internalID: 459777040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_124
-      rect:
-        serializedVersion: 2
-        x: 1106
-        y: 689
-        width: 46
-        height: 44
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba218bfd91144854f9c9b6c807d8d1a3
-      internalID: -703394467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_125
-      rect:
-        serializedVersion: 2
-        x: 1162
-        y: 688
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e4012e9c91a97a4c8591e16c011bf8e
-      internalID: 446231581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_126
-      rect:
-        serializedVersion: 2
-        x: 1228
-        y: 687
-        width: 42
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e107fe03fbc819428cf27f41f3502f8
-      internalID: -12993697
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_127
-      rect:
-        serializedVersion: 2
-        x: 1273
-        y: 687
-        width: 43
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7497fb46547582e479d9c953a0daa1fb
-      internalID: -1892968297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_128
-      rect:
-        serializedVersion: 2
-        x: 1321
-        y: 687
-        width: 42
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f2f0ebe2ca276949a57d1613025ffe7
-      internalID: 101313634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_129
-      rect:
-        serializedVersion: 2
-        x: 1372
-        y: 687
-        width: 57
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e176b739498e204e93d72d17366f4f0
-      internalID: -1545117057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_130
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 595
-        width: 47
-        height: 44
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b39532c9ba20d04d82657a6b91f27db
-      internalID: 368922174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_131
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 595
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0838847ca1f8c4848adb0654f06e5313
-      internalID: -301569987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_132
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 595
-        width: 82
-        height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78396f777ce21a6479d30835140abaf9
-      internalID: -58959618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_133
-      rect:
-        serializedVersion: 2
-        x: 249
-        y: 595
-        width: 89
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8dddf3bfc4b552a4b987b6c26fba7ed3
-      internalID: 431918277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_134
-      rect:
-        serializedVersion: 2
-        x: 344
-        y: 595
-        width: 88
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1136bcf29bb20994faab3d73cd1f8e7d
-      internalID: -1808526941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_135
-      rect:
-        serializedVersion: 2
-        x: 437
-        y: 595
-        width: 91
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc88cf729bfbda24d8a3d94c32381ce9
-      internalID: 892621914
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_136
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 595
-        width: 108
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcee6cc382c6c844892274189b674d3c
-      internalID: 54688382
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_137
-      rect:
-        serializedVersion: 2
-        x: 646
-        y: 595
-        width: 46
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f7723ca8c276d740bb3352849f1450b
-      internalID: 1495024979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_138
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 618
-        width: 13
-        height: 41
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 841e4c75097049d4d8a1514598589a67
-      internalID: -14539944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_139
-      rect:
-        serializedVersion: 2
-        x: 708
-        y: 594
-        width: 58
-        height: 66
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61234aaa6c266104ea4cc03a329904d0
-      internalID: 1570446461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_140
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 595
-        width: 50
-        height: 56
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01898627ac559ea4fabbd5c100d0e4af
-      internalID: 674119513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_141
-      rect:
-        serializedVersion: 2
-        x: 830
-        y: 595
-        width: 73
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5959b9c2beabe4646ab460cf63f000cc
-      internalID: -543313358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_142
-      rect:
-        serializedVersion: 2
-        x: 933
-        y: 594
-        width: 94
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2de7fe4da2bef134cbbca3d2e17ad191
-      internalID: 500293906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_143
-      rect:
-        serializedVersion: 2
-        x: 1034
-        y: 594
-        width: 91
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c92eb91ae6b63b489eeac27a9acb399
-      internalID: -856231448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_144
-      rect:
-        serializedVersion: 2
-        x: 1132
-        y: 594
-        width: 95
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 996a93654357b184ca013a7fd1a67085
-      internalID: 292232128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_145
-      rect:
-        serializedVersion: 2
-        x: 1233
-        y: 594
-        width: 46
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6fa60b1daf602c4989a807d8b4f5ef1
-      internalID: -1000327876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_146
-      rect:
-        serializedVersion: 2
-        x: 1276
-        y: 617
-        width: 13
-        height: 41
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b78b494c6f8a6546b6ca1c67a4d460a
-      internalID: 1428363039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_147
-      rect:
-        serializedVersion: 2
-        x: 1298
-        y: 594
-        width: 58
-        height: 66
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e13a9b5b83620b04481a7a4b418f59bb
-      internalID: 578091182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_148
-      rect:
-        serializedVersion: 2
-        x: 1365
-        y: 594
-        width: 50
-        height: 56
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf21ebe1aed40ed4caf59dd807c31878
-      internalID: 1399036713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_149
-      rect:
-        serializedVersion: 2
-        x: 906
-        y: 604
-        width: 22
-        height: 14
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08b8b36d56f53224f82eb808d5fc65db
-      internalID: -1364711541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_150
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 505
-        width: 108
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c025a37799051b148a62f061ab8abd73
-      internalID: -577557649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_151
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 500
-        width: 46
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e90f5ba16a75264082c99e64515c416
-      internalID: 1950592404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_152
-      rect:
-        serializedVersion: 2
-        x: 201
-        y: 523
-        width: 13
-        height: 41
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3eeaa2e054d168446bbd5e2194063a59
-      internalID: 1242334133
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_153
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 499
-        width: 58
-        height: 66
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bec6312296b772540ac10acfac107ab6
-      internalID: 205511900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_154
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 498
-        width: 50
-        height: 56
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 931bb16427e149b42907593550ec50c2
-      internalID: -658883488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_155
-      rect:
-        serializedVersion: 2
-        x: 347
-        y: 498
-        width: 73
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 223b5697b9546454985881752b38d79e
-      internalID: 303004134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_156
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 497
-        width: 92
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5949e255c7f997649994070372707562
-      internalID: -263105417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_157
-      rect:
-        serializedVersion: 2
-        x: 548
-        y: 497
-        width: 91
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f580af28c44b8d4e86562c41b973d42
-      internalID: 937403358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_158
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 497
-        width: 95
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1a0d9f45668b11418b672371b1edee4
-      internalID: -1791361195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_159
-      rect:
-        serializedVersion: 2
-        x: 747
-        y: 498
-        width: 46
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e225929077af4b429731ed910813de9
-      internalID: -520677566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_160
-      rect:
-        serializedVersion: 2
-        x: 790
-        y: 521
-        width: 13
-        height: 41
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8018765ca68b68b4e83ae32bd854d5e6
-      internalID: -1433462519
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_161
-      rect:
-        serializedVersion: 2
-        x: 817
-        y: 499
-        width: 58
-        height: 66
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c233e555aeb20bc4a9d8a57c58c837f6
-      internalID: 1887169521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_162
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 499
-        width: 50
-        height: 56
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8d04147ee6abde47b97f1052625d651
-      internalID: 536334637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_163
-      rect:
-        serializedVersion: 2
-        x: 945
-        y: 499
-        width: 73
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f165188f979e6342a9ebb5addf721ae
-      internalID: 635756639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_164
-      rect:
-        serializedVersion: 2
-        x: 1051
-        y: 499
-        width: 94
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e17a66b9840c12c4a855f466af74f6c1
-      internalID: 217224246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_165
-      rect:
-        serializedVersion: 2
-        x: 1154
-        y: 498
-        width: 91
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 273cc4d6561648e41b12ef38dfff4b26
-      internalID: 1530035799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_166
-      rect:
-        serializedVersion: 2
-        x: 1252
-        y: 498
-        width: 95
-        height: 53
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d536c69432bd2444fbc7d18d07eb1b04
-      internalID: -2075477511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_167
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 498
-        width: 48
-        height: 43
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc83d849215c93a4e8f6af1b0b6a43ae
-      internalID: 798980743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_168
-      rect:
-        serializedVersion: 2
-        x: 423
-        y: 507
-        width: 22
-        height: 14
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ba0bdef6a2b6334f8c97a0d8b838ad8
-      internalID: -1058239447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_169
-      rect:
-        serializedVersion: 2
-        x: 1021
-        y: 508
-        width: 22
-        height: 14
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f79b3c2da5f77943abe051872f91dfd
-      internalID: -800299211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_170
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 414
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca1239411b368224a95aeffe8313cc8d
-      internalID: 775446447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_171
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 414
-        width: 46
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b7c83b3684258a439139e265b2706db
-      internalID: 820732167
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_172
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 414
-        width: 37
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 530fb7c67dfb55842b89a0592ed4c236
-      internalID: 534479246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_173
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 414
-        width: 45
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0a3f2d2f4206b34ba3ed5b3cb5ca89e
-      internalID: 1358827261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_174
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 414
-        width: 42
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6f6d7b9ff1cbcdd4d94a711f8cc34993
-      internalID: -2138318344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_175
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 455
-        width: 5
-        height: 5
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ed64d2270f91a1428441618d1433ba0
-      internalID: 1459466754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_176
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 414
-        width: 40
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fdc2fa2016655ec409d9b492744d6e3c
-      internalID: 2071611541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_177
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 455
-        width: 8
-        height: 10
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbe86e624a34eb34499a0dca3b184df9
-      internalID: -1921160320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_178
-      rect:
-        serializedVersion: 2
-        x: 335
-        y: 414
-        width: 44
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c8c2e4ba8f2ed40b8b9e370e5989df
-      internalID: -1584857092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_179
-      rect:
-        serializedVersion: 2
-        x: 381
-        y: 415
-        width: 41
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b84fc2860a13743418fa3ec7fef38d80
-      internalID: -82770155
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_180
-      rect:
-        serializedVersion: 2
-        x: 425
-        y: 416
-        width: 45
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2abeef5d385d5cc49b22f0ea99719101
-      internalID: 1908666933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_181
-      rect:
-        serializedVersion: 2
-        x: 475
-        y: 417
-        width: 65
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73566fb7740a4a4438e105e3432c14fc
-      internalID: -970456025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_182
-      rect:
-        serializedVersion: 2
-        x: 545
-        y: 417
-        width: 57
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 380901e203cb4094689c5e049a633811
-      internalID: -1381726624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_183
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 418
-        width: 59
-        height: 54
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e430a18f3f6ae34280302cc758d14ca
-      internalID: 97021535
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_184
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 454
-        width: 13
-        height: 5
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a673ead98a2d884e87d318dd1e226de
-      internalID: 1731263507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_185
-      rect:
-        serializedVersion: 2
-        x: 691
-        y: 419
-        width: 63
-        height: 51
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6974c8316be3a734096b8b5f90f74093
-      internalID: 207234993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_186
-      rect:
-        serializedVersion: 2
-        x: 756
-        y: 452
-        width: 16
-        height: 11
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d6348e35c533d364a847a971c3b52924
-      internalID: 243197987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_187
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 421
-        width: 79
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5890714d0c0f7e041a0a077a5c4ed690
-      internalID: -1240786567
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_188
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 421
-        width: 65
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30c3c7c86f8dbef4e84f8e4383fb8b7a
-      internalID: -1154677425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_189
-      rect:
-        serializedVersion: 2
-        x: 936
-        y: 422
-        width: 46
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a9ec3dc653c3274080be4684b016e39
-      internalID: 263309057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_190
-      rect:
-        serializedVersion: 2
-        x: 994
-        y: 423
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d3c630f61867a54cba8a0600261469c
-      internalID: 1515080119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_191
-      rect:
-        serializedVersion: 2
-        x: 1063
-        y: 423
-        width: 82
-        height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61212d0b3a3eca5458ee042eff393e72
-      internalID: -1783673837
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_192
-      rect:
-        serializedVersion: 2
-        x: 1150
-        y: 423
-        width: 89
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7cae6f4c73c1da4699d3d8815ffda00
-      internalID: -933692454
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_193
-      rect:
-        serializedVersion: 2
-        x: 1245
-        y: 423
-        width: 88
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cac436b68fed3c6418611ca1bfe0f33f
-      internalID: 1932224522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_194
-      rect:
-        serializedVersion: 2
-        x: 1338
-        y: 423
-        width: 91
-        height: 37
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6ea62820a967ab4298dcf4de0227938
-      internalID: -318319054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_198
-      rect:
-        serializedVersion: 2
-        x: 998
-        y: 318
-        width: 38
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adb305eb2d6bdc54abce0f750f0db009
-      internalID: 254670274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_199
-      rect:
-        serializedVersion: 2
-        x: 1041
-        y: 318
-        width: 38
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 767c3fadf6934a349aa41dd8d835310e
-      internalID: 1908398468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_200
-      rect:
-        serializedVersion: 2
-        x: 1086
-        y: 318
-        width: 39
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eef9dd5c6f0b1b2499fa9f21d122ed53
-      internalID: -1628491720
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_201
-      rect:
-        serializedVersion: 2
-        x: 1134
-        y: 318
-        width: 43
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ed3de331400bc04faf37a8fc9fb923b
-      internalID: 186314246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_202
-      rect:
-        serializedVersion: 2
-        x: 1186
-        y: 318
-        width: 46
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 50f0ac6768efb194696314aea219735d
-      internalID: 324583299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_203
-      rect:
-        serializedVersion: 2
-        x: 1240
-        y: 318
-        width: 61
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01459e905e54a0343b7e0a6219977dcb
-      internalID: -2057076725
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_204
-      rect:
-        serializedVersion: 2
-        x: 1308
-        y: 318
-        width: 46
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db12335eb315e864a80cec5a4987a226
-      internalID: 1414746596
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_205
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 317
-        width: 63
-        height: 48
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f2b95889e4322342bf7a2272f4ffa23
-      internalID: -880907558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_215
-      rect:
-        serializedVersion: 2
-        x: 1076
-        y: 199
-        width: 74
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 410325428d12324448f0f5dddce8e84c
-      internalID: 1737971269
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_216
-      rect:
-        serializedVersion: 2
-        x: 1155
-        y: 203
-        width: 64
-        height: 62
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9755516d97178cc49937a82cc89d18a9
-      internalID: -1694627779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_217
-      rect:
-        serializedVersion: 2
-        x: 1225
-        y: 202
-        width: 55
-        height: 68
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6240a9b8b350d342ab5b4a1311a6cad
-      internalID: 1590685303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_218
-      rect:
-        serializedVersion: 2
-        x: 1287
-        y: 202
-        width: 64
-        height: 62
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fce66c6d1a31a7d4982d3ef5b7ff5619
-      internalID: -114929172
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_219
-      rect:
-        serializedVersion: 2
-        x: 1353
-        y: 202
-        width: 74
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eb37623adbdb6c458d0a7c5be99cf4b
-      internalID: -323617373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_225
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 97
-        width: 46
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 34f4861237d374244a73a8582a0b5568
-      internalID: 406150146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_226
-      rect:
-        serializedVersion: 2
-        x: 885
-        y: 97
-        width: 45
-        height: 51
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc39d43bb2c31b249bcc6e0db47bad8f
-      internalID: 861933366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_227
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 96
-        width: 44
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63fdf9324d60f4740a785d8058238503
-      internalID: -1739808417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_228
-      rect:
-        serializedVersion: 2
-        x: 986
-        y: 97
-        width: 43
-        height: 49
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3360b281be55e5941971309c70d2895f
-      internalID: -480946114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_229
-      rect:
-        serializedVersion: 2
-        x: 1034
-        y: 96
-        width: 43
-        height: 51
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f8dc60efa11342498ed68175c35d7ec
-      internalID: -791872435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_230
-      rect:
-        serializedVersion: 2
-        x: 1083
-        y: 96
-        width: 45
-        height: 52
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad7d66fdd06551844adaf8c4c9ada981
-      internalID: 1230929751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_231
-      rect:
-        serializedVersion: 2
-        x: 1132
-        y: 97
-        width: 46
-        height: 51
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a668c3b4b92fc948914626c5c0ff2f8
-      internalID: 1396505084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_232
-      rect:
-        serializedVersion: 2
-        x: 1183
-        y: 97
-        width: 46
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e417941b759b99647b8c27914da0ed6c
-      internalID: -1018664058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_234
-      rect:
-        serializedVersion: 2
-        x: 1240
-        y: 97
-        width: 39
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9161ed690aefcde4d8015f890f25f0ae
-      internalID: 856791244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_235
-      rect:
-        serializedVersion: 2
-        x: 1283
-        y: 97
-        width: 39
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 293047e0f04e7ac46aa92cf11a8dd822
-      internalID: 857171322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_236
-      rect:
-        serializedVersion: 2
-        x: 1329
-        y: 97
-        width: 39
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24dbcbe92fc17be4c84b6071c48570ca
-      internalID: 1601233272
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_237
-      rect:
-        serializedVersion: 2
-        x: 1375
-        y: 97
-        width: 39
-        height: 50
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6eff4469c293ffc4d9a8ef2c5b44b005
-      internalID: -69296274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_253
-      rect:
-        serializedVersion: 2
-        x: 1349
-        y: 21
-        width: 22
-        height: 23
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bea595a250bfdba428bb635cecb7b461
-      internalID: -345449810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_254
-      rect:
-        serializedVersion: 2
-        x: 1373
-        y: 18
-        width: 13
-        height: 28
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0910a8c8602acb9479705a61c5a0faaf
-      internalID: -1531115031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_255
-      rect:
-        serializedVersion: 2
-        x: 1391
-        y: 16
-        width: 6
-        height: 31
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a1272bd0733a304584ec248a7a3017e
-      internalID: -566004306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dion_256
-      rect:
-        serializedVersion: 2
-        x: 1404
-        y: 28
-        width: 10
-        height: 6
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e592e7871734e64eb2d913274c01fae
-      internalID: -2096463151
       vertices: []
       indices: 
       edges: []
@@ -3802,7 +1156,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dion_10: 975312713
       Dion_100: -945555954
       Dion_101: -1495951146
       Dion_102: -2142427592
@@ -3813,7 +1166,6 @@ TextureImporter:
       Dion_107: -362197023
       Dion_108: -573556282
       Dion_109: 983415545
-      Dion_11: -779253320
       Dion_110: 241951252
       Dion_111: -710599240
       Dion_112: -1882659099
@@ -3824,7 +1176,6 @@ TextureImporter:
       Dion_117: 209977964
       Dion_118: 1964903869
       Dion_119: 1397181227
-      Dion_12: -1743533467
       Dion_120: 1305101015
       Dion_121: -33765691
       Dion_122: 537356050
@@ -3835,7 +1186,6 @@ TextureImporter:
       Dion_127: -1892968297
       Dion_128: 101313634
       Dion_129: -1545117057
-      Dion_13: 134934552
       Dion_130: 368922174
       Dion_131: -301569987
       Dion_132: -58959618
@@ -3846,7 +1196,6 @@ TextureImporter:
       Dion_137: 1495024979
       Dion_138: -14539944
       Dion_139: 1570446461
-      Dion_14: -389026774
       Dion_140: 674119513
       Dion_141: -543313358
       Dion_142: 500293906
@@ -3857,7 +1206,6 @@ TextureImporter:
       Dion_147: 578091182
       Dion_148: 1399036713
       Dion_149: -1364711541
-      Dion_15: 717816736
       Dion_150: -577557649
       Dion_151: 1950592404
       Dion_152: 1242334133
@@ -3868,7 +1216,6 @@ TextureImporter:
       Dion_157: 937403358
       Dion_158: -1791361195
       Dion_159: -520677566
-      Dion_16: -2018447754
       Dion_160: -1433462519
       Dion_161: 1887169521
       Dion_162: 536334637
@@ -3879,7 +1226,6 @@ TextureImporter:
       Dion_167: 798980743
       Dion_168: -1058239447
       Dion_169: -800299211
-      Dion_17: 1450101379
       Dion_170: 775446447
       Dion_171: 820732167
       Dion_172: 534479246
@@ -3890,7 +1236,6 @@ TextureImporter:
       Dion_177: -1921160320
       Dion_178: -1584857092
       Dion_179: -82770155
-      Dion_18: -2141787806
       Dion_180: 1908666933
       Dion_181: -970456025
       Dion_182: -1381726624
@@ -3983,23 +1328,6 @@ TextureImporter:
       Dion_31: 1942275048
       Dion_32: -1132291711
       Dion_33: -786645634
-      Dion_35: 1998736548
-      Dion_36: 131715965
-      Dion_37: -284819938
-      Dion_38: -390812152
-      Dion_39: 579237613
-      Dion_40: 734668251
-      Dion_41: -1767309036
-      Dion_42: 1539014293
-      Dion_43: 1587303902
-      Dion_44: 730982763
-      Dion_45: 31060158
-      Dion_46: 1451789805
-      Dion_47: 2009121032
-      Dion_48: -756437394
-      Dion_49: -1658072109
-      Dion_50: -1778212097
-      Dion_51: -112473204
       Dion_52: 1692051223
       Dion_53: 545167079
       Dion_54: 49299251
@@ -4019,13 +1347,29 @@ TextureImporter:
       Dion_82: 1160368487
       Dion_83: 963675888
       Dion_89: 1639040257
-      Dion_9: -1435904351
       Dion_91: -798071237
       Dion_95: -980332070
       Dion_96: -2112294219
       Dion_97: 612063861
       Dion_98: -1112082370
       Dion_99: 752724908
+      Dion_Attack_0: 1998736548
+      Dion_Attack_1: 131715965
+      Dion_Attack_10: 31060158
+      Dion_Attack_11: 1451789805
+      Dion_Attack_12: 2009121032
+      Dion_Attack_13: -756437394
+      Dion_Attack_14: -1658072109
+      Dion_Attack_15: -1778212097
+      Dion_Attack_16: -112473204
+      Dion_Attack_2: -284819938
+      Dion_Attack_3: -390812152
+      Dion_Attack_4: 579237613
+      Dion_Attack_5: 734668251
+      Dion_Attack_6: -1767309036
+      Dion_Attack_7: 1539014293
+      Dion_Attack_8: 1587303902
+      Dion_Attack_9: 730982763
       Dion_Idle_0: 1317664358
       Dion_Idle_1: 8044423
       Dion_Idle_2: -747134187
@@ -4034,6 +1378,16 @@ TextureImporter:
       Dion_Idle_5: -377446853
       Dion_Idle_6: -1085654837
       Dion_Idle_7: -258048868
+      Dion_Walk_0: -1435904351
+      Dion_Walk_1: 975312713
+      Dion_Walk_2: -779253320
+      Dion_Walk_3: -1743533467
+      Dion_Walk_4: 134934552
+      Dion_Walk_5: -389026774
+      Dion_Walk_6: 717816736
+      Dion_Walk_7: -2018447754
+      Dion_Walk_8: 1450101379
+      Dion_Walk_9: -2141787806
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

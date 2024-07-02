@@ -166,8 +166,8 @@ TextureImporter:
         y: 2225
         width: 54
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.018518519, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_14
+      name: Louise_Move_0
       rect:
         serializedVersion: 2
         x: 24
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_15
+      name: Louise_Move_1
       rect:
         serializedVersion: 2
         x: 91
         y: 2143
         width: 62
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.048387095, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_16
+      name: Louise_Move_2
       rect:
         serializedVersion: 2
         x: 174
@@ -264,12 +264,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_17
+      name: Louise_Move_3
       rect:
         serializedVersion: 2
-        x: 249
+        x: 245
         y: 2143
-        width: 56
+        width: 60
         height: 45
       alignment: 4
       pivot: {x: 0, y: 0.5}
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_18
+      name: Louise_Move_4
       rect:
         serializedVersion: 2
         x: 327
         y: 2142
         width: 60
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.016666668, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_19
+      name: Louise_Move_5
       rect:
         serializedVersion: 2
         x: 398
         y: 2140
         width: 63
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.04761905, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,15 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_20
+      name: Louise_Move_6
       rect:
         serializedVersion: 2
         x: 479
         y: 2140
         width: 63
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.031746034, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,14 +348,14 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_21
+      name: Louise_Move_7
       rect:
         serializedVersion: 2
-        x: 565
+        x: 562
         y: 2140
-        width: 55
+        width: 58
         height: 45
-      alignment: 4
+      alignment: 9
       pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_89
+      name: Louise_Attack_0
       rect:
         serializedVersion: 2
         x: 37
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_90
+      name: Louise_Attack_1
       rect:
         serializedVersion: 2
         x: 109
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_91
+      name: Louise_Attack_2
       rect:
         serializedVersion: 2
         x: 182
@@ -432,15 +432,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_93
+      name: Louise_Attack_3
       rect:
         serializedVersion: 2
         x: 267
         y: 1737
         width: 74
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.054054055, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,15 +453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_95
+      name: Louise_Attack_4
       rect:
         serializedVersion: 2
         x: 356
         y: 1735
         width: 59
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.050847456, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,15 +474,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_96
+      name: Louise_Attack_5
       rect:
         serializedVersion: 2
         x: 428
         y: 1735
         width: 50
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.04, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_97
+      name: Louise_Attack_6
       rect:
         serializedVersion: 2
         x: 488
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_98
+      name: Louise_Attack_7
       rect:
         serializedVersion: 2
         x: 552
@@ -1009,10 +1009,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Louise_Attack_0: 2107001403
+      Louise_Attack_1: 224379820
+      Louise_Attack_2: 904498140
+      Louise_Attack_3: 882373070
+      Louise_Attack_4: 1263840271
+      Louise_Attack_5: -993180110
+      Louise_Attack_6: 728822678
+      Louise_Attack_7: -684235132
       Louise_Idle_0: -1963965444
       Louise_Idle_1: -1853365306
       Louise_Idle_2: -1989675841
       Louise_Idle_3: 2114479298
+      Louise_Move_0: 1726058824
+      Louise_Move_1: -2001149734
+      Louise_Move_2: 423154418
+      Louise_Move_3: 581642969
+      Louise_Move_4: -760807059
+      Louise_Move_5: -1598511992
+      Louise_Move_6: -776012276
+      Louise_Move_7: -368932575
       Mobile - Metal Slug Attack - Louise_0: -811178117
       Mobile - Metal Slug Attack - Louise_1: 950554278
       Mobile - Metal Slug Attack - Louise_10: -787162321
@@ -1059,7 +1075,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_137: -1624437860
       Mobile - Metal Slug Attack - Louise_138: -988187671
       Mobile - Metal Slug Attack - Louise_139: 143497417
-      Mobile - Metal Slug Attack - Louise_14: 1726058824
       Mobile - Metal Slug Attack - Louise_140: 2097179206
       Mobile - Metal Slug Attack - Louise_141: -1912166321
       Mobile - Metal Slug Attack - Louise_142: -1405676607
@@ -1070,7 +1085,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_147: -1895257595
       Mobile - Metal Slug Attack - Louise_148: -1553653460
       Mobile - Metal Slug Attack - Louise_149: 1489565032
-      Mobile - Metal Slug Attack - Louise_15: -2001149734
       Mobile - Metal Slug Attack - Louise_150: -1215872294
       Mobile - Metal Slug Attack - Louise_151: -642714003
       Mobile - Metal Slug Attack - Louise_152: 813097195
@@ -1081,7 +1095,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_157: 107657037
       Mobile - Metal Slug Attack - Louise_158: -365586157
       Mobile - Metal Slug Attack - Louise_159: 1294655087
-      Mobile - Metal Slug Attack - Louise_16: 423154418
       Mobile - Metal Slug Attack - Louise_160: -2050732847
       Mobile - Metal Slug Attack - Louise_161: 1707721766
       Mobile - Metal Slug Attack - Louise_162: -1653212789
@@ -1092,7 +1105,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_167: -1317409369
       Mobile - Metal Slug Attack - Louise_168: 143990280
       Mobile - Metal Slug Attack - Louise_169: -1421777921
-      Mobile - Metal Slug Attack - Louise_17: 581642969
       Mobile - Metal Slug Attack - Louise_170: -773314564
       Mobile - Metal Slug Attack - Louise_171: -847517611
       Mobile - Metal Slug Attack - Louise_172: 1185221648
@@ -1103,7 +1115,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_177: 769267240
       Mobile - Metal Slug Attack - Louise_178: 1366494760
       Mobile - Metal Slug Attack - Louise_179: -549001737
-      Mobile - Metal Slug Attack - Louise_18: -760807059
       Mobile - Metal Slug Attack - Louise_180: 1429049762
       Mobile - Metal Slug Attack - Louise_181: -1445104644
       Mobile - Metal Slug Attack - Louise_182: 1466607066
@@ -1114,7 +1125,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_187: -1840976189
       Mobile - Metal Slug Attack - Louise_188: 1261938462
       Mobile - Metal Slug Attack - Louise_189: 2062865222
-      Mobile - Metal Slug Attack - Louise_19: -1598511992
       Mobile - Metal Slug Attack - Louise_190: -1082750762
       Mobile - Metal Slug Attack - Louise_191: 17925109
       Mobile - Metal Slug Attack - Louise_192: -243062371
@@ -1126,7 +1136,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_198: 32311898
       Mobile - Metal Slug Attack - Louise_199: 1203462210
       Mobile - Metal Slug Attack - Louise_2: 1847830560
-      Mobile - Metal Slug Attack - Louise_20: -776012276
       Mobile - Metal Slug Attack - Louise_200: -1021459391
       Mobile - Metal Slug Attack - Louise_201: -1054125912
       Mobile - Metal Slug Attack - Louise_202: -446453860
@@ -1137,7 +1146,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_207: 971609026
       Mobile - Metal Slug Attack - Louise_208: -905810833
       Mobile - Metal Slug Attack - Louise_209: 918034914
-      Mobile - Metal Slug Attack - Louise_21: -368932575
       Mobile - Metal Slug Attack - Louise_210: 1335575520
       Mobile - Metal Slug Attack - Louise_211: 1397593994
       Mobile - Metal Slug Attack - Louise_212: 439784967
@@ -1405,16 +1413,8 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_86: 1176509089
       Mobile - Metal Slug Attack - Louise_87: -1246660767
       Mobile - Metal Slug Attack - Louise_88: -1466969157
-      Mobile - Metal Slug Attack - Louise_89: 2107001403
-      Mobile - Metal Slug Attack - Louise_90: 224379820
-      Mobile - Metal Slug Attack - Louise_91: 904498140
       Mobile - Metal Slug Attack - Louise_92: -1789270980
-      Mobile - Metal Slug Attack - Louise_93: 882373070
       Mobile - Metal Slug Attack - Louise_94: 1492285483
-      Mobile - Metal Slug Attack - Louise_95: 1263840271
-      Mobile - Metal Slug Attack - Louise_96: -993180110
-      Mobile - Metal Slug Attack - Louise_97: 728822678
-      Mobile - Metal Slug Attack - Louise_98: -684235132
       Mobile - Metal Slug Attack - Louise_99: 475407691
   spritePackingTag: 
   pSDRemoveMatte: 0

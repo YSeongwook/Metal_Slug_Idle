@@ -50,6 +50,8 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.AddListener(_uiManager.CloseAllUIs);
+        _uiManager.heroTabInActiveButton.onClick.AddListener(_uiManager.DisableFormationTab);
+        _uiManager.formationInActiveTabButton.onClick.AddListener(_uiManager.EnableFormationTab);
     }
 
     // 버튼 클릭 이벤트 리스너를 제거하는 메서드
@@ -60,6 +62,8 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(_uiManager.CloseAllUIs);
+        _uiManager.heroTabInActiveButton.onClick.RemoveListener(_uiManager.DisableFormationTab);
+        _uiManager.formationInActiveTabButton.onClick.RemoveListener(_uiManager.EnableFormationTab);
     }
 
     // 채팅 버튼 클릭 이벤트 핸들러

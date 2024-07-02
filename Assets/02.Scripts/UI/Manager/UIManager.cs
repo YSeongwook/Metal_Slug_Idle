@@ -106,6 +106,16 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Main UI/Panel Party")] [PropertySpace(5f, 0f)]
     public GameObject[] heroes;
 
+    // Hero UI
+    [FoldoutGroup("Hero UI")] public GameObject middleBar;
+    [FoldoutGroup("Hero UI")] public GameObject formationPanel;
+    [FoldoutGroup("Hero UI")] public GameObject heroList;
+    [FoldoutGroup("Hero UI")] public Button heroTabInActiveButton;
+    [FoldoutGroup("Hero UI")] public Button heroTabActiveButton;
+    [FoldoutGroup("Hero UI")] public Button formationInActiveTabButton;
+    [FoldoutGroup("Hero UI")] public Button formationActiveTabButton;
+    
+    // Shop UI
     [FoldoutGroup("Shop UI")] [HorizontalGroup("Shop UI/Horizontal")]
     [FoldoutGroup("Shop UI/Horizontal/Shop")] public Button summonSingleButton;
     [FoldoutGroup("Shop UI/Horizontal/Shop")] public Button summonTenButton;
@@ -336,6 +346,42 @@ public class UIManager : Singleton<UIManager>
     public void ToggleChatUI()
     {
         chatUI.SetActive(!chatUI.activeSelf);
+    }
+
+    #endregion
+
+    #region Hero UI
+
+    public void EnableFormationTab()
+    {
+        Debug.Log("편성 버튼 클릭");
+        RectTransform heroListRect;
+        
+        heroTabActiveButton.gameObject.SetActive(false); // 영웅 관리 활성화버튼 비활성화
+        formationActiveTabButton.gameObject.SetActive(true); // 편성 활성화 버튼 활성화
+        middleBar.SetActive(false); // 미들바 비활성화
+        formationPanel.SetActive(true); // 편성 패널 활성화
+        
+        // 영웅 리스트 크기 조절
+        heroListRect = heroList.GetComponent<RectTransform>();
+        heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -795);
+        heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
+    }
+
+    public void DisableFormationTab()
+    {
+        Debug.Log("영웅 관리 버튼 클릭");
+        RectTransform heroListRect;
+        
+        formationActiveTabButton.gameObject.SetActive(false); // 편성 활성화 버튼 비활성화
+        heroTabActiveButton.gameObject.SetActive(true); // 영웅 관리 활성화 버튼 비활성화
+        middleBar.SetActive(true); // 미들바 활성화
+        formationPanel.SetActive(false); // 편성 패널 비활성화
+        
+        // 영웅 리스트 크기 조절
+        heroListRect = heroList.GetComponent<RectTransform>();
+        heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -220);
+        heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
     }
 
     #endregion

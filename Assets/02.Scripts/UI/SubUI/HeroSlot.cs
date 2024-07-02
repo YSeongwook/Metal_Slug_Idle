@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public Image heroIcon; // 영웅 아이콘 이미지
+    public RawImage heroRenderTexture; // Render Texture를 표시할 RawImage
+    public HeroSlotData heroSlotData; // 영웅 데이터
     private Transform originalParent; // 드래그 시작 시 원래 부모 트랜스폼 저장
     private CanvasGroup canvasGroup; // 드래그 중 상호작용을 비활성화하기 위한 CanvasGroup
 
@@ -55,11 +56,17 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     // 슬롯 간 영웅 데이터를 교환하는 메서드
     private void SwapHeroes(HeroSlot targetSlot)
     {
-        // 아이콘 스왑
-        Sprite tempIcon = targetSlot.heroIcon.sprite;
-        targetSlot.heroIcon.sprite = this.heroIcon.sprite;
-        this.heroIcon.sprite = tempIcon;
+        HeroSlotData tempHero = targetSlot.heroSlotData;
+        targetSlot.SetHero(this.heroSlotData);
+        this.SetHero(tempHero);
 
         Debug.Log("영웅 위치 변경 완료"); // 디버그 메시지 출력
+    }
+
+    // 영웅 데이터를 설정하는 메서드
+    public void SetHero(HeroSlotData newHero)
+    {
+        heroSlotData = newHero;
+        heroRenderTexture.texture = newHero.heroRenderTexture; // Render Texture 설정
     }
 }
