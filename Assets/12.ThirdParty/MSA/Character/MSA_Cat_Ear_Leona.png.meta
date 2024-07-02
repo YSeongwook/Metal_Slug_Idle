@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MSA_Cat_Ear_Leona_0
+      name: Cat_Ear_Leona_Idle_0
       rect:
         serializedVersion: 2
         x: 23
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Cat_Ear_Leona_1
+      name: Cat_Ear_Leona_Idle_1
       rect:
         serializedVersion: 2
         x: 100
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Cat_Ear_Leona_2
+      name: Cat_Ear_Leona_Idle_2
       rect:
         serializedVersion: 2
         x: 174
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MSA_Cat_Ear_Leona_3
+      name: Cat_Ear_Leona_Idle_3
       rect:
         serializedVersion: 2
         x: 239
@@ -1784,10 +1784,10 @@ TextureImporter:
       CatEar_Leona_7: 1091151300
       CatEar_Leona_8: 1183401531
       CatEar_Leona_9: -382794675
-      MSA_Cat_Ear_Leona_0: -1972186517
-      MSA_Cat_Ear_Leona_1: -611749113
-      MSA_Cat_Ear_Leona_2: -1797797623
-      MSA_Cat_Ear_Leona_3: 585033643
+      Cat_Ear_Leona_Idle_0: -1972186517
+      Cat_Ear_Leona_Idle_1: -611749113
+      Cat_Ear_Leona_Idle_2: -1797797623
+      Cat_Ear_Leona_Idle_3: 585033643
       MSA_Cat_Ear_Leona_4: 41099730
       MSA_Cat_Ear_Leona_47: 1182833059
       MSA_Cat_Ear_Leona_48: 2115572529

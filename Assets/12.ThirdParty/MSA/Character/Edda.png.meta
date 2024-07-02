@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Edda_0
+      name: Edda_Idle_0
       rect:
         serializedVersion: 2
         x: 40
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_1
+      name: Edda_Idle_1
       rect:
         serializedVersion: 2
         x: 137
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_2
+      name: Edda_Idle_2
       rect:
         serializedVersion: 2
         x: 236
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_3
+      name: Edda_Idle_3
       rect:
         serializedVersion: 2
         x: 332
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_4
+      name: Edda_Idle_4
       rect:
         serializedVersion: 2
         x: 438
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_5
+      name: Edda_Idle_5
       rect:
         serializedVersion: 2
         x: 538
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_6
+      name: Edda_Idle_6
       rect:
         serializedVersion: 2
         x: 634
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Edda_7
+      name: Edda_Idle_7
       rect:
         serializedVersion: 2
         x: 723
@@ -883,8 +883,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Edda_0: -518009009
-      Edda_1: 393360240
       Edda_10: -1205776662
       Edda_100: 894082920
       Edda_101: 207237598
@@ -995,7 +993,6 @@ TextureImporter:
       Edda_197: 756168246
       Edda_198: 87325297
       Edda_199: 1852968148
-      Edda_2: 714261034
       Edda_20: 387950802
       Edda_200: -916805869
       Edda_201: 101510808
@@ -1106,7 +1103,6 @@ TextureImporter:
       Edda_297: 577927760
       Edda_298: 1308013502
       Edda_299: -546481134
-      Edda_3: 1528417887
       Edda_30: -1787332863
       Edda_300: 1796121578
       Edda_301: -1948037643
@@ -1217,7 +1213,6 @@ TextureImporter:
       Edda_397: 751429714
       Edda_398: 1084852527
       Edda_399: 1045590148
-      Edda_4: -69330368
       Edda_40: 1494906358
       Edda_400: 2025659585
       Edda_401: 1941462308
@@ -1246,7 +1241,6 @@ TextureImporter:
       Edda_47: 1809687024
       Edda_48: 1188010697
       Edda_49: -986752104
-      Edda_5: 1198638010
       Edda_50: -1337811196
       Edda_51: -1859683854
       Edda_52: 695525954
@@ -1257,7 +1251,6 @@ TextureImporter:
       Edda_57: 2131535616
       Edda_58: 290618672
       Edda_59: -186204948
-      Edda_6: 1947285253
       Edda_60: 1854901187
       Edda_61: -891945175
       Edda_62: -1889629638
@@ -1268,7 +1261,6 @@ TextureImporter:
       Edda_67: -681383046
       Edda_68: -122606358
       Edda_69: -1207124836
-      Edda_7: -1860733361
       Edda_70: 1611447812
       Edda_71: -849666327
       Edda_72: -1526845777
@@ -1299,6 +1291,14 @@ TextureImporter:
       Edda_97: 2073499405
       Edda_98: -432298342
       Edda_99: -367483671
+      Edda_Idle_0: -518009009
+      Edda_Idle_1: 393360240
+      Edda_Idle_2: 714261034
+      Edda_Idle_3: 1528417887
+      Edda_Idle_4: -69330368
+      Edda_Idle_5: 1198638010
+      Edda_Idle_6: 1947285253
+      Edda_Idle_7: -1860733361
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

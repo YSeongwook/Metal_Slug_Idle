@@ -452,6 +452,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Btn_AutoFormation
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1760
+        width: 182
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 60, y: 0, z: 60, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddd972f22535654abdc917bb1311760
+      internalID: 648414428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_PlaceCam
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1229
+        width: 92
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97d69859613c544eabd8f1e2f2f77e1
+      internalID: -2113833617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_Formation
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 373
+        width: 414
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991626edce54bf047944921ed8713a6a
+      internalID: -694151913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slot_Formation
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1152
+        width: 142
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733f517d351c20145884186faa23a526
+      internalID: 2073682355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -464,11 +548,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Base_ShopStep: 1023960707
+      Btn_AutoFormation: 648414428
       Btn_BlueBrown: -572814643
       Check_Toggle: 731806022
       Deco_LightStar: -1478345130
       Frame_ActiveBtn: -1628293404
       Frame_BlueBrown2: 312129121
+      Frame_Formation: -694151913
       Frame_SkyBlue: 1860447653
       Frame_SummonHalf: -1531198306
       Frame_SummonLevel: 510720863
@@ -478,6 +564,8 @@ TextureImporter:
       Frame_White2: -1910936017
       GradationBar_Black: 1750697
       Grdation_Bar: -650706351
+      Icon_PlaceCam: -2113833617
+      Slot_Formation: 2073682355
       sactx-1-2048x2048-ASTC 6x6-UI_RenewalAtlas-80ff2fc3_0: 281150282
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dion_7
+      name: Dion_Idle_7
       rect:
         serializedVersion: 2
         x: 507
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_6
+      name: Dion_Idle_6
       rect:
         serializedVersion: 2
         x: 583
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_5
+      name: Dion_Idle_5
       rect:
         serializedVersion: 2
         x: 660
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_4
+      name: Dion_Idle_4
       rect:
         serializedVersion: 2
         x: 735
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_3
+      name: Dion_Idle_3
       rect:
         serializedVersion: 2
         x: 813
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_2
+      name: Dion_Idle_2
       rect:
         serializedVersion: 2
         x: 889
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_1
+      name: Dion_Idle_1
       rect:
         serializedVersion: 2
         x: 966
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dion_0
+      name: Dion_Idle_0
       rect:
         serializedVersion: 2
         x: 1043
@@ -3802,8 +3802,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dion_0: 1317664358
-      Dion_1: 8044423
       Dion_10: 975312713
       Dion_100: -945555954
       Dion_101: -1495951146
@@ -3914,7 +3912,6 @@ TextureImporter:
       Dion_197: 903469389
       Dion_198: 254670274
       Dion_199: 1908398468
-      Dion_2: -747134187
       Dion_20: 1857921770
       Dion_200: -1628491720
       Dion_201: 186314246
@@ -3982,7 +3979,6 @@ TextureImporter:
       Dion_27: -1480362892
       Dion_28: 1635990443
       Dion_29: -502120068
-      Dion_3: -731867902
       Dion_30: 1622109233
       Dion_31: 1942275048
       Dion_32: -1132291711
@@ -3992,7 +3988,6 @@ TextureImporter:
       Dion_37: -284819938
       Dion_38: -390812152
       Dion_39: 579237613
-      Dion_4: 994833111
       Dion_40: 734668251
       Dion_41: -1767309036
       Dion_42: 1539014293
@@ -4003,7 +3998,6 @@ TextureImporter:
       Dion_47: 2009121032
       Dion_48: -756437394
       Dion_49: -1658072109
-      Dion_5: -377446853
       Dion_50: -1778212097
       Dion_51: -112473204
       Dion_52: 1692051223
@@ -4014,10 +4008,8 @@ TextureImporter:
       Dion_57: -706365080
       Dion_58: -253294551
       Dion_59: -1492438849
-      Dion_6: -1085654837
       Dion_60: 1077226274
       Dion_61: 1260358389
-      Dion_7: -258048868
       Dion_76: 1643755939
       Dion_77: -1401043160
       Dion_78: -1477570743
@@ -4034,6 +4026,14 @@ TextureImporter:
       Dion_97: 612063861
       Dion_98: -1112082370
       Dion_99: 752724908
+      Dion_Idle_0: 1317664358
+      Dion_Idle_1: 8044423
+      Dion_Idle_2: -747134187
+      Dion_Idle_3: -731867902
+      Dion_Idle_4: 994833111
+      Dion_Idle_5: -377446853
+      Dion_Idle_6: -1085654837
+      Dion_Idle_7: -258048868
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

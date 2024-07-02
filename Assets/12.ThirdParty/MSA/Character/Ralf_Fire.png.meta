@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ralf_Fire_0
+      name: Ralf_Fire_Idle_0
       rect:
         serializedVersion: 2
         x: 8
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_1
+      name: Ralf_Fire_Idle_1
       rect:
         serializedVersion: 2
         x: 74
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_2
+      name: Ralf_Fire_Idle_2
       rect:
         serializedVersion: 2
         x: 134
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_3
+      name: Ralf_Fire_Idle_3
       rect:
         serializedVersion: 2
         x: 193
@@ -3655,8 +3655,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ralf_Fire_0: -1798405940
-      Ralf_Fire_1: 1812286989
       Ralf_Fire_10: -599627890
       Ralf_Fire_100: -1949182112
       Ralf_Fire_101: -1557452301
@@ -3767,7 +3765,6 @@ TextureImporter:
       Ralf_Fire_197: -1790840528
       Ralf_Fire_198: 1592504279
       Ralf_Fire_199: 490960785
-      Ralf_Fire_2: 1906822992
       Ralf_Fire_20: 1655579563
       Ralf_Fire_200: 1817974275
       Ralf_Fire_201: -594328213
@@ -3859,7 +3856,6 @@ TextureImporter:
       Ralf_Fire_297: 89230558
       Ralf_Fire_298: 12480880
       Ralf_Fire_299: 854965249
-      Ralf_Fire_3: -191516525
       Ralf_Fire_30: -1271010975
       Ralf_Fire_300: 1967332154
       Ralf_Fire_301: 820222509
@@ -4153,6 +4149,10 @@ TextureImporter:
       Ralf_Fire_Flame_7: -28483679
       Ralf_Fire_Flame_8: 249679513
       Ralf_Fire_Flame_9: -1077426789
+      Ralf_Fire_Idle_0: -1798405940
+      Ralf_Fire_Idle_1: 1812286989
+      Ralf_Fire_Idle_2: 1906822992
+      Ralf_Fire_Idle_3: -191516525
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

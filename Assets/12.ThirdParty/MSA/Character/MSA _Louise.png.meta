@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_6
+      name: Louise_Idle_0
       rect:
         serializedVersion: 2
         x: 28
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_7
+      name: Louise_Idle_1
       rect:
         serializedVersion: 2
         x: 96
@@ -159,7 +159,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_8
+      name: Louise_Idle_2
       rect:
         serializedVersion: 2
         x: 163
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Metal Slug Attack - Louise_9
+      name: Louise_Idle_3
       rect:
         serializedVersion: 2
         x: 232
@@ -1009,6 +1009,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Louise_Idle_0: -1963965444
+      Louise_Idle_1: -1853365306
+      Louise_Idle_2: -1989675841
+      Louise_Idle_3: 2114479298
       Mobile - Metal Slug Attack - Louise_0: -811178117
       Mobile - Metal Slug Attack - Louise_1: 950554278
       Mobile - Metal Slug Attack - Louise_10: -787162321
@@ -1372,7 +1376,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_57: -989792035
       Mobile - Metal Slug Attack - Louise_58: -321131315
       Mobile - Metal Slug Attack - Louise_59: -971091993
-      Mobile - Metal Slug Attack - Louise_6: -1963965444
       Mobile - Metal Slug Attack - Louise_60: -272676748
       Mobile - Metal Slug Attack - Louise_61: -278071705
       Mobile - Metal Slug Attack - Louise_62: 112911362
@@ -1383,7 +1386,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_67: 304783194
       Mobile - Metal Slug Attack - Louise_68: 1910099061
       Mobile - Metal Slug Attack - Louise_69: -1637219260
-      Mobile - Metal Slug Attack - Louise_7: -1853365306
       Mobile - Metal Slug Attack - Louise_70: -1535435732
       Mobile - Metal Slug Attack - Louise_71: -1202820825
       Mobile - Metal Slug Attack - Louise_72: -204473796
@@ -1394,7 +1396,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_77: 413494332
       Mobile - Metal Slug Attack - Louise_78: 1623983422
       Mobile - Metal Slug Attack - Louise_79: 506416739
-      Mobile - Metal Slug Attack - Louise_8: -1989675841
       Mobile - Metal Slug Attack - Louise_80: -405648156
       Mobile - Metal Slug Attack - Louise_81: -979191259
       Mobile - Metal Slug Attack - Louise_82: 312670684
@@ -1405,7 +1406,6 @@ TextureImporter:
       Mobile - Metal Slug Attack - Louise_87: -1246660767
       Mobile - Metal Slug Attack - Louise_88: -1466969157
       Mobile - Metal Slug Attack - Louise_89: 2107001403
-      Mobile - Metal Slug Attack - Louise_9: 2114479298
       Mobile - Metal Slug Attack - Louise_90: 224379820
       Mobile - Metal Slug Attack - Louise_91: 904498140
       Mobile - Metal Slug Attack - Louise_92: -1789270980
