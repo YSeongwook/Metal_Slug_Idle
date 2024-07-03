@@ -124,8 +124,8 @@ TextureImporter:
         y: 3761
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,8 +145,8 @@ TextureImporter:
         y: 3761
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -166,8 +166,8 @@ TextureImporter:
         y: 3761
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,8 +187,8 @@ TextureImporter:
         y: 3761
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +201,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_4
+      name: Ralf_Fire_Move_0
       rect:
         serializedVersion: 2
         x: 6
         y: 3657
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_5
+      name: Ralf_Fire_Move_1
       rect:
         serializedVersion: 2
         x: 67
         y: 3656
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_6
+      name: Ralf_Fire_Move_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 3658
+        y: 3656
         width: 53
         height: 45
       alignment: 9
-      pivot: {x: 0, y: 0.45555556}
+      pivot: {x: 0.1509434, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,15 +264,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_7
+      name: Ralf_Fire_Move_3
       rect:
         serializedVersion: 2
         x: 193
         y: 3656
         width: 53
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.1509434, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_8
+      name: Ralf_Fire_Move_4
       rect:
         serializedVersion: 2
         x: 256
         y: 3656
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_9
+      name: Ralf_Fire_Move_5
       rect:
         serializedVersion: 2
         x: 316
         y: 3656
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,15 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_10
+      name: Ralf_Fire_Move_6
       rect:
         serializedVersion: 2
         x: 383
         y: 3656
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,15 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_11
+      name: Ralf_Fire_Move_7
       rect:
         serializedVersion: 2
         x: 451
         y: 3655
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,15 +369,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_12
+      name: Ralf_Fire_Move_8
       rect:
         serializedVersion: 2
         x: 12
-        y: 3584
+        y: 3582
         width: 57
         height: 45
       alignment: 9
-      pivot: {x: 0, y: 0.45555556}
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,15 +390,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_13
+      name: Ralf_Fire_Move_9
       rect:
         serializedVersion: 2
         x: 93
         y: 3582
         width: 57
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14035088, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,15 +411,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_14
+      name: Ralf_Fire_Move_10
       rect:
         serializedVersion: 2
         x: 157
         y: 3582
         width: 56
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,15 +432,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_15
+      name: Ralf_Fire_Move_11
       rect:
         serializedVersion: 2
         x: 225
         y: 3582
         width: 56
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,15 +453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_28
+      name: Ralf_Fire_Attack_0
       rect:
         serializedVersion: 2
         x: 15
         y: 3342
         width: 52
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.15384616, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,15 +474,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_29
+      name: Ralf_Fire_Attack_1
       rect:
         serializedVersion: 2
         x: 78
         y: 3342
         width: 56
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14285715, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,15 +495,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_30
+      name: Ralf_Fire_Attack_2
       rect:
         serializedVersion: 2
         x: 144
         y: 3342
         width: 55
         height: 45
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_31
+      name: Ralf_Fire_Attack_3
       rect:
         serializedVersion: 2
         x: 204
@@ -524,7 +524,7 @@ TextureImporter:
         width: 55
         height: 45
       alignment: 9
-      pivot: {x: 0.06909091, y: 0.5}
+      pivot: {x: 0.21454546, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_32
+      name: Ralf_Fire_Attack_4
       rect:
         serializedVersion: 2
         x: 266
@@ -545,7 +545,7 @@ TextureImporter:
         width: 55
         height: 45
       alignment: 9
-      pivot: {x: 0.036363635, y: 0.5}
+      pivot: {x: 0.18181819, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_33
+      name: Ralf_Fire_Attack_5
       rect:
         serializedVersion: 2
         x: 332
@@ -566,7 +566,7 @@ TextureImporter:
         width: 55
         height: 45
       alignment: 9
-      pivot: {x: 0.018181818, y: 0.5}
+      pivot: {x: 0.16363636, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,7 +579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_34
+      name: Ralf_Fire_Attack_6
       rect:
         serializedVersion: 2
         x: 394
@@ -587,7 +587,7 @@ TextureImporter:
         width: 55
         height: 45
       alignment: 9
-      pivot: {x: 0, y: 0.5}
+      pivot: {x: 0.14545454, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -595,216 +595,6 @@ TextureImporter:
       bones: []
       spriteID: 67924724ee2165e418315865eb1bb27b
       internalID: -2011659741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_65
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 2897
-        width: 30
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95778cd6ff830df47b55c3cbb5a08994
-      internalID: -1280915814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_66
-      rect:
-        serializedVersion: 2
-        x: 304
-        y: 2898
-        width: 31
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ecdc19ac1d909f45bf93fd32135517f
-      internalID: -1746307017
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_67
-      rect:
-        serializedVersion: 2
-        x: 339
-        y: 2898
-        width: 38
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c7f22a390700c74aa76aed4f2f1bfcb
-      internalID: -15516811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_68
-      rect:
-        serializedVersion: 2
-        x: 381
-        y: 2900
-        width: 48
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e56d2cb8c3b23544aabe9c0ce9aa4df2
-      internalID: 1103182758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_69
-      rect:
-        serializedVersion: 2
-        x: 433
-        y: 2901
-        width: 45
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d7e9518ea2a3a045a150dddf26687d1
-      internalID: -429597710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_70
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 2900
-        width: 47
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 240a7d58219a4f44c84114f9b0b50df0
-      internalID: 1330487007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_71
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 2855
-        width: 45
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c4cdd7e1de21d349b13f34c35e0cb7a
-      internalID: 956209457
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_72
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 2855
-        width: 45
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 699e725f3fafefb4484da5337d5d07ac
-      internalID: 648478590
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_73
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 2855
-        width: 48
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60628f51a1eadbd40a912fe259b7b813
-      internalID: -1547559935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_74
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 2855
-        width: 49
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7d9d2d40cacf3a41b285ef7431a3467
-      internalID: 1564956782
       vertices: []
       indices: 
       edges: []
@@ -2679,405 +2469,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ralf_Fire_45
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3028
-        width: 30
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b83a86f6846434499c51e16f56da6df
-      internalID: -704127878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_46
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 3028
-        width: 37
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 570ffca439eb17349ace6f94626de556
-      internalID: -1620573227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_47
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 3028
-        width: 33
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d962740766e50554fbd9302723c8160d
-      internalID: 529332307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_48
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 3028
-        width: 30
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bef0699af13caa40a3fcf5d6bc972d9
-      internalID: 1946648924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_49
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 3028
-        width: 33
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0040159b81f773645a27d9d12810be20
-      internalID: -467306629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_50
-      rect:
-        serializedVersion: 2
-        x: 211
-        y: 3028
-        width: 31
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53b8fd0b071ba1d4eb959c73718885f2
-      internalID: -545383392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_52
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 2964
-        width: 31
-        height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81c92a95856ba9b47a8ad0132a1c85aa
-      internalID: 1092000138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_53
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 2964
-        width: 31
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7dbbae29b595074aa247c65992d906c
-      internalID: 121090925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_54
-      rect:
-        serializedVersion: 2
-        x: 113
-        y: 2964
-        width: 32
-        height: 47
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b65345b43bb4ee418b090d7762d6155
-      internalID: 1612452844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_55
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 2963
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 795fe6bf383a41941a60e246e0c92b88
-      internalID: -927350351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_56
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 2964
-        width: 40
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 922071a1f5feeee4b9cef68f6479ef78
-      internalID: 575286077
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_57
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 2965
-        width: 40
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d9d0833d2aeaf74297489100a61393a
-      internalID: -692701663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_58
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 2965
-        width: 40
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48984d187a42a674dac9b5e573764c83
-      internalID: 1445608470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_59
-      rect:
-        serializedVersion: 2
-        x: 364
-        y: 2966
-        width: 40
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4b9850e0d211b542abd4d941c54ae50
-      internalID: -1604730913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_60
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 2890
-        width: 47
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38cc62d3960eea043a3803100c638538
-      internalID: 1473030337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_61
-      rect:
-        serializedVersion: 2
-        x: 74
-        y: 2890
-        width: 47
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f63ffe125528b243b4b7607def81884
-      internalID: 812014672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_62
-      rect:
-        serializedVersion: 2
-        x: 126
-        y: 2894
-        width: 46
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7692c736173a074a879f3fa2849fb74
-      internalID: 1372599890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_63
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 2897
-        width: 47
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd0f77732b890fc4eb484424a427f9dc
-      internalID: 1162632933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ralf_Fire_64
-      rect:
-        serializedVersion: 2
-        x: 226
-        y: 2897
-        width: 40
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33e9d153aa10b5944a590354fd73cbeb
-      internalID: 1992702726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Ralf_Fire_95
       rect:
         serializedVersion: 2
@@ -3655,7 +3046,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ralf_Fire_10: -599627890
       Ralf_Fire_100: -1949182112
       Ralf_Fire_101: -1557452301
       Ralf_Fire_102: 1952262576
@@ -3666,7 +3056,6 @@ TextureImporter:
       Ralf_Fire_107: 2141641871
       Ralf_Fire_108: -522644818
       Ralf_Fire_109: 1480915225
-      Ralf_Fire_11: -1703328764
       Ralf_Fire_110: 1459420946
       Ralf_Fire_111: -86571249
       Ralf_Fire_112: 559345832
@@ -3677,7 +3066,6 @@ TextureImporter:
       Ralf_Fire_117: 2136207924
       Ralf_Fire_118: 1968742061
       Ralf_Fire_119: 1649270871
-      Ralf_Fire_12: 2042951156
       Ralf_Fire_120: 671124106
       Ralf_Fire_121: 632177190
       Ralf_Fire_122: -1883472241
@@ -3688,7 +3076,6 @@ TextureImporter:
       Ralf_Fire_127: -1320428061
       Ralf_Fire_128: -939661586
       Ralf_Fire_129: 47958758
-      Ralf_Fire_13: -638845293
       Ralf_Fire_130: -61995667
       Ralf_Fire_131: -650643201
       Ralf_Fire_132: 270980696
@@ -3699,7 +3086,6 @@ TextureImporter:
       Ralf_Fire_137: 453231147
       Ralf_Fire_138: -187886826
       Ralf_Fire_139: 857130144
-      Ralf_Fire_14: 622734928
       Ralf_Fire_140: 1297373224
       Ralf_Fire_141: 1496919548
       Ralf_Fire_142: -1873577434
@@ -3710,7 +3096,6 @@ TextureImporter:
       Ralf_Fire_147: -126489390
       Ralf_Fire_148: 1500233932
       Ralf_Fire_149: -1136120505
-      Ralf_Fire_15: 140179073
       Ralf_Fire_150: -1989705145
       Ralf_Fire_151: 56366092
       Ralf_Fire_152: 1959465427
@@ -3834,7 +3219,6 @@ TextureImporter:
       Ralf_Fire_260: -143807859
       Ralf_Fire_261: -286211059
       Ralf_Fire_27: -118740460
-      Ralf_Fire_28: -174791308
       Ralf_Fire_280: 383657721
       Ralf_Fire_281: -1682773707
       Ralf_Fire_282: -1042482861
@@ -3845,7 +3229,6 @@ TextureImporter:
       Ralf_Fire_287: -1245555441
       Ralf_Fire_288: 888604908
       Ralf_Fire_289: 1807493049
-      Ralf_Fire_29: 660074852
       Ralf_Fire_290: -540972114
       Ralf_Fire_291: -1968817162
       Ralf_Fire_292: -1311807314
@@ -3856,7 +3239,6 @@ TextureImporter:
       Ralf_Fire_297: 89230558
       Ralf_Fire_298: 12480880
       Ralf_Fire_299: 854965249
-      Ralf_Fire_30: -1271010975
       Ralf_Fire_300: 1967332154
       Ralf_Fire_301: 820222509
       Ralf_Fire_302: 733809127
@@ -3867,7 +3249,6 @@ TextureImporter:
       Ralf_Fire_307: 237955172
       Ralf_Fire_308: -1805481692
       Ralf_Fire_309: -881850652
-      Ralf_Fire_31: 1369094461
       Ralf_Fire_310: -1726400809
       Ralf_Fire_311: -774741402
       Ralf_Fire_312: 27294167
@@ -3878,7 +3259,6 @@ TextureImporter:
       Ralf_Fire_317: 36576938
       Ralf_Fire_318: 1878080332
       Ralf_Fire_319: 1014510521
-      Ralf_Fire_32: 9932540
       Ralf_Fire_320: 1094956358
       Ralf_Fire_321: -207984386
       Ralf_Fire_322: -1474379482
@@ -3889,7 +3269,6 @@ TextureImporter:
       Ralf_Fire_327: 1566132076
       Ralf_Fire_328: 1918124920
       Ralf_Fire_329: 667559086
-      Ralf_Fire_33: -616234708
       Ralf_Fire_330: -255144839
       Ralf_Fire_331: 229787573
       Ralf_Fire_332: -1622744968
@@ -3900,7 +3279,6 @@ TextureImporter:
       Ralf_Fire_337: 1917098595
       Ralf_Fire_338: -1549597973
       Ralf_Fire_339: -1342248273
-      Ralf_Fire_34: -2011659741
       Ralf_Fire_340: 1764776432
       Ralf_Fire_341: -1604265958
       Ralf_Fire_342: -207483604
@@ -3966,7 +3344,6 @@ TextureImporter:
       Ralf_Fire_397: -1813950716
       Ralf_Fire_398: 743545346
       Ralf_Fire_399: 715514078
-      Ralf_Fire_4: -1297659265
       Ralf_Fire_40: -1858062685
       Ralf_Fire_400: -1581150646
       Ralf_Fire_401: 1720058913
@@ -4076,7 +3453,6 @@ TextureImporter:
       Ralf_Fire_496: -187665628
       Ralf_Fire_497: -2076639908
       Ralf_Fire_498: -156052775
-      Ralf_Fire_5: 1989865690
       Ralf_Fire_50: -545383392
       Ralf_Fire_51: 459553513
       Ralf_Fire_52: 1092000138
@@ -4087,7 +3463,6 @@ TextureImporter:
       Ralf_Fire_57: -692701663
       Ralf_Fire_58: 1445608470
       Ralf_Fire_59: -1604730913
-      Ralf_Fire_6: 1447195694
       Ralf_Fire_60: 1473030337
       Ralf_Fire_61: 812014672
       Ralf_Fire_62: 1372599890
@@ -4098,7 +3473,6 @@ TextureImporter:
       Ralf_Fire_67: -15516811
       Ralf_Fire_68: 1103182758
       Ralf_Fire_69: -429597710
-      Ralf_Fire_7: -2137822707
       Ralf_Fire_70: 1330487007
       Ralf_Fire_71: 956209457
       Ralf_Fire_72: 648478590
@@ -4109,7 +3483,6 @@ TextureImporter:
       Ralf_Fire_77: -1779126141
       Ralf_Fire_78: -137234562
       Ralf_Fire_79: -596748231
-      Ralf_Fire_8: -1005360668
       Ralf_Fire_80: -928863109
       Ralf_Fire_81: -1843547374
       Ralf_Fire_82: -451610990
@@ -4120,7 +3493,6 @@ TextureImporter:
       Ralf_Fire_87: -21435727
       Ralf_Fire_88: -200126582
       Ralf_Fire_89: 603988058
-      Ralf_Fire_9: -1134072322
       Ralf_Fire_90: -592196129
       Ralf_Fire_91: -1331306456
       Ralf_Fire_92: 1342333590
@@ -4131,6 +3503,13 @@ TextureImporter:
       Ralf_Fire_97: -1666292625
       Ralf_Fire_98: -87762610
       Ralf_Fire_99: -402487055
+      Ralf_Fire_Attack_0: -174791308
+      Ralf_Fire_Attack_1: 660074852
+      Ralf_Fire_Attack_2: -1271010975
+      Ralf_Fire_Attack_3: 1369094461
+      Ralf_Fire_Attack_4: 9932540
+      Ralf_Fire_Attack_5: -616234708
+      Ralf_Fire_Attack_6: -2011659741
       Ralf_Fire_Flame_0: -1024355796
       Ralf_Fire_Flame_1: -176503305
       Ralf_Fire_Flame_10: 428186296
@@ -4153,6 +3532,18 @@ TextureImporter:
       Ralf_Fire_Idle_1: 1812286989
       Ralf_Fire_Idle_2: 1906822992
       Ralf_Fire_Idle_3: -191516525
+      Ralf_Fire_Move_0: -1297659265
+      Ralf_Fire_Move_1: 1989865690
+      Ralf_Fire_Move_10: 622734928
+      Ralf_Fire_Move_11: 140179073
+      Ralf_Fire_Move_2: 1447195694
+      Ralf_Fire_Move_3: -2137822707
+      Ralf_Fire_Move_4: -1005360668
+      Ralf_Fire_Move_5: -1134072322
+      Ralf_Fire_Move_6: -599627890
+      Ralf_Fire_Move_7: -1703328764
+      Ralf_Fire_Move_8: 2042951156
+      Ralf_Fire_Move_9: -638845293
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

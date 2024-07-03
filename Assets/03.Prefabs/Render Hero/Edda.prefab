@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 192825135471173277}
   - component: {fileID: 192825135471173267}
   - component: {fileID: 192825135471173266}
+  - component: {fileID: 4482793147194121230}
   m_Layer: 8
   m_Name: Edda
   m_TagString: Untagged
@@ -106,3 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4482793147194121230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192825135471173276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199eba1f4de7ab441a94871dddb1fe9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedSlotIndex: 7

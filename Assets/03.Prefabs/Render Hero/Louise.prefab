@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8285504752250269051}
   - component: {fileID: 8285504752250269048}
   - component: {fileID: 8285504752250269049}
+  - component: {fileID: 2739680363565253020}
   m_Layer: 8
   m_Name: Louise
   m_TagString: Untagged
@@ -106,3 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2739680363565253020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8285504752250269054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 199eba1f4de7ab441a94871dddb1fe9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedSlotIndex: 4
