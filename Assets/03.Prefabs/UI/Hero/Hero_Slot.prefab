@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -102,51 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroImage: {fileID: 0}
   slotIndex: 0
-  uvRects:
-  - serializedVersion: 2
-    x: 0
-    y: 0.666
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.333
-    y: 0.666
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.666
-    y: 0.666
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0
-    y: 0.333
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.333
-    y: 0.333
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.666
-    y: 0.333
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.333
-    y: 0
-    width: 0.333
-    height: 0.333
-  - serializedVersion: 2
-    x: 0.666
-    y: 0
-    width: 0.333
-    height: 0.333
+  characterTransform: {fileID: 0}
+  renderTextureParty: {fileID: 0}

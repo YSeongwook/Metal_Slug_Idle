@@ -4,16 +4,22 @@ using System.Collections.Generic;
 public class HeroSlotManager : MonoBehaviour
 {
     public List<HeroSlot> heroSlots; // HeroSlot 오브젝트 리스트
-    public Transform[] characterTransforms; // 캐릭터 Transform 배열
+    public Transform renderTextureParty; // Render Texture Party Transform
 
     private void Start()
     {
-        // 각 HeroSlot의 초기 슬롯 인덱스를 설정하고 캐릭터 Transform 배열을 할당합니다.
-        for (int i = 0; i < heroSlots.Count; i++)
+        // Render Texture Party의 자식들을 순차적으로 접근하여 HeroSlotTracker로부터 현재 할당된 슬롯 인덱스를 찾음
+        foreach (Transform characterTransform in renderTextureParty)
         {
-            heroSlots[i].slotIndex = i;
-            heroSlots[i].characterTransforms = characterTransforms;
-            heroSlots[i].UpdateCharacterPositions();
+            HeroSlotTracker tracker = characterTransform.GetComponent<HeroSlotTracker>();
+            if (tracker != null)
+            {
+                int assignedSlotIndex = tracker.assignedSlotIndex;
+                if (assignedSlotIndex >= 0 && assignedSlotIndex < heroSlots.Count)
+                {
+                    heroSlots[assignedSlotIndex].InitializeSlot(characterTransform, renderTextureParty);
+                }
+            }
         }
     }
 }
