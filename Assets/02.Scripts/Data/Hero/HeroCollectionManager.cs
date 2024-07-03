@@ -1,11 +1,11 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using UnityEngine;
 
 public class HeroCollectionManager : Singleton<HeroCollectionManager>
 {
-    private bool[] heroCollection; // 보유 상태를 저장하는 배열
+    private HeroOwnership[] heroCollection; // 보유 및 배치 상태를 저장하는 배열
     private string fileName = "HeroCollection.json";
 
     protected override void Awake()
@@ -14,31 +14,44 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
         InitializeCollection();
         LoadCollection();
     }
-
+    
     public bool HasHero(int heroId)
     {
         if (heroId >= 0 && heroId < heroCollection.Length)
         {
-            return heroCollection[heroId];
+            return heroCollection[heroId].owned;
         }
         return false;
     }
-
+    
+    public bool IsHeroAssigned(int heroId)
+    {
+        if (heroId >= 0 && heroId < heroCollection.Length)
+        {
+            return heroCollection[heroId].assigned;
+        }
+        return false;
+    }
+    
     public void Initialize(int maxHeroes)
     {
-        heroCollection = new bool[maxHeroes];
+        heroCollection = new HeroOwnership[maxHeroes];
+        for (int i = 0; i < maxHeroes; i++)
+        {
+            heroCollection[i] = new HeroOwnership { id = i, owned = false, assigned = false };
+        }
         SaveCollection();
     }
-
+    
     public void AddHero(int heroId)
     {
         if (heroId >= 0 && heroId < heroCollection.Length)
         {
-            heroCollection[heroId] = true;
+            heroCollection[heroId].owned = true;
             SaveCollection();
         }
     }
-
+    
     public void UpdateHeroCollection(int[] heroIds)
     {
         foreach (int heroId in heroIds)
@@ -83,11 +96,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
                     HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
                     if (wrapper != null && wrapper.heroCollection != null)
                     {
-                        heroCollection = new bool[wrapper.heroCollection.Length];
-                        for (int i = 0; i < wrapper.heroCollection.Length; i++)
-                        {
-                            heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
-                        }
+                        heroCollection = wrapper.heroCollection;
                     }
                     else
                     {
@@ -117,40 +126,26 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 #else
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 #endif
-        List<HeroOwnership> heroOwnershipList = new List<HeroOwnership>();
-        for (int i = 0; i < heroCollection.Length; i++)
-        {
-            heroOwnershipList.Add(new HeroOwnership { id = i, owned = heroCollection[i] });
-        }
-        HeroCollectionWrapper wrapper = new HeroCollectionWrapper { heroCollection = heroOwnershipList.ToArray() };
+        HeroCollectionWrapper wrapper = new HeroCollectionWrapper { heroCollection = heroCollection };
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(filePath, json);
     }
 
     public string ToBase64()
     {
-        List<HeroOwnership> heroOwnershipList = new List<HeroOwnership>();
-        for (int i = 0; i < heroCollection.Length; i++)
-        {
-            heroOwnershipList.Add(new HeroOwnership { id = i, owned = heroCollection[i] });
-        }
-        string json = JsonUtility.ToJson(new HeroCollectionWrapper { heroCollection = heroOwnershipList.ToArray() });
-        byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(json);
+        string json = JsonUtility.ToJson(new HeroCollectionWrapper { heroCollection = heroCollection });
+        byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
         return Convert.ToBase64String(jsonBytes);
     }
 
     public void FromBase64(string base64)
     {
         byte[] jsonBytes = Convert.FromBase64String(base64);
-        string json = System.Text.Encoding.UTF8.GetString(jsonBytes);
+        string json = Encoding.UTF8.GetString(jsonBytes);
         try
         {
             HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
-            heroCollection = new bool[wrapper.heroCollection.Length];
-            for (int i = 0; i < wrapper.heroCollection.Length; i++)
-            {
-                heroCollection[wrapper.heroCollection[i].id] = wrapper.heroCollection[i].owned;
-            }
+            heroCollection = wrapper.heroCollection;
         }
         catch (Exception ex)
         {
@@ -169,5 +164,6 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     {
         public int id;
         public bool owned;
+        public bool assigned;
     }
 }

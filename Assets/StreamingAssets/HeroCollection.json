@@ -2,63 +2,78 @@
     "heroCollection": [
         {
             "id": 0,
-            "owned": true
+            "owned": true,
+            "assigned": true
         },
         {
             "id": 1,
-            "owned": true
+            "owned": true,
+            "assigned": true
         },
         {
             "id": 2,
-            "owned": true
+            "owned": true,
+            "assigned": true
         },
         {
             "id": 3,
-            "owned": true
+            "owned": true,
+            "assigned": true
         },
         {
             "id": 4,
-            "owned": true
+            "owned": true,
+            "assigned": true
         },
         {
             "id": 5,
-            "owned": true
+            "owned": true,
+            "assigned": false
         },
         {
             "id": 6,
-            "owned": true
+            "owned": true,
+            "assigned": false
         },
         {
             "id": 7,
-            "owned": true
+            "owned": true,
+            "assigned": false
         },
         {
             "id": 8,
-            "owned": true
+            "owned": true,
+            "assigned": false
         },
         {
             "id": 9,
-            "owned": true
+            "owned": true,
+            "assigned": false
         },
         {
             "id": 10,
-            "owned": false
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 11,
-            "owned": false
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 12,
-            "owned": false
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 13,
-            "owned": false
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 14,
-            "owned": false
+            "owned": false,
+            "assigned": false
         }
     ]
 }

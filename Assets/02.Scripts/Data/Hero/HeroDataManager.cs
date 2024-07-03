@@ -110,8 +110,17 @@ public class HeroDataManager : Singleton<HeroDataManager>
             (currentTypeFilter == "전체" || hero.type == currentTypeFilter) &&
             (currentRankFilter == "전체" || hero.rank == currentRankFilter)).ToList();
 
-        SortHeroesByAttack(filteredHeroes, _isDescending); // 필터링 후 정렬
-        UpdateHeroList(filteredHeroes); // 필터링된 영웅 리스트를 UI에 업데이트
+        // 배치된 영웅과 배치되지 않은 영웅을 나눔
+        var assignedHeroes = filteredHeroes.Where(hero => HeroCollectionManager.Instance.IsHeroAssigned(hero.id)).ToList();
+        var unassignedHeroes = filteredHeroes.Where(hero => !HeroCollectionManager.Instance.IsHeroAssigned(hero.id)).ToList();
+
+        // 각각 정렬
+        SortHeroesByAttack(assignedHeroes, _isDescending);
+        SortHeroesByAttack(unassignedHeroes, _isDescending);
+
+        // 두 리스트를 합침
+        assignedHeroes.AddRange(unassignedHeroes);
+        UpdateHeroList(assignedHeroes); // 필터링된 영웅 리스트를 UI에 업데이트
     }
 
     // 필터링된 영웅 리스트를 UI에 업데이트하는 메서드
