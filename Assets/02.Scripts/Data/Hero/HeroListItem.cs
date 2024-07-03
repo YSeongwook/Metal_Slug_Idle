@@ -5,12 +5,13 @@ using TMPro;
 
 public class HeroListItem : InfiniteScrollItem
 {
-    public Image portraitImage;
-    public Image typeImage;
+    public Image portraitImage; // 영웅 초상화 이미지
+    public Image typeImage; // 타입 아이콘 이미지
     public Image rankImage; // 캐릭터 등급에 따른 테두리 이미지
-    public TMP_Text nameText;
-    public TMP_Text levelText;
-    
+    public GameObject assignedIndicator; // 편성된 영웅 표시 이미지
+    public TMP_Text nameText; // 영웅 이름 텍스트
+    public TMP_Text levelText; // 영웅 레벨 텍스트
+
     public GameObject[] starIcons; // 별 갯수를 표시하는 아이콘 배열
     public Sprite[] rankSprites; // 랭크 스프라이트 배열
     public Sprite[] typeSprites; // 타입 스프라이트 배열
@@ -20,17 +21,23 @@ public class HeroListItem : InfiniteScrollItem
         HeroData heroData = scrollData as HeroData;
         if (heroData == null) return;
 
+        // 텍스트와 이미지 업데이트
         nameText.text = heroData.name;
         portraitImage.sprite = Resources.Load<Sprite>(heroData.portraitPath);
         typeImage.sprite = GetTypeSprite(heroData.type);
         levelText.text = $"Lv.{heroData.level}";
 
+        // 별 아이콘 업데이트
         for (int i = 0; i < starIcons.Length; i++)
         {
             starIcons[i].SetActive(i < heroData.starLevel);
         }
 
+        // 랭크 이미지 업데이트
         rankImage.sprite = GetRankSprite(heroData.rank);
+
+        // 편성 상태 업데이트
+        assignedIndicator.SetActive(HeroCollectionManager.Instance.IsHeroAssigned(heroData.id));
     }
 
     private Sprite GetRankSprite(string grade)

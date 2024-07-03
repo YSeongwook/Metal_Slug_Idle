@@ -263,6 +263,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Back_Assigned
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 618
+        width: 280
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6930b4110a71e14eb28367521153f87
+      internalID: 1749382007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -275,6 +296,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       BackBlue2: 1279768492
+      Back_Assigned: 1749382007
       Background_Blue: 197682716
       Frame_DungeonList: 716341347
       Frame_Gray: 1187370842
