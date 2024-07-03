@@ -591,6 +591,7 @@ GameObject:
   - component: {fileID: 7732221231683114565}
   - component: {fileID: 7094023119881808523}
   - component: {fileID: 8849966294682881627}
+  - component: {fileID: 3598207480583223194}
   m_Layer: 5
   m_Name: Hero_Slots
   m_TagString: Untagged
@@ -659,6 +660,29 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &3598207480583223194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285166461495704287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97161a6f637b66643afd1166635c2a27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroSlots:
+  - {fileID: 8480870128016786033}
+  - {fileID: 4370598512902049817}
+  - {fileID: 8665153059827216993}
+  - {fileID: 6800895095420599647}
+  - {fileID: 7612022191999676703}
+  - {fileID: 7125706255840483168}
+  - {fileID: 5627596725086330267}
+  - {fileID: 5174894426206041623}
+  - {fileID: 8529760925293271802}
+  characterTransforms: []
 --- !u!1 &294411333909438603
 GameObject:
   m_ObjectHideFlags: 0
@@ -19623,8 +19647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5}
-  m_SizeDelta: {x: 0, y: -430}
+  m_AnchoredPosition: {x: 0, y: -292.5}
+  m_SizeDelta: {x: 0, y: -1005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3875431644323815834
 CanvasRenderer:
@@ -26448,7 +26472,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -35, y: -120}
-  m_SizeDelta: {x: 1920, y: 1920}
+  m_SizeDelta: {x: 1152, y: 1152}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &135527860486980978
 CanvasRenderer:
@@ -26472,7 +26496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -33346,7 +33370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4879916543486146850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39806,6 +39830,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7732221231683114565}
     m_Modifications:
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (6)
@@ -39896,6 +39928,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+--- !u!114 &5627596725086330267 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 542366486682966093}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7315358422127960014 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
@@ -40428,6 +40471,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7732221231683114565}
     m_Modifications:
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (7)
@@ -40518,6 +40569,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+--- !u!114 &5174894426206041623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 1031052759204656065}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7803763773698585666 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
@@ -40931,6 +40993,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 115962651, guid: 7454b6291f290a54591943d43d748204, type: 3}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (3)
@@ -41021,6 +41091,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+--- !u!114 &6800895095420599647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 1728889795758864521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8502163672192843530 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
@@ -41569,6 +41650,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1019249016, guid: 7454b6291f290a54591943d43d748204, type: 3}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (4)
@@ -41664,6 +41753,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 2322933611558040777}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7612022191999676703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 2322933611558040777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2395716664742266755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42090,6 +42190,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7732221231683114565}
     m_Modifications:
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (5)
@@ -42185,6 +42293,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 3133513596195705526}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7125706255840483168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 3133513596195705526}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3276352346611620936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42675,6 +42794,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 455436977, guid: 3ed9e8795333b9e46b13487f088f44cc, type: 3}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (2)
@@ -42770,6 +42897,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 3593640341646833591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8665153059827216993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 3593640341646833591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4164938268524320045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42913,6 +43051,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 746709391, guid: 3ed9e8795333b9e46b13487f088f44cc, type: 3}
     - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: heroSlotData.heroRenderTexture
       value: 
       objectReference: {fileID: 8400000, guid: d14cefc1929236b4a87888a4d36e0d67, type: 2}
@@ -43011,6 +43153,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 4336395138291271591}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8480870128016786033 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 4336395138291271591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4593722523771756332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43018,6 +43171,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7732221231683114565}
     m_Modifications:
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (8)
@@ -43113,6 +43274,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 4593722523771756332}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8529760925293271802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 4593722523771756332}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4747535365155506171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46011,6 +46183,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -323473171, guid: edd45d3aadf090d48b5c58cd09b45720, type: 3}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: heroImage
+      value: 
+      objectReference: {fileID: 6762934032174940431}
+    - target: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+      propertyPath: slotIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6114946265981058396, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
       propertyPath: m_Name
       value: Background_Slot (1)
@@ -46106,6 +46286,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7062630253424396163, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
   m_PrefabInstance: {fileID: 8446674984500991439}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4370598512902049817 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5305207468190369238, guid: ddfc17176110ff543af31c8db3b5ac08, type: 3}
+  m_PrefabInstance: {fileID: 8446674984500991439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ea87619ab0aaf5419ecd03c3cf9e6cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8650901417656216838
 PrefabInstance:
   m_ObjectHideFlags: 0
