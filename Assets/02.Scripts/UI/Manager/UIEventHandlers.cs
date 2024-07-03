@@ -49,10 +49,12 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.logButton.onClick.AddListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
-        _uiManager.mainCloseButton.onClick.AddListener(_uiManager.CloseAllUIs);
-        _uiManager.heroTabInActiveButton.onClick.AddListener(_uiManager.DisableFormationTab);
-        _uiManager.formationInActiveTabButton.onClick.AddListener(_uiManager.EnableFormationTab);
-        _uiManager.sortAttackButton.onClick.AddListener(_uiManager.SortListByAttack);
+        _uiManager.mainCloseButton.onClick.AddListener(OnClickMainCloseButton);
+        _uiManager.activeTypeButton.onClick.AddListener(OnClickActiveTypeButton);
+        _uiManager.activeGradeButton.onClick.AddListener(OnClickActiveGradeButton);
+        _uiManager.heroTabInActiveButton.onClick.AddListener(OnClickHeroTabInActiveButton);
+        _uiManager.formationTabInActiveButton.onClick.AddListener(OnClickFormationTabInActiveButton);
+        _uiManager.sortAttackButton.onClick.AddListener(OnClickSortAttackButton);
     }
 
     // 버튼 클릭 이벤트 리스너를 제거하는 메서드
@@ -62,22 +64,18 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.logButton.onClick.RemoveListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
-        _uiManager.mainCloseButton.onClick.RemoveListener(_uiManager.CloseAllUIs);
-        _uiManager.heroTabInActiveButton.onClick.RemoveListener(_uiManager.DisableFormationTab);
-        _uiManager.formationInActiveTabButton.onClick.RemoveListener(_uiManager.EnableFormationTab);
-        _uiManager.sortAttackButton.onClick.RemoveListener(_uiManager.SortListByAttack);
-    }
-
-    // 채팅 버튼 클릭 이벤트 핸들러
-    public void OnClickChatButton()
-    {
-        _uiManager.ToggleChatUI();
+        _uiManager.mainCloseButton.onClick.RemoveListener(OnClickMainCloseButton);
+        _uiManager.activeTypeButton.onClick.RemoveListener(OnClickActiveTypeButton);
+        _uiManager.activeGradeButton.onClick.RemoveListener(OnClickActiveGradeButton);
+        _uiManager.heroTabInActiveButton.onClick.RemoveListener(OnClickHeroTabInActiveButton);
+        _uiManager.formationTabInActiveButton.onClick.RemoveListener(OnClickFormationTabInActiveButton);
+        _uiManager.sortAttackButton.onClick.RemoveListener(OnClickSortAttackButton);
     }
 
     #region Intro UI
 
     // 로그 버튼 클릭 이벤트 핸들러
-    public void OnClickLogButton()
+    private void OnClickLogButton()
     {
         _uiManager.ToggleLog();
     }
@@ -89,13 +87,13 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
     }
 
     // 수동 Google Sign-In 버튼 클릭 이벤트 핸들러
-    public void OnClickManualGoogleSignIn()
+    private void OnClickManualGoogleSignIn()
     {
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickManualGPGSSignIn);
     }
 
     // 이메일 로그인 버튼 클릭 이벤트 핸들러
-    public void OnClickEmailSignInButton()
+    private void OnClickEmailSignInButton()
     {
         _uiManager.EnableEmailSignInUI();
     }
@@ -145,8 +143,47 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
     #endregion
 
     #region Main UI
-    
+
+    // 메인 닫기 버튼 클릭 이벤트 핸들러
+    private void OnClickMainCloseButton()
+    {
+        _uiManager.CloseAllUIs();
+    }
+
+    // 채팅 버튼 클릭 이벤트 핸들러
+    private void OnClickChatButton()
+    {
+        _uiManager.ToggleChatUI();
+    }
 
     #endregion
 
+    #region Hero UI
+
+    private void OnClickActiveTypeButton()
+    {
+        _uiManager.ToggleTypeButtonsPanel();
+    }
+
+    private void OnClickActiveGradeButton()
+    {
+        _uiManager.ToggleGradeButtonsPanel();
+    }
+    
+    private void OnClickHeroTabInActiveButton()
+    {
+        _uiManager.DisableFormationTab();
+    }
+    
+    private void OnClickFormationTabInActiveButton()
+    {
+        _uiManager.EnableFormationTab();
+    }
+
+    private void OnClickSortAttackButton()
+    {
+        _uiManager.SortListByAttack();
+    }
+
+    #endregion
 }

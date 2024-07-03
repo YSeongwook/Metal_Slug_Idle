@@ -31,7 +31,8 @@ public class InvisibleExitButton : MonoBehaviour
         GameObject parentUI = transform.parent.gameObject;
         parentUI.SetActive(false);
         UIManager.Instance.RemoveUIFromList(parentUI);
-        
+
+        if (deco == null) return; 
         deco.SetActive(true);
     }
 }

@@ -115,17 +115,26 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Hero UI/SortBar")] public Button sortAttackButton;
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortAscendIcon;
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortDescendIcon;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject gradeButtonsPanel;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject dRankButton;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject cRankButton;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject bRankButton;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject aRankButton;
-    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject SRankButton;
+
+    [FoldoutGroup("Hero UI/TypeButtons")] public GameObject typeButtonsPanel;
+    [FoldoutGroup("Hero UI/TypeButtons")] public Button allTypeButton;
+    [FoldoutGroup("Hero UI/TypeButtons")] public Button defenseTypeButton;
+    [FoldoutGroup("Hero UI/TypeButtons")] public Button shortTypeButton;
+    [FoldoutGroup("Hero UI/TypeButtons")] public Button longTypeButton;
+    [FoldoutGroup("Hero UI/TypeButtons")] public Button specialTypeButton;
+    
+    [FoldoutGroup("Hero UI/GradeButtons")] public GameObject gradeButtonsPanel;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button allRankButton;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button dRankButton;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button cRankButton;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button bRankButton;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button aRankButton;
+    [FoldoutGroup("Hero UI/GradeButtons")] public Button SRankButton;
     
     [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabInActiveButton;
     [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabActiveButton;
-    [FoldoutGroup("Hero UI/UnderBar")] public Button formationInActiveTabButton;
-    [FoldoutGroup("Hero UI/UnderBar")] public Button formationActiveTabButton;
+    [FoldoutGroup("Hero UI/UnderBar")] public Button formationTabInActiveButton;
+    [FoldoutGroup("Hero UI/UnderBar")] public Button formationTabActiveButton;
     
     // Shop UI
     [FoldoutGroup("Shop UI")] [HorizontalGroup("Shop UI/Horizontal")]
@@ -144,6 +153,7 @@ public class UIManager : Singleton<UIManager>
     private bool _isActiveChatUI;
     private bool isDescending;
     private List<GameObject> activeUIs = new List<GameObject>();
+    private RectTransform heroListRect;
 
     #endregion
 
@@ -153,6 +163,8 @@ public class UIManager : Singleton<UIManager>
         base.Awake();
         AddButtonEvents();
         AddInputFieldEvents(); // InputField 이벤트 등록
+        
+        heroListRect = heroList.GetComponent<RectTransform>();
     }
 
     private void Start()
@@ -282,7 +294,7 @@ public class UIManager : Singleton<UIManager>
     #region Main UI
 
     // 특정 UI 오브젝트를 활성화
-    public void EnableUI(GameObject uiObject)
+    private void EnableUI(GameObject uiObject)
     {
         if (activeUIs.Contains(uiObject)) return;
         
@@ -291,7 +303,7 @@ public class UIManager : Singleton<UIManager>
     }
 
     // 특정 UI 오브젝트를 비활성화
-    public void DisableUI(GameObject uiObject)
+    private void DisableUI(GameObject uiObject)
     {
         if(activeUIs.Count == 0) return;
         if (!activeUIs.Contains(uiObject)) return;
@@ -348,8 +360,8 @@ public class UIManager : Singleton<UIManager>
         mainQuestButton.gameObject.SetActive(!isActive);
         mainShopButton.gameObject.SetActive(!isActive);
     }
-    
-    public void EnableMainCloseButton()
+
+    private void EnableMainCloseButton()
     {
         mainCloseButton.gameObject.SetActive(true);
         underDeco.SetActive(false);
@@ -365,34 +377,65 @@ public class UIManager : Singleton<UIManager>
 
     #region Hero UI
 
+    // 특정 UI 오브젝트를 비활성화
+    private void DisableUIWithoutMainClose(GameObject uiObject)
+    {
+        if(activeUIs.Count == 0) return;
+        if (!activeUIs.Contains(uiObject)) return;
+    
+        uiObject.SetActive(false);
+        activeUIs.Remove(uiObject);
+    }
+
+    // 특정 UI 오브젝트를 토글하는 메서드
+    public void ToggleUIWithoutMainClose(GameObject uiObject)
+    {
+        if (activeUIs.Contains(uiObject))
+        {
+            // 이미 활성화된 UI가 다시 눌리면 비활성화
+            uiObject.SetActive(false);
+            activeUIs.Remove(uiObject);
+        }
+        else
+        {
+            // 새로운 UI 활성화
+            uiObject.SetActive(true);
+            activeUIs.Add(uiObject);
+        }
+    }
+    
     public void EnableFormationTab()
     {
-        RectTransform heroListRect;
-        
         heroTabActiveButton.gameObject.SetActive(false); // 영웅 관리 활성화버튼 비활성화
-        formationActiveTabButton.gameObject.SetActive(true); // 편성 활성화 버튼 활성화
+        formationTabActiveButton.gameObject.SetActive(true); // 편성 활성화 버튼 활성화
         middleBar.SetActive(false); // 미들바 비활성화
         formationPanel.SetActive(true); // 편성 패널 활성화
         
         // 영웅 리스트 크기 조절
-        heroListRect = heroList.GetComponent<RectTransform>();
         heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -795);
         heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
     }
 
     public void DisableFormationTab()
     {
-        RectTransform heroListRect;
-        
-        formationActiveTabButton.gameObject.SetActive(false); // 편성 활성화 버튼 비활성화
+        formationTabActiveButton.gameObject.SetActive(false); // 편성 활성화 버튼 비활성화
         heroTabActiveButton.gameObject.SetActive(true); // 영웅 관리 활성화 버튼 비활성화
         middleBar.SetActive(true); // 미들바 활성화
         formationPanel.SetActive(false); // 편성 패널 비활성화
         
         // 영웅 리스트 크기 조절
-        heroListRect = heroList.GetComponent<RectTransform>();
         heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -220);
         heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
+    }
+
+    public void ToggleTypeButtonsPanel()
+    {
+        ToggleUIWithoutMainClose(typeButtonsPanel);
+    }
+
+    public void ToggleGradeButtonsPanel()
+    {
+        ToggleUIWithoutMainClose(gradeButtonsPanel);
     }
 
     public void SortListByAttack()
@@ -445,6 +488,8 @@ public class UIManager : Singleton<UIManager>
 
     #endregion
 
+    #region ETC
+
     // 소프트 키보드를 닫는 메서드
     private void CloseSoftKeyboard()
     {
@@ -469,4 +514,6 @@ public class UIManager : Singleton<UIManager>
             mainCloseButton.gameObject.SetActive(false);
         }
     }
+
+    #endregion
 }
