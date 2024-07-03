@@ -51,7 +51,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.AddListener(OnClickMainCloseButton);
         _uiManager.activeTypeButton.onClick.AddListener(OnClickActiveTypeButton);
-        _uiManager.activeGradeButton.onClick.AddListener(OnClickActiveGradeButton);
+        _uiManager.activeRankButton.onClick.AddListener(OnClickActiveGradeButton);
         _uiManager.heroTabInActiveButton.onClick.AddListener(OnClickHeroTabInActiveButton);
         _uiManager.formationTabInActiveButton.onClick.AddListener(OnClickFormationTabInActiveButton);
         _uiManager.sortAttackButton.onClick.AddListener(OnClickSortAttackButton);
@@ -66,7 +66,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(OnClickMainCloseButton);
         _uiManager.activeTypeButton.onClick.RemoveListener(OnClickActiveTypeButton);
-        _uiManager.activeGradeButton.onClick.RemoveListener(OnClickActiveGradeButton);
+        _uiManager.activeRankButton.onClick.RemoveListener(OnClickActiveGradeButton);
         _uiManager.heroTabInActiveButton.onClick.RemoveListener(OnClickHeroTabInActiveButton);
         _uiManager.formationTabInActiveButton.onClick.RemoveListener(OnClickFormationTabInActiveButton);
         _uiManager.sortAttackButton.onClick.RemoveListener(OnClickSortAttackButton);

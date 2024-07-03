@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 4616060965683527260}
   - component: {fileID: 1964631621886272203}
   m_Layer: 5
-  m_Name: Panel_GradeButtons
+  m_Name: Panel_RankButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ RectTransform:
   - {fileID: 5886554449203495783}
   - {fileID: 3007994893354403863}
   m_Father: {fileID: 2631223510882719238}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -268,7 +268,7 @@ RectTransform:
   m_Children:
   - {fileID: 3289146291663251304}
   m_Father: {fileID: 2631223510882719238}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1724,6 +1724,7 @@ GameObject:
   - component: {fileID: 1730833591199351110}
   - component: {fileID: 269387332322869062}
   - component: {fileID: 5445948168242157380}
+  - component: {fileID: 6622535352058353997}
   m_Layer: 5
   m_Name: Btn_ActiveType_Long
   m_TagString: Untagged
@@ -1834,6 +1835,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6622535352058353997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551835314822404237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda0a25d81fcd2a46b7338a68b0bc51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeButtonIcon: {fileID: 2232907859858022286}
+  heroType: "\uC6D0\uAC70\uB9AC\uD615"
+  typeSprites:
+  - {fileID: 18790017, guid: 282a52fc02298954ebdbaeefb63f2ef0, type: 3}
+  - {fileID: 21300000, guid: 5d2fdc4045aa18b488cf89b4f3a5e40b, type: 3}
+  - {fileID: 21300000, guid: 6cd4f310a27466e47a6c1de94ed50198, type: 3}
+  - {fileID: 21300000, guid: 6e201eca458d97c48b4b07904fcf4aa6, type: 3}
+  - {fileID: 21300000, guid: b30ff6648fd094946bddc7424ba99ec5, type: 3}
 --- !u!1 &575983021990713108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2505,7 +2526,7 @@ GameObject:
   - component: {fileID: 1162186012613117093}
   - component: {fileID: 3672852307978924818}
   m_Layer: 5
-  m_Name: Text_Grade_C
+  m_Name: Text_Rank_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13201,6 +13222,7 @@ GameObject:
   - component: {fileID: 1557118007891711219}
   - component: {fileID: 6282459764187529436}
   - component: {fileID: 7651656535031114989}
+  - component: {fileID: 7381845942955464871}
   m_Layer: 5
   m_Name: Btn_ActiveType_All
   m_TagString: Untagged
@@ -13311,6 +13333,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7381845942955464871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801792734635641944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda0a25d81fcd2a46b7338a68b0bc51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeButtonIcon: {fileID: 2232907859858022286}
+  heroType: "\uC804\uCCB4"
+  typeSprites:
+  - {fileID: 18790017, guid: 282a52fc02298954ebdbaeefb63f2ef0, type: 3}
+  - {fileID: 21300000, guid: 5d2fdc4045aa18b488cf89b4f3a5e40b, type: 3}
+  - {fileID: 21300000, guid: 6cd4f310a27466e47a6c1de94ed50198, type: 3}
+  - {fileID: 21300000, guid: 6e201eca458d97c48b4b07904fcf4aa6, type: 3}
+  - {fileID: 21300000, guid: b30ff6648fd094946bddc7424ba99ec5, type: 3}
 --- !u!1 &1806965569067265543
 GameObject:
   m_ObjectHideFlags: 0
@@ -15656,8 +15698,9 @@ GameObject:
   - component: {fileID: 3836334403130268705}
   - component: {fileID: 6125673468190950535}
   - component: {fileID: 3982166697909693662}
+  - component: {fileID: 9047936913033704780}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_All
+  m_Name: Btn_ActiveRank_All
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15766,6 +15809,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9047936913033704780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814025406656595403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: "\uC804\uCCB4"
 --- !u!1 &1923349238846673047
 GameObject:
   m_ObjectHideFlags: 0
@@ -16587,7 +16644,7 @@ GameObject:
   - component: {fileID: 2410243467633792204}
   - component: {fileID: 7005746828450915269}
   m_Layer: 5
-  m_Name: Text_Grade_S
+  m_Name: Text_Rank_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20587,8 +20644,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2631223510882719238}
   - {fileID: 2283548626380681957}
+  - {fileID: 2631223510882719238}
   m_Father: {fileID: 1079444814102505100}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21051,7 +21108,7 @@ GameObject:
   - component: {fileID: 3622699720597481249}
   - component: {fileID: 6710829114781009}
   m_Layer: 5
-  m_Name: Text_Grade_All
+  m_Name: Text_Rank_All
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21508,8 +21565,9 @@ GameObject:
   - component: {fileID: 3032988176581037886}
   - component: {fileID: 75245762869638882}
   - component: {fileID: 8538867393188211766}
+  - component: {fileID: 7173719830147481462}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_A
+  m_Name: Btn_ActiveRank_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21618,6 +21676,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7173719830147481462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218142825139237499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: A
 --- !u!1 &3266979078610306438
 GameObject:
   m_ObjectHideFlags: 0
@@ -24327,6 +24399,7 @@ GameObject:
   - component: {fileID: 6357677061942355803}
   - component: {fileID: 7326319378570646685}
   - component: {fileID: 465104476853182052}
+  - component: {fileID: 1936828734797242865}
   m_Layer: 5
   m_Name: Btn_ActiveType_Special
   m_TagString: Untagged
@@ -24437,6 +24510,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1936828734797242865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488884817474473544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda0a25d81fcd2a46b7338a68b0bc51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeButtonIcon: {fileID: 2232907859858022286}
+  heroType: "\uB9CC\uB2A5\uD615"
+  typeSprites:
+  - {fileID: 18790017, guid: 282a52fc02298954ebdbaeefb63f2ef0, type: 3}
+  - {fileID: 21300000, guid: 5d2fdc4045aa18b488cf89b4f3a5e40b, type: 3}
+  - {fileID: 21300000, guid: 6cd4f310a27466e47a6c1de94ed50198, type: 3}
+  - {fileID: 21300000, guid: 6e201eca458d97c48b4b07904fcf4aa6, type: 3}
+  - {fileID: 21300000, guid: b30ff6648fd094946bddc7424ba99ec5, type: 3}
 --- !u!1 &3520952121843787546
 GameObject:
   m_ObjectHideFlags: 0
@@ -26432,13 +26525,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6309712438820654353}
-  - {fileID: 4943357519089273494}
-  - {fileID: 3238048956219146583}
   - {fileID: 4425823959922321504}
   - {fileID: 7743210614502258574}
   - {fileID: 90793570579982511}
+  - {fileID: 4943357519089273494}
+  - {fileID: 3238048956219146583}
   m_Father: {fileID: 4155276511209553943}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -26960,7 +27053,7 @@ GameObject:
   - component: {fileID: 7444880806581370819}
   - component: {fileID: 2619977265863882331}
   m_Layer: 5
-  m_Name: Text_Grade
+  m_Name: Text_Rank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27095,8 +27188,9 @@ GameObject:
   - component: {fileID: 755831594483722536}
   - component: {fileID: 8841063739329376349}
   - component: {fileID: 7155070831148203819}
+  - component: {fileID: 797725503806686804}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_D
+  m_Name: Btn_ActiveRank_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27205,6 +27299,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &797725503806686804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4649414095098424487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: D
 --- !u!1 &4664524117161185300
 GameObject:
   m_ObjectHideFlags: 0
@@ -27265,8 +27373,9 @@ GameObject:
   - component: {fileID: 6873129189318522965}
   - component: {fileID: 5587503667421819373}
   - component: {fileID: 28468731287049248}
+  - component: {fileID: 8227439093469191497}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_S
+  m_Name: Btn_ActiveRank_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27375,6 +27484,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8227439093469191497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681491639081578130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: S
 --- !u!1 &4705909756008081847
 GameObject:
   m_ObjectHideFlags: 0
@@ -27540,8 +27663,9 @@ GameObject:
   - component: {fileID: 4788339924298310093}
   - component: {fileID: 2315914744173070318}
   - component: {fileID: 6225631639193919669}
+  - component: {fileID: 8833618722379773351}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_C
+  m_Name: Btn_ActiveRank_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27650,6 +27774,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8833618722379773351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817908424960374108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: C
 --- !u!1 &4845420911480380316
 GameObject:
   m_ObjectHideFlags: 0
@@ -28167,7 +28305,7 @@ RectTransform:
   - {fileID: 2411468888055497989}
   - {fileID: 4234748924011373764}
   m_Father: {fileID: 2631223510882719238}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -29220,7 +29358,7 @@ GameObject:
   - component: {fileID: 853935316551728933}
   - component: {fileID: 6924590715241897696}
   m_Layer: 5
-  m_Name: Text_Grade_B
+  m_Name: Text_Rank_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29431,8 +29569,9 @@ GameObject:
   - component: {fileID: 6952536931145736571}
   - component: {fileID: 7170081988136019884}
   - component: {fileID: 6576648930728960881}
+  - component: {fileID: 8619579399623283978}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade_B
+  m_Name: Btn_ActiveRank_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29541,6 +29680,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8619579399623283978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5427612051911154519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fce8aea526e6e4bb462cfca564a20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rankButtonText: {fileID: 2619977265863882331}
+  heroRank: B
 --- !u!1 &5458638754835133995
 GameObject:
   m_ObjectHideFlags: 0
@@ -30068,23 +30221,12 @@ MonoBehaviour:
   formationPanel: {fileID: 208543492569609432}
   heroList: {fileID: 2636714077068813228}
   activeTypeButton: {fileID: 2814504046372323652}
-  activeGradeButton: {fileID: 4323835555458179525}
+  activeRankButton: {fileID: 4323835555458179525}
   sortAttackButton: {fileID: 3154203645203990527}
   sortAscendIcon: {fileID: 1478526944650887428}
   sortDescendIcon: {fileID: 1553925664449181125}
   typeButtonsPanel: {fileID: 4919093099712751767}
-  allTypeButton: {fileID: 7651656535031114989}
-  defenseTypeButton: {fileID: 6432788491660398628}
-  shortTypeButton: {fileID: 6175829837924835519}
-  longTypeButton: {fileID: 5445948168242157380}
-  specialTypeButton: {fileID: 465104476853182052}
   gradeButtonsPanel: {fileID: 39694360197777110}
-  allRankButton: {fileID: 3982166697909693662}
-  dRankButton: {fileID: 7155070831148203819}
-  cRankButton: {fileID: 6225631639193919669}
-  bRankButton: {fileID: 6576648930728960881}
-  aRankButton: {fileID: 8538867393188211766}
-  SRankButton: {fileID: 28468731287049248}
   heroTabInActiveButton: {fileID: 1079444814713436695}
   heroTabActiveButton: {fileID: 1079444812626844651}
   formationTabInActiveButton: {fileID: 1079444813205299566}
@@ -30132,7 +30274,7 @@ RectTransform:
   - {fileID: 2325760824741128045}
   - {fileID: 7232203016323015507}
   m_Father: {fileID: 2631223510882719238}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -35649,7 +35791,7 @@ GameObject:
   - component: {fileID: 6805692508049849334}
   - component: {fileID: 4331414050451292816}
   m_Layer: 5
-  m_Name: Text_Grade_A
+  m_Name: Text_Rank_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35860,6 +36002,7 @@ GameObject:
   - component: {fileID: 847853750059012094}
   - component: {fileID: 106146117893795014}
   - component: {fileID: 6432788491660398628}
+  - component: {fileID: 3200766647089171059}
   m_Layer: 5
   m_Name: Btn_ActiveType_Defense
   m_TagString: Untagged
@@ -35970,6 +36113,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3200766647089171059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7099577907544462878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda0a25d81fcd2a46b7338a68b0bc51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeButtonIcon: {fileID: 2232907859858022286}
+  heroType: "\uBC29\uC5B4\uD615"
+  typeSprites:
+  - {fileID: 18790017, guid: 282a52fc02298954ebdbaeefb63f2ef0, type: 3}
+  - {fileID: 21300000, guid: 5d2fdc4045aa18b488cf89b4f3a5e40b, type: 3}
+  - {fileID: 21300000, guid: 6cd4f310a27466e47a6c1de94ed50198, type: 3}
+  - {fileID: 21300000, guid: 6e201eca458d97c48b4b07904fcf4aa6, type: 3}
+  - {fileID: 21300000, guid: b30ff6648fd094946bddc7424ba99ec5, type: 3}
 --- !u!1 &7104223424224447324
 GameObject:
   m_ObjectHideFlags: 0
@@ -38083,6 +38246,7 @@ GameObject:
   - component: {fileID: 136944054115670452}
   - component: {fileID: 4462216382138324172}
   - component: {fileID: 6175829837924835519}
+  - component: {fileID: 5340816183635074049}
   m_Layer: 5
   m_Name: Btn_ActiveType_Short
   m_TagString: Untagged
@@ -38193,6 +38357,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5340816183635074049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343385792542007934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda0a25d81fcd2a46b7338a68b0bc51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeButtonIcon: {fileID: 2232907859858022286}
+  heroType: "\uADFC\uAC70\uB9AC\uD615"
+  typeSprites:
+  - {fileID: 18790017, guid: 282a52fc02298954ebdbaeefb63f2ef0, type: 3}
+  - {fileID: 21300000, guid: 5d2fdc4045aa18b488cf89b4f3a5e40b, type: 3}
+  - {fileID: 21300000, guid: 6cd4f310a27466e47a6c1de94ed50198, type: 3}
+  - {fileID: 21300000, guid: 6e201eca458d97c48b4b07904fcf4aa6, type: 3}
+  - {fileID: 21300000, guid: b30ff6648fd094946bddc7424ba99ec5, type: 3}
 --- !u!1 &7343943273682245297
 GameObject:
   m_ObjectHideFlags: 0
@@ -40436,7 +40620,7 @@ GameObject:
   - component: {fileID: 4580529913844576582}
   - component: {fileID: 8939381523092965492}
   m_Layer: 5
-  m_Name: Text_Grade_D
+  m_Name: Text_Rank_D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40880,7 +41064,7 @@ GameObject:
   - component: {fileID: 2201392631363514935}
   - component: {fileID: 4323835555458179525}
   m_Layer: 5
-  m_Name: Btn_ActiveGrade
+  m_Name: Btn_ActiveRank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40900,7 +41084,7 @@ RectTransform:
   m_Children:
   - {fileID: 8149636420661294205}
   m_Father: {fileID: 2631223510882719238}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -43521,7 +43705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1182463843471085106, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1182463843471085106, guid: d82bd981ae4976c489f543b0184dd350, type: 3}
       propertyPath: m_AnchorMax.x

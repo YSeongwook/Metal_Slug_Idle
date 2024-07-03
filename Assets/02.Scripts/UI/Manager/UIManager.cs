@@ -111,25 +111,13 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Hero UI")] public GameObject formationPanel;
     [FoldoutGroup("Hero UI")] public GameObject heroList;
     [FoldoutGroup("Hero UI/SortBar")] public Button activeTypeButton;
-    [FoldoutGroup("Hero UI/SortBar")] public Button activeGradeButton;
+    [FoldoutGroup("Hero UI/SortBar")] public Button activeRankButton;
     [FoldoutGroup("Hero UI/SortBar")] public Button sortAttackButton;
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortAscendIcon;
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortDescendIcon;
 
-    [FoldoutGroup("Hero UI/TypeButtons")] public GameObject typeButtonsPanel;
-    [FoldoutGroup("Hero UI/TypeButtons")] public Button allTypeButton;
-    [FoldoutGroup("Hero UI/TypeButtons")] public Button defenseTypeButton;
-    [FoldoutGroup("Hero UI/TypeButtons")] public Button shortTypeButton;
-    [FoldoutGroup("Hero UI/TypeButtons")] public Button longTypeButton;
-    [FoldoutGroup("Hero UI/TypeButtons")] public Button specialTypeButton;
-    
-    [FoldoutGroup("Hero UI/GradeButtons")] public GameObject gradeButtonsPanel;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button allRankButton;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button dRankButton;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button cRankButton;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button bRankButton;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button aRankButton;
-    [FoldoutGroup("Hero UI/GradeButtons")] public Button SRankButton;
+    [FoldoutGroup("Hero UI/Panels")] public GameObject typeButtonsPanel;
+    [FoldoutGroup("Hero UI/Panels")] public GameObject gradeButtonsPanel;
     
     [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabInActiveButton;
     [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabActiveButton;
