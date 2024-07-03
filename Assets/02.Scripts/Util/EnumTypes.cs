@@ -26,6 +26,7 @@ namespace EnumTypes
         OnClickEmailSignIn,
         StartLoading,
         EndLoading,
+        OnClickSortListAttackButton,
     }
 
     public enum DataEvents

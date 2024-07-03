@@ -110,10 +110,22 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Hero UI")] public GameObject middleBar;
     [FoldoutGroup("Hero UI")] public GameObject formationPanel;
     [FoldoutGroup("Hero UI")] public GameObject heroList;
-    [FoldoutGroup("Hero UI")] public Button heroTabInActiveButton;
-    [FoldoutGroup("Hero UI")] public Button heroTabActiveButton;
-    [FoldoutGroup("Hero UI")] public Button formationInActiveTabButton;
-    [FoldoutGroup("Hero UI")] public Button formationActiveTabButton;
+    [FoldoutGroup("Hero UI/SortBar")] public Button activeTypeButton;
+    [FoldoutGroup("Hero UI/SortBar")] public Button activeGradeButton;
+    [FoldoutGroup("Hero UI/SortBar")] public Button sortAttackButton;
+    [FoldoutGroup("Hero UI/SortBar")] public GameObject sortAscendIcon;
+    [FoldoutGroup("Hero UI/SortBar")] public GameObject sortDescendIcon;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject gradeButtonsPanel;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject dRankButton;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject cRankButton;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject bRankButton;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject aRankButton;
+    [FoldoutGroup("Hero UI/GradeButtonsPanel")] public GameObject SRankButton;
+    
+    [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabInActiveButton;
+    [FoldoutGroup("Hero UI/UnderBar")] public Button heroTabActiveButton;
+    [FoldoutGroup("Hero UI/UnderBar")] public Button formationInActiveTabButton;
+    [FoldoutGroup("Hero UI/UnderBar")] public Button formationActiveTabButton;
     
     // Shop UI
     [FoldoutGroup("Shop UI")] [HorizontalGroup("Shop UI/Horizontal")]
@@ -130,6 +142,7 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Log Scroll View")] public Button logButton;
     
     private bool _isActiveChatUI;
+    private bool isDescending;
     private List<GameObject> activeUIs = new List<GameObject>();
 
     #endregion
@@ -354,7 +367,6 @@ public class UIManager : Singleton<UIManager>
 
     public void EnableFormationTab()
     {
-        Debug.Log("편성 버튼 클릭");
         RectTransform heroListRect;
         
         heroTabActiveButton.gameObject.SetActive(false); // 영웅 관리 활성화버튼 비활성화
@@ -370,7 +382,6 @@ public class UIManager : Singleton<UIManager>
 
     public void DisableFormationTab()
     {
-        Debug.Log("영웅 관리 버튼 클릭");
         RectTransform heroListRect;
         
         formationActiveTabButton.gameObject.SetActive(false); // 편성 활성화 버튼 비활성화
@@ -384,6 +395,18 @@ public class UIManager : Singleton<UIManager>
         heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
     }
 
+    public void SortListByAttack()
+    {
+        // 정렬 버튼 누르면 토글되도록
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickSortListAttackButton);
+    
+        // 버튼 아이콘의 변경
+        sortAscendIcon.SetActive(!isDescending);
+        sortDescendIcon.SetActive(isDescending);
+
+        isDescending = !isDescending;
+    }
+    
     #endregion
 
     #region Shop UI

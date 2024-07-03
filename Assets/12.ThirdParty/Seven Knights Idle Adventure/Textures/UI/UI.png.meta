@@ -524,7 +524,7 @@ TextureImporter:
         width: 142
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -532,6 +532,48 @@ TextureImporter:
       bones: []
       spriteID: 733f517d351c20145884186faa23a526
       internalID: 2073682355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Btn_SkyBlue
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1389
+        width: 128
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 62, y: 0, z: 62, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ffe7caa51e5b0479fa555a7f4be449
+      internalID: 1074646684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame_BlackGray
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 70, y: 70, z: 70, w: 70}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed1e7de3a9c78141ba908b62fa885a8
+      internalID: 1322498868
       vertices: []
       indices: 
       edges: []
@@ -550,9 +592,11 @@ TextureImporter:
       Base_ShopStep: 1023960707
       Btn_AutoFormation: 648414428
       Btn_BlueBrown: -572814643
+      Btn_SkyBlue: 1074646684
       Check_Toggle: 731806022
       Deco_LightStar: -1478345130
       Frame_ActiveBtn: -1628293404
+      Frame_BlackGray: 1322498868
       Frame_BlueBrown2: 312129121
       Frame_Formation: -694151913
       Frame_SkyBlue: 1860447653

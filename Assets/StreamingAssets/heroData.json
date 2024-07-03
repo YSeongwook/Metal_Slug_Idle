@@ -28,7 +28,7 @@
       "rank": "S",
       "level": 1,
       "health": 1000,
-      "attack": 200,
+      "attack": 250,
       "portraitPath": "HeroPortraits/Avatar_CatEar_Leona",
       "starLevel": 0,
       "type": "만능형"

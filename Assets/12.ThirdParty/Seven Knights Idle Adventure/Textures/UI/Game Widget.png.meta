@@ -915,13 +915,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon_ThreeLine
+      name: Icon_Ascend
       rect:
         serializedVersion: 2
-        x: 1301
-        y: 1586
-        width: 47
-        height: 36
+        x: 1272
+        y: 1582
+        width: 76
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -936,7 +936,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon_List
+      name: Icon_Descend
       rect:
         serializedVersion: 2
         x: 809
@@ -1196,7 +1196,7 @@ TextureImporter:
         width: 300
         height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1246,6 +1246,7 @@ TextureImporter:
       Gradation_MainBoss: 189608460
       Gradation_Red: 916978636
       Gradtion_White: -860316776
+      Icon_Ascend: 975696194
       Icon_Auto_Off: -890329111
       Icon_Auto_On: -601263648
       Icon_Box: -109754346
@@ -1253,10 +1254,10 @@ TextureImporter:
       Icon_Cam: 1744224617
       Icon_ChangeEnhanceMode: -1616089099
       Icon_Crew: 116951510
+      Icon_Descend: -108923995
       Icon_Formation: 927362556
       Icon_Honor: 1782616445
       Icon_Horse: 1348398823
-      Icon_List: -108923995
       Icon_LuckyWheel: 284223642
       Icon_Menu: 18790017
       Icon_Message: -1152493131
@@ -1266,7 +1267,6 @@ TextureImporter:
       Icon_Settin: -467996728
       Icon_Setting: -980861336
       Icon_SleepMode: 1489362162
-      Icon_ThreeLine: 975696194
       Indicator_Arrow: 832810696
       Indicator_GaugeBack: -1388944216
       Mask_Portrait: 1490613454

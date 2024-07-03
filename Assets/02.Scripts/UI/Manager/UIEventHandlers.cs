@@ -52,6 +52,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.mainCloseButton.onClick.AddListener(_uiManager.CloseAllUIs);
         _uiManager.heroTabInActiveButton.onClick.AddListener(_uiManager.DisableFormationTab);
         _uiManager.formationInActiveTabButton.onClick.AddListener(_uiManager.EnableFormationTab);
+        _uiManager.sortAttackButton.onClick.AddListener(_uiManager.SortListByAttack);
     }
 
     // 버튼 클릭 이벤트 리스너를 제거하는 메서드
@@ -64,6 +65,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.mainCloseButton.onClick.RemoveListener(_uiManager.CloseAllUIs);
         _uiManager.heroTabInActiveButton.onClick.RemoveListener(_uiManager.DisableFormationTab);
         _uiManager.formationInActiveTabButton.onClick.RemoveListener(_uiManager.EnableFormationTab);
+        _uiManager.sortAttackButton.onClick.RemoveListener(_uiManager.SortListByAttack);
     }
 
     // 채팅 버튼 클릭 이벤트 핸들러
