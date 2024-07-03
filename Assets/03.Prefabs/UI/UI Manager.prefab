@@ -682,7 +682,7 @@ MonoBehaviour:
   - {fileID: 5627596725086330267}
   - {fileID: 5174894426206041623}
   - {fileID: 8529760925293271802}
-  characterTransforms: []
+  renderTextureParty: {fileID: 0}
 --- !u!1 &294411333909438603
 GameObject:
   m_ObjectHideFlags: 0
@@ -30601,7 +30601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1720}
+  m_AnchoredPosition: {x: 0, y: -30}
   m_SizeDelta: {x: 1080, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6743693947312252454
