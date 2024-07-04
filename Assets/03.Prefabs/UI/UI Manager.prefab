@@ -30041,6 +30041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startText: {fileID: 4500402067558705022}
   textBlinkDuration: 1.5
+  loadingUIDuration: 3
 --- !u!1 &5617364716133085594
 GameObject:
   m_ObjectHideFlags: 0
@@ -39960,6 +39961,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3798035479425243978}
+  - component: {fileID: 1145661604343811052}
+  - component: {fileID: 2001026392489701233}
+  - component: {fileID: 8737527300419822077}
   m_Layer: 5
   m_Name: Intro UI
   m_TagString: Untagged
@@ -39993,6 +39997,59 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1145661604343811052
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089475338963439317}
+  m_CullTransparentMesh: 1
+--- !u!114 &2001026392489701233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089475338963439317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8737527300419822077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8089475338963439317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d564c82c59a884e94fb6a8c1a3e581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startText: {fileID: 4500402067558705022}
+  textBlinkDuration: 1.5
+  loadingUIDuration: 3
 --- !u!1 &8093280415962532539
 GameObject:
   m_ObjectHideFlags: 0
@@ -45261,6 +45318,10 @@ PrefabInstance:
     - target: {fileID: 3229430185912606788, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3350124158593555251, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6178703158288544299, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
       propertyPath: m_WasSpriteAssigned

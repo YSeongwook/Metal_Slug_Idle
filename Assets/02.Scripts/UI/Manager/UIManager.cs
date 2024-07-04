@@ -231,16 +231,16 @@ public class UIManager : Singleton<UIManager>
     // 로딩 UI를 표시하는 메서드
     public void ShowLoadingUI()
     {
+        introUI.SetActive(false);
         loadingUI.SetActive(true);
+        mainUI.SetActive(true);
+        joystickUI.SetActive(true);
+        upperBar.SetActive(true);
     }
 
     // 로딩 UI를 숨기는 메서드
     public void HideLoadingUI()
     {
-        mainUI.SetActive(true);
-        joystickUI.SetActive(true);
-        upperBar.SetActive(true);
-        introUI.SetActive(false);
         loadingUI.SetActive(false);
     }
 

@@ -1,4 +1,3 @@
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using EnumTypes;
 using EventLibrary;
@@ -6,12 +5,13 @@ using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
+using Cysharp.Threading.Tasks;
 
 public class IntroManager : MonoBehaviour, IPointerDownHandler
 {
     [TabGroup("Press to Start")] public TextMeshProUGUI startText; // TextMeshPro 텍스트 객체
     [TabGroup("Press to Start")] [SerializeField] private float textBlinkDuration = 1f; // 텍스트 블링크 지속 시간
+    [TabGroup("Loading Settings")] [SerializeField] private float loadingUIDuration = 3f; // 로딩 UI 유지 시간
 
     private Tween _blinkingTween; // 텍스트 블링크 효과를 위한 Tween
     private bool _isFirebaseReady; // Firebase 준비 상태
@@ -45,7 +45,7 @@ public class IntroManager : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         if (!_canStartGame) return;
-        
+
         StartGame();
         startText.gameObject.SetActive(false);
     }
@@ -58,9 +58,10 @@ public class IntroManager : MonoBehaviour, IPointerDownHandler
 
         // Loading UI 활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.StartLoading);
-        
-        // 모든 오브젝트 활성화 후 Loading UI 비활성화
-        
+
+        // 로딩 UI를 일정 시간 동안 유지
+        await UniTask.Delay((int)(loadingUIDuration * 1000));
+
         // Loading UI 비활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.EndLoading);
     }
