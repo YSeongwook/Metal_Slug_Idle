@@ -1,24 +1,39 @@
-using Unity.VisualScripting;
-
-public class MainUIEventHandlers : UIEventHandlers
+public class MainUIEventHandlers : Singleton<MainUIEventHandlers>, IUIEventHandlers
 {
-    protected override void AddEvents()
+    private UIManager _uiManager;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        _uiManager = UIManager.Instance;
+        
+        AddEvents();
+        AddButtonClickEvents();
+    }
+
+    private void OnDestroy()
+    {
+        RemoveEvents();
+        RemoveButtonClickEvents();
+    }
+
+    public void AddEvents()
     {
         
     }
 
-    protected override void RemoveEvents()
+    public void RemoveEvents()
     {
         
     }
 
-    protected override void AddButtonClickEvents()
+    public void AddButtonClickEvents()
     {
         _uiManager.chatButton.onClick.AddListener(OnClickChatButton);
         _uiManager.mainCloseButton.onClick.AddListener(OnClickMainCloseButton);
     }
 
-    protected override void RemoveButtonClickEvents()
+    public void RemoveButtonClickEvents()
     {
         _uiManager.chatButton.onClick.RemoveListener(OnClickChatButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(OnClickMainCloseButton);

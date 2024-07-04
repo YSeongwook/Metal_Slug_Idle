@@ -121,14 +121,14 @@ public class AuthManager : Singleton<AuthManager>
     private void ManualGoogleSignIn()
     {
         signInText.text = "로그인 시도 중...";
-        UIEventHandlers.Instance.DisableSignInUI();
+        IntroUIEventHandlers.Instance.DisableSignInUI();
         PlayGamesPlatform.Instance.ManuallyAuthenticate(ProcessAuthentication);
     }
 
     private void SignInWithEmail()
     {
-        string email = UIEventHandlers.Instance.GetEmail();
-        string password = UIEventHandlers.Instance.GetPassword();
+        string email = IntroUIEventHandlers.Instance.GetEmail();
+        string password = IntroUIEventHandlers.Instance.GetPassword();
 
         DebugLogger.Log($"이메일 로그인 시도: {email}");
 
@@ -155,7 +155,7 @@ public class AuthManager : Singleton<AuthManager>
 
                     logger.LogError(errorMessage);
                     noticeText.text = errorMessage;
-                    UIEventHandlers.Instance.EnableEmailSignInUI();
+                    IntroUIEventHandlers.Instance.EnableEmailSignInUI();
                 }
                 return;
             }
@@ -165,7 +165,7 @@ public class AuthManager : Singleton<AuthManager>
             signInText.text = "이메일 로그인 성공";
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
-            UIEventHandlers.Instance.DisableEmailSignInUI();
+            IntroUIEventHandlers.Instance.DisableEmailSignInUI();
         });
     }
 
@@ -180,7 +180,7 @@ public class AuthManager : Singleton<AuthManager>
                 string errorMessage = "이메일 회원가입 중 오류 발생: " + task.Exception?.ToString();
                 logger.LogError(errorMessage);
                 noticeText.text = errorMessage;
-                UIEventHandlers.Instance.EnableEmailSignInUI();
+                IntroUIEventHandlers.Instance.EnableEmailSignInUI();
                 return;
             }
 
@@ -194,7 +194,7 @@ public class AuthManager : Singleton<AuthManager>
                 {
                     logger.LogError("DisplayName 설정 중 오류 발생: " + updateTask.Exception?.ToString());
                     noticeText.text = "DisplayName 설정 중 오류 발생: " + updateTask.Exception?.ToString();
-                    UIEventHandlers.Instance.EnableEmailSignInUI();
+                    IntroUIEventHandlers.Instance.EnableEmailSignInUI();
                     return;
                 }
 

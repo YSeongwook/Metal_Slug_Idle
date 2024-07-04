@@ -1,9 +1,10 @@
 using Gpm.Ui;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class HeroListItem : InfiniteScrollItem
+public class HeroListItem : InfiniteScrollItem, IPointerDownHandler
 {
     public Image portraitImage; // 영웅 초상화 이미지
     public Image typeImage; // 타입 아이콘 이미지
@@ -18,22 +19,14 @@ public class HeroListItem : InfiniteScrollItem
     public Sprite[] rankSprites; // 랭크 스프라이트 배열
     public Sprite[] typeSprites; // 타입 스프라이트 배열
 
-    private Button _button;
     private int _originalSiblingIndex; // 원래 자식 인덱스를 저장하기 위한 변수
     private bool _isMovedToLast; // 현재 오브젝트가 최하위 자식으로 이동되었는지 여부를 저장하기 위한 변수
     private bool _isOwned;
 
     private void Awake()
     {
-        _button = gameObject.GetComponent<Button>();
-        _button.onClick.AddListener(OnClickHeroListItem);
         _originalSiblingIndex = transform.GetSiblingIndex(); // 초기화 시 원래 인덱스를 저장
         _isMovedToLast = false; // 초기 상태를 false로 설정
-    }
-
-    private void OnDestroy()
-    {
-        _button.onClick.RemoveListener(OnClickHeroListItem);
     }
 
     public override void UpdateData(InfiniteScrollData scrollData)
@@ -90,39 +83,27 @@ public class HeroListItem : InfiniteScrollItem
             _ => null
         };
     }
-
-    public void OnClickHeroListItem()
+    
+    // 터치 입력을 처리하는 메서드
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (!_isOwned) return; // 영웅이 보유되지 않은 경우 클릭 이벤트 무시
-        
-        // 현재 비활성화 상태를 반영하여 Manager에 등록
-        if (!selectUI.activeSelf)
-        {
-            HeroListItemManager.Instance.RegisterSelection(this);
-        }
-        else
-        {
-            HeroListItemManager.Instance.ClearCurrentSelection();
-        }
-        
-        // 선택 UI의 활성화 상태 토글
-        bool isActive = selectUI.activeSelf;
-        selectUI.SetActive(!isActive);
+        if (!_isOwned) return;
 
-        // 현재 오브젝트가 최하위 자식으로 이동되었는지 여부에 따라 처리
-        if (_isMovedToLast)
-        {
-            // 원래 자식 인덱스로 이동
-            transform.SetSiblingIndex(_originalSiblingIndex);
-        }
-        else
-        {
-            // 현재 자식 인덱스를 저장하고 최하위 자식으로 이동
-            _originalSiblingIndex = transform.GetSiblingIndex();
-            transform.SetAsLastSibling();
-        }
+        HeroListItemManager.Instance.RegisterSelection(this); // HeroListItemManager에 선택 항목 등록
+    }
 
-        // 상태 토글
-        _isMovedToLast = !_isMovedToLast;
+    // 선택 UI를 활성화하는 메서드
+    public void ActivateSelectUI()
+    {
+        selectUI.SetActive(true);
+        _originalSiblingIndex = transform.GetSiblingIndex(); // 원래의 위치 저장
+        transform.SetAsLastSibling(); // 부모의 가장 최하위 자식으로 이동
+    }
+
+    // 선택 UI를 비활성화하는 메서드
+    public void DeactivateSelectUI()
+    {
+        selectUI.SetActive(false);
+        transform.SetSiblingIndex(_originalSiblingIndex); // 원래의 위치로 이동
     }
 }

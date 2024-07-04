@@ -1,38 +1,61 @@
-using System;
 using EnumTypes;
 using EventLibrary;
-using UnityEngine.EventSystems;
 
 public class HeroListItemManager : Singleton<HeroListItemManager>
 {
     private HeroListItem _currentSelectedItem;
     private bool _isDeselecting;
+    private bool _isFormationTabActive;
 
     protected override void Awake()
     {
         base.Awake();
-        EventManager<UIEvents>.StartListening(UIEvents.OnClickHeroTabButton, ClearCurrentSelection);
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickHeroTabButton, ChangeTab);
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickFormationTabButton, ChangeTab);
     }
 
     private void OnDestroy()
     {
-        EventManager<UIEvents>.StopListening(UIEvents.OnClickHeroTabButton, ClearCurrentSelection);
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickHeroTabButton, ChangeTab);
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickFormationTabButton, ChangeTab);
     }
 
     public void RegisterSelection(HeroListItem selectedItem)
     {
-        if (_currentSelectedItem != null && _currentSelectedItem != selectedItem)
+        // 현재 탭이 편성 탭인 경우에만 활성화
+        if (!_isFormationTabActive) return;
+        
+        if (_currentSelectedItem == selectedItem)
         {
-            _isDeselecting = true;
-            _currentSelectedItem.OnClickHeroListItem(); // 현재 선택된 아이템의 클릭 이벤트를 다시 호출하여 비활성화
-            _isDeselecting = false;
+            // 이미 선택된 아이템을 다시 클릭한 경우
+            selectedItem.DeactivateSelectUI();
+            _currentSelectedItem = null;
         }
-        _currentSelectedItem = selectedItem;
+        else
+        {
+            if (_currentSelectedItem != null)
+            {
+                _isDeselecting = true;
+                _currentSelectedItem.DeactivateSelectUI(); // 현재 선택된 아이템의 선택 UI 비활성화
+                _isDeselecting = false;
+            }
+
+            _currentSelectedItem = selectedItem;
+            _currentSelectedItem.ActivateSelectUI(); // 새로 선택된 아이템의 선택 UI 활성화
+        }
     }
 
-    public void ClearCurrentSelection()
+    private void ChangeTab()
     {
-        _currentSelectedItem.OnClickHeroListItem();
+        _isFormationTabActive = !_isFormationTabActive; // 현재 탭 상태를 토글
+        ClearCurrentSelection();
+    }
+
+    private void ClearCurrentSelection()
+    {
+        if (_currentSelectedItem == null) return;
+        
+        _currentSelectedItem.DeactivateSelectUI(); // 현재 선택된 아이템의 선택 UI 비활성화
         _currentSelectedItem = null;
     }
 }

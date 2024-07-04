@@ -143,9 +143,9 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Log Scroll View")] public Button logButton;
     
     private bool _isActiveChatUI;
-    private bool isDescending;
+    private bool _isDescending;
     private List<GameObject> activeUIs = new List<GameObject>();
-    private RectTransform heroListRect;
+    private RectTransform _heroListRect;
 
     #endregion
 
@@ -156,7 +156,7 @@ public class UIManager : Singleton<UIManager>
         AddButtonEvents();
         AddInputFieldEvents(); // InputField 이벤트 등록
         
-        heroListRect = heroList.GetComponent<RectTransform>();
+        _heroListRect = heroList.GetComponent<RectTransform>();
     }
 
     private void Start()
@@ -413,8 +413,8 @@ public class UIManager : Singleton<UIManager>
         formationPanel.SetActive(true); // 편성 패널 활성화
         
         // 영웅 리스트 크기 조절
-        heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -795);
-        heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
+        _heroListRect.offsetMax = new Vector2(_heroListRect.offsetMax.x, -795);
+        _heroListRect.offsetMin = new Vector2(_heroListRect.offsetMin.x, 210);
     }
 
     public void DisableFormationTab()
@@ -425,8 +425,8 @@ public class UIManager : Singleton<UIManager>
         formationPanel.SetActive(false); // 편성 패널 비활성화
         
         // 영웅 리스트 크기 조절
-        heroListRect.offsetMax = new Vector2(heroListRect.offsetMax.x, -220);
-        heroListRect.offsetMin = new Vector2(heroListRect.offsetMin.x, 210);
+        _heroListRect.offsetMax = new Vector2(_heroListRect.offsetMax.x, -220);
+        _heroListRect.offsetMin = new Vector2(_heroListRect.offsetMin.x, 210);
     }
 
     public void ToggleTypeButtonsPanel()
@@ -445,10 +445,10 @@ public class UIManager : Singleton<UIManager>
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickSortListAttackButton);
     
         // 버튼 아이콘의 변경
-        sortAscendIcon.SetActive(!isDescending);
-        sortDescendIcon.SetActive(isDescending);
+        sortAscendIcon.SetActive(!_isDescending);
+        sortDescendIcon.SetActive(_isDescending);
 
-        isDescending = !isDescending;
+        _isDescending = !_isDescending;
     }
     
     #endregion

@@ -1,11 +1,26 @@
 using EnumTypes;
 using EventLibrary;
 
-public class IntroUIEventHandlers : UIEventHandlers
+public class IntroUIEventHandlers : Singleton<IntroUIEventHandlers>, IUIEventHandlers
 {
-    public
+    private UIManager _uiManager;
     
-    protected override void AddEvents()
+    protected override void Awake()
+    {
+        base.Awake();
+        _uiManager = UIManager.Instance;
+        
+        AddEvents();
+        AddButtonClickEvents();
+    }
+
+    private void OnDestroy()
+    {
+        RemoveEvents();
+        RemoveButtonClickEvents();
+    }
+    
+    public void AddEvents()
     {
         EventManager<UIEvents>.StartListening(UIEvents.OnClickSignInGoogle, _uiManager.DisableSignInUI);
         EventManager<UIEvents>.StartListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
@@ -13,7 +28,7 @@ public class IntroUIEventHandlers : UIEventHandlers
         EventManager<UIEvents>.StartListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
     }
 
-    protected override void RemoveEvents()
+    public void RemoveEvents()
     {
         EventManager<UIEvents>.StopListening(UIEvents.OnClickSignInGoogle, _uiManager.DisableSignInUI);
         EventManager<UIEvents>.StopListening(UIEvents.OnClickStart, _uiManager.DisableIntroUI);
@@ -21,14 +36,14 @@ public class IntroUIEventHandlers : UIEventHandlers
         EventManager<UIEvents>.StopListening(UIEvents.EndLoading, _uiManager.HideLoadingUI);
     }
 
-    protected override void AddButtonClickEvents()
+    public void AddButtonClickEvents()
     {
         _uiManager.logButton.onClick.AddListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
     }
 
-    protected override void RemoveButtonClickEvents()
+    public void RemoveButtonClickEvents()
     {
         _uiManager.logButton.onClick.RemoveListener(OnClickLogButton);
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);

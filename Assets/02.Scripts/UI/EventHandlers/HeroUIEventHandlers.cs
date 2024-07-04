@@ -1,18 +1,36 @@
-using UnityEngine;
+using EnumTypes;
+using EventLibrary;
 
-public class HeroUIEventHandlers : UIEventHandlers
+public class HeroUIEventHandlers : Singleton<HeroUIEventHandlers>, IUIEventHandlers
 {
-    protected override void AddEvents()
+    private UIManager _uiManager;
+    
+    protected override void Awake()
+    {
+        base.Awake();
+        _uiManager = UIManager.Instance;
+        
+        AddEvents();
+        AddButtonClickEvents();
+    }
+
+    private void OnDestroy()
+    {
+        RemoveEvents();
+        RemoveButtonClickEvents();
+    }
+    
+    public void AddEvents()
     {
         
     }
 
-    protected override void RemoveEvents()
+    public void RemoveEvents()
     {
         
     }
 
-    protected override void AddButtonClickEvents()
+    public void AddButtonClickEvents()
     {
         _uiManager.showOnlyOwnedButton.onClick.AddListener(OnClickShowOnlyOwnedButton);
         _uiManager.activeTypeButton.onClick.AddListener(OnClickActiveTypeButton);
@@ -22,7 +40,7 @@ public class HeroUIEventHandlers : UIEventHandlers
         _uiManager.sortAttackButton.onClick.AddListener(OnClickSortAttackButton);
     }
 
-    protected override void RemoveButtonClickEvents()
+    public void RemoveButtonClickEvents()
     {
         _uiManager.showOnlyOwnedButton.onClick.RemoveListener(OnClickShowOnlyOwnedButton);
         _uiManager.activeTypeButton.onClick.RemoveListener(OnClickActiveTypeButton);
@@ -47,18 +65,20 @@ public class HeroUIEventHandlers : UIEventHandlers
         _uiManager.ToggleGradeButtonsPanel();
     }
     
+    private void OnClickSortAttackButton()
+    {
+        _uiManager.SortListByAttack();
+    }
+    
     private void OnClickHeroTabInActiveButton()
     {
         _uiManager.DisableFormationTab();
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickHeroTabButton);
     }
     
     private void OnClickFormationTabInActiveButton()
     {
         _uiManager.EnableFormationTab();
-    }
-
-    private void OnClickSortAttackButton()
-    {
-        _uiManager.SortListByAttack();
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickFormationTabButton);
     }
 }
