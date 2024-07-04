@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Gpm.Ui;
@@ -9,12 +10,28 @@ public class HeroListItem : InfiniteScrollItem
     public Image typeImage; // 타입 아이콘 이미지
     public Image rankImage; // 캐릭터 등급에 따른 테두리 이미지
     public GameObject assignedIndicator; // 편성된 영웅 표시 이미지
+    public GameObject selectUI; // 선택된 영웅 UI
     public TMP_Text nameText; // 영웅 이름 텍스트
     public TMP_Text levelText; // 영웅 레벨 텍스트
 
     public GameObject[] starIcons; // 별 갯수를 표시하는 아이콘 배열
     public Sprite[] rankSprites; // 랭크 스프라이트 배열
     public Sprite[] typeSprites; // 타입 스프라이트 배열
+
+    private int originalSiblingIndex; // 원래 자식 인덱스를 저장하기 위한 변수
+    private bool isMovedToLast; // 현재 오브젝트가 최하위 자식으로 이동되었는지 여부를 저장하기 위한 변수
+
+    private void Awake()
+    {
+        gameObject.GetComponent<Button>().onClick.AddListener(OnClickHeroListItem);
+        originalSiblingIndex = transform.GetSiblingIndex(); // 초기화 시 원래 인덱스를 저장
+        isMovedToLast = false; // 초기 상태를 false로 설정
+    }
+
+    private void OnDestroy()
+    {
+        gameObject.GetComponent<Button>().onClick.RemoveListener(OnClickHeroListItem);
+    }
 
     public override void UpdateData(InfiniteScrollData scrollData)
     {
@@ -63,5 +80,28 @@ public class HeroListItem : InfiniteScrollItem
             "만능형" => typeSprites.Length > 3 ? typeSprites[3] : null,
             _ => null
         };
+    }
+
+    public void OnClickHeroListItem()
+    {
+        // 선택 UI의 활성화 상태 토글
+        bool isActive = selectUI.activeSelf;
+        selectUI.SetActive(!isActive);
+
+        // 현재 오브젝트가 최하위 자식으로 이동되었는지 여부에 따라 처리
+        if (isMovedToLast)
+        {
+            // 원래 자식 인덱스로 이동
+            transform.SetSiblingIndex(originalSiblingIndex);
+        }
+        else
+        {
+            // 현재 자식 인덱스를 저장하고 최하위 자식으로 이동
+            originalSiblingIndex = transform.GetSiblingIndex();
+            transform.SetAsLastSibling();
+        }
+
+        // 상태 토글
+        isMovedToLast = !isMovedToLast;
     }
 }

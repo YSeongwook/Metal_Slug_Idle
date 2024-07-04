@@ -43913,7 +43913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infiniteScroll: {fileID: 8479647557975914461}
   padding: {x: 60, y: 30}
-  space: {x: 120, y: 30}
+  space: {x: 180, y: 30}
   fileName: HeroData.json
 --- !u!114 &8479647557975914461 stripped
 MonoBehaviour:
@@ -45318,10 +45318,6 @@ PrefabInstance:
     - target: {fileID: 3229430185912606788, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3350124158593555251, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6178703158288544299, guid: cabbe653f7b22594b9ea91085340e97b, type: 3}
       propertyPath: m_WasSpriteAssigned
