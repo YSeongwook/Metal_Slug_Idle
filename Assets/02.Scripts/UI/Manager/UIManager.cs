@@ -160,7 +160,7 @@ public class UIManager : Singleton<UIManager>
         // 인트로 UI와 로그 버튼을 제외하고 자식 오브젝트 모두 비활성화
         foreach (Transform child in transform)
         {
-            if (child.gameObject != introUI && child.gameObject != logButton.gameObject && child.gameObject != upperBar)
+            if (child.gameObject != introUI && child.gameObject != logButton.gameObject)
             {
                 child.gameObject.SetActive(false);
             }
@@ -237,11 +237,11 @@ public class UIManager : Singleton<UIManager>
     // 로딩 UI를 숨기는 메서드
     public void HideLoadingUI()
     {
-        loadingUI.SetActive(false);
-        introUI.SetActive(false);
         mainUI.SetActive(true);
         joystickUI.SetActive(true);
         upperBar.SetActive(true);
+        introUI.SetActive(false);
+        loadingUI.SetActive(false);
     }
 
     // 로그인 UI를 활성화하는 메서드

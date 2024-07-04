@@ -13,8 +13,6 @@ public class IntroManager : MonoBehaviour, IPointerDownHandler
     [TabGroup("Press to Start")] public TextMeshProUGUI startText; // TextMeshPro 텍스트 객체
     [TabGroup("Press to Start")] [SerializeField] private float textBlinkDuration = 1f; // 텍스트 블링크 지속 시간
 
-    [TabGroup("Load Next Scene"), Required] public string nextSceneName; // 다음 씬 이름
-
     private Tween _blinkingTween; // 텍스트 블링크 효과를 위한 Tween
     private bool _isFirebaseReady; // Firebase 준비 상태
     private bool _canStartGame; // 게임 시작 가능 여부
@@ -60,15 +58,11 @@ public class IntroManager : MonoBehaviour, IPointerDownHandler
 
         // Loading UI 활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.StartLoading);
-
-        // 다음 씬을 비동기적으로 로드
-        await LoadSceneAsync(nextSceneName);
-
+        
+        // 모든 오브젝트 활성화 후 Loading UI 비활성화
+        
         // Loading UI 비활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.EndLoading);
-
-        // 이 오브젝트 비활성화
-        this.gameObject.SetActive(false);
     }
 
     // Firebase 인증 완료 시 호출되는 메서드
@@ -86,22 +80,5 @@ public class IntroManager : MonoBehaviour, IPointerDownHandler
 
         StartBlinkingText();
         _canStartGame = true;
-    }
-
-    // 씬을 비동기적으로 로드하는 메서드
-    private async UniTask LoadSceneAsync(string sceneName)
-    {
-        var sceneLoadOperation = SceneManager.LoadSceneAsync(sceneName);
-        sceneLoadOperation.allowSceneActivation = false;
-
-        while (!sceneLoadOperation.isDone)
-        {
-            // 로딩이 거의 완료되었을 때 씬 활성화
-            if (sceneLoadOperation.progress >= 0.9f)
-            {
-                sceneLoadOperation.allowSceneActivation = true;
-            }
-            await UniTask.Yield();
-        }
     }
 }
