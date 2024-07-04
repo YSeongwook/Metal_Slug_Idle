@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class HeroCollectionManager : Singleton<HeroCollectionManager>
 {
-    private HeroOwnership[] heroCollection; // 보유 및 배치 상태를 저장하는 배열
-    private string fileName = "HeroCollection.json";
+    private HeroOwnership[] _heroCollection; // 보유 및 배치 상태를 저장하는 배열
+    private const string FileName = "HeroCollection.json";
 
     protected override void Awake()
     {
@@ -17,37 +17,37 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     
     public bool HasHero(int heroId)
     {
-        if (heroId >= 0 && heroId < heroCollection.Length)
+        if (heroId >= 0 && heroId < _heroCollection.Length)
         {
-            return heroCollection[heroId].owned;
+            return _heroCollection[heroId].owned;
         }
         return false;
     }
     
     public bool IsHeroAssigned(int heroId)
     {
-        if (heroId >= 0 && heroId < heroCollection.Length)
+        if (heroId >= 0 && heroId < _heroCollection.Length)
         {
-            return heroCollection[heroId].assigned;
+            return _heroCollection[heroId].assigned;
         }
         return false;
     }
     
     public void Initialize(int maxHeroes)
     {
-        heroCollection = new HeroOwnership[maxHeroes];
+        _heroCollection = new HeroOwnership[maxHeroes];
         for (int i = 0; i < maxHeroes; i++)
         {
-            heroCollection[i] = new HeroOwnership { id = i, owned = false, assigned = false };
+            _heroCollection[i] = new HeroOwnership { id = i, owned = false, assigned = false };
         }
         SaveCollection();
     }
     
     public void AddHero(int heroId)
     {
-        if (heroId >= 0 && heroId < heroCollection.Length)
+        if (heroId >= 0 && heroId < _heroCollection.Length)
         {
-            heroCollection[heroId].owned = true;
+            _heroCollection[heroId].owned = true;
             SaveCollection();
         }
     }
@@ -63,7 +63,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     private void InitializeCollection()
     {
 #if UNITY_EDITOR
-        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 #endif
@@ -82,7 +82,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     private void LoadCollection()
     {
 #if UNITY_EDITOR
-        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 #endif
@@ -96,7 +96,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
                     HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
                     if (wrapper != null && wrapper.heroCollection != null)
                     {
-                        heroCollection = wrapper.heroCollection;
+                        _heroCollection = wrapper.heroCollection;
                     }
                     else
                     {
@@ -122,18 +122,18 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     public void SaveCollection()
     {
 #if UNITY_EDITOR
-        string filePath = Path.Combine(Application.streamingAssetsPath, fileName);
+        string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
 #endif
-        HeroCollectionWrapper wrapper = new HeroCollectionWrapper { heroCollection = heroCollection };
+        HeroCollectionWrapper wrapper = new HeroCollectionWrapper { heroCollection = _heroCollection };
         string json = JsonUtility.ToJson(wrapper, true);
         File.WriteAllText(filePath, json);
     }
 
     public string ToBase64()
     {
-        string json = JsonUtility.ToJson(new HeroCollectionWrapper { heroCollection = heroCollection });
+        string json = JsonUtility.ToJson(new HeroCollectionWrapper { heroCollection = _heroCollection });
         byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
         return Convert.ToBase64String(jsonBytes);
     }
@@ -145,7 +145,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
         try
         {
             HeroCollectionWrapper wrapper = JsonUtility.FromJson<HeroCollectionWrapper>(json);
-            heroCollection = wrapper.heroCollection;
+            _heroCollection = wrapper.heroCollection;
         }
         catch (Exception ex)
         {

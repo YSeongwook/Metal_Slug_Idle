@@ -5,8 +5,9 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
 {
     private UIManager _uiManager;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         _uiManager = UIManager.Instance;
         AddEvents(); // 이벤트 리스너 등록
         AddButtonClickEvents(); // 버튼 클릭 이벤트 등록

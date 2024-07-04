@@ -5,29 +5,26 @@ using EventLibrary;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-// UniTask를 사용하기 위해 필요
 
-public class IntroManager : MonoBehaviour
+public class IntroManager : MonoBehaviour, IPointerDownHandler
 {
     [TabGroup("Press to Start")] public TextMeshProUGUI startText; // TextMeshPro 텍스트 객체
-    [TabGroup("Press to Start")] [SerializeField] private float textBlinkDuration = 1f;
+    [TabGroup("Press to Start")] [SerializeField] private float textBlinkDuration = 1f; // 텍스트 블링크 지속 시간
 
-    [TabGroup("Load Next Scene"), Required] public string nextSceneName; // 다음 씬
+    [TabGroup("Load Next Scene"), Required] public string nextSceneName; // 다음 씬 이름
 
-    private Tween blinkingTween; // 텍스트 블링크 효과를 위한 Tween
-
-    private bool isGPGSReady = false; // GPGS 준비 상태
-    private bool isFirebaseReady = false; // Firebase 준비 상태
-
-    private bool canStartGame = false; // 게임 시작 가능 여부
+    private Tween _blinkingTween; // 텍스트 블링크 효과를 위한 Tween
+    private bool _isFirebaseReady; // Firebase 준비 상태
+    private bool _canStartGame; // 게임 시작 가능 여부
 
     private Logger logger;
 
     private void Awake()
     {
         logger = Logger.Instance;
-        
+
         // 이벤트 리스너 등록
         EventManager<FirebaseEvents>.StartListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
@@ -38,47 +35,28 @@ public class IntroManager : MonoBehaviour
         EventManager<FirebaseEvents>.StopListening(FirebaseEvents.FirebaseSignIn, OnFirebaseSignIn);
     }
 
-    private void Update()
-    {
-        // 터치 입력 감지
-        if (canStartGame)
-        {
-            DetectTouch();
-        }
-    }
-
+    // 텍스트를 깜박이기 시작하는 메서드
     private void StartBlinkingText()
     {
         startText.gameObject.SetActive(true);
         // DOTween을 사용하여 텍스트 알파값을 페이드 인/아웃
-        blinkingTween = startText.DOFade(0, textBlinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
+        _blinkingTween = startText.DOFade(0, textBlinkDuration).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutSine);
     }
 
-    private void DetectTouch()
+    // 화면 터치 또는 마우스 클릭을 감지하는 메서드
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                // 터치 시작 시 호출
-                StartGame();
-                startText.gameObject.SetActive(false);
-            }
-        }
-        else if (Input.GetMouseButtonDown(0))
-        {
-            // 마우스 클릭도 감지
-            StartGame();
-            startText.gameObject.SetActive(false);
-        }
+        if (!_canStartGame) return;
+        
+        StartGame();
+        startText.gameObject.SetActive(false);
     }
 
+    // 게임을 시작하는 메서드
     private async void StartGame()
     {
         // DOTween 애니메이션 정지
-        blinkingTween.Kill();
+        _blinkingTween.Kill();
 
         // Loading UI 활성화
         EventManager<UIEvents>.TriggerEvent(UIEvents.StartLoading);
@@ -93,21 +71,24 @@ public class IntroManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+    // Firebase 인증 완료 시 호출되는 메서드
     private void OnFirebaseSignIn()
     {
         logger.Log("Firebase 초기화 완료");
-        isFirebaseReady = true;
+        _isFirebaseReady = true;
         CheckIfReadyToStart();
     }
 
+    // 게임을 시작할 준비가 되었는지 확인하는 메서드
     private void CheckIfReadyToStart()
     {
-        if (!isFirebaseReady) return;
-        
+        if (!_isFirebaseReady) return;
+
         StartBlinkingText();
-        canStartGame = true;
+        _canStartGame = true;
     }
-    
+
+    // 씬을 비동기적으로 로드하는 메서드
     private async UniTask LoadSceneAsync(string sceneName)
     {
         var sceneLoadOperation = SceneManager.LoadSceneAsync(sceneName);

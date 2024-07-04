@@ -15,7 +15,6 @@ public class AuthManager : Singleton<AuthManager>
 
     private FirebaseAuth _auth; // Firebase 인증 객체
     private FirebaseUser currentUser;
-    private bool isSignin; // 로그인 상태를 추적하는 플래그
     private Logger logger;
 
     protected override void Awake()
@@ -109,7 +108,6 @@ public class AuthManager : Singleton<AuthManager>
             currentUser = task.Result;
             logger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             signInText.text = "Firebase Login";
-            isSignin = true;
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
         });
@@ -132,7 +130,7 @@ public class AuthManager : Singleton<AuthManager>
         string email = UIEventHandlers.Instance.GetEmail();
         string password = UIEventHandlers.Instance.GetPassword();
 
-        Debug.Log($"이메일 로그인 시도: {email}");
+        DebugLogger.Log($"이메일 로그인 시도: {email}");
 
         _auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
         {
@@ -165,7 +163,6 @@ public class AuthManager : Singleton<AuthManager>
             currentUser = task.Result.User;
             logger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 이메일 로그인 했습니다.");
             signInText.text = "이메일 로그인 성공";
-            isSignin = true;
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
             UIEventHandlers.Instance.DisableEmailSignInUI();
@@ -174,7 +171,7 @@ public class AuthManager : Singleton<AuthManager>
 
     private void RegisterAndSignInWithEmail(string email, string password)
     {
-        Debug.Log($"이메일 회원가입 시도: {email}");
+        DebugLogger.Log($"이메일 회원가입 시도: {email}");
 
         _auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
         {

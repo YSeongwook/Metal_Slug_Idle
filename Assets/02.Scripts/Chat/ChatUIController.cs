@@ -19,7 +19,6 @@ namespace Chat
         private Logger logger;
         private ScrollRect _scrollRect;
         private FirebaseUser _currentUser; // 현재 로그인한 사용자
-        private bool _isUserSignIn;
         private TcpClientManager _tcpClientManager;
 
         [SerializeField]
@@ -40,7 +39,7 @@ namespace Chat
 
             _tcpClientManager = new TcpClientManager(serverIp, port);
             _tcpClientManager.OnMessageReceived += HandleMessageReceived;
-            Debug.Log("Chat UI 활성화됨 - 서버에 연결");
+            DebugLogger.Log("Chat UI 활성화됨 - 서버에 연결");
         }
 
         private void OnDisable()
@@ -57,7 +56,6 @@ namespace Chat
         private void OnFirebaseSignIn()
         {
             _currentUser = AuthManager.Instance.GetCurrentUser();
-            _isUserSignIn = true;
             logger.Log($"사용자 {_currentUser.DisplayName}로 로그인됨");
         }
 
