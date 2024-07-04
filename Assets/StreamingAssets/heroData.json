@@ -64,7 +64,7 @@
       "attack": 300,
       "portraitPath": "HeroPortraits/Avatar_Marco",
       "starLevel": 0,
-      "type": "만능형"
+      "type": "근거리형"
     },
     {
       "id": 6,
@@ -75,7 +75,7 @@
       "attack": 300,
       "portraitPath": "HeroPortraits/Avatar_Marco",
       "starLevel": 0,
-      "type": "만능형"
+      "type": "원거리형"
     },
     {
       "id": 7,
@@ -86,7 +86,7 @@
       "attack": 300,
       "portraitPath": "HeroPortraits/Avatar_Marco",
       "starLevel": 0,
-      "type": "만능형"
+      "type": "방어형"
     },
     {
       "id": 8,

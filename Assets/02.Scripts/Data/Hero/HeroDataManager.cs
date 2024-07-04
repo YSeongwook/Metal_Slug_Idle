@@ -16,20 +16,23 @@ public class HeroDataManager : Singleton<HeroDataManager>
     private List<HeroData> _ownedHeroes; // 소유한 영웅 데이터를 저장하는 리스트
     private bool _isDescending = true; // 정렬 순서를 저장하는 변수 (기본값: 내림차순)
 
-    private string currentTypeFilter = "전체"; // 현재 타입 필터 상태
-    private string currentRankFilter = "전체"; // 현재 랭크 필터 상태
+    private string _currentTypeFilter = "전체"; // 현재 타입 필터 상태
+    private string _currentRankFilter = "전체"; // 현재 랭크 필터 상태
+    private bool _showOnlyOwned; // 보유한 영웅만 표시할지 여부
 
     protected override void Awake()
     {
         base.Awake();
         // 정렬 버튼 클릭 이벤트 리스너 추가
         EventManager<UIEvents>.StartListening(UIEvents.OnClickSortListAttackButton, ToggleSortOrder);
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickShowOnlyOwnedButton, ToggleShowOnlyOwned);
     }
 
     private void OnDestroy()
     {
         // 정렬 버튼 클릭 이벤트 리스너 제거
         EventManager<UIEvents>.StopListening(UIEvents.OnClickSortListAttackButton, ToggleSortOrder);
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickShowOnlyOwnedButton, ToggleShowOnlyOwned);
     }
 
     private void Start()
@@ -92,34 +95,50 @@ public class HeroDataManager : Singleton<HeroDataManager>
     // 타입 필터를 적용하는 메서드
     public void FilterHeroesByType(string type)
     {
-        currentTypeFilter = type;
+        _currentTypeFilter = type;
         ApplyFilters(); // 타입 필터 적용 후 필터 및 정렬 적용
     }
 
     // 랭크 필터를 적용하는 메서드
     public void FilterHeroesByRank(string rank)
     {
-        currentRankFilter = rank;
+        _currentRankFilter = rank;
         ApplyFilters(); // 랭크 필터 적용 후 필터 및 정렬 적용
+    }
+
+    // 보유 상태 필터를 토글하는 메서드
+    private void ToggleShowOnlyOwned()
+    {
+        _showOnlyOwned = !_showOnlyOwned;
+        ApplyFilters(); // 보유 상태 필터 적용 후 필터 및 정렬 적용
     }
 
     // 현재 적용된 필터들을 사용하여 영웅 리스트를 필터링하고 정렬하는 메서드
     private void ApplyFilters()
     {
-        var filteredHeroes = _ownedHeroes.Where(hero =>
-            (currentTypeFilter == "전체" || hero.type == currentTypeFilter) &&
-            (currentRankFilter == "전체" || hero.rank == currentRankFilter)).ToList();
+        var filteredHeroes = _allHeroes.Where(hero =>
+            (_currentTypeFilter == "전체" || hero.type == _currentTypeFilter) &&
+            (_currentRankFilter == "전체" || hero.rank == _currentRankFilter) &&
+            (!_showOnlyOwned || HeroCollectionManager.Instance.HasHero(hero.id))
+        ).ToList();
 
         // 배치된 영웅과 배치되지 않은 영웅을 나눔
         var assignedHeroes = filteredHeroes.Where(hero => HeroCollectionManager.Instance.IsHeroAssigned(hero.id)).ToList();
-        var unassignedHeroes = filteredHeroes.Where(hero => !HeroCollectionManager.Instance.IsHeroAssigned(hero.id)).ToList();
+        var unassignedHeroes = filteredHeroes.Where(hero => !HeroCollectionManager.Instance.IsHeroAssigned(hero.id) && HeroCollectionManager.Instance.HasHero(hero.id)).ToList();
+        var unownedHeroes = filteredHeroes.Where(hero => !HeroCollectionManager.Instance.HasHero(hero.id)).ToList();
 
         // 각각 정렬
         SortHeroesByAttack(assignedHeroes, _isDescending);
         SortHeroesByAttack(unassignedHeroes, _isDescending);
+        SortHeroesByAttack(unownedHeroes, _isDescending);
 
-        // 두 리스트를 합침
+        // 세 리스트를 합침
         assignedHeroes.AddRange(unassignedHeroes);
+        if (!_showOnlyOwned)
+        {
+            assignedHeroes.AddRange(unownedHeroes);
+        }
+
         UpdateHeroList(assignedHeroes); // 필터링된 영웅 리스트를 UI에 업데이트
     }
 

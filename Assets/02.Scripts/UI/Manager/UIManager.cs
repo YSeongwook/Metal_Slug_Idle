@@ -107,9 +107,13 @@ public class UIManager : Singleton<UIManager>
     public GameObject[] heroes;
 
     // Hero UI
-    [FoldoutGroup("Hero UI")] public GameObject middleBar;
     [FoldoutGroup("Hero UI")] public GameObject formationPanel;
     [FoldoutGroup("Hero UI")] public GameObject heroList;
+    
+    [FoldoutGroup("Hero UI/MiddleBar")] public GameObject middleBar;
+    [FoldoutGroup("Hero UI/MiddleBar")] public Button showOnlyOwnedButton;
+    [FoldoutGroup("Hero UI/MiddleBar")] public GameObject showOnlyOwnedCheck;
+    
     [FoldoutGroup("Hero UI/SortBar")] public Button activeTypeButton;
     [FoldoutGroup("Hero UI/SortBar")] public Button activeRankButton;
     [FoldoutGroup("Hero UI/SortBar")] public Button sortAttackButton;
@@ -390,6 +394,15 @@ public class UIManager : Singleton<UIManager>
             uiObject.SetActive(true);
             activeUIs.Add(uiObject);
         }
+    }
+
+    // 보유 영웅만 표시 버튼 토글 메서드
+    public void ToggleShowOnlyOwnedButton()
+    {
+        bool isActive = showOnlyOwnedCheck.activeSelf;
+        
+        showOnlyOwnedCheck.SetActive(!isActive);
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickShowOnlyOwnedButton);
     }
     
     public void EnableFormationTab()

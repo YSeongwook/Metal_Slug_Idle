@@ -51,6 +51,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.AddListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.AddListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.AddListener(OnClickMainCloseButton);
+        _uiManager.showOnlyOwnedButton.onClick.AddListener(OnClickShowOnlyOwnedButton);
         _uiManager.activeTypeButton.onClick.AddListener(OnClickActiveTypeButton);
         _uiManager.activeRankButton.onClick.AddListener(OnClickActiveGradeButton);
         _uiManager.heroTabInActiveButton.onClick.AddListener(OnClickHeroTabInActiveButton);
@@ -66,6 +67,7 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
         _uiManager.signInGoogle.onClick.RemoveListener(OnClickManualGoogleSignIn);
         _uiManager.signInEmail.onClick.RemoveListener(OnClickEmailSignInButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(OnClickMainCloseButton);
+        _uiManager.showOnlyOwnedButton.onClick.RemoveListener(OnClickShowOnlyOwnedButton);
         _uiManager.activeTypeButton.onClick.RemoveListener(OnClickActiveTypeButton);
         _uiManager.activeRankButton.onClick.RemoveListener(OnClickActiveGradeButton);
         _uiManager.heroTabInActiveButton.onClick.RemoveListener(OnClickHeroTabInActiveButton);
@@ -160,6 +162,11 @@ public class UIEventHandlers : Singleton<UIEventHandlers>
     #endregion
 
     #region Hero UI
+
+    private void OnClickShowOnlyOwnedButton()
+    {
+        _uiManager.ToggleShowOnlyOwnedButton();
+    }
 
     private void OnClickActiveTypeButton()
     {

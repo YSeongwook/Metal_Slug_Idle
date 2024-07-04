@@ -3740,6 +3740,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3598207480583223194, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 4190099396881957979, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
