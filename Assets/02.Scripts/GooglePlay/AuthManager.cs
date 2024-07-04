@@ -70,7 +70,7 @@ public class AuthManager : Singleton<AuthManager>
             logger.LogError("Google Play Games 로그인 실패");
             signInText.text = "Fail GOOGLE Sign In";
             signInText.text = "GOOGLE LOGIN";
-            UIEventHandlers.Instance.EnableSignInUI();
+            IntroUIEventHandlers.Instance.EnableSignInUI();
         }
     }
 

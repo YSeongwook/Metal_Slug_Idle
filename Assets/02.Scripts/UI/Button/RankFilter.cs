@@ -1,3 +1,5 @@
+using EnumTypes;
+using EventLibrary;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,5 +34,6 @@ public class RankFilter : MonoBehaviour
         rankButtonText.text = heroRank == "전체" ? heroRank : $"{heroRank} 랭크"; // 버튼의 텍스트 변경
 
         UIManager.Instance.ToggleUIWithoutMainClose(_parent);
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickHeroTabButton);
     }
 }

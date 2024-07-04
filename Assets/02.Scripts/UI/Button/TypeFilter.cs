@@ -1,3 +1,5 @@
+using EnumTypes;
+using EventLibrary;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,6 +33,7 @@ public class TypeFilter : MonoBehaviour
         HeroDataManager.Instance.FilterHeroesByType(heroType);
         UpdateTypeIcon(heroType); // 아이콘 변경
         UIManager.Instance.ToggleUIWithoutMainClose(_parent);
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickHeroTabButton);
     }
 
     private void UpdateTypeIcon(string type)

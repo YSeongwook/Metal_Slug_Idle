@@ -28,6 +28,7 @@ namespace EnumTypes
         EndLoading,
         OnClickShowOnlyOwnedButton,
         OnClickSortListAttackButton,
+        OnClickHeroTabButton,
     }
 
     public enum DataEvents

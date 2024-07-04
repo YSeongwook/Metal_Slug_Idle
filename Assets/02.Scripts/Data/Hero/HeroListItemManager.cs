@@ -1,7 +1,23 @@
+using System;
+using EnumTypes;
+using EventLibrary;
+using UnityEngine.EventSystems;
+
 public class HeroListItemManager : Singleton<HeroListItemManager>
 {
     private HeroListItem _currentSelectedItem;
     private bool _isDeselecting;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickHeroTabButton, ClearCurrentSelection);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickHeroTabButton, ClearCurrentSelection);
+    }
 
     public void RegisterSelection(HeroListItem selectedItem)
     {
@@ -16,6 +32,7 @@ public class HeroListItemManager : Singleton<HeroListItemManager>
 
     public void ClearCurrentSelection()
     {
+        _currentSelectedItem.OnClickHeroListItem();
         _currentSelectedItem = null;
     }
 }
