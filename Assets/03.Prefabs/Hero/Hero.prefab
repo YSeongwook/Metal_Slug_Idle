@@ -201,6 +201,7 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   flipSpeed: 100
+  hud: {fileID: 1117550246640602529}
 --- !u!1001 &4320461207781846310
 PrefabInstance:
   m_ObjectHideFlags: 0
