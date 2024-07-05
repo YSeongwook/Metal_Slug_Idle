@@ -20,13 +20,11 @@ public class HeroListItem : InfiniteScrollItem, IPointerDownHandler
     public Sprite[] typeSprites; // 타입 스프라이트 배열
 
     private int _originalSiblingIndex; // 원래 자식 인덱스를 저장하기 위한 변수
-    private bool _isMovedToLast; // 현재 오브젝트가 최하위 자식으로 이동되었는지 여부를 저장하기 위한 변수
     private bool _isOwned;
 
     private void Awake()
     {
         _originalSiblingIndex = transform.GetSiblingIndex(); // 초기화 시 원래 인덱스를 저장
-        _isMovedToLast = false; // 초기 상태를 false로 설정
     }
 
     public override void UpdateData(InfiniteScrollData scrollData)

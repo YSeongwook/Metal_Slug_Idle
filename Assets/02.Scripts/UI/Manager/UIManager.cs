@@ -240,6 +240,7 @@ public class UIManager : Singleton<UIManager>
         mainUI.SetActive(true);
         joystickUI.SetActive(true);
         upperBar.SetActive(true);
+        mainUnderPanel.SetActive(true);
     }
 
     // 로딩 UI를 숨기는 메서드

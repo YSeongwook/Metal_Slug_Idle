@@ -4,7 +4,6 @@ using EventLibrary;
 public class HeroListItemManager : Singleton<HeroListItemManager>
 {
     private HeroListItem _currentSelectedItem;
-    private bool _isDeselecting;
     private bool _isFormationTabActive;
 
     protected override void Awake()
@@ -35,9 +34,7 @@ public class HeroListItemManager : Singleton<HeroListItemManager>
         {
             if (_currentSelectedItem != null)
             {
-                _isDeselecting = true;
                 _currentSelectedItem.DeactivateSelectUI(); // 현재 선택된 아이템의 선택 UI 비활성화
-                _isDeselecting = false;
             }
 
             _currentSelectedItem = selectedItem;
