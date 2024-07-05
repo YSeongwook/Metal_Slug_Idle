@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 1807524690767059632}
   - component: {fileID: 1807524690767059635}
   - component: {fileID: 1807524690767059634}
-  - component: {fileID: 1807524690767059637}
-  m_Layer: 0
+  - component: {fileID: 2155306434567825141}
+  - component: {fileID: 1627243142788437845}
+  m_Layer: 8
   m_Name: Dion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,8 +168,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1807524690767059637}
-        m_TargetAssemblyTypeName: PlayerController2_5D, Assembly-CSharp
+      - m_Target: {fileID: 2155306434567825141}
+        m_TargetAssemblyTypeName: HeroController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -186,7 +187,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1807524690767059637
+--- !u!114 &2155306434567825141
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,13 +196,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807524690767059636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9275c947a7d3e3142bce442d3b3e3365, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e23af45bd5ebc4eb038d62d2bb674e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
-  flipSpeed: 100
   hud: {fileID: 1337405372330666192}
+--- !u!114 &1627243142788437845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807524690767059636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff289f3f0d0639c44ac5b63c5a955e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroId: 3
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
 --- !u!1001 &2808101627837220951
 PrefabInstance:
   m_ObjectHideFlags: 0

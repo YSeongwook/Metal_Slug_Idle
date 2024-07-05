@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 5793186821655348752}
   - component: {fileID: 5793186821655348753}
   - component: {fileID: 5793186821655348782}
-  - component: {fileID: 5793186821655348783}
-  m_Layer: 0
+  - component: {fileID: 1704735323605614910}
+  - component: {fileID: 5275239496175143383}
+  m_Layer: 8
   m_Name: Ralf_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,8 +168,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5793186821655348783}
-        m_TargetAssemblyTypeName: PlayerController2_5D, Assembly-CSharp
+      - m_Target: {fileID: 1704735323605614910}
+        m_TargetAssemblyTypeName: HeroController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -186,7 +187,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5793186821655348783
+--- !u!114 &1704735323605614910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,13 +196,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 5793186821655348780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9275c947a7d3e3142bce442d3b3e3365, type: 3}
+  m_Script: {fileID: 11500000, guid: b0e23af45bd5ebc4eb038d62d2bb674e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
-  flipSpeed: 100
   hud: {fileID: 4490933519017326963}
+--- !u!114 &5275239496175143383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5793186821655348780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff289f3f0d0639c44ac5b63c5a955e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroId: 2
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    movementSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
 --- !u!1001 &730720760656878068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,6 +239,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5793186821655348757}
     m_Modifications:
+    - target: {fileID: 422185512436208532, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 538856918849039646, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 620338527915535582, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545185524206054587, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3763281142639004362, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -269,6 +315,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5554918839329677009, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7377675555790430415, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -281,10 +331,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hud
       objectReference: {fileID: 0}
+    - target: {fileID: 7397369810723684246, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881028787405895654, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937417056654601367, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7973110917765301770, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
       propertyPath: hero
       value: 
       objectReference: {fileID: 5793186821655348757}
+    - target: {fileID: 8833187626759550398, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 331e2f72f169bd04c9cee32361c9849c, type: 3}
 --- !u!224 &4490933519017326963 stripped

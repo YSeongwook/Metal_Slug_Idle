@@ -8,10 +8,11 @@ public class JoyStickController : MonoBehaviour
     public GameObject joystick; // 조이스틱 오브젝트 (Joystick)
     public Image joystickBackground; // 조이스틱 배경 이미지
     public Image joystickStick; // 조이스틱 스틱 이미지
+    public HeroController heroController; // HeroController 참조
     private Vector2 joystickInitialPosition; // 조이스틱 초기 위치
     private OnScreenStick onScreenStick;
 
-    void Start()
+    private void Start()
     {
         // 조이스틱 초기 위치 저장
         joystickInitialPosition = joystick.GetComponent<RectTransform>().anchoredPosition;
@@ -46,6 +47,9 @@ public class JoyStickController : MonoBehaviour
 
     private void OnTouchStart(PointerEventData eventData)
     {
+        // 터치 시작 시 자동 이동을 비활성화
+        heroController.SetAutoMove(false);
+
         // 터치 시작 시 조이스틱 위치 변경 및 알파값 255로 설정
         joystick.GetComponent<RectTransform>().position = eventData.position;
         SetJoystickAlpha(1);
@@ -68,6 +72,9 @@ public class JoyStickController : MonoBehaviour
 
         // OnScreenStick의 터치 종료 메서드 호출
         onScreenStick.OnPointerUp(eventData);
+
+        // 터치 종료 후에도 자동 이동 모드를 유지하려면 주석 처리
+        // heroController.SetAutoMove(true);
     }
 
     private void SetJoystickAlpha(float alpha)
