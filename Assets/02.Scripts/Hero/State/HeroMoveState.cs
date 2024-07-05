@@ -4,6 +4,7 @@ public class HeroMoveState : IHeroState
 {
     private HeroController _hero;
     private Vector3 _targetPosition;
+    private float _maxDistanceFromLeader = 5f; // 리더로부터의 최대 거리
 
     public void EnterState(HeroController hero)
     {
@@ -12,6 +13,8 @@ public class HeroMoveState : IHeroState
 
     public void UpdateState()
     {
+        if (!_hero.IsAutoMode) return; // 오토 모드가 아닌 경우 이동하지 않음
+
         MoveToTarget();
     }
 
@@ -27,6 +30,14 @@ public class HeroMoveState : IHeroState
 
     private void MoveToTarget()
     {
+        if (_hero is FollowerController follower)
+        {
+            if (Vector3.Distance(_hero.transform.position, follower.leader.transform.position) > _maxDistanceFromLeader)
+            {
+                _targetPosition = follower.leader.transform.position; // 리더의 위치로 돌아가기
+            }
+        }
+
         Vector3 direction = (_targetPosition - _hero.transform.position).normalized;
         Vector3 moveDirection = new Vector3(direction.x, 0, direction.z * _hero.zSpeedMultiplier);
         Vector3 newPosition = _hero.Rb.position + moveDirection * (_hero.moveSpeed * Time.fixedDeltaTime);

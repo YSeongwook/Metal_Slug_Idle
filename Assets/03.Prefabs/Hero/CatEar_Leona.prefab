@@ -202,6 +202,8 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 4872126359028631025}
+  IsAutoMode: 0
+  autoMoveDelay: 0.5
 --- !u!114 &6914980880521333082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff289f3f0d0639c44ac5b63c5a955e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroId: 1
+  heroId: 2
   heroStats:
     id: 0
     name: 

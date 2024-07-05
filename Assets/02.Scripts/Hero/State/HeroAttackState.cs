@@ -1,10 +1,14 @@
 using UnityEngine;
 
+/**
+ * @brief 캐릭터의 공격 상태를 정의하는 클래스입니다.
+ */
 public class HeroAttackState : IHeroState
 {
     private HeroController _hero;
     private Transform _targetEnemy;
     private float _lastAttackTime;
+    private float _maxDistanceFromLeader = 10f; // 리더로부터의 최대 거리
 
     public void EnterState(HeroController hero)
     {
@@ -15,6 +19,8 @@ public class HeroAttackState : IHeroState
 
     public void UpdateState()
     {
+        if (!_hero.IsAutoMode) return; // 오토 모드가 아닌 경우 공격하지 않음
+
         if (_targetEnemy == null)
         {
             _hero.TransitionToState(_hero.IdleState);
@@ -22,6 +28,16 @@ public class HeroAttackState : IHeroState
         }
 
         float distanceToEnemy = Vector3.Distance(new Vector3(_hero.transform.position.x, 0, _hero.transform.position.z), new Vector3(_targetEnemy.position.x, 0, _targetEnemy.position.z));
+
+        if (_hero is FollowerController follower)
+        {
+            float distanceToLeader = Vector3.Distance(_hero.transform.position, follower.leader.transform.position);
+            if (distanceToLeader > _maxDistanceFromLeader)
+            {
+                _hero.TransitionToState(_hero.IdleState);
+                return;
+            }
+        }
 
         if (distanceToEnemy > _hero.HeroStatsManager.AttackRange)
         {

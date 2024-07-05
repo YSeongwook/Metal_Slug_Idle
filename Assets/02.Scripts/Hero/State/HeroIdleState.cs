@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// 캐릭터의 Idle 상태를 정의하는 클래스
 public class HeroIdleState : IHeroState
 {
     private HeroController _hero;
@@ -15,6 +14,8 @@ public class HeroIdleState : IHeroState
 
     public void UpdateState()
     {
+        if (!_hero.IsAutoMode) return; // 오토 모드가 아닌 경우 탐지하지 않음
+
         if (Time.time - _lastCheckTime > _checkInterval)
         {
             _lastCheckTime = Time.time;
@@ -24,10 +25,9 @@ public class HeroIdleState : IHeroState
 
     public void ExitState()
     {
-        // 상태를 나갈 때 수행할 작업이 있으면 여기에 작성
+        // 상태를 나갈 때 수행할 작업이 있으면 여기에 작성합니다.
     }
 
-    // 가장 가까운 적을 찾는 메서드
     private void FindClosestEnemy()
     {
         Collider[] enemies = Physics.OverlapSphere(_hero.transform.position, Mathf.Infinity, _hero.EnemyLayer);

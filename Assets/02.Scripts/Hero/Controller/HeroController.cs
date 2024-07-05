@@ -1,9 +1,8 @@
+using EnumTypes;
+using EventLibrary;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-/**
- * @brief 캐릭터의 기본 동작을 정의하는 클래스입니다.
- */
 public class HeroController : MonoBehaviour
 {
     public float moveSpeed = 2f;
@@ -39,10 +38,20 @@ public class HeroController : MonoBehaviour
 
     public bool IsMoving => _moveInput != Vector2.zero || _isMovingToTarget;
 
+    public bool IsAutoMode = false;  // 오토 모드
+    protected float LastUserInputTime;
+    public float autoMoveDelay = 0.5f;
+
     protected virtual void Awake()
     {
         Initialize();
         TransitionToState(IdleState);
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
+    }
+
+    protected virtual void OnDestroy()
+    {
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
     }
 
     protected void Initialize()
@@ -75,6 +84,12 @@ public class HeroController : MonoBehaviour
         if (_moveInput != Vector2.zero)
         {
             Move();
+            LastUserInputTime = Time.time;
+        }
+        else if (Time.time - LastUserInputTime > autoMoveDelay && IsUserControlled)
+        {
+            IsUserControlled = false;
+            TransitionToState(IdleState);
         }
         else
         {
@@ -82,9 +97,6 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    /**
-     * @brief 상태 전환 메서드
-     */
     public void TransitionToState(IHeroState state)
     {
         _currentState?.ExitState();
@@ -92,9 +104,6 @@ public class HeroController : MonoBehaviour
         _currentState.EnterState(this);
     }
 
-    /**
-     * @brief 이동 처리 메서드
-     */
     protected void Move()
     {
         Vector3 moveDirection = new Vector3(_moveInput.x, 0, _moveInput.y * zSpeedMultiplier);
@@ -107,11 +116,13 @@ public class HeroController : MonoBehaviour
         {
             HandleSpriteFlip(_moveInput.x);
         }
+        else
+        {
+            Animator.SetFloat(Speed, 0);
+            TransitionToState(IdleState);
+        }
     }
 
-    /**
-     * @brief 타겟으로 이동 메서드
-     */
     public void MoveToTarget(Vector3 targetPosition)
     {
         _isMovingToTarget = true;
@@ -119,9 +130,6 @@ public class HeroController : MonoBehaviour
         MoveState.SetTarget(targetPosition);
     }
 
-    /**
-     * @brief 이동 중지 메서드
-     */
     public void StopMoving()
     {
         _moveInput = Vector2.zero;
@@ -134,9 +142,9 @@ public class HeroController : MonoBehaviour
     {
         _moveInput = context.ReadValue<Vector2>();
         IsUserControlled = _moveInput != Vector2.zero;
+        LastUserInputTime = Time.time;
     }
 
-    // 스프라이트 플립 처리 메서드
     public void HandleSpriteFlip(float moveHorizontal)
     {
         if (moveHorizontal == 0) return;
@@ -148,12 +156,10 @@ public class HeroController : MonoBehaviour
         IsFlipped = shouldFlip;
         SpriteRenderer.flipX = shouldFlip;
 
-        // BoxCollider 위치 반전
         Vector3 boxColliderCenter = BoxCollider.center;
         boxColliderCenter.x *= -1;
         BoxCollider.center = boxColliderCenter;
 
-        // HUD 위치 반전
         Vector3 hudPosition = hud.localPosition;
         hudPosition.x *= -1;
         hud.localPosition = hudPosition;
@@ -166,5 +172,11 @@ public class HeroController : MonoBehaviour
         {
             TransitionToState(IdleState);
         }
+    }
+
+    protected void ToggleAutoMode()
+    {
+        IsAutoMode = !IsAutoMode;
+        Debug.Log("오토 모드 " + (IsAutoMode ? "활성화됨" : "비활성화됨"));
     }
 }

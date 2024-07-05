@@ -1,8 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-/**
- * @brief 팔로워 캐릭터의 동작을 정의하는 클래스입니다.
- */
 public class FollowerController : HeroController
 {
     public LeaderController leader;
@@ -15,13 +13,24 @@ public class FollowerController : HeroController
     {
         base.Awake();
         _followerAttack = GetComponent<FollowerAttack>();
+        CalculateRelativePosition();
     }
 
     protected override void FixedUpdate()
     {
-        if (leader.IsMoving)
+        if (IsUserControlled)
+        {
+            // 유저가 조작 중인 경우 위치를 유지하며 이동
+            Move();
+            CalculateRelativePosition();
+        }
+        else if (leader.IsMoving)
         {
             FollowLeader();
+        }
+        else if (leader.CurrentState is HeroAttackState && !_followerAttack.IsAttacking)
+        {
+            AdjustPositionForAttack();
         }
         else if (!_followerAttack.IsAttacking)
         {
@@ -32,10 +41,12 @@ public class FollowerController : HeroController
             base.FixedUpdate();
         }
     }
-
-    /**
-     * @brief 리더를 따라가는 메서드
-     */
+    
+    private void CalculateRelativePosition()
+    {
+        relativePosition = transform.position - leader.transform.position;
+    }
+    
     private void FollowLeader()
     {
         Vector3 leaderPosition = leader.transform.position + relativePosition;
@@ -56,10 +67,7 @@ public class FollowerController : HeroController
             Animator.SetFloat(HeroController.Speed, 0);
         }
     }
-
-    /**
-     * @brief 원래 위치로 돌아가는 메서드
-     */
+    
     private void ReturnToPosition()
     {
         Vector3 leaderPosition = leader.transform.position + relativePosition;
@@ -78,6 +86,31 @@ public class FollowerController : HeroController
         else
         {
             Animator.SetFloat(HeroController.Speed, 0);
+        }
+    }
+    
+    private void AdjustPositionForAttack()
+    {
+        Vector3 leaderPosition = leader.transform.position + relativePosition;
+        float distanceToLeader = Vector3.Distance(transform.position, leaderPosition);
+        float attackRange = HeroStatsManager.AttackRange;
+
+        if (distanceToLeader > attackRange)
+        {
+            MoveToTarget(leaderPosition);
+        }
+        else
+        {
+            StopMoving();
+        }
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        base.OnMove(context);
+        if (IsUserControlled)
+        {
+            CalculateRelativePosition(); // 상대 위치 갱신
         }
     }
 }

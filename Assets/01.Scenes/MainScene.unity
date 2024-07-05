@@ -839,6 +839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ralf_Fire
       objectReference: {fileID: 0}
+    - target: {fileID: 5793186821655348782, guid: 5c65fcfddfa89d74fb50d719e34c5fad, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1223267843}
     - target: {fileID: 7206696648485041507, guid: 5c65fcfddfa89d74fb50d719e34c5fad, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -1969,6 +1973,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1134890735426999483, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1513594458}
+    - target: {fileID: 1134890735426999483, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnMove
+      objectReference: {fileID: 0}
     - target: {fileID: 1134890735426999487, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
       propertyPath: m_Name
       value: Louise
@@ -2355,6 +2367,8 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 1807976431}
+  IsAutoMode: 0
+  autoMoveDelay: 0.5
   leader: {fileID: 1513594458}
   relativePosition: {x: 0, y: 0, z: 0}
   followDistance: 2
@@ -2381,6 +2395,10 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1807524690767059634, guid: bc6599412a181d247acc643b20a35283, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1231083942}
     - target: {fileID: 1807524690767059636, guid: bc6599412a181d247acc643b20a35283, type: 3}
       propertyPath: m_Name
       value: Dion
@@ -2478,6 +2496,8 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 1381566562}
+  IsAutoMode: 0
+  autoMoveDelay: 0.5
   leader: {fileID: 1513594458}
   relativePosition: {x: 0, y: 0, z: 0}
   followDistance: 2
@@ -2893,6 +2913,7 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 168049623}
+  IsAutoMode: 0
   autoMoveDelay: 2
 --- !u!1001 &1531253320
 PrefabInstance:
@@ -3400,6 +3421,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8320211732717095926, guid: e4bf9e2de7864664da7fd412a83f5493, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1836401552}
     - target: {fileID: 8320211732717095928, guid: e4bf9e2de7864664da7fd412a83f5493, type: 3}
       propertyPath: m_Name
       value: CatEar_Leona
@@ -3445,6 +3470,8 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 1269507216}
+  IsAutoMode: 0
+  autoMoveDelay: 0.5
   leader: {fileID: 1513594458}
   relativePosition: {x: 0, y: 0, z: 0}
   followDistance: 2
@@ -3552,6 +3579,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4482793146184030785, guid: cd1a787bbe8a1a244885855e7b9842d8, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1909087549}
     - target: {fileID: 4482793146184030786, guid: cd1a787bbe8a1a244885855e7b9842d8, type: 3}
       propertyPath: m_Name
       value: Edda
@@ -3673,6 +3704,8 @@ MonoBehaviour:
   moveSpeed: 2
   zSpeedMultiplier: 1.777
   hud: {fileID: 230729202}
+  IsAutoMode: 0
+  autoMoveDelay: 0.5
   leader: {fileID: 1513594458}
   relativePosition: {x: 0, y: 0, z: 0}
   followDistance: 2
