@@ -13,7 +13,7 @@ public class HeroStats
     public int maxHealth; // 최대 체력
     public int attack; // 공격력
     public int defense; // 방어력
-    public float movementSpeed; // 이동 속도
+    public float moveSpeed; // 이동 속도
     public float attackSpeed; // 공격 속도
     public float attackRange; // 공격 범위
     public int experience; // 현재 경험치

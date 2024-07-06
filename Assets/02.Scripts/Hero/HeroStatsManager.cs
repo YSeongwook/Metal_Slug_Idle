@@ -11,9 +11,10 @@ public class HeroStatsManager : MonoBehaviour
     private void Awake()
     {
         heroStatsLoader = FindObjectOfType<HeroStatsLoader>();
+        Initialize();
     }
-
-    private void Start()
+    
+    public void Initialize()
     {
         if (heroStatsLoader != null)
         {
@@ -27,13 +28,14 @@ public class HeroStatsManager : MonoBehaviour
         }
         else
         {
-            // 추가적인 초기화 작업 수행 가능
+            Debug.Log("HeroStats loaded successfully.");
         }
     }
 
     public float AttackRange => heroStats.attackRange;
     public float AttackDamage => heroStats.attack;
     public float AttackSpeed => heroStats.attackSpeed;
+    public float MoveSpeed => heroStats.moveSpeed;
 
     // 체력 회복 함수 호출 예시
     public void HealHero(int amount)
@@ -50,5 +52,10 @@ public class HeroStatsManager : MonoBehaviour
             // 사망 처리 (예: 애니메이션, 게임 오버 등)
             // 예: GetComponent<Animator>().SetTrigger("Die");
         }
+    }
+
+    public HeroStats GetHeroStats()
+    {
+        return heroStats;
     }
 }

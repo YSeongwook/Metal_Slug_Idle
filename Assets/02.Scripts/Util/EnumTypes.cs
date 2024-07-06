@@ -15,7 +15,7 @@ namespace EnumTypes
         Reserved2,
         Reserved3,
         Player,
-        World,
+        Enemy,
     }
 
     public enum UIEvents

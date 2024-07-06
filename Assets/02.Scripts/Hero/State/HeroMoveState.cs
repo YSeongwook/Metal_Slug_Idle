@@ -4,11 +4,13 @@ public class HeroMoveState : IHeroState
 {
     private HeroController _hero;
     private Vector3 _targetPosition;
-    private float _maxDistanceFromLeader = 5f; // 리더로부터의 최대 거리
+    private const float MaxDistanceFromLeader = 5f; // 리더로부터의 최대 거리
 
     public void EnterState(HeroController hero)
     {
         _hero = hero;
+        
+        DebugLogger.Log("Enter MoveState");
     }
 
     public void UpdateState()
@@ -16,6 +18,11 @@ public class HeroMoveState : IHeroState
         if (!_hero.IsAutoMode) return; // 오토 모드가 아닌 경우 이동하지 않음
 
         MoveToTarget();
+    }
+    
+    public void PhysicsUpdateState()
+    {
+        
     }
 
     public void ExitState()
@@ -32,18 +39,18 @@ public class HeroMoveState : IHeroState
     {
         if (_hero is FollowerController follower)
         {
-            if (Vector3.Distance(_hero.transform.position, follower.leader.transform.position) > _maxDistanceFromLeader)
+            if (Vector3.Distance(_hero.transform.position, follower.leader.transform.position) > MaxDistanceFromLeader)
             {
                 _targetPosition = follower.leader.transform.position; // 리더의 위치로 돌아가기
             }
         }
 
         Vector3 direction = (_targetPosition - _hero.transform.position).normalized;
-        Vector3 moveDirection = new Vector3(direction.x, 0, direction.z * _hero.zSpeedMultiplier);
-        Vector3 newPosition = _hero.Rb.position + moveDirection * (_hero.moveSpeed * Time.fixedDeltaTime);
+        Vector3 moveDirection = new Vector3(direction.x, 0, direction.z * _hero.heroStats.moveSpeed);
+        Vector3 newPosition = _hero.Rb.position + moveDirection * (_hero.heroStats.moveSpeed * Time.fixedDeltaTime);
         newPosition.y = _hero.InitialY;
         _hero.Rb.MovePosition(newPosition);
-        _hero.Animator.SetFloat(HeroController.Speed, moveDirection.magnitude);
+        _hero.Animator.SetFloat(_hero.SpeedParameter, moveDirection.magnitude);
 
         float distanceToTarget = Vector3.Distance(new Vector3(_hero.transform.position.x, 0, _hero.transform.position.z), new Vector3(_targetPosition.x, 0, _targetPosition.z));
 
@@ -52,7 +59,7 @@ public class HeroMoveState : IHeroState
             _hero.StopMoving();
             _hero.TransitionToState(_hero.IdleState);
         }
-        else if (distanceToTarget <= _hero.HeroStatsManager.AttackRange)
+        else if (distanceToTarget <= _hero.heroStats.attackRange)
         {
             _hero.StopMoving();
             _hero.TransitionToState(_hero.AttackState);

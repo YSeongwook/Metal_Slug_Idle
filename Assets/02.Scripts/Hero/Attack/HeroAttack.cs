@@ -1,8 +1,5 @@
 using UnityEngine;
 
-/**
- * @brief 캐릭터의 공격을 처리하는 클래스입니다.
- */
 public class HeroAttack : MonoBehaviour
 {
     public LayerMask enemyLayer;
@@ -30,10 +27,7 @@ public class HeroAttack : MonoBehaviour
         FindClosestEnemy();
         HandleMovementAndAttack();
     }
-
-    /**
-     * @brief 가장 가까운 적을 찾는 메서드
-     */
+    
     protected virtual void FindClosestEnemy()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, Mathf.Infinity, enemyLayer);
@@ -52,10 +46,7 @@ public class HeroAttack : MonoBehaviour
 
         targetEnemy = closestEnemy;
     }
-
-    /**
-     * @brief 이동 및 공격을 처리하는 메서드
-     */
+    
     protected virtual void HandleMovementAndAttack()
     {
         if (targetEnemy == null) return;
@@ -64,7 +55,7 @@ public class HeroAttack : MonoBehaviour
 
         if (distanceToEnemy > _heroStatsManager.AttackRange)
         {
-            _heroController.MoveToTarget(targetEnemy.position);
+            // _heroController.MoveToTarget(targetEnemy.position);
         }
         else
         {
@@ -72,15 +63,12 @@ public class HeroAttack : MonoBehaviour
             Attack();
         }
     }
-
-    /**
-     * @brief 공격을 수행하는 메서드
-     */
+    
     protected virtual void Attack()
     {
         if (Time.time - _lastAttackTime < 1f / _heroStatsManager.AttackSpeed) return;
 
-        _animator.SetTrigger(HeroController.AttackParameter);
+        _animator.SetTrigger(_heroController.AttackParameter);
         _lastAttackTime = Time.time;
         IsAttacking = true;
 

@@ -47,9 +47,9 @@ public class JoyStickController : MonoBehaviour
 
     private void OnTouchStart(PointerEventData eventData)
     {
-        // 터치 시작 시 자동 이동을 비활성화
-        heroController.SetAutoMove(false);
-
+        // 터치 시작 시 자동 모드 비활성화
+        heroController.IsUserControlled = true;
+        
         // 터치 시작 시 조이스틱 위치 변경 및 알파값 255로 설정
         joystick.GetComponent<RectTransform>().position = eventData.position;
         SetJoystickAlpha(1);
@@ -66,6 +66,9 @@ public class JoyStickController : MonoBehaviour
 
     private void OnTouchEnd(PointerEventData eventData)
     {
+        // 터치 종료 시 자동 모드 활성화
+        heroController.IsUserControlled = false;
+        
         // 터치 종료 시 조이스틱을 초기 위치로 되돌리고 알파값 0으로 설정
         joystick.GetComponent<RectTransform>().anchoredPosition = joystickInitialPosition;
         SetJoystickAlpha(0);
