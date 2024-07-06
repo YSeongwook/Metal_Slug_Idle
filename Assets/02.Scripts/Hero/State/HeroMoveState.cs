@@ -15,20 +15,14 @@ public class HeroMoveState : IHeroState
 
     public void UpdateState()
     {
-        if (!_hero.IsAutoMode) return; // 오토 모드가 아닌 경우 이동하지 않음
+        if (!_hero.IsAutoMode) return;
 
         MoveToTarget();
     }
-    
-    public void PhysicsUpdateState()
-    {
-        
-    }
 
-    public void ExitState()
-    {
-        // 상태를 나갈 때 수행할 작업이 있으면 여기에 작성합니다.
-    }
+    public void PhysicsUpdateState() { }
+
+    public void ExitState() { }
 
     public void SetTarget(Vector3 targetPosition)
     {
@@ -41,7 +35,7 @@ public class HeroMoveState : IHeroState
         {
             if (Vector3.Distance(_hero.transform.position, follower.leader.transform.position) > MaxDistanceFromLeader)
             {
-                _targetPosition = follower.leader.transform.position; // 리더의 위치로 돌아가기
+                _targetPosition = follower.leader.transform.position;
             }
         }
 
@@ -50,24 +44,16 @@ public class HeroMoveState : IHeroState
         Vector3 newPosition = _hero.Rb.position + moveDirection * (_hero.heroStats.moveSpeed * Time.fixedDeltaTime);
         newPosition.y = _hero.InitialY;
         _hero.Rb.MovePosition(newPosition);
-        _hero.Animator.SetFloat(_hero.SpeedParameter, moveDirection.magnitude);
-
-        float distanceToTarget = Vector3.Distance(new Vector3(_hero.transform.position.x, 0, _hero.transform.position.z), new Vector3(_targetPosition.x, 0, _targetPosition.z));
-
-        if (distanceToTarget < 1f)
-        {
-            _hero.StopMoving();
-            _hero.TransitionToState(_hero.IdleState);
-        }
-        else if (distanceToTarget <= _hero.heroStats.attackRange)
-        {
-            _hero.StopMoving();
-            _hero.TransitionToState(_hero.AttackState);
-        }
 
         if (moveDirection != Vector3.zero)
         {
             _hero.HandleSpriteFlip(direction.x);
+            _hero.Animator.SetFloat(_hero.SpeedParameter, moveDirection.magnitude);
+        }
+        else
+        {
+            _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
+            _hero.TransitionToState(_hero.IdleState);
         }
     }
 }

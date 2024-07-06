@@ -10,7 +10,7 @@ public class HeroController : MonoBehaviour
     public float autoMoveDelay = 0.5f;
     public Transform hud;
     public HeroStats heroStats;
-    
+
     public Rigidbody Rb { get; private set; }
     public SpriteRenderer SpriteRenderer { get; private set; }
     public Animator Animator { get; private set; }
@@ -23,11 +23,14 @@ public class HeroController : MonoBehaviour
     public LayerMask EnemyLayer { get; private set; }
     public bool IsUserControlled { get; set; }
     public bool IsAutoMode { get; set; }
-    
     public float LastUserInputTime { get; set; }
     public Vector2 MoveInput { get; set; }
-    
+    public Transform CurrentTarget { get; set; }
+
     private IHeroState _currentState;
+    private Collider[] _cachedEnemies;
+    private float _lastCacheTime;
+    private const float CacheInterval = 1.0f;
 
     public readonly HeroIdleState IdleState = new HeroIdleState();
     public readonly HeroMoveState MoveState = new HeroMoveState();
@@ -36,7 +39,7 @@ public class HeroController : MonoBehaviour
 
     public readonly int SpeedParameter = Animator.StringToHash("Speed");
     public readonly int AttackParameter = Animator.StringToHash("Attack");
-    
+
     protected bool _isMovingToTarget;
 
     private HeroStatsManager _heroStatsManager;
@@ -56,7 +59,7 @@ public class HeroController : MonoBehaviour
     private void Initialize()
     {
         _heroStatsManager = GetComponent<HeroStatsManager>();
-        _heroStatsManager.Initialize(); // HeroStatsManager 초기화
+        _heroStatsManager.Initialize();
         MoveInput = Vector2.zero;
         Rb = GetComponent<Rigidbody>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -75,7 +78,7 @@ public class HeroController : MonoBehaviour
 
         if (_heroStatsManager != null)
         {
-            heroStats = _heroStatsManager.GetHeroStats(); // HeroStatsManager에서 heroStats를 가져와 할당
+            heroStats = _heroStatsManager.GetHeroStats();
         }
     }
 
@@ -91,6 +94,7 @@ public class HeroController : MonoBehaviour
 
     public void TransitionToState(IHeroState state)
     {
+        if (_currentState == state) return; // 상태 전환 빈도 줄이기
         _currentState?.ExitState();
         _currentState = state;
         _currentState.EnterState(this);
@@ -139,5 +143,34 @@ public class HeroController : MonoBehaviour
     public HeroStatsManager GetHeroStatsManager()
     {
         return _heroStatsManager;
+    }
+
+    public void FindClosestEnemy()
+    {
+        if (_cachedEnemies == null || Time.time - _lastCacheTime >= CacheInterval)
+        {
+            _cachedEnemies = Physics.OverlapSphere(transform.position, heroStats.attackRange * 5, EnemyLayer);
+            _lastCacheTime = Time.time;
+        }
+
+        Transform closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Collider enemy in _cachedEnemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < closestDistance)
+            {
+                closestDistance = distanceToEnemy;
+                closestEnemy = enemy.transform;
+            }
+        }
+
+        CurrentTarget = closestEnemy;
+    }
+
+    public float GetDistanceToTarget(Transform target)
+    {
+        return Vector3.Distance(transform.position, target.position);
     }
 }
