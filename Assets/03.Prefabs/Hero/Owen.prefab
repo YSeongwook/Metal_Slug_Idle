@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4469967695800262727}
   - component: {fileID: 4469967695800262726}
   - component: {fileID: 4469967695800262729}
-  - component: {fileID: 4469967695800262728}
   m_Layer: 0
   m_Name: Owen
   m_TagString: Untagged
@@ -167,7 +166,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4469967695800262728}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController2_5D, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -186,21 +185,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4469967695800262728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4469967695800262730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9275c947a7d3e3142bce442d3b3e3365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  zSpeedMultiplier: 1.777
-  flipSpeed: 100
 --- !u!1001 &5099424116512455106
 PrefabInstance:
   m_ObjectHideFlags: 0

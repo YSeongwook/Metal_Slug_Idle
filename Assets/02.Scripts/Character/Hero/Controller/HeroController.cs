@@ -40,10 +40,9 @@ public class HeroController : MonoBehaviour
     public readonly int SpeedParameter = Animator.StringToHash("Speed");
     public readonly int AttackParameter = Animator.StringToHash("Attack");
 
-    protected bool _isMovingToTarget;
+    protected HeroStatsManager _heroStatsManager;
 
-    private HeroStatsManager _heroStatsManager;
-
+    // 초기화 작업 수행
     protected virtual void Awake()
     {
         Initialize();
@@ -51,11 +50,13 @@ public class HeroController : MonoBehaviour
         EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
     }
 
+    // 오브젝트 파괴 시 호출
     protected virtual void OnDestroy()
     {
         EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
     }
 
+    // 컴포넌트 초기화
     private void Initialize()
     {
         _heroStatsManager = GetComponent<HeroStatsManager>();
@@ -82,16 +83,19 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    private void Update()
+    // 매 프레임 상태 업데이트
+    protected void Update()
     {
         _currentState.UpdateState();
     }
 
-    private void FixedUpdate()
+    // 고정된 시간 간격으로 물리 업데이트
+    protected void FixedUpdate()
     {
         _currentState.PhysicsUpdateState();
     }
 
+    // 상태 전환
     public void TransitionToState(IHeroState state)
     {
         if (_currentState == state) return; // 상태 전환 빈도 줄이기
@@ -100,14 +104,15 @@ public class HeroController : MonoBehaviour
         _currentState.EnterState(this);
     }
 
+    // 이동 중지
     public void StopMoving()
     {
         MoveInput = Vector2.zero;
-        _isMovingToTarget = false;
         Animator.SetFloat(SpeedParameter, 0);
         TransitionToState(IdleState);
     }
 
+    // 이동 입력 처리
     public void OnMove(InputAction.CallbackContext context)
     {
         MoveInput = context.ReadValue<Vector2>();
@@ -115,6 +120,7 @@ public class HeroController : MonoBehaviour
         LastUserInputTime = Time.time;
     }
 
+    // 캐릭터 방향 전환
     public void HandleSpriteFlip(float moveHorizontal)
     {
         if (moveHorizontal == 0) return;
@@ -135,16 +141,19 @@ public class HeroController : MonoBehaviour
         hud.localPosition = hudPosition;
     }
 
+    // 자동 모드 전환
     private void ToggleAutoMode()
     {
         IsAutoMode = !IsAutoMode;
     }
 
+    // HeroStatsManager 가져오기
     public HeroStatsManager GetHeroStatsManager()
     {
         return _heroStatsManager;
     }
 
+    // 가장 가까운 적 찾기
     public void FindClosestEnemy()
     {
         if (_cachedEnemies == null || Time.time - _lastCacheTime >= CacheInterval)
@@ -169,6 +178,7 @@ public class HeroController : MonoBehaviour
         CurrentTarget = closestEnemy;
     }
 
+    // 타겟과의 거리 계산
     public float GetDistanceToTarget(Transform target)
     {
         return Vector3.Distance(transform.position, target.position);

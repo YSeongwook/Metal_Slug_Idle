@@ -1,3 +1,5 @@
+using EnumTypes;
+using EventLibrary;
 using UnityEngine;
 
 public class HeroAttackState : IHeroState
@@ -16,6 +18,8 @@ public class HeroAttackState : IHeroState
         _lastAttackTime = Time.time - 1f / _hero.heroStats.attackSpeed;
         FindClosestEnemy();
         _hero.Animator.SetBool(IsAttacking, true);
+        
+        EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStarted);
         
         DebugLogger.Log("Enter AttackState");
     }
@@ -50,6 +54,7 @@ public class HeroAttackState : IHeroState
     public void ExitState()
     {
         _hero.Animator.SetBool(IsAttacking, false);
+        EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStopped);
     }
 
     private void FindClosestEnemy()

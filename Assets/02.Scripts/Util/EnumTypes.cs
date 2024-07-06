@@ -17,6 +17,12 @@ namespace EnumTypes
         Player,
         Enemy,
     }
+    
+    public enum HeroEvents
+    {
+        LeaderAttackStarted,
+        LeaderAttackStopped
+    }
 
     public enum UIEvents
     {

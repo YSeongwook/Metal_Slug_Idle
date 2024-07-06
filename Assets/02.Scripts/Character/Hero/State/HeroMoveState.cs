@@ -15,12 +15,15 @@ public class HeroMoveState : IHeroState
 
     public void UpdateState()
     {
-        if (!_hero.IsAutoMode) return;
-
-        MoveToTarget();
+        
     }
 
-    public void PhysicsUpdateState() { }
+    public void PhysicsUpdateState()
+    {
+        if (!_hero.IsAutoMode) return;
+        
+        MoveToTarget();
+    }
 
     public void ExitState() { }
 

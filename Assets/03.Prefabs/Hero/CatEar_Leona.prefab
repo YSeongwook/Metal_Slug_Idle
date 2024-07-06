@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8320211732717095924}
   - component: {fileID: 8320211732717095927}
   - component: {fileID: 8320211732717095926}
-  - component: {fileID: 4737868887576820631}
+  - component: {fileID: 1644146060232178372}
   - component: {fileID: 6914980880521333082}
   m_Layer: 8
   m_Name: CatEar_Leona
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4737868887576820631}
+      - m_Target: {fileID: 1644146060232178372}
         m_TargetAssemblyTypeName: HeroController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4737868887576820631
+--- !u!114 &1644146060232178372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,14 +196,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 8320211732717095928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0e23af45bd5ebc4eb038d62d2bb674e, type: 3}
+  m_Script: {fileID: 11500000, guid: b6bb440040f3a4b41a65cb3a597615d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
-  hud: {fileID: 4872126359028631025}
-  IsAutoMode: 0
   autoMoveDelay: 0.5
+  hud: {fileID: 4872126359028631025}
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
+  leader: {fileID: 0}
+  formationOffset: {x: 0, y: 0, z: 0}
+  followDistance: 5
 --- !u!114 &6914980880521333082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +245,7 @@ MonoBehaviour:
     maxHealth: 0
     attack: 0
     defense: 0
-    movementSpeed: 0
+    moveSpeed: 0
     attackSpeed: 0
     attackRange: 0
     experience: 0
