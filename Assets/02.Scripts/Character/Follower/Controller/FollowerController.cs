@@ -11,22 +11,23 @@ public class FollowerController : HeroController
     private IFollowerState currentState;
     public readonly FollowState FollowState = new FollowState();
     public readonly AttackState AttackState = new AttackState();
+    public readonly FollowManualState ManualState = new FollowManualState();
 
     private new void Awake()
     {
         Initialize();
-        TransitionToState(FollowState);
+        InitializeFollower();
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
     }
-
-    private void Start()
+    
+    private void InitializeFollower()
     {
-        // formationOffset이 초기화되지 않은 경우, 리더와의 현재 위치 차이를 기준으로 설정
         if (formationOffset == Vector3.zero)
         {
             formationOffset = transform.position - leader.transform.position;
         }
+        TransitionToState(FollowState);
     }
 
     private void OnDestroy()
@@ -36,13 +37,13 @@ public class FollowerController : HeroController
     }
     
     // 매 프레임 상태 업데이트
-    protected void Update()
+    private void Update()
     {
         currentState.UpdateState();
     }
 
     // 고정된 시간 간격으로 물리 업데이트
-    protected void FixedUpdate()
+    private void FixedUpdate()
     {
         currentState.PhysicsUpdateState();
     }
@@ -56,11 +57,13 @@ public class FollowerController : HeroController
     {
         TransitionToState(FollowState);
     }
+    
 
-    public void TransitionToState(IFollowerState newState)
+    public void TransitionToState(IFollowerState state)
     {
+        if (currentState == state) return; // 상태 전환 빈도 줄이기
         currentState?.ExitState();
-        currentState = newState;
+        currentState = state;
         currentState.EnterState(this);
     }
 }

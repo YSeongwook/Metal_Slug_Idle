@@ -3,62 +3,79 @@ using UnityEngine;
 public class AttackState : IFollowerState
 {
     private FollowerController _follower;
-    private Transform currentTargetEnemy;
+    private Transform targetEnemy;
+    private const float CheckInterval = 0.5f; // 리더 이동 감지 간격
+    private float _lastCheckTime;
+    private const float MaxDistanceFromLeader = 10f; // 리더로부터의 최대 거리
 
     public void EnterState(FollowerController follower)
     {
-        currentTargetEnemy = FindClosestEnemy(follower);
         _follower = follower;
-        
-        DebugLogger.Log("Enter FollowerAttackState");
+        targetEnemy = _follower.CurrentTarget;
+        _lastCheckTime = Time.time;
+        _follower.Animator.SetBool(_follower.IsAttacking, true);
+        Debug.Log("Enter FollowerAttackState");
     }
 
     public void UpdateState()
     {
-        if (currentTargetEnemy == null || Vector3.Distance(_follower.transform.position, currentTargetEnemy.position) > _follower.heroStats.attackRange)
+        if (_follower.IsUserControlled)
         {
-            _follower.TransitionToState(_follower.FollowState);
+            _follower.TransitionToState(_follower.ManualState);
             return;
         }
 
-        // 공격 로직
-        _follower.Animator.SetTrigger(_follower.AttackParameter);
-        // currentTargetEnemy.GetComponent<Enemy>().TakeDamage(follower.heroStats.attack);
-
-        /*
-        if (currentTargetEnemy.GetComponent<Enemy>().IsDead())
+        if (Time.time - _lastCheckTime >= CheckInterval)
         {
-            _follower.TransitionToState(_follower.FollowState);
+            _lastCheckTime = Time.time;
+            CheckLeaderDistance();
         }
-        */
+
+        if (targetEnemy == null || Vector3.Distance(_follower.transform.position, targetEnemy.position) > _follower.heroStats.attackRange)
+        {
+            MoveTowardsTarget();
+        }
+        else
+        {
+            Attack();
+        }
     }
 
-    public void PhysicsUpdateState()
-    {
-        
-    }
+    public void PhysicsUpdateState() { }
 
     public void ExitState()
     {
-        currentTargetEnemy = null;
+        targetEnemy = null;
+        _follower.Animator.SetBool(_follower.IsAttacking, false);
     }
 
-    private Transform FindClosestEnemy(FollowerController follower)
+    private void CheckLeaderDistance()
     {
-        Collider[] enemies = Physics.OverlapSphere(follower.transform.position, follower.heroStats.attackRange, follower.EnemyLayer);
-        Transform closestEnemy = null;
-        float closestDistance = Mathf.Infinity;
-
-        foreach (Collider enemy in enemies)
+        float distanceToLeader = Vector3.Distance(_follower.transform.position, _follower.leader.transform.position);
+        if (distanceToLeader > MaxDistanceFromLeader)
         {
-            float distanceToEnemy = Vector3.Distance(follower.transform.position, enemy.transform.position);
-            if (distanceToEnemy < closestDistance)
-            {
-                closestDistance = distanceToEnemy;
-                closestEnemy = enemy.transform;
-            }
+            _follower.TransitionToState(_follower.FollowState);
         }
+    }
 
-        return closestEnemy;
+    private void MoveTowardsTarget()
+    {
+        if (targetEnemy != null)
+        {
+            Vector3 direction = (targetEnemy.position - _follower.transform.position).normalized;
+            Vector3 moveDirection = new Vector3(direction.x, 0, direction.z) * (_follower.heroStats.moveSpeed * Time.deltaTime);
+            _follower.Rb.MovePosition(_follower.Rb.position + moveDirection);
+            _follower.Animator.SetFloat(_follower.SpeedParameter, moveDirection.magnitude);
+        }
+    }
+
+    private void Attack()
+    {
+        _follower.Animator.SetTrigger(_follower.AttackParameter);
+
+        if (targetEnemy != null)
+        {
+            // targetEnemy.GetComponent<Enemy>().TakeDamage(_follower.heroStats.attack);
+        }
     }
 }

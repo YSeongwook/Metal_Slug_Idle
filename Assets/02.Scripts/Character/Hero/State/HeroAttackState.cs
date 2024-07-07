@@ -9,7 +9,6 @@ public class HeroAttackState : IHeroState
     private float _lastAttackTime;
     private const float CheckInterval = 0.5f; // 공격 간격
     private float _lastCheckTime;
-    private static readonly int IsAttacking = Animator.StringToHash("IsAttacking");
     private const float MaxDistanceFromLeader = 10f;
 
     public void EnterState(HeroController hero)
@@ -17,7 +16,7 @@ public class HeroAttackState : IHeroState
         _hero = hero;
         _lastAttackTime = Time.time - 1f / _hero.heroStats.attackSpeed;
         FindClosestEnemy();
-        _hero.Animator.SetBool(IsAttacking, true);
+        _hero.Animator.SetBool(_hero.IsAttacking, true);
         
         EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStarted);
         
@@ -53,7 +52,7 @@ public class HeroAttackState : IHeroState
 
     public void ExitState()
     {
-        _hero.Animator.SetBool(IsAttacking, false);
+        _hero.Animator.SetBool(_hero.IsAttacking, false);
         EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStopped);
     }
 
@@ -68,16 +67,6 @@ public class HeroAttackState : IHeroState
         if (_targetEnemy == null) return;
 
         float distanceToEnemy = _hero.GetDistanceToTarget(_targetEnemy);
-
-        if (_hero is FollowerController follower)
-        {
-            float distanceToLeader = _hero.GetDistanceToTarget(follower.leader.transform);
-            if (distanceToLeader > MaxDistanceFromLeader)
-            {
-                _hero.TransitionToState(_hero.IdleState);
-                return;
-            }
-        }
 
         if (distanceToEnemy > _hero.heroStats.attackRange)
         {

@@ -3,17 +3,31 @@ using UnityEngine;
 public class FollowState : IFollowerState
 {
     private FollowerController _follower;
+    private const float CheckInterval = 0.5f; // 적 탐지 간격
+    private float _lastCheckTime;
 
     public void EnterState(FollowerController follower)
     {
         _follower = follower;
-        // 추가 초기화 코드가 필요한 경우 여기에 작성
-        DebugLogger.Log("Enter FollowState");
+        _lastCheckTime = Time.time;
+        _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
+        
+        Debug.Log("Enter FollowState");
     }
 
     public void UpdateState()
     {
-        
+        if (_follower.IsUserControlled)
+        {
+            _follower.TransitionToState(_follower.ManualState);
+            return;
+        }
+
+        if (Time.time - _lastCheckTime >= CheckInterval)
+        {
+            _lastCheckTime = Time.time;
+            FindClosestEnemy();
+        }
     }
 
     public void PhysicsUpdateState()
@@ -21,10 +35,7 @@ public class FollowState : IFollowerState
         FollowLeader();
     }
 
-    public void ExitState()
-    {
-        // 종료 시 처리 코드가 필요한 경우 여기에 작성
-    }
+    public void ExitState() { }
 
     private void FollowLeader()
     {
@@ -45,8 +56,18 @@ public class FollowState : IFollowerState
         {
             _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
         }
+    }
 
-        // 리더의 공격 상태를 이벤트를 통해 처리
-        // _follower.TransitionToState(_follower.AttackState);
+    private void FindClosestEnemy()
+    {
+        _follower.FindClosestEnemy();
+        if (_follower.CurrentTarget != null)
+        {
+            float distanceToTarget = _follower.GetDistanceToTarget(_follower.CurrentTarget);
+            if (distanceToTarget <= _follower.heroStats.attackRange)
+            {
+                _follower.TransitionToState(_follower.AttackState);
+            }
+        }
     }
 }

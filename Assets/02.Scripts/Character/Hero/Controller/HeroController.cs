@@ -39,6 +39,7 @@ public class HeroController : MonoBehaviour
 
     public readonly int SpeedParameter = Animator.StringToHash("Speed");
     public readonly int AttackParameter = Animator.StringToHash("Attack");
+    public readonly int IsAttacking = Animator.StringToHash("IsAttacking");
 
     protected HeroStatsManager _heroStatsManager;
 
