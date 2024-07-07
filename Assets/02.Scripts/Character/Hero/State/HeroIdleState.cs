@@ -12,7 +12,7 @@ public class HeroIdleState : IHeroState
         _lastCheckTime = Time.time;
         _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
         
-        DebugLogger.Log("Enter IdleState");
+        // DebugLogger.Log("Enter IdleState");
     }
 
     public void UpdateState()

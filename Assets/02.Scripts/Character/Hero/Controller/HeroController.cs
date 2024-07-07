@@ -159,7 +159,7 @@ public class HeroController : MonoBehaviour
     {
         if (_cachedEnemies == null || Time.time - _lastCacheTime >= CacheInterval)
         {
-            _cachedEnemies = Physics.OverlapSphere(transform.position, heroStats.attackRange * 5, EnemyLayer);
+            _cachedEnemies = Physics.OverlapSphere(transform.position, 30, EnemyLayer);
             _lastCacheTime = Time.time;
         }
 

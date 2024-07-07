@@ -5,13 +5,24 @@ public class FollowState : IFollowerState
     private FollowerController _follower;
     private const float CheckInterval = 0.5f; // 적 탐지 간격
     private float _lastCheckTime;
+    private float originalMoveSpeed;
+    
+    private Vector3 _targetPosition;
+    private Vector3 _moveDirection;
 
     public void EnterState(FollowerController follower)
     {
         _follower = follower;
         _lastCheckTime = Time.time;
         _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
-        
+        originalMoveSpeed = _follower.heroStats.moveSpeed; // 원래 이동 속도 저장
+
+        // 현재 타겟이 없을 때만 포메이션 복귀 상태로 설정
+        if (_follower.CurrentTarget == null)
+        {
+            _follower.heroStats.moveSpeed = originalMoveSpeed * 1.5f; // 이동 속도 1.5배로 설정
+        }
+
         Debug.Log("Enter FollowState");
     }
 
@@ -28,6 +39,9 @@ public class FollowState : IFollowerState
             _lastCheckTime = Time.time;
             FindClosestEnemy();
         }
+        
+        CalculateDistance();
+        SpriteFlip();
     }
 
     public void PhysicsUpdateState()
@@ -35,26 +49,37 @@ public class FollowState : IFollowerState
         FollowLeader();
     }
 
-    public void ExitState() { }
-
+    public void ExitState()
+    {
+        _follower.heroStats.moveSpeed = originalMoveSpeed; // 이동 속도 원래대로 복원
+    }
+    
     private void FollowLeader()
     {
-        Vector3 targetPosition = _follower.leader.transform.position + _follower.formationOffset;
-        float distance = Vector3.Distance(_follower.transform.position, targetPosition);
-
-        if (distance > _follower.followDistance)
+        if (_moveDirection.magnitude > 0.01f)
         {
-            Vector3 direction = (targetPosition - _follower.transform.position).normalized;
-            Vector3 moveDirection = new Vector3(direction.x, 0, direction.z) * _follower.heroStats.moveSpeed;
-            Vector3 newPosition = _follower.Rb.position + moveDirection * Time.deltaTime;
-            newPosition.y = _follower.Rb.position.y;
-
-            _follower.Rb.MovePosition(newPosition);
-            _follower.Animator.SetFloat(_follower.SpeedParameter, moveDirection.magnitude);
+            _follower.Rb.MovePosition(Vector3.MoveTowards(_follower.Rb.position, _targetPosition, _follower.heroStats.moveSpeed * 2f * Time.deltaTime));
+            _follower.Animator.SetFloat(_follower.SpeedParameter, _moveDirection.magnitude);
         }
         else
         {
             _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
+            _follower.heroStats.moveSpeed = originalMoveSpeed; // 위치 도달 시 이동 속도 원래대로 복원
+            _moveDirection = Vector3.zero;  // 미세한 이동 멈춤
+        }
+    }
+    
+    private void CalculateDistance()
+    {
+        _targetPosition = _follower.leader.transform.position + _follower.formationOffset;
+        _moveDirection = _targetPosition - _follower.transform.position;
+    }
+
+    private void SpriteFlip()
+    {
+        if (_moveDirection != Vector3.zero)
+        {
+            _follower.HandleSpriteFlip(_follower.MoveInput.x);
         }
     }
 

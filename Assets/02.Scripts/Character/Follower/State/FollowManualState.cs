@@ -3,49 +3,56 @@ using UnityEngine;
 public class FollowManualState : IFollowerState
 {
     private FollowerController _follower;
+    private Vector3 _targetPosition;
+    private Vector3 _moveDirection;
 
     public void EnterState(FollowerController follower)
     {
         _follower = follower;
-        DebugLogger.Log("Enter FollowManualState");
+        Debug.Log("Enter FollowManualState");
     }
 
     public void UpdateState()
     {
-        if (_follower.MoveInput == Vector2.zero)
-        {
-            _follower.TransitionToState(_follower.FollowState);
-        }
+        CalculateDistance();
+        SpriteFlip();
     }
 
     public void PhysicsUpdateState()
     {
-        if (_follower.MoveInput == Vector2.zero) return;
-        
-        Move();
-        _follower.LastUserInputTime = Time.time;
+        FollowLeader();
     }
-    
+
     public void ExitState()
     {
+        _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
     }
-    
-    private void Move()
-    {
-        Vector3 moveDirection = new Vector3(_follower.MoveInput.x, 0, _follower.MoveInput.y * _follower.zSpeedMultiplier);
-        Vector3 newPosition = _follower.Rb.position + moveDirection * (_follower.moveSpeed * Time.fixedDeltaTime);
-        newPosition.y = _follower.InitialY;
-        _follower.Rb.MovePosition(newPosition);
-        _follower.Animator.SetFloat(_follower.SpeedParameter, moveDirection.magnitude);
 
-        if (moveDirection != Vector3.zero)
+    private void FollowLeader()
+    {
+        if (_moveDirection.magnitude > 0.01f)
         {
-            _follower.HandleSpriteFlip(_follower.MoveInput.x);
+            _follower.Rb.MovePosition(Vector3.MoveTowards(_follower.Rb.position, _targetPosition, _follower.heroStats.moveSpeed * 2f * Time.deltaTime));
+            _follower.Animator.SetFloat(_follower.SpeedParameter, _moveDirection.magnitude);
         }
         else
         {
             _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
-            _follower.TransitionToState(_follower.FollowState);
+            _moveDirection = Vector3.zero;  // 미세한 이동 멈춤
+        }
+    }
+
+    private void CalculateDistance()
+    {
+        _targetPosition = _follower.leader.transform.position + _follower.formationOffset;
+        _moveDirection = _targetPosition - _follower.transform.position;
+    }
+
+    private void SpriteFlip()
+    {
+        if (_moveDirection != Vector3.zero)
+        {
+            _follower.HandleSpriteFlip(_follower.MoveInput.x);
         }
     }
 }

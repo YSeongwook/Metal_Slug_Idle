@@ -7,7 +7,7 @@ public class HeroManualState : IHeroState
     public void EnterState(HeroController hero)
     {
         _hero = hero;
-        DebugLogger.Log("Enter ManualState");
+        // DebugLogger.Log("Enter ManualState");
     }
 
     public void UpdateState()

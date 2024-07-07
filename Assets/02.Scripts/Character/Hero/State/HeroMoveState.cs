@@ -10,7 +10,7 @@ public class HeroMoveState : IHeroState
     {
         _hero = hero;
         
-        DebugLogger.Log("Enter MoveState");
+        // DebugLogger.Log("Enter MoveState");
     }
 
     public void UpdateState()

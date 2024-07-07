@@ -20,7 +20,7 @@ public class HeroAttackState : IHeroState
         
         EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStarted);
         
-        DebugLogger.Log("Enter AttackState");
+        // DebugLogger.Log("Enter AttackState");
     }
 
     public void UpdateState()
