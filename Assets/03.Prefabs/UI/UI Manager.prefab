@@ -30445,6 +30445,8 @@ MonoBehaviour:
   noticeButton: {fileID: 1079444814307630483}
   crewButton: {fileID: 1079444813282425308}
   calendarButton: {fileID: 1079444813903418197}
+  autoOnButton: {fileID: 6025558157567755461}
+  autoOffButton: {fileID: 9098811262178805975}
   partyPanel: {fileID: 1079444812977975250}
   heroes:
   - {fileID: 1612845432612777193}
@@ -40875,6 +40877,7 @@ MonoBehaviour:
   joystick: {fileID: 8548205915450078396}
   joystickBackground: {fileID: 4866245784423242931}
   joystickStick: {fileID: 2827983424101790474}
+  heroController: {fileID: 0}
 --- !u!1 &8275901352172276539
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks.Triggers;
 using EnumTypes;
 using EventLibrary;
 using Sirenix.OdinInspector;
@@ -100,6 +101,8 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button noticeButton;
     [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button crewButton;
     [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button calendarButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button autoOnButton;
+    [FoldoutGroup("Main UI/Horizontal/Panel Right Menus")] public Button autoOffButton;
 
     [FoldoutGroup("Main UI/Panel Party")] public GameObject partyPanel;
 
@@ -364,6 +367,16 @@ public class UIManager : Singleton<UIManager>
     public void ToggleChatUI()
     {
         chatUI.SetActive(!chatUI.activeSelf);
+    }
+
+    public void ToggleAutoButton()
+    {
+        bool isActive = autoButtonOff.gameObject.activeSelf;
+        
+        autoButtonOff.gameObject.SetActive(!isActive);
+        autoButtonOn.gameObject.SetActive(isActive);
+        
+        EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickAutoButton);
     }
 
     #endregion

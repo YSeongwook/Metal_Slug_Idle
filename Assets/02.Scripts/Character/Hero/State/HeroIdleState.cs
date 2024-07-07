@@ -11,8 +11,6 @@ public class HeroIdleState : IHeroState
         _hero = hero;
         _lastCheckTime = Time.time;
         _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
-        
-        // DebugLogger.Log("Enter IdleState");
     }
 
     public void UpdateState()
@@ -37,17 +35,17 @@ public class HeroIdleState : IHeroState
     private void FindClosestEnemy()
     {
         _hero.FindClosestEnemy();
-        if (_hero.CurrentTarget != null)
+        
+        if (_hero.CurrentTarget == null) return;
+        
+        float distanceToTarget = _hero.GetDistanceToTarget(_hero.CurrentTarget);
+        if (distanceToTarget <= _hero.heroStats.attackRange)
         {
-            float distanceToTarget = _hero.GetDistanceToTarget(_hero.CurrentTarget);
-            if (distanceToTarget <= _hero.heroStats.attackRange)
-            {
-                _hero.TransitionToState(_hero.AttackState);
-            }
-            else if (_hero.IsAutoMode)
-            {
-                _hero.TransitionToState(_hero.MoveState);
-            }
+            _hero.TransitionToState(_hero.AttackState);
+        }
+        else if (_hero.IsAutoMode)
+        {
+            _hero.TransitionToState(_hero.MoveState);
         }
     }
 }

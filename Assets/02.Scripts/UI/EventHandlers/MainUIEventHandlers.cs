@@ -31,12 +31,16 @@ public class MainUIEventHandlers : Singleton<MainUIEventHandlers>, IUIEventHandl
     {
         _uiManager.chatButton.onClick.AddListener(OnClickChatButton);
         _uiManager.mainCloseButton.onClick.AddListener(OnClickMainCloseButton);
+        _uiManager.autoButtonOn.onClick.AddListener(OnclickAutoButton);
+        _uiManager.autoButtonOff.onClick.AddListener(OnclickAutoButton);
     }
 
     public void RemoveButtonClickEvents()
     {
         _uiManager.chatButton.onClick.RemoveListener(OnClickChatButton);
         _uiManager.mainCloseButton.onClick.RemoveListener(OnClickMainCloseButton);
+        _uiManager.autoButtonOn.onClick.RemoveListener(OnclickAutoButton);
+        _uiManager.autoButtonOff.onClick.RemoveListener(OnclickAutoButton);
     }
     
     // 메인 닫기 버튼 클릭 이벤트 핸들러
@@ -49,5 +53,10 @@ public class MainUIEventHandlers : Singleton<MainUIEventHandlers>, IUIEventHandl
     private void OnClickChatButton()
     {
         _uiManager.ToggleChatUI();
+    }
+
+    private void OnclickAutoButton()
+    {
+        _uiManager.ToggleAutoButton();
     }
 }

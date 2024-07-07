@@ -70,6 +70,7 @@ public class HeroController : MonoBehaviour
         InitialY = transform.position.y;
         BoxCollider = GetComponent<BoxCollider>();
         BoxColliderCenter = BoxCollider.center;
+        IsAutoMode = true;
         if (hud == null)
         {
             hud = GetComponentInChildren<Transform>();
