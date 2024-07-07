@@ -8,6 +8,7 @@ public class AttackState : IFollowerState
     public void EnterState(FollowerController follower)
     {
         currentTargetEnemy = FindClosestEnemy(follower);
+        _follower = follower;
         
         DebugLogger.Log("Enter FollowerAttackState");
     }
@@ -34,7 +35,7 @@ public class AttackState : IFollowerState
 
     public void PhysicsUpdateState()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public void ExitState()

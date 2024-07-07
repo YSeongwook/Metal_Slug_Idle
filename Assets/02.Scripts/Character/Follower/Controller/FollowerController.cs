@@ -12,9 +12,10 @@ public class FollowerController : HeroController
     public readonly FollowState FollowState = new FollowState();
     public readonly AttackState AttackState = new AttackState();
 
-    protected override void Awake()
+    private new void Awake()
     {
-        base.Awake();
+        Initialize();
+        TransitionToState(FollowState);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
     }
@@ -26,14 +27,24 @@ public class FollowerController : HeroController
         {
             formationOffset = transform.position - leader.transform.position;
         }
-        
-        TransitionToState(FollowState);
     }
 
     private void OnDestroy()
     {
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
+    }
+    
+    // 매 프레임 상태 업데이트
+    protected void Update()
+    {
+        currentState.UpdateState();
+    }
+
+    // 고정된 시간 간격으로 물리 업데이트
+    protected void FixedUpdate()
+    {
+        currentState.PhysicsUpdateState();
     }
 
     private void OnLeaderAttackStarted()

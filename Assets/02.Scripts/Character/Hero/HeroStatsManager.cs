@@ -26,10 +26,6 @@ public class HeroStatsManager : MonoBehaviour
         {
             Debug.LogError("HeroStats could not be loaded.");
         }
-        else
-        {
-            Debug.Log("HeroStats loaded successfully.");
-        }
     }
 
     public float AttackRange => heroStats.attackRange;

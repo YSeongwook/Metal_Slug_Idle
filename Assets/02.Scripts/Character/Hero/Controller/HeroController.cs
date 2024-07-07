@@ -57,7 +57,7 @@ public class HeroController : MonoBehaviour
     }
 
     // 컴포넌트 초기화
-    private void Initialize()
+    protected void Initialize()
     {
         _heroStatsManager = GetComponent<HeroStatsManager>();
         _heroStatsManager.Initialize();
