@@ -118,6 +118,14 @@ public class HeroController : MonoBehaviour
         LastUserInputTime = Time.time;
     }
 
+    public void LoadHeroStats()
+    {
+        if (_heroStatsManager != null)
+        {
+            heroStats = _heroStatsManager.GetHeroStats();
+        }
+    }
+
     // 이동 중지
     public void StopMoving()
     {

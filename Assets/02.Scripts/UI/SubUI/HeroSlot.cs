@@ -1,4 +1,3 @@
-using System;
 using EnumTypes;
 using EventLibrary;
 using UnityEngine;
@@ -19,6 +18,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Vector3 _originalCharacterPosition; // 드래그 시작 시 캐릭터의 원래 월드 위치 저장
 
     private GameObject _leaderIcon;
+    private GameObject _inGameHero;
     private bool _isChangeLeaderMode;
 
     private const float SlotXSpacing = 230f; // 슬롯 간의 x축 간격
@@ -51,6 +51,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             UpdateCharacterPosition();
             _leaderIcon = heroTramsform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
+            _inGameHero = heroTramsform.GetComponent<HeroSlotTracker>().hero;
         }
     }
 
@@ -221,14 +222,16 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private void SetLeader()
     {
         if (!_isChangeLeaderMode) return;
-
-        EventManager<FormationEvents>.TriggerEvent(FormationEvents.SetLeader);
         
         if (formationManager != null)
         {
-            formationManager.SetLeader(heroTramsform.gameObject);
+            formationManager.SetLeader(_inGameHero);
         }
-
+        
         _isChangeLeaderMode = false;
+        
+        EventManager<FormationEvents>.TriggerEvent(FormationEvents.SetLeader);
+        
+        _leaderIcon.SetActive(true);
     }
 }

@@ -30,6 +30,11 @@ public class FollowerController : HeroController
     public void InitializeFollower()
     {
         this.IsLeader = false;
+        if (leader == null)
+        {
+            leader = FormationManager.Instance.leader;
+        }
+        
         if (leader != null)
         {
             if (formationOffset == Vector3.zero)
@@ -83,6 +88,7 @@ public class FollowerController : HeroController
     {
         if (currentState != AttackState) // AttackState일 때는 무시
         {
+            
         }
     }
 

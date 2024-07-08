@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform player; // 플레이어를 참조
+    public Transform leader; // 플레이어를 참조
     public Vector3 offset; // 플레이어와의 거리 차이
     public float smoothSpeed = 1f; // 보간 속도
 
     private void LateUpdate()
     {
-        if (player == null) return;
-        Vector3 desiredPosition = player.position + offset;
+        if (leader == null) return;
+        Vector3 desiredPosition = leader.position + offset;
 
         // Y축 고정
         desiredPosition.y = transform.position.y;

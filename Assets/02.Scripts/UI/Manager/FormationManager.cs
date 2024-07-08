@@ -1,58 +1,59 @@
-using UnityEngine;
-using System.Linq;
 using System.Collections.Generic;
 using EnumTypes;
 using EventLibrary;
+using UnityEngine;
 
-public class FormationManager : MonoBehaviour
+public class FormationManager : Singleton<FormationManager>
 {
     public GameObject changeLeaderModePanel; // 리더 카메라 변경 모드 패널
-    public HeroController leader;
+    public HeroController leader; // 인스펙터에서 할당된 리더
     public List<FollowerController> followers;
-    private bool isChangeLeaderMode;
+    public CameraFollow cameraFollow;
+    
+    private bool _isChangeLeaderMode;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+        
         // followers 리스트 초기화
         followers = new List<FollowerController>();
 
         // 씬에 있는 모든 HeroController를 찾음
         HeroController[] heroControllers = FindObjectsOfType<HeroController>();
 
-        if (leader == null)
+        // 인스펙터에서 할당된 리더가 없는 경우 첫 번째 영웅을 리더로 설정
+        if (leader == null && heroControllers.Length > 0)
         {
-            // 리더를 찾아 leader 변수에 할당
-            leader = heroControllers.FirstOrDefault(hero => hero.IsLeader);
+            leader = heroControllers[0];
+            leader.IsLeader = true;
         }
 
+        // 리더 설정
         if (leader != null)
         {
             leader.IsLeader = true;
-            leader.GetComponent<FollowerController>().enabled = false;
-        }
-
-        // 리더가 할당되지 않은 경우, 첫 번째 영웅을 리더로 설정
-        if (leader == null && heroControllers.Length > 0)
-        {
-            leader = heroControllers[4];
-            leader.IsLeader = true;
+            var leaderFollower = leader.GetComponent<FollowerController>();
+            if (leaderFollower != null)
+            {
+                leaderFollower.enabled = false;
+            }
         }
 
         // 리더가 아닌 나머지 HeroController를 followers 리스트에 할당
         foreach (var hero in heroControllers)
         {
-            if (!hero.IsLeader)
+            if (hero == leader) continue;
+            
+            var follower = hero.GetComponent<FollowerController>();
+            if (follower != null && !followers.Contains(follower))
             {
-                var follower = hero.GetComponent<FollowerController>();
-                if (follower != null && !followers.Contains(follower))
-                {
-                    followers.Add(follower);
-
-                    if (follower.gameObject.GetComponent<HeroController>().IsLeader)
-                    {
-                        followers.Remove(follower);
-                    }
-                }
+                followers.Add(follower);
+            }
+                
+            if (follower.gameObject.GetComponent<HeroController>().IsLeader)
+            {
+                followers.Remove(follower);
             }
         }
     }
@@ -63,11 +64,6 @@ public class FormationManager : MonoBehaviour
         if (leader == null)
         {
             Debug.LogError("Leader not found!");
-        }
-        else
-        {
-            SetLeader(leader.gameObject);
-            Debug.Log("Leader assigned: " + leader.name);
         }
 
         if (followers.Count == 0)
@@ -80,7 +76,6 @@ public class FormationManager : MonoBehaviour
             {
                 SetFollower(follower.gameObject);
             }
-            Debug.Log("Followers assigned: " + string.Join(", ", followers.Select(f => f.name)));
         }
 
         EventManager<FormationEvents>.StartListening(FormationEvents.OnChangeLeaderMode, EnableChangeLeaderMode);
@@ -95,13 +90,13 @@ public class FormationManager : MonoBehaviour
 
     private void EnableChangeLeaderMode()
     {
-        isChangeLeaderMode = true;
+        _isChangeLeaderMode = true;
         changeLeaderModePanel.SetActive(true);
     }
 
     private void DisableChangeLeaderMode()
     {
-        isChangeLeaderMode = false;
+        _isChangeLeaderMode = false;
         changeLeaderModePanel.SetActive(false);
     }
 
@@ -112,41 +107,50 @@ public class FormationManager : MonoBehaviour
 
     public void SetLeader(GameObject newLeader)
     {
-        if (!isChangeLeaderMode) return;
-        DebugLogger.Log("SetLeader");
+        // 위에서 먼저 inschangeLeaderMode 꺼버리는듯
+        if (!_isChangeLeaderMode) return;
 
         var newLeaderController = newLeader.GetComponent<HeroController>();
-        if (newLeaderController == null) return;
+        if (newLeaderController == null || newLeaderController == leader) return;
 
         var currentLeaderFollowerController = leader.GetComponent<FollowerController>();
         var newLeaderFollowerController = newLeader.GetComponent<FollowerController>();
 
         // 현재 리더를 팔로워로 설정
         leader.IsLeader = false;
-        leader.enabled = false;
         if (currentLeaderFollowerController != null)
         {
+            leader.enabled = false;
             currentLeaderFollowerController.enabled = true;
             currentLeaderFollowerController.InitializeFollower(); // 초기화 메서드 호출
-            followers.Add(currentLeaderFollowerController);
+            if (!followers.Contains(currentLeaderFollowerController))
+            {
+                followers.Add(currentLeaderFollowerController);
+            }
         }
 
         // 새로운 리더를 설정
         newLeaderController.IsLeader = true;
-        newLeaderController.enabled = true;
         if (newLeaderFollowerController != null)
         {
             newLeaderFollowerController.enabled = false;
             followers.Remove(newLeaderFollowerController);
+            newLeaderController.enabled = true;
         }
 
-        // 새로운 리더를 업데이트
+        // 새로운 리더 업데이트
         leader = newLeaderController;
+        leader.LoadHeroStats();
 
-        // 팔로워들의 리더를 업데이트
+        // 카메라 추적 대상 새로운 리더로 업데이트
+        cameraFollow.leader = leader.transform;
+
+        // 팔로워들 업데이트
         foreach (var follower in followers)
         {
             follower.leader = leader;
+            // follower.InitializeFollower();
+            follower.LoadHeroStats();
         }
 
         Debug.Log("New Leader assigned: " + leader.name);

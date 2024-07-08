@@ -181,6 +181,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1835410461289210005}
+        m_TargetAssemblyTypeName: HeroController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 03e41995-29a2-41e8-bd5d-1dcf352a5e5e
     m_ActionName: Player/Move
   m_NeverAutoSwitchControlSchemes: 0
@@ -202,7 +214,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
-  autoMoveDelay: 0.5
   hud: {fileID: 1117550246640602529}
   heroStats:
     id: 0
@@ -235,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
-  autoMoveDelay: 0.5
   hud: {fileID: 1117550246640602529}
   heroStats:
     id: 0
