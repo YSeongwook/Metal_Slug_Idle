@@ -1,11 +1,16 @@
+using System;
+using EnumTypes;
+using EventLibrary;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     public int slotIndex; // 슬롯 인덱스
     public Transform heroTramsform; // 캐릭터의 Transform
     public Transform renderTextureParty; // Render Texture Party Transform
+    public GameObject changeLeaderModePanel; // 리더 카메라 변경 모드 패널
+    public FormationManager formationManager;
 
     private Transform _originalParent; // 드래그 시작 시 원래 부모 트랜스폼 저장
     private CanvasGroup _canvasGroup; // 드래그 중 상호작용을 비활성화하기 위한 CanvasGroup
@@ -13,7 +18,8 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private Vector3 _originalWorldPosition; // 드래그 시작 시 원래 월드 위치 저장
     private Vector3 _originalCharacterPosition; // 드래그 시작 시 캐릭터의 원래 월드 위치 저장
 
-    private Camera _mainCamera; // 메인 카메라
+    private GameObject _leaderIcon;
+    private bool _isChangeLeaderMode;
 
     private const float SlotXSpacing = 230f; // 슬롯 간의 x축 간격
     private const float SlotYSpacing = 130f; // 슬롯 간의 y축 간격
@@ -24,12 +30,18 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
-        _mainCamera = Camera.main;
 
         if (_canvasGroup == null)
         {
             _canvasGroup = gameObject.AddComponent<CanvasGroup>();
         }
+
+        if (formationManager == null)
+        {
+            formationManager = FindObjectOfType<FormationManager>();
+        }
+        
+        EventManager<FormationEvents>.StartListening(FormationEvents.OnChangeLeaderMode, EnableChangeLeaderMode);
     }
 
     private void Start()
@@ -38,7 +50,13 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         if (heroTramsform != null)
         {
             UpdateCharacterPosition();
+            _leaderIcon = heroTramsform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
         }
+    }
+
+    private void OnDestroy()
+    {
+        EventManager<FormationEvents>.StopListening(FormationEvents.OnChangeLeaderMode, EnableChangeLeaderMode);
     }
 
     public void InitializeSlot(Transform heroTransform, Transform renderTextureParty)
@@ -50,6 +68,11 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         
         heroTransform.GetComponent<HeroSlotTracker>().assignedSlotIndex = slotIndex;
         UpdateCharacterPosition();
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        SetLeader(); // 리더 변경 모드 중 영웅 슬롯 클릭 시 클릭된 영웅 슬롯의 영웅 리더로 설정
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -188,5 +211,24 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     {
         _rectTransform.position = _originalWorldPosition; // 유효한 슬롯이 없으면 원래 위치로 돌아감
         heroTramsform.position = _originalCharacterPosition; // 캐릭터도 원래 위치로 돌아감
+    }
+
+    private void EnableChangeLeaderMode()
+    {
+        _isChangeLeaderMode = true;
+    }
+    
+    private void SetLeader()
+    {
+        if (!_isChangeLeaderMode) return;
+
+        EventManager<FormationEvents>.TriggerEvent(FormationEvents.SetLeader);
+        
+        if (formationManager != null)
+        {
+            formationManager.SetLeader(heroTramsform.gameObject);
+        }
+
+        _isChangeLeaderMode = false;
     }
 }

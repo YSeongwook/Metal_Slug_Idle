@@ -35,7 +35,8 @@ public class HeroMoveState : IHeroState
         if (_target == null) return;
 
         Vector3 direction = (_target.position - _hero.transform.position).normalized;
-        float distanceToMove = Vector3.Distance(_hero.transform.position, _target.position) - (_hero.heroStats.attackRange - 1f);
+        float attackRangeBuffer = 1.0f; // 추가적인 마진
+        float distanceToMove = Vector3.Distance(_hero.transform.position, _target.position) - (_hero.heroStats.attackRange - attackRangeBuffer);
 
         if (distanceToMove > 0)
         {
@@ -48,6 +49,7 @@ public class HeroMoveState : IHeroState
         else
         {
             _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
+            _hero.TransitionToState(_hero.AttackState);
         }
     }
 }

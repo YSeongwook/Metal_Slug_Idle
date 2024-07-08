@@ -2,7 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-// SubUI 클래스는 버튼의 스프라이트를 변경하는 기본 기능을 제공합니다.
+// SubUI 클래스는 버튼의 스프라이트를 변경하는 기본 기능을 제공
 public class SubUI : MonoBehaviour
 {
     [PropertySpace(5f, 5f)] public Vector3 upperBarPosition;

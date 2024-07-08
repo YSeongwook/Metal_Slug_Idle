@@ -15,12 +15,6 @@ public class HeroIdleState : IHeroState
 
     public void UpdateState()
     {
-        if (_hero.IsUserControlled)
-        {
-            _hero.TransitionToState(_hero.ManualState);
-            return;
-        }
-
         if (Time.time - _lastCheckTime >= CheckInterval)
         {
             _lastCheckTime = Time.time;

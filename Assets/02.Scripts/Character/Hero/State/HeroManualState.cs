@@ -7,12 +7,19 @@ public class HeroManualState : IHeroState
     public void EnterState(HeroController hero)
     {
         _hero = hero;
-        // DebugLogger.Log("Enter ManualState");
     }
 
     public void UpdateState()
     {
+        /*
         if (_hero.MoveInput == Vector2.zero)
+        {
+            DebugLogger.Log("TransitionIdleState");
+            _hero.TransitionToState(_hero.IdleState);
+        }
+        */
+
+        if (!_hero.IsUserControlled)
         {
             _hero.TransitionToState(_hero.IdleState);
         }

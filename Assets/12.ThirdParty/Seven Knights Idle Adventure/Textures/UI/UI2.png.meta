@@ -267,13 +267,13 @@ TextureImporter:
       name: Back_Assigned
       rect:
         serializedVersion: 2
-        x: 1290
-        y: 618
-        width: 280
-        height: 60
+        x: 1220
+        y: 621
+        width: 420
+        height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 40, y: 20, z: 40, w: 20}
       outline: []
       physicsShape: []
       tessellationDetail: 0

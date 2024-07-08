@@ -110,7 +110,6 @@ public class UIManager : Singleton<UIManager>
     public GameObject[] heroes;
 
     // Hero UI
-    [FoldoutGroup("Hero UI")] public GameObject formationPanel;
     [FoldoutGroup("Hero UI")] public GameObject heroList;
     
     [FoldoutGroup("Hero UI/MiddleBar")] public GameObject middleBar;
@@ -123,6 +122,10 @@ public class UIManager : Singleton<UIManager>
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortAscendIcon;
     [FoldoutGroup("Hero UI/SortBar")] public GameObject sortDescendIcon;
 
+    [FoldoutGroup("Hero UI/Formation Panel")] public GameObject formationPanel;
+    [FoldoutGroup("Hero UI/Formation Panel")] public Button leaderCameraButton;
+    [FoldoutGroup("Hero UI/Formation Panel")] public GameObject touchLeaderPanel;
+    
     [FoldoutGroup("Hero UI/Panels")] public GameObject typeButtonsPanel;
     [FoldoutGroup("Hero UI/Panels")] public GameObject gradeButtonsPanel;
     
@@ -463,6 +466,16 @@ public class UIManager : Singleton<UIManager>
         sortDescendIcon.SetActive(_isDescending);
 
         _isDescending = !_isDescending;
+    }
+
+    public void EnableTouchLeaderPanel()
+    {
+        touchLeaderPanel.SetActive(true);
+    }
+
+    public void DisableTouchLeaderPanel()
+    {
+        touchLeaderPanel.SetActive(false);
     }
     
     #endregion

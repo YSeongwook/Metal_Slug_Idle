@@ -22,12 +22,12 @@ public class HeroUIEventHandlers : Singleton<HeroUIEventHandlers>, IUIEventHandl
     
     public void AddEvents()
     {
-        
+        EventManager<FormationEvents>.StartListening(FormationEvents.SetLeader, _uiManager.DisableTouchLeaderPanel);
     }
 
     public void RemoveEvents()
     {
-        
+        EventManager<FormationEvents>.StopListening(FormationEvents.SetLeader, _uiManager.DisableTouchLeaderPanel);
     }
 
     public void AddButtonClickEvents()
@@ -38,6 +38,7 @@ public class HeroUIEventHandlers : Singleton<HeroUIEventHandlers>, IUIEventHandl
         _uiManager.heroTabInActiveButton.onClick.AddListener(OnClickHeroTabInActiveButton);
         _uiManager.formationTabInActiveButton.onClick.AddListener(OnClickFormationTabInActiveButton);
         _uiManager.sortAttackButton.onClick.AddListener(OnClickSortAttackButton);
+        _uiManager.leaderCameraButton.onClick.AddListener(OnClickLeaderCameraButton);
     }
 
     public void RemoveButtonClickEvents()
@@ -48,6 +49,7 @@ public class HeroUIEventHandlers : Singleton<HeroUIEventHandlers>, IUIEventHandl
         _uiManager.heroTabInActiveButton.onClick.RemoveListener(OnClickHeroTabInActiveButton);
         _uiManager.formationTabInActiveButton.onClick.RemoveListener(OnClickFormationTabInActiveButton);
         _uiManager.sortAttackButton.onClick.RemoveListener(OnClickSortAttackButton);
+        _uiManager.leaderCameraButton.onClick.RemoveListener(OnClickLeaderCameraButton);
     }
     
     private void OnClickShowOnlyOwnedButton()
@@ -80,5 +82,11 @@ public class HeroUIEventHandlers : Singleton<HeroUIEventHandlers>, IUIEventHandl
     {
         _uiManager.EnableFormationTab();
         EventManager<UIEvents>.TriggerEvent(UIEvents.OnClickFormationTabButton);
+    }
+
+    private void OnClickLeaderCameraButton()
+    {
+        _uiManager.EnableTouchLeaderPanel();
+        EventManager<FormationEvents>.TriggerEvent(FormationEvents.OnChangeLeaderMode);
     }
 }

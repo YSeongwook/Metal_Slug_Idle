@@ -25,12 +25,6 @@ public class HeroAttackState : IHeroState
 
     public void UpdateState()
     {
-        if (_hero.IsUserControlled)
-        {
-            _hero.TransitionToState(_hero.ManualState);
-            return;
-        }
-
         if (_targetEnemy == null || !_targetEnemy.gameObject.activeSelf)
         {
             FindClosestEnemy();

@@ -21,7 +21,14 @@ namespace EnumTypes
     public enum HeroEvents
     {
         LeaderAttackStarted,
-        LeaderAttackStopped
+        LeaderAttackStopped,
+        LeaderDirectionChanged,
+    }
+    
+    public enum FormationEvents
+    {
+        OnChangeLeaderMode,
+        SetLeader,
     }
 
     public enum UIEvents
@@ -32,6 +39,8 @@ namespace EnumTypes
         OnClickEmailSignIn,
         StartLoading,
         EndLoading,
+        OnTouchStartJoystick,
+        OnTouchEndJoystick,
         OnClickAutoButton,
         OnClickShowOnlyOwnedButton,
         OnClickSortListAttackButton,

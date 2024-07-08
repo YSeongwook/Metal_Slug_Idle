@@ -9,7 +9,7 @@ public class FollowManualState : IFollowerState
     public void EnterState(FollowerController follower)
     {
         _follower = follower;
-        Debug.Log("Enter FollowManualState");
+        _follower.Animator.SetBool(_follower.IsAttacking, false);
     }
 
     public void UpdateState()

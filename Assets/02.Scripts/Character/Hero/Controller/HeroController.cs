@@ -10,7 +10,8 @@ public class HeroController : MonoBehaviour
     public float autoMoveDelay = 0.5f;
     public Transform hud;
     public HeroStats heroStats;
-
+    
+    public bool IsLeader { get; set; }
     public Rigidbody Rb { get; private set; }
     public SpriteRenderer SpriteRenderer { get; private set; }
     public Animator Animator { get; private set; }
@@ -49,12 +50,16 @@ public class HeroController : MonoBehaviour
         Initialize();
         TransitionToState(IdleState);
         EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
+        EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
+        EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
 
     // 오브젝트 파괴 시 호출
     protected virtual void OnDestroy()
     {
         EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
+        EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
+        EventManager<UIEvents>.StopListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
 
     // 컴포넌트 초기화
@@ -70,7 +75,8 @@ public class HeroController : MonoBehaviour
         InitialY = transform.position.y;
         BoxCollider = GetComponent<BoxCollider>();
         BoxColliderCenter = BoxCollider.center;
-        IsAutoMode = true;
+        IsAutoMode = false;
+        IsLeader = true;
         if (hud == null)
         {
             hud = GetComponentInChildren<Transform>();
@@ -105,6 +111,13 @@ public class HeroController : MonoBehaviour
         _currentState = state;
         _currentState.EnterState(this);
     }
+    
+    // 이동 입력 처리
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        MoveInput = context.ReadValue<Vector2>();
+        LastUserInputTime = Time.time;
+    }
 
     // 이동 중지
     public void StopMoving()
@@ -113,40 +126,22 @@ public class HeroController : MonoBehaviour
         Animator.SetFloat(SpeedParameter, 0);
         TransitionToState(IdleState);
     }
-
-    // 이동 입력 처리
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        MoveInput = context.ReadValue<Vector2>();
-        IsUserControlled = MoveInput != Vector2.zero;
-        LastUserInputTime = Time.time;
-    }
-
-    // 캐릭터 방향 전환
-    public void HandleSpriteFlip(float moveHorizontal)
-    {
-        if (moveHorizontal == 0) return;
-
-        bool shouldFlip = moveHorizontal < 0;
-
-        if (shouldFlip == IsFlipped) return;
-
-        IsFlipped = shouldFlip;
-        SpriteRenderer.flipX = shouldFlip;
-
-        Vector3 boxColliderCenter = BoxCollider.center;
-        boxColliderCenter.x *= -1;
-        BoxCollider.center = boxColliderCenter;
-
-        Vector3 hudPosition = hud.localPosition;
-        hudPosition.x *= -1;
-        hud.localPosition = hudPosition;
-    }
-
+    
     // 자동 모드 전환
     private void ToggleAutoMode()
     {
         IsAutoMode = !IsAutoMode;
+    }
+
+    private void OnUserControl()
+    {
+        IsUserControlled = true;
+        TransitionToState(ManualState);
+    }
+
+    protected void OffUserControl()
+    {
+        IsUserControlled = false;
     }
 
     // HeroStatsManager 가져오기
@@ -178,11 +173,41 @@ public class HeroController : MonoBehaviour
         }
 
         CurrentTarget = closestEnemy;
+        
+        // 적이 발견되면 스프라이트 반전
+        if (CurrentTarget != null)
+        {
+            float moveHorizontal = CurrentTarget.position.x - transform.position.x;
+            HandleSpriteFlip(moveHorizontal);
+        }
     }
 
     // 타겟과의 거리 계산
     public float GetDistanceToTarget(Transform target)
     {
         return Vector3.Distance(transform.position, target.position);
+    }
+    
+    // 캐릭터 방향 전환
+    public void HandleSpriteFlip(float moveHorizontal)
+    {
+        if (moveHorizontal == 0) return;
+
+        bool shouldFlip = moveHorizontal < 0;
+
+        if (shouldFlip == IsFlipped) return;
+
+        IsFlipped = shouldFlip;
+        SpriteRenderer.flipX = shouldFlip;
+
+        Vector3 boxColliderCenter = BoxCollider.center;
+        boxColliderCenter.x *= -1;
+        BoxCollider.center = boxColliderCenter;
+
+        Vector3 hudPosition = hud.localPosition;
+        hudPosition.x *= -1;
+        hud.localPosition = hudPosition;
+        
+        EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderDirectionChanged);
     }
 }
