@@ -7,7 +7,6 @@ public class HeroController : MonoBehaviour
 {
     public float moveSpeed = 2f;
     public float zSpeedMultiplier = 1.777f;
-    public float autoMoveDelay = 0.5f;
     public Transform hud;
     public HeroStats heroStats;
     
@@ -76,7 +75,7 @@ public class HeroController : MonoBehaviour
         BoxCollider = GetComponent<BoxCollider>();
         BoxColliderCenter = BoxCollider.center;
         IsAutoMode = false;
-        IsLeader = true;
+        IsUserControlled = false;
         if (hud == null)
         {
             hud = GetComponentInChildren<Transform>();

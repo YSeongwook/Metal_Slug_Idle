@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1134890735426999493}
   - component: {fileID: 1134890735426999483}
   - component: {fileID: 4841292066431430580}
+  - component: {fileID: 1835410461289210005}
   - component: {fileID: 1727715978751259556}
   m_Layer: 8
   m_Name: Hero
@@ -201,7 +202,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   zSpeedMultiplier: 1.777
+  autoMoveDelay: 0.5
   hud: {fileID: 1117550246640602529}
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
+--- !u!114 &1835410461289210005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134890735426999487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6bb440040f3a4b41a65cb3a597615d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  zSpeedMultiplier: 1.777
+  autoMoveDelay: 0.5
+  hud: {fileID: 1117550246640602529}
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
+  leader: {fileID: 0}
+  formationOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &1727715978751259556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +278,7 @@ MonoBehaviour:
     maxHealth: 0
     attack: 0
     defense: 0
-    movementSpeed: 0
+    moveSpeed: 0
     attackSpeed: 0
     attackRange: 0
     experience: 0

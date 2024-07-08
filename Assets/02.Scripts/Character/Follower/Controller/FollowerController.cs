@@ -5,9 +5,7 @@ using EventLibrary;
 public class FollowerController : HeroController
 {
     public HeroController leader;
-    public SpriteRenderer leaderSpriteRenderer;
     public Vector3 formationOffset;
-    public float followDistance = 5f;
 
     private IFollowerState currentState;
     public readonly FollowState FollowState = new FollowState();
@@ -17,6 +15,10 @@ public class FollowerController : HeroController
     private new void Awake()
     {
         Initialize();
+    }
+
+    private void Start()
+    {
         InitializeFollower();
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
@@ -24,16 +26,22 @@ public class FollowerController : HeroController
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
-    
-    private void InitializeFollower()
+
+    public void InitializeFollower()
     {
         this.IsLeader = false;
-        leaderSpriteRenderer = leader.SpriteRenderer;
-        if (formationOffset == Vector3.zero)
+        if (leader != null)
         {
-            formationOffset = transform.position - leader.transform.position;
+            if (formationOffset == Vector3.zero)
+            {
+                formationOffset = transform.position - leader.transform.position;
+            }
+            TransitionToState(FollowState);
         }
-        TransitionToState(FollowState);
+        else
+        {
+            Debug.LogError("Leader not assigned to follower.");
+        }
     }
 
     private void OnDestroy()
@@ -44,17 +52,18 @@ public class FollowerController : HeroController
         EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
         EventManager<UIEvents>.StopListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
-    
+
     // 매 프레임 상태 업데이트
     private void Update()
     {
+        if (currentState == null) return;
         currentState.UpdateState();
-        // 방향은 여기서 관리하는게 좋을 듯, 이동 하는 방향을 바라보게?
     }
 
     // 고정된 시간 간격으로 물리 업데이트
     private void FixedUpdate()
     {
+        if (currentState == null) return;
         currentState.PhysicsUpdateState();
     }
 
@@ -74,7 +83,6 @@ public class FollowerController : HeroController
     {
         if (currentState != AttackState) // AttackState일 때는 무시
         {
-            SpriteRenderer.flipX = !SpriteRenderer.flipX;
         }
     }
 
@@ -91,7 +99,7 @@ public class FollowerController : HeroController
         currentState = state;
         currentState.EnterState(this);
     }
-    
+
     // 캐릭터 방향 전환
     public void HandleSpriteFlip(float moveHorizontal)
     {

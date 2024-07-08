@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1807524690767059632}
   - component: {fileID: 1807524690767059635}
   - component: {fileID: 1807524690767059634}
+  - component: {fileID: 6927638003869927350}
   - component: {fileID: 1429531440820737801}
   - component: {fileID: 1627243142788437845}
   m_Layer: 8
@@ -187,6 +188,39 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6927638003869927350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807524690767059636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e23af45bd5ebc4eb038d62d2bb674e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  zSpeedMultiplier: 1.777
+  autoMoveDelay: 0.5
+  hud: {fileID: 1337405372330666192}
+  heroStats:
+    id: 0
+    name: 
+    rank: 
+    level: 0
+    health: 0
+    maxHealth: 0
+    attack: 0
+    defense: 0
+    moveSpeed: 0
+    attackSpeed: 0
+    attackRange: 0
+    experience: 0
+    maxExperience: 0
+    criticalHitChance: 0
+    criticalDamageMultiplier: 0
+    skills: []
 --- !u!114 &1429531440820737801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +256,6 @@ MonoBehaviour:
     skills: []
   leader: {fileID: 0}
   formationOffset: {x: 0, y: 0, z: 0}
-  followDistance: 5
 --- !u!114 &1627243142788437845
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -467,6 +467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294548733}
+  - component: {fileID: 294548734}
   m_Layer: 0
   m_Name: FormationManager
   m_TagString: Untagged
@@ -487,8 +488,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846067634}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &294548734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294548732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f06f88416e7b249abaa574e8f038d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeLeaderModePanel: {fileID: 2111510748}
+  leader: {fileID: 1513594456}
+  followers: []
 --- !u!1 &319611110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1886,8 +1902,8 @@ Transform:
   - {fileID: 761640032}
   - {fileID: 15708816}
   - {fileID: 818669846}
-  - {fileID: 1678145499}
   - {fileID: 294548733}
+  - {fileID: 1678145499}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2327,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1835410461289210005, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
+      propertyPath: leader
+      value: 
+      objectReference: {fileID: 1513594456}
     - target: {fileID: 3706108490835935736, guid: 926ac26221bc1c744af30a0d9d895863, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -3507,7 +3527,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846067634}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1678145500
 MonoBehaviour:
@@ -5311,7 +5331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7833168057698273091, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7909824096196789401, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5491,6 +5511,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+--- !u!1 &2111510748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1429915789050759142, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+  m_PrefabInstance: {fileID: 2111510747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2111510749 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8117139290663895434, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
