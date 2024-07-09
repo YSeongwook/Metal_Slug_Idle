@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     public int slotIndex; // 슬롯 인덱스
-    public Transform heroTramsform; // 캐릭터의 Transform
+    public Transform heroTramsform; // 영웅 Transform
     public Transform renderTextureParty; // Render Texture Party Transform
     public GameObject changeLeaderModePanel; // 리더 카메라 변경 모드 패널
     public FormationManager formationManager;
@@ -16,10 +16,10 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private RectTransform _rectTransform; // RectTransform 참조
     private Vector3 _originalWorldPosition; // 드래그 시작 시 원래 월드 위치 저장
     private Vector3 _originalCharacterPosition; // 드래그 시작 시 캐릭터의 원래 월드 위치 저장
-
-    private GameObject _leaderIcon;
-    private GameObject _inGameHero;
-    private bool _isChangeLeaderMode;
+    private HeroSlotTracker _heroSlotTracker; // 렌더 텍스쳐 영웅 heroSlotTracker
+    private GameObject _leaderIcon; // 리더 카메라 아이콘
+    private GameObject _inGameHero; // 렌더 텍스쳐 영웅에 대응하는 인게임 영웅
+    private bool _isChangeLeaderMode; // 리더 변경 모드 판별 변수
 
     private const float SlotXSpacing = 230f; // 슬롯 간의 x축 간격
     private const float SlotYSpacing = 130f; // 슬롯 간의 y축 간격
@@ -51,7 +51,8 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             UpdateCharacterPosition();
             _leaderIcon = heroTramsform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
-            _inGameHero = heroTramsform.GetComponent<HeroSlotTracker>().hero;
+            _heroSlotTracker = heroTramsform.GetComponent<HeroSlotTracker>();
+            _inGameHero = _heroSlotTracker.hero;
         }
     }
 
@@ -159,8 +160,8 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             (targetSlot.heroTramsform.position, this.heroTramsform.position) = (this.heroTramsform.position, targetSlot.heroTramsform.position);
 
             // 슬롯 인덱스 갱신
-            targetSlot.heroTramsform.GetComponent<HeroSlotTracker>().assignedSlotIndex = targetSlot.slotIndex;
-            heroTramsform.GetComponent<HeroSlotTracker>().assignedSlotIndex = slotIndex;
+            targetSlot._heroSlotTracker.assignedSlotIndex = targetSlot.slotIndex;
+            _heroSlotTracker.assignedSlotIndex = slotIndex;
 
             // 캐릭터의 위치를 업데이트합니다.
             targetSlot.UpdateCharacterPosition();

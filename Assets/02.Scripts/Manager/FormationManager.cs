@@ -152,6 +152,8 @@ public class FormationManager : Singleton<FormationManager>
             // follower.InitializeFollower();
             follower.LoadHeroStats();
         }
+        
+        UpdateFormationOffSet();
 
         Debug.Log("New Leader assigned: " + leader.name);
     }
@@ -170,5 +172,23 @@ public class FormationManager : Singleton<FormationManager>
 
         // 팔로워의 리더를 설정
         followerController.leader = leader;
+    }
+
+    private void UpdateFormationOffSet()
+    {
+        var leaderOffset = leader.gameObject.GetComponent<FollowerController>().formationOffset;
+        foreach (var follower in followers)
+        {
+            follower.formationOffset = RoundToOneDecimalPlace(follower.formationOffset - leaderOffset);
+        }
+    }
+    
+    private Vector3 RoundToOneDecimalPlace(Vector3 vector)
+    {
+        return new Vector3(
+            Mathf.Round(vector.x * 10f) / 10f,
+            Mathf.Round(vector.y * 10f) / 10f,
+            Mathf.Round(vector.z * 10f) / 10f
+        );
     }
 }
