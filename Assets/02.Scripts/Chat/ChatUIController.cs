@@ -40,6 +40,8 @@ namespace Chat
             _tcpClientManager = new TcpClientManager(serverIp, port);
             _tcpClientManager.OnMessageReceived += HandleMessageReceived;
             DebugLogger.Log("Chat UI 활성화됨 - 서버에 연결");
+
+            OnFirebaseSignIn();
         }
 
         private void OnDisable()
@@ -56,7 +58,7 @@ namespace Chat
         private void OnFirebaseSignIn()
         {
             _currentUser = AuthManager.Instance.GetCurrentUser();
-            logger.Log($"사용자 {_currentUser.DisplayName}로 로그인됨");
+            DebugLogger.Log($"사용자 {_currentUser.DisplayName}로 로그인됨");
         }
 
         private void OnSendButtonClicked()

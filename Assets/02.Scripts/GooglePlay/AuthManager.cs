@@ -6,7 +6,6 @@ using Firebase.Extensions;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using TMPro;
-using UnityEngine;
 
 public class AuthManager : Singleton<AuthManager>
 {
@@ -106,7 +105,7 @@ public class AuthManager : Singleton<AuthManager>
             }
 
             currentUser = task.Result;
-            logger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
+            DebugLogger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 로그인 했습니다.");
             signInText.text = "Firebase Login";
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);
@@ -134,8 +133,10 @@ public class AuthManager : Singleton<AuthManager>
 
         _auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task =>
         {
+            DebugLogger.Log($"이메일 로그인 시도중...");
             if (task.IsCanceled || task.IsFaulted)
             {
+                DebugLogger.Log($"이메일 로그인 시도중2...");
                 FirebaseException firebaseEx = task.Exception?.InnerException as FirebaseException;
                 if (firebaseEx != null && firebaseEx.ErrorCode == 1)
                 {
@@ -161,7 +162,7 @@ public class AuthManager : Singleton<AuthManager>
             }
 
             currentUser = task.Result.User;
-            logger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 이메일 로그인 했습니다.");
+            DebugLogger.Log($"{currentUser.DisplayName ?? "이름 없음"}로 이메일 로그인 했습니다.");
             signInText.text = "이메일 로그인 성공";
 
             EventManager<FirebaseEvents>.TriggerEvent(FirebaseEvents.FirebaseSignIn);

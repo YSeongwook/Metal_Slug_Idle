@@ -46,7 +46,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void Start()
     {
-        Initialize();
+        Initialize(); // InitializeSlot이 모두 완료되고 나서 동작하게 수정해야 안전, 레오나가 할당인 안되는 이슈가 있었음
     }
 
     private void OnDestroy()

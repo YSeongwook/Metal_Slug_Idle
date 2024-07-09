@@ -65,7 +65,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 #if UNITY_EDITOR
         string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
-        string filePath = Path.Combine(Application.persistentDataPath, fileName);
+        string filePath = Path.Combine(Application.persistentDataPath, FileName);
 #endif
 
         if (File.Exists(filePath))
@@ -84,7 +84,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 #if UNITY_EDITOR
         string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
-        string filePath = Path.Combine(Application.persistentDataPath, fileName);
+        string filePath = Path.Combine(Application.persistentDataPath, FileName);
 #endif
         if (File.Exists(filePath))
         {
@@ -124,7 +124,7 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
 #if UNITY_EDITOR
         string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #else
-        string filePath = Path.Combine(Application.persistentDataPath, fileName);
+        string filePath = Path.Combine(Application.persistentDataPath, FileName);
 #endif
         HeroCollectionWrapper wrapper = new HeroCollectionWrapper { heroCollection = _heroCollection };
         string json = JsonUtility.ToJson(wrapper, true);

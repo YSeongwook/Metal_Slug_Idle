@@ -350,6 +350,7 @@ public class UIManager : Singleton<UIManager>
     // 메인 하단 버튼들 토글
     public void ToggleMainUnderButtons()
     {
+        DebugLogger.Log("하단 버튼 토글");
         bool isActive = mainHeroButton.gameObject.activeSelf;
         
         mainHeroButton.gameObject.SetActive(!isActive);

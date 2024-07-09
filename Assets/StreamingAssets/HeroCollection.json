@@ -2,28 +2,28 @@
     "heroCollection": [
         {
             "id": 0,
-            "owned": true,
-            "assigned": true
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 1,
-            "owned": true,
-            "assigned": true
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 2,
             "owned": true,
-            "assigned": true
+            "assigned": false
         },
         {
             "id": 3,
-            "owned": true,
-            "assigned": true
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 4,
-            "owned": true,
-            "assigned": true
+            "owned": false,
+            "assigned": false
         },
         {
             "id": 5,
@@ -42,12 +42,12 @@
         },
         {
             "id": 8,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {
             "id": 9,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {

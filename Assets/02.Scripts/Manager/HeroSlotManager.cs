@@ -1,6 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class HeroSlotManager : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class HeroSlotManager : MonoBehaviour
     [PropertySpace(5f, 0f)]
     public List<HeroSlot> heroSlots; // HeroSlot 오브젝트 리스트
 
-    private void Start()
+    private void Awake()
     {
         FindAssignedSlotIndex();
     }
@@ -19,7 +19,6 @@ public class HeroSlotManager : MonoBehaviour
         foreach (Transform heroTransform in renderTextureParty)
         {
             HeroSlotTracker tracker = heroTransform.GetComponent<HeroSlotTracker>();
-
             if (tracker == null) continue;
 
             int assignedSlotIndex = tracker.assignedSlotIndex;
