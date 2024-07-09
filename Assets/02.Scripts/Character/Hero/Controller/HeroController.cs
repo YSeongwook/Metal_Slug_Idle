@@ -28,6 +28,15 @@ public class HeroController : MonoBehaviour
     public Transform CurrentTarget { get; set; }
 
     private IHeroState _currentState;
+
+    public IHeroState CurrentState
+    {
+        get
+        {
+            return _currentState;
+        }
+    }
+
     private Collider[] _cachedEnemies;
     private float _lastCacheTime;
     private const float CacheInterval = 1.0f;

@@ -9,7 +9,6 @@ public class HeroAttackState : IHeroState
     private float _lastAttackTime;
     private const float CheckInterval = 0.5f; // 공격 간격
     private float _lastCheckTime;
-    private const float MaxDistanceFromLeader = 10f;
 
     public void EnterState(HeroController hero)
     {
@@ -20,7 +19,7 @@ public class HeroAttackState : IHeroState
         
         EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderAttackStarted);
         
-        // DebugLogger.Log("Enter AttackState");
+        DebugLogger.Log("Enter AttackState");
     }
 
     public void UpdateState()

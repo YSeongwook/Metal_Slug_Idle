@@ -8,6 +8,8 @@ public class AttackState : IFollowerState
     private float _lastCheckTime;
     private const float MaxDistanceFromLeader = 5f; // 리더로부터의 최대 거리
     private float _originalMoveSpeed;
+    private Vector3 _direction;
+    private Vector3 _moveDirection;
 
     public void EnterState(FollowerController follower)
     {
@@ -18,8 +20,11 @@ public class AttackState : IFollowerState
 
         if (_targetEnemy == null)
         {
-            _follower.FindClosestEnemy();
+            // FindClosestEnemy();
+            _targetEnemy = _follower.leader.CurrentTarget;
         }
+        
+        DebugLogger.Log("Enter FollowerAttackState");
     }
 
     public void UpdateState()
@@ -33,10 +38,16 @@ public class AttackState : IFollowerState
         if (Time.time - _lastCheckTime >= CheckInterval)
         {
             _lastCheckTime = Time.time;
+            
             CheckLeaderDistance();
         }
 
-        if (_targetEnemy == null || Vector3.Distance(_follower.transform.position, _targetEnemy.position) > _follower.heroStats.attackRange)
+        if (_targetEnemy == null)
+        {
+            FindClosestEnemy();
+        }
+
+        if (Vector3.Distance(_follower.transform.position, _targetEnemy.position) > _follower.heroStats.attackRange)
         {
             MoveTowardsTarget();
         }
@@ -45,6 +56,8 @@ public class AttackState : IFollowerState
             _follower.Animator.SetBool(_follower.IsAttacking, true);
             Attack();
         }
+
+        SpriteFlip();
     }
 
     public void PhysicsUpdateState() { }
@@ -55,6 +68,19 @@ public class AttackState : IFollowerState
         _follower.Animator.SetBool(_follower.IsAttacking, false);
         // 포메이션 위치 복귀
         _follower.heroStats.moveSpeed = _originalMoveSpeed;
+    }
+    
+    private void FindClosestEnemy()
+    {
+        _follower.FindClosestEnemy();
+        
+        if (_follower.CurrentTarget == null) return;
+        
+        float distanceToTarget = _follower.GetDistanceToTarget(_follower.CurrentTarget);
+        if (distanceToTarget <= _follower.heroStats.attackRange)
+        {
+            _follower.TransitionToState(_follower.AttackState);
+        }
     }
 
     private void CheckLeaderDistance()
@@ -70,13 +96,13 @@ public class AttackState : IFollowerState
     {
         if (_targetEnemy == null) return;
         
-        Vector3 direction = (_targetEnemy.position - _follower.transform.position).normalized;
-        Vector3 moveDirection = direction * (_follower.heroStats.moveSpeed * 10 * Time.deltaTime);
+        _direction = (_targetEnemy.position - _follower.transform.position).normalized;
+        _moveDirection = _direction * (_follower.heroStats.moveSpeed * 10 * Time.deltaTime);
         // Vector3 newPosition = _follower.Rb.position + moveDirection;
 
         // _follower.Rb.MovePosition(newPosition);
         _follower.Rb.MovePosition(Vector3.MoveTowards(_follower.Rb.position, _targetEnemy.position, _follower.heroStats.moveSpeed * 1.5f * Time.deltaTime));
-        _follower.Animator.SetFloat(_follower.SpeedParameter, moveDirection.magnitude);
+        _follower.Animator.SetFloat(_follower.SpeedParameter, _moveDirection.magnitude);
     }
 
     private void Attack()
@@ -96,6 +122,19 @@ public class AttackState : IFollowerState
                 enemy.TakeDamage(_follower.heroStats.attack);
             }
             */
+        }
+    }
+
+    private void SpriteFlip()
+    {
+        if (_targetEnemy != null)
+        {
+            float directionToEnemy = _targetEnemy.position.x - _follower.transform.position.x;
+            _follower.HandleSpriteFlip(directionToEnemy);
+        }
+        else if (_moveDirection != Vector3.zero)
+        {
+            _follower.HandleSpriteFlip(_moveDirection.x);
         }
     }
 }

@@ -35,6 +35,7 @@ public class HeroManualState : IHeroState
     
     public void ExitState()
     {
+        _hero.IsUserControlled = false;
     }
     
     private void Move()

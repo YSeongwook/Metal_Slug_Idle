@@ -1,10 +1,10 @@
+using EnumTypes;
+using EventLibrary;
 using UnityEngine;
 
 public class FollowState : IFollowerState
 {
     private FollowerController _follower;
-    private const float CheckInterval = 0.5f; // 적 탐지 간격
-    private float _lastCheckTime;
     private float _originalMoveSpeed;
     
     private Vector3 _targetPosition;
@@ -13,7 +13,6 @@ public class FollowState : IFollowerState
     public void EnterState(FollowerController follower)
     {
         _follower = follower;
-        _lastCheckTime = Time.time;
         _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
         _originalMoveSpeed = _follower.heroStats.moveSpeed; // 원래 이동 속도 저장
 
@@ -22,14 +21,17 @@ public class FollowState : IFollowerState
         {
             _follower.heroStats.moveSpeed = _originalMoveSpeed * 1.5f; // 이동 속도 1.5배로 설정
         }
+        
+        DebugLogger.Log("Enter FollowState");
     }
 
     public void UpdateState()
     {
-        if (Time.time - _lastCheckTime >= CheckInterval)
+        // 리더 공격 상태 들어가면 공격 상태로 전환
+
+        if (_follower.leader.CurrentState is HeroAttackState)
         {
-            _lastCheckTime = Time.time;
-            FindClosestEnemy();
+            _follower.TransitionToState(_follower.AttackState);
         }
         
         CalculateDistance();
@@ -72,19 +74,6 @@ public class FollowState : IFollowerState
         if (_moveDirection != Vector3.zero)
         {
             _follower.HandleSpriteFlip(_moveDirection.x);
-        }
-    }
-
-    private void FindClosestEnemy()
-    {
-        _follower.FindClosestEnemy();
-        
-        if (_follower.CurrentTarget == null) return;
-        
-        float distanceToTarget = _follower.GetDistanceToTarget(_follower.CurrentTarget);
-        if (distanceToTarget <= _follower.heroStats.attackRange)
-        {
-            _follower.TransitionToState(_follower.AttackState);
         }
     }
 }

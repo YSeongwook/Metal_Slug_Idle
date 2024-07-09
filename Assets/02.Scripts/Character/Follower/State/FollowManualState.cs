@@ -10,6 +10,7 @@ public class FollowManualState : IFollowerState
     {
         _follower = follower;
         _follower.Animator.SetBool(_follower.IsAttacking, false);
+        _follower.CurrentTarget = null;
     }
 
     public void UpdateState()
