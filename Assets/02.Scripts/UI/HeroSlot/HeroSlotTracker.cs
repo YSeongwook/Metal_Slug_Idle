@@ -26,7 +26,6 @@ public class HeroSlotTracker : MonoBehaviour
         if (_heroController.IsLeader)
         {
             hero.transform.position += newOffset; 
-            // _followerController.formationOffset = Vector3.zero;
         }
     }
 

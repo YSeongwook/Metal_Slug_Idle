@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -509,8 +509,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeLeaderModePanel: {fileID: 2111510748}
   leader: {fileID: 1513594456}
-  followers: []
   cameraFollow: {fileID: 1559893157}
+  followers: []
 --- !u!1 &319611110
 GameObject:
   m_ObjectHideFlags: 0
@@ -4894,6 +4894,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 4370598512902049817, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 4468818221737106339, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4990,6 +4994,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 5174894426206041623, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 5296227424975181109, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5118,6 +5126,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 5627596725086330267, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 5938522469322044577, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -5258,6 +5270,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 6800895095420599647, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 6844688634876221897, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5274,6 +5290,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 7125706255840483168, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 7244067845351942274, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.00000087263044
@@ -5346,6 +5366,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 7612022191999676703, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 7803763773698585666, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -5462,6 +5486,10 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 8480870128016786033, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 8497418049388017614, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5514,10 +5542,18 @@ PrefabInstance:
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 8529760925293271802, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 8665153059827216993, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: formationManager
       value: 
       objectReference: {fileID: 294548734}
+    - target: {fileID: 8665153059827216993, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: renderTextureParty
+      value: 
+      objectReference: {fileID: 1924303912}
     - target: {fileID: 8889072204050375706, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0

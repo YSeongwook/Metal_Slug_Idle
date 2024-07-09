@@ -6,9 +6,8 @@ using UnityEngine.EventSystems;
 public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
     public int slotIndex; // 슬롯 인덱스
-    public Transform heroTramsform; // 영웅 Transform
+    public Transform heroTransform; // 영웅 Transform
     public Transform renderTextureParty; // Render Texture Party Transform
-    public GameObject changeLeaderModePanel; // 리더 카메라 변경 모드 패널
     public FormationManager formationManager;
 
     private Transform _originalParent; // 드래그 시작 시 원래 부모 트랜스폼 저장
@@ -47,15 +46,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void Start()
     {
-        // 초기 위치 설정 또는 로드
-        if (heroTramsform != null)
-        {
-            UpdateCharacterPosition();
-            _leaderIcon = heroTramsform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
-            _heroSlotTracker = heroTramsform.GetComponent<HeroSlotTracker>();
-            _inGameHero = _heroSlotTracker.hero;
-            _inGameHeroController = _inGameHero.GetComponent<HeroController>();
-        }
+        Initialize();
     }
 
     private void OnDestroy()
@@ -63,9 +54,21 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         EventManager<FormationEvents>.StopListening(FormationEvents.OnChangeLeaderMode, EnableChangeLeaderMode);
     }
 
+    public void Initialize()
+    {
+        // 초기 위치 설정 또는 로드
+        if (heroTransform == null) return;
+        
+        UpdateCharacterPosition();
+        _leaderIcon = heroTransform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
+        _heroSlotTracker = heroTransform.GetComponent<HeroSlotTracker>();
+        _inGameHero = _heroSlotTracker.hero;
+        _inGameHeroController = _inGameHero.GetComponent<HeroController>();
+    }
+
     public void InitializeSlot(Transform heroTransform, Transform renderTextureParty)
     {
-        this.heroTramsform = heroTransform;
+        this.heroTransform = heroTransform;
         this.renderTextureParty = renderTextureParty;
 
         if (heroTransform == null) return;
@@ -81,11 +84,11 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (heroTramsform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
+        if (heroTransform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
 
         _originalParent = transform.parent;
         _originalWorldPosition = _rectTransform.position; // 월드 좌표로 위치 저장
-        _originalCharacterPosition = heroTramsform.position; // 캐릭터의 월드 위치 저장
+        _originalCharacterPosition = heroTransform.position; // 캐릭터의 월드 위치 저장
 
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
@@ -96,7 +99,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (heroTramsform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
+        if (heroTransform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle((RectTransform)transform.parent, eventData.position, eventData.pressEventCamera, out Vector2 localPoint);
         _rectTransform.localPosition = localPoint;
@@ -104,12 +107,12 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         // 슬롯의 이동을 보정하여 캐릭터를 따라 이동
         Vector3 slotDelta = _rectTransform.position - _originalWorldPosition;
         Vector3 characterDelta = new Vector3(slotDelta.x / SlotXSpacing * CharXSpacing, 0, slotDelta.y / SlotYSpacing * CharYSpacing);
-        heroTramsform.position = _originalCharacterPosition + characterDelta;
+        heroTransform.position = _originalCharacterPosition + characterDelta;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (heroTramsform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
+        if (heroTransform == null) return; // 캐릭터가 없는 슬롯은 드래그 불가능
 
         transform.SetParent(_originalParent);
         _rectTransform.position = _originalWorldPosition; // 월드 좌표로 위치 설정
@@ -139,18 +142,24 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void SwapSlots(HeroSlot targetSlot)
     {
-        if (targetSlot.heroTramsform == null)
+        if (targetSlot.heroTransform == null)
         {
+            bool isLeader = _heroSlotTracker.hero.GetComponent<HeroController>().IsLeader;
+
+            _heroSlotTracker.UpdateOffsetBasedOnSlotIndex(slotIndex, targetSlot.slotIndex);
+            _heroSlotTracker.assignedSlotIndex = targetSlot.slotIndex;
+            
             // 캐릭터가 없는 슬롯과 교환
-            targetSlot.heroTramsform = this.heroTramsform;
-            this.heroTramsform = null;
-
-            targetSlot.heroTramsform.GetComponent<HeroSlotTracker>().assignedSlotIndex = targetSlot.slotIndex;
-
+            targetSlot.heroTransform = this.heroTransform;
+            targetSlot.Initialize();
+            
+            this.heroTransform = null;
+            this._heroSlotTracker = null;
+            
             targetSlot.UpdateCharacterPosition();
-            this.UpdateCharacterPosition();
+            if (isLeader) formationManager.UpdateFormationOffSets(); // 교환하는 오브젝트가 리더인 경우 오프셋 재설정
         }
-        else if (heroTramsform != null)
+        else if (heroTransform != null)
         {
             // 캐릭터가 있는 슬롯과 교환
             int oldSlotIndex = slotIndex;
@@ -162,7 +171,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             (targetSlot._rectTransform.position, this._rectTransform.position) = (this._rectTransform.position, targetSlot._rectTransform.position);
 
             // 캐릭터 위치 교환
-            (targetSlot.heroTramsform.position, this.heroTramsform.position) = (this.heroTramsform.position, targetSlot.heroTramsform.position);
+            (targetSlot.heroTransform.position, this.heroTransform.position) = (this.heroTransform.position, targetSlot.heroTransform.position);
 
             // 슬롯 인덱스 갱신
             targetSlot._heroSlotTracker.assignedSlotIndex = targetSlot.slotIndex;
@@ -171,7 +180,6 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             // 오프셋 업데이트
             if (_inGameHeroController.IsLeader || targetSlot._inGameHeroController.IsLeader)
             {
-                DebugLogger.Log("Leader 와 스왑");
                 targetSlot._heroSlotTracker.UpdateOffsetBasedOnSlotIndex(targetOldSlotIndex, targetSlot.slotIndex);
                 _heroSlotTracker.UpdateOffsetBasedOnSlotIndex(oldSlotIndex, slotIndex);
                 formationManager.UpdateFormationOffSets();
@@ -194,7 +202,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private void FixCharacterPosition()
     {
-        if (heroTramsform == null) return;
+        if (heroTransform == null) return;
 
         // 현재 슬롯 인덱스를 기반으로 캐릭터 위치 고정
         float fixedX = 0f;
@@ -216,22 +224,22 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             _ => fixedZ
         };
 
-        heroTramsform.localPosition = new Vector3(fixedX, heroTramsform.localPosition.y, fixedZ);
+        heroTransform.localPosition = new Vector3(fixedX, heroTransform.localPosition.y, fixedZ);
     }
 
     private void UpdateCharacterPosition()
     {
-        if (heroTramsform == null || renderTextureParty == null) return;
+        if (heroTransform == null || renderTextureParty == null) return;
 
         // 위치 보정
-        Vector3 adjustedPosition = renderTextureParty.TransformPoint(heroTramsform.localPosition);
-        heroTramsform.position = adjustedPosition;
+        Vector3 adjustedPosition = renderTextureParty.TransformPoint(heroTransform.localPosition);
+        heroTransform.position = adjustedPosition;
     }
 
     private void ReturnToOriginalPosition()
     {
         _rectTransform.position = _originalWorldPosition; // 유효한 슬롯이 없으면 원래 위치로 돌아감
-        heroTramsform.position = _originalCharacterPosition; // 캐릭터도 원래 위치로 돌아감
+        heroTransform.position = _originalCharacterPosition; // 캐릭터도 원래 위치로 돌아감
     }
 
     private void EnableChangeLeaderMode()
