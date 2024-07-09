@@ -1,3 +1,4 @@
+using System;
 using EnumTypes;
 using EventLibrary;
 using UnityEngine;
@@ -60,6 +61,11 @@ public class HeroController : MonoBehaviour
         EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
+    }
+
+    private void Start()
+    {
+        LoadHeroStats();
     }
 
     // 오브젝트 파괴 시 호출
