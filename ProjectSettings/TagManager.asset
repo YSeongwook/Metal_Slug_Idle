@@ -44,9 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 2947217611
     locked: 0
-  - name: Map
-    uniqueID: 328722009
+  - name: Hero
+    uniqueID: 915872903
     locked: 0
   - name: UI
     uniqueID: 1088939745
+    locked: 0
+  - name: Map
+    uniqueID: 328722009
     locked: 0
