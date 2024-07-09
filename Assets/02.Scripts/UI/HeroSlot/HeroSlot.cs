@@ -19,6 +19,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private HeroSlotTracker _heroSlotTracker; // 렌더 텍스쳐 영웅 heroSlotTracker
     private GameObject _leaderIcon; // 리더 카메라 아이콘
     private GameObject _inGameHero; // 렌더 텍스쳐 영웅에 대응하는 인게임 영웅
+    private HeroController _inGameHeroController; // 렌더 텍스쳐 영웅에 대응하는 인게임 영웅
     private bool _isChangeLeaderMode; // 리더 변경 모드 판별 변수
 
     private const float SlotXSpacing = 230f; // 슬롯 간의 x축 간격
@@ -53,6 +54,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             _leaderIcon = heroTramsform.GetChild(0).gameObject; // 리더 아이콘 캔버스 오브젝트
             _heroSlotTracker = heroTramsform.GetComponent<HeroSlotTracker>();
             _inGameHero = _heroSlotTracker.hero;
+            _inGameHeroController = _inGameHero.GetComponent<HeroController>();
         }
     }
 
@@ -167,7 +169,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             _heroSlotTracker.assignedSlotIndex = slotIndex;
 
             // 오프셋 업데이트
-            if (_inGameHero.GetComponent<HeroController>().IsLeader)
+            if (_inGameHeroController.IsLeader || targetSlot._inGameHeroController.IsLeader)
             {
                 DebugLogger.Log("Leader 와 스왑");
                 targetSlot._heroSlotTracker.UpdateOffsetBasedOnSlotIndex(targetOldSlotIndex, targetSlot.slotIndex);

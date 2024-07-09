@@ -9,7 +9,8 @@ public class FormationManager : Singleton<FormationManager>
     public HeroController leader; // 인스펙터에서 할당된 리더
     public CameraFollow cameraFollow;
     public List<FollowerController> followers;
-    
+
+    private FollowerController _leaderFollowerController;
     private bool _isChangeLeaderMode;
 
     protected override void Awake()
@@ -33,10 +34,11 @@ public class FormationManager : Singleton<FormationManager>
         if (leader != null)
         {
             leader.IsLeader = true;
-            var leaderFollower = leader.GetComponent<FollowerController>();
-            if (leaderFollower != null)
+            _leaderFollowerController = leader.GetComponent<FollowerController>();
+            if (_leaderFollowerController != null)
             {
-                leaderFollower.enabled = false;
+                _leaderFollowerController.leader = leader;
+                _leaderFollowerController.enabled = false;
             }
         }
 
@@ -140,6 +142,7 @@ public class FormationManager : Singleton<FormationManager>
         // 새로운 리더 업데이트
         leader = newLeaderController;
         leader.LoadHeroStats();
+        _leaderFollowerController = leader.transform.GetComponent<FollowerController>();
         leader.transform.GetComponent<FollowerController>().leader = leader;
 
         // 카메라 추적 대상 새로운 리더로 업데이트
@@ -174,16 +177,16 @@ public class FormationManager : Singleton<FormationManager>
         followerController.leader = leader;
     }
 
+    // 이 메서드가 문제
     public void UpdateFormationOffSets()
     {
-        var leaderOffset = leader.gameObject.GetComponent<FollowerController>().formationOffset;
-        DebugLogger.Log(leaderOffset);
+        var leaderOffset = _leaderFollowerController.formationOffset;
         foreach (var follower in followers)
         {
             follower.formationOffset = RoundToOneDecimalPlace(follower.formationOffset - leaderOffset);
         }
 
-        leaderOffset = Vector3.zero;
+        _leaderFollowerController.formationOffset = Vector3.zero;
     }
     
     private Vector3 RoundToOneDecimalPlace(Vector3 vector)

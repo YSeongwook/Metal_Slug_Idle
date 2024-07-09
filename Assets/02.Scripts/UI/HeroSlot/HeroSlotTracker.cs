@@ -16,15 +16,17 @@ public class HeroSlotTracker : MonoBehaviour
 
     public void UpdateOffsetBasedOnSlotIndex(int oldSlotIndex, int newSlotIndex)
     {
+        Vector3 newOffset = CalculateOffsetChange(oldSlotIndex, newSlotIndex);
+        
         if (_followerController != null)
         {
-            Vector3 newOffset = CalculateOffsetChange(oldSlotIndex, newSlotIndex);
             _followerController.formationOffset += newOffset;
         }
 
         if (_heroController.IsLeader)
         {
-            _followerController.formationOffset = Vector3.zero;
+            hero.transform.position += newOffset; 
+            // _followerController.formationOffset = Vector3.zero;
         }
     }
 
