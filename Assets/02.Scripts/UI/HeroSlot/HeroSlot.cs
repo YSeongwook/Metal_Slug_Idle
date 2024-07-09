@@ -151,6 +151,9 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         else if (heroTramsform != null)
         {
             // 캐릭터가 있는 슬롯과 교환
+            int oldSlotIndex = slotIndex;
+            int targetOldSlotIndex = targetSlot.slotIndex;
+
             (targetSlot.slotIndex, this.slotIndex) = (this.slotIndex, targetSlot.slotIndex);
 
             // 위치 교환 (월드 좌표 사용)
@@ -162,6 +165,20 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             // 슬롯 인덱스 갱신
             targetSlot._heroSlotTracker.assignedSlotIndex = targetSlot.slotIndex;
             _heroSlotTracker.assignedSlotIndex = slotIndex;
+
+            // 오프셋 업데이트
+            if (_inGameHero.GetComponent<HeroController>().IsLeader)
+            {
+                DebugLogger.Log("Leader 와 스왑");
+                targetSlot._heroSlotTracker.UpdateOffsetBasedOnSlotIndex(targetOldSlotIndex, targetSlot.slotIndex);
+                _heroSlotTracker.UpdateOffsetBasedOnSlotIndex(oldSlotIndex, slotIndex);
+                formationManager.UpdateFormationOffSets();
+            }
+            else
+            {
+                targetSlot._heroSlotTracker.UpdateOffsetBasedOnSlotIndex(targetOldSlotIndex, targetSlot.slotIndex);
+                _heroSlotTracker.UpdateOffsetBasedOnSlotIndex(oldSlotIndex, slotIndex);
+            }
 
             // 캐릭터의 위치를 업데이트합니다.
             targetSlot.UpdateCharacterPosition();

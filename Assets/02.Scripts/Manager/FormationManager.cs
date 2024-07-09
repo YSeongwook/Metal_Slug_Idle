@@ -7,8 +7,8 @@ public class FormationManager : Singleton<FormationManager>
 {
     public GameObject changeLeaderModePanel; // 리더 카메라 변경 모드 패널
     public HeroController leader; // 인스펙터에서 할당된 리더
-    public List<FollowerController> followers;
     public CameraFollow cameraFollow;
+    public List<FollowerController> followers;
     
     private bool _isChangeLeaderMode;
 
@@ -107,7 +107,6 @@ public class FormationManager : Singleton<FormationManager>
 
     public void SetLeader(GameObject newLeader)
     {
-        // 위에서 먼저 inschangeLeaderMode 꺼버리는듯
         if (!_isChangeLeaderMode) return;
 
         var newLeaderController = newLeader.GetComponent<HeroController>();
@@ -141,6 +140,7 @@ public class FormationManager : Singleton<FormationManager>
         // 새로운 리더 업데이트
         leader = newLeaderController;
         leader.LoadHeroStats();
+        leader.transform.GetComponent<FollowerController>().leader = leader;
 
         // 카메라 추적 대상 새로운 리더로 업데이트
         cameraFollow.leader = leader.transform;
@@ -153,7 +153,7 @@ public class FormationManager : Singleton<FormationManager>
             follower.LoadHeroStats();
         }
         
-        UpdateFormationOffSet();
+        UpdateFormationOffSets();
 
         Debug.Log("New Leader assigned: " + leader.name);
     }
@@ -174,13 +174,16 @@ public class FormationManager : Singleton<FormationManager>
         followerController.leader = leader;
     }
 
-    private void UpdateFormationOffSet()
+    public void UpdateFormationOffSets()
     {
         var leaderOffset = leader.gameObject.GetComponent<FollowerController>().formationOffset;
+        DebugLogger.Log(leaderOffset);
         foreach (var follower in followers)
         {
             follower.formationOffset = RoundToOneDecimalPlace(follower.formationOffset - leaderOffset);
         }
+
+        leaderOffset = Vector3.zero;
     }
     
     private Vector3 RoundToOneDecimalPlace(Vector3 vector)
