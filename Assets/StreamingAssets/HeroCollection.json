@@ -7,12 +7,12 @@
         },
         {
             "id": 1,
-            "owned": false,
+            "owned": true,
             "assigned": false
         },
         {
             "id": 2,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {
@@ -42,7 +42,7 @@
         },
         {
             "id": 8,
-            "owned": false,
+            "owned": true,
             "assigned": false
         },
         {
@@ -67,12 +67,12 @@
         },
         {
             "id": 13,
-            "owned": false,
+            "owned": true,
             "assigned": false
         },
         {
             "id": 14,
-            "owned": false,
+            "owned": true,
             "assigned": false
         }
     ]

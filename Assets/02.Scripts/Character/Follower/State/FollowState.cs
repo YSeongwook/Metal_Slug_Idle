@@ -21,8 +21,6 @@ public class FollowState : IFollowerState
         {
             _follower.heroStats.moveSpeed = _originalMoveSpeed * 1.5f; // 이동 속도 1.5배로 설정
         }
-        
-        DebugLogger.Log("Enter FollowState");
     }
 
     public void UpdateState()
