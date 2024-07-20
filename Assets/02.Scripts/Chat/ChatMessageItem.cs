@@ -13,7 +13,7 @@ public class ChatMessageItem : InfiniteScrollItem
 
     public ContentSizeFitter contentSizeFitter;
     
-    public override void UpdateData(InfiniteScrollData scrollData)
+    public override async void UpdateData(InfiniteScrollData scrollData)
     {
         base.UpdateData(scrollData);
 
@@ -40,7 +40,7 @@ public class ChatMessageItem : InfiniteScrollItem
         waitTask();
     }
 
-    async UniTask waitTask()
+    private  async UniTask waitTask()
     {
         await UniTask.NextFrame();
         

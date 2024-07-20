@@ -7,10 +7,10 @@ public class FollowerController : HeroController
     public HeroController leader;
     public Vector3 formationOffset;
 
-    private IFollowerState currentState;
+    private IFollowerState _currentState;
     public readonly FollowState FollowState = new FollowState();
-    public readonly AttackState AttackState = new AttackState();
-    public readonly FollowManualState ManualState = new FollowManualState();
+    public new readonly AttackState AttackState = new AttackState();
+    public new readonly FollowManualState ManualState = new FollowManualState();
 
     private new void Awake()
     {
@@ -49,7 +49,7 @@ public class FollowerController : HeroController
         }
     }
 
-    private void OnDestroy()
+    private new void OnDestroy()
     {
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
@@ -59,17 +59,17 @@ public class FollowerController : HeroController
     }
 
     // 매 프레임 상태 업데이트
-    private void Update()
+    private new void Update()
     {
-        if (currentState == null) return;
-        currentState.UpdateState();
+        if (_currentState == null) return;
+        _currentState.UpdateState();
     }
 
     // 고정된 시간 간격으로 물리 업데이트
-    private void FixedUpdate()
+    private new void FixedUpdate()
     {
-        if (currentState == null) return;
-        currentState.PhysicsUpdateState();
+        if (_currentState == null) return;
+        _currentState.PhysicsUpdateState();
     }
 
     private void OnLeaderAttackStarted()
@@ -86,7 +86,7 @@ public class FollowerController : HeroController
 
     private void OnLeaderDirectionChanged()
     {
-        if (currentState != AttackState) // AttackState일 때는 무시
+        if (_currentState != AttackState) // AttackState일 때는 무시
         {
             
         }
@@ -100,14 +100,14 @@ public class FollowerController : HeroController
 
     public void TransitionToState(IFollowerState state)
     {
-        if (currentState == state) return; // 상태 전환 빈도 줄이기
-        currentState?.ExitState();
-        currentState = state;
-        currentState.EnterState(this);
+        if (_currentState == state) return; // 상태 전환 빈도 줄이기
+        _currentState?.ExitState();
+        _currentState = state;
+        _currentState.EnterState(this);
     }
 
     // 캐릭터 방향 전환
-    public void HandleSpriteFlip(float moveHorizontal)
+    public new void HandleSpriteFlip(float moveHorizontal)
     {
         if (moveHorizontal == 0) return;
 

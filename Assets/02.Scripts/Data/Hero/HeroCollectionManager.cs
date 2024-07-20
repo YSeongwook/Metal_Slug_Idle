@@ -82,9 +82,9 @@ public class HeroCollectionManager : Singleton<HeroCollectionManager>
     private void LoadCollection()
     {
 #if UNITY_EDITOR
-        string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
-#else
         string filePath = Path.Combine(Application.persistentDataPath, FileName);
+#else
+        string filePath = Path.Combine(Application.streamingAssetsPath, FileName);
 #endif
         if (File.Exists(filePath))
         {

@@ -10,9 +10,9 @@ using UnityEngine.Networking;
 
 public class GachaManager : MonoBehaviour
 {
-    private string gachaUrl = "https://asia-northeast1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
+    private const string _gachaUrl = "https://asia-northeast1-unifire-ebcc1.cloudfunctions.net/gacha"; // 가챠 API의 URL
     public SummonResultManager summonResultManager; // SummonResultManager 컴포넌트 참조
-    private Dictionary<int, HeroData> heroDataDict;
+    private Dictionary<int, HeroData> _heroDataDict;
     private static GachaManager _instance;
 
     public static GachaManager Instance
@@ -37,10 +37,10 @@ public class GachaManager : MonoBehaviour
     {
         // HeroData를 Firebase에서 불러오도록 수정
         DatabaseManager.Instance.LoadHeroDataFromFirebase(data => {
-            heroDataDict = new Dictionary<int, HeroData>();
+            _heroDataDict = new Dictionary<int, HeroData>();
             foreach (var hero in data.data)
             {
-                heroDataDict[hero.id] = hero;
+                _heroDataDict[hero.id] = hero;
             }
         });
     }
@@ -61,10 +61,10 @@ public class GachaManager : MonoBehaviour
 
     public void SetHeroData(HeroDataWrapper heroData)
     {
-        heroDataDict = new Dictionary<int, HeroData>();
+        _heroDataDict = new Dictionary<int, HeroData>();
         foreach (var hero in heroData.data)
         {
-            heroDataDict[hero.id] = hero;
+            _heroDataDict[hero.id] = hero;
         }
     }
 
@@ -83,14 +83,14 @@ public class GachaManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("유저가 로그인되어 있지 않습니다.");
+            DebugLogger.LogError("유저가 로그인되어 있지 않습니다.");
         }
     }
 
     private async Task<int[]> GachaRequestAsync(string userId, int drawCount)
     {
         var json = JsonConvert.SerializeObject(new { userId = userId, drawCount = drawCount }); // 요청 데이터를 JSON으로 직렬화
-        using (var request = new UnityWebRequest(gachaUrl, "POST")) // POST 요청 생성 및 using 구문 사용
+        using (var request = new UnityWebRequest(_gachaUrl, "POST")) // POST 요청 생성 및 using 구문 사용
         {
             byte[] bodyRaw = Encoding.UTF8.GetBytes(json); // 요청 바디 설정
             request.uploadHandler = new UploadHandlerRaw(bodyRaw); // 업로드 핸들러 설정
@@ -110,7 +110,7 @@ public class GachaManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Gacha request failed: " + request.error); // 에러 처리
+                DebugLogger.LogError("Gacha request failed: " + request.error); // 에러 처리
                 return null;
             }
         }
@@ -123,7 +123,7 @@ public class GachaManager : MonoBehaviour
         List<SummonResultData> summonResults = new List<SummonResultData>();
         foreach (int heroId in heroIds)
         {
-            if (heroDataDict.TryGetValue(heroId, out HeroData heroData))
+            if (_heroDataDict.TryGetValue(heroId, out HeroData heroData))
             {
                 summonResults.Add(new SummonResultData
                 {
@@ -135,7 +135,7 @@ public class GachaManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"영웅 ID {heroId}에 해당하는 데이터를 찾을 수 없습니다.");
+                DebugLogger.LogError($"영웅 ID {heroId}에 해당하는 데이터를 찾을 수 없습니다.");
             }
         }
 
@@ -145,7 +145,7 @@ public class GachaManager : MonoBehaviour
         }
         else
         {
-            Debug.LogError("summonResultManager가 초기화되지 않았습니다.");
+            DebugLogger.LogError("summonResultManager가 초기화되지 않았습니다.");
         }
     }
 
