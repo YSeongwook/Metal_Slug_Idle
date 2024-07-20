@@ -1,5 +1,3 @@
-using EnumTypes;
-using EventLibrary;
 using UnityEngine;
 
 public class FollowState : IFollowerState
@@ -74,4 +72,7 @@ public class FollowState : IFollowerState
             _follower.HandleSpriteFlip(_moveDirection.x);
         }
     }
+    
+    // 팔로우 상태에서는 리더와 항상 같은 방향이어야함
+    // TODO: 리더 스프라이트 변경 시 이벤트 발생 시켜서 같이 변하게 수정
 }

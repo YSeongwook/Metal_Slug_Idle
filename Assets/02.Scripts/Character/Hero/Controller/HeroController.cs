@@ -1,6 +1,6 @@
-using System;
 using EnumTypes;
 using EventLibrary;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,8 +9,9 @@ public class HeroController : MonoBehaviour
     public float moveSpeed = 2f;
     public float zSpeedMultiplier = 1.777f;
     public Transform hud;
-    public HeroStats heroStats;
-    
+
+    #region Property
+
     public bool IsLeader { get; set; }
     public Rigidbody Rb { get; private set; }
     public SpriteRenderer SpriteRenderer { get; private set; }
@@ -23,24 +24,15 @@ public class HeroController : MonoBehaviour
     public Vector3 HudPosition { get; protected set; }
     public LayerMask EnemyLayer { get; private set; }
     public bool IsUserControlled { get; set; }
-    public bool IsAutoMode { get; set; }
+    [ShowInInspector] public bool IsAutoMode { get; set; }
     public float LastUserInputTime { get; set; }
     public Vector2 MoveInput { get; set; }
     public Transform CurrentTarget { get; set; }
 
+    #endregion
+   
     private IHeroState _currentState;
-
-    public IHeroState CurrentState
-    {
-        get
-        {
-            return _currentState;
-        }
-    }
-
-    private Collider[] _cachedEnemies;
-    private float _lastCacheTime;
-    private const float CacheInterval = 1.0f;
+    public IHeroState CurrentState => _currentState;
 
     public readonly HeroIdleState IdleState = new HeroIdleState();
     public readonly HeroMoveState MoveState = new HeroMoveState();
@@ -50,8 +42,14 @@ public class HeroController : MonoBehaviour
     public readonly int SpeedParameter = Animator.StringToHash("Speed");
     public readonly int AttackParameter = Animator.StringToHash("Attack");
     public readonly int IsAttacking = Animator.StringToHash("IsAttacking");
-
-    protected HeroStatsManager _heroStatsManager;
+    
+    public HeroStats heroStats;
+    
+    protected HeroStatsManager HeroStatsManager;
+    
+    private Collider[] _cachedEnemies;
+    private float _lastCacheTime;
+    private const float CacheInterval = 1.0f;
 
     // 초기화 작업 수행
     protected virtual void Awake()
@@ -79,8 +77,8 @@ public class HeroController : MonoBehaviour
     // 컴포넌트 초기화
     protected void Initialize()
     {
-        _heroStatsManager = GetComponent<HeroStatsManager>();
-        _heroStatsManager.Initialize();
+        HeroStatsManager = GetComponent<HeroStatsManager>();
+        HeroStatsManager.Initialize();
         MoveInput = Vector2.zero;
         Rb = GetComponent<Rigidbody>();
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -99,9 +97,9 @@ public class HeroController : MonoBehaviour
         HudPosition = hud.localPosition;
         EnemyLayer = LayerMask.GetMask("Enemy");
 
-        if (_heroStatsManager != null)
+        if (HeroStatsManager != null)
         {
-            heroStats = _heroStatsManager.GetHeroStats();
+            heroStats = HeroStatsManager.GetHeroStats();
         }
     }
 
@@ -135,9 +133,9 @@ public class HeroController : MonoBehaviour
 
     public void LoadHeroStats()
     {
-        if (_heroStatsManager != null)
+        if (HeroStatsManager != null)
         {
-            heroStats = _heroStatsManager.GetHeroStats();
+            heroStats = HeroStatsManager.GetHeroStats();
         }
     }
 
@@ -169,7 +167,7 @@ public class HeroController : MonoBehaviour
     // HeroStatsManager 가져오기
     public HeroStatsManager GetHeroStatsManager()
     {
-        return _heroStatsManager;
+        return HeroStatsManager;
     }
 
     // 가장 가까운 적 찾기
@@ -197,7 +195,7 @@ public class HeroController : MonoBehaviour
         CurrentTarget = closestEnemy;
         
         // 적이 발견되면 스프라이트 반전
-        if (CurrentTarget != null)
+        if (CurrentTarget != null && IsAutoMode)
         {
             float moveHorizontal = CurrentTarget.position.x - transform.position.x;
             HandleSpriteFlip(moveHorizontal);

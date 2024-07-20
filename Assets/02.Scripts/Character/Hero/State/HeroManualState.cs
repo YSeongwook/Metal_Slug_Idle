@@ -11,14 +11,6 @@ public class HeroManualState : IHeroState
 
     public void UpdateState()
     {
-        /*
-        if (_hero.MoveInput == Vector2.zero)
-        {
-            DebugLogger.Log("TransitionIdleState");
-            _hero.TransitionToState(_hero.IdleState);
-        }
-        */
-
         if (!_hero.IsUserControlled)
         {
             _hero.TransitionToState(_hero.IdleState);
@@ -36,6 +28,7 @@ public class HeroManualState : IHeroState
     public void ExitState()
     {
         _hero.IsUserControlled = false;
+        _hero.CurrentTarget = null;
     }
     
     private void Move()
