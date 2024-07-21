@@ -4,7 +4,6 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
-// ShopUI 클래스는 SubUI의 기능을 확장하여 여러 버튼의 스프라이트를 관리합니다.
 public class ShopUI : SubUI
 {
     // 추가 버튼들

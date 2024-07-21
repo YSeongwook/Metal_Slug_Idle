@@ -10,12 +10,16 @@ public class SummonResultManager : MonoBehaviour
 
     public void UpdateSummonResults(List<SummonResultData> newResults)
     {
-        summonResultScroll.ClearData();
         foreach (var result in newResults)
         {
             summonResultScroll.InsertData(result, true);
             SetPaddingAndSpace();
         }
+    }
+
+    public void ClearSummonResults()
+    {
+        summonResultScroll.ClearData();
     }
     
     // 패딩과 스페이스 설정 메서드

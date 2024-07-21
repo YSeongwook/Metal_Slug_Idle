@@ -2,7 +2,7 @@
     "heroCollection": [
         {
             "id": 0,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {
@@ -37,7 +37,7 @@
         },
         {
             "id": 7,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {
@@ -52,7 +52,7 @@
         },
         {
             "id": 10,
-            "owned": true,
+            "owned": false,
             "assigned": false
         },
         {
@@ -67,7 +67,7 @@
         },
         {
             "id": 13,
-            "owned": false,
+            "owned": true,
             "assigned": false
         },
         {

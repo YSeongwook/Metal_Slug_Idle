@@ -118,6 +118,7 @@ public class GachaManager : MonoBehaviour
 
     private void UpdateUIWithGachaResult(int[] heroIds)
     {
+        summonResultManager.ClearSummonResults(); // SummonResult 패널 초기화
         UIManager.Instance.panelSummonResult.SetActive(true); // SummonResult 패널 활성화
 
         List<SummonResultData> summonResults = new List<SummonResultData>();
