@@ -2,8 +2,14 @@ using UnityEngine;
 
 namespace EnumTypes
 {
-    public enum LookDirection { Up, Down, Left, Right }
-    public enum PlayerState { Stand, Move, Run, Hold, Cook }
+    public enum PlayerState
+    {
+        Stand,
+        Move,
+        Run,
+        Hold
+    }
+
     public enum Layers
     {
         Default,
@@ -17,14 +23,14 @@ namespace EnumTypes
         Player,
         Enemy,
     }
-    
+
     public enum HeroEvents
     {
         LeaderAttackStarted,
         LeaderAttackStopped,
         LeaderDirectionChanged,
     }
-    
+
     public enum FormationEvents
     {
         OnChangeLeaderMode,
@@ -76,6 +82,8 @@ namespace EnumTypes
         FirebaseSignIn,
         EmailSignIn,
     }
-
-    public class EnumTypes : MonoBehaviour { }
+    
+    public class EnumTypes : MonoBehaviour
+    {
+    }
 }

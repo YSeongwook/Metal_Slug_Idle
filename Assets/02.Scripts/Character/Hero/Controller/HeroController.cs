@@ -1,3 +1,4 @@
+using System;
 using EnumTypes;
 using EventLibrary;
 using Sirenix.OdinInspector;
@@ -28,6 +29,7 @@ public class HeroController : MonoBehaviour
     public float LastUserInputTime { get; set; }
     public Vector2 MoveInput { get; set; }
     public Transform CurrentTarget { get; set; }
+    public bool IsColliding { get; private set; }
 
     #endregion
    
@@ -101,6 +103,7 @@ public class HeroController : MonoBehaviour
         BoxColliderCenter = BoxCollider.center;
         IsAutoMode = false;
         IsUserControlled = false;
+        IsColliding = false; // 초기화
         if (hud == null)
         {
             hud = GetComponentInChildren<Transform>();
@@ -211,6 +214,7 @@ public class HeroController : MonoBehaviour
         {
             float moveHorizontal = CurrentTarget.position.x - transform.position.x;
             HandleSpriteFlip(moveHorizontal);
+            EventManager<HeroEvents>.TriggerEvent<float>(HeroEvents.LeaderDirectionChanged, moveHorizontal);
         }
     }
 
@@ -241,5 +245,28 @@ public class HeroController : MonoBehaviour
         hud.localPosition = hudPosition;
         
         EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderDirectionChanged);
+    }
+
+    protected void OnCollisionEnter(Collision col)
+    {
+        // 벽과 부딪혔다면
+        if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            // 충돌 중인 상태로 설정
+            IsColliding = true;
+            // 벽에 부딪히면 이동 멈춤
+            Rb.velocity = Vector3.zero;
+            MoveInput = Vector2.zero;
+        }
+    }
+
+    protected void OnCollisionExit(Collision col)
+    {
+        // 벽과의 충돌이 끝났다면
+        if (col.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            // 충돌 중이지 않은 상태로 설정
+            IsColliding = false;
+        }
     }
 }

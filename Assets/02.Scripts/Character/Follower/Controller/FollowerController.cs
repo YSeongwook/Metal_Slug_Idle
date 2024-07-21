@@ -33,7 +33,7 @@ public class FollowerController : HeroController
         EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
-        EventManager<HeroEvents>.StartListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
+        EventManager<HeroEvents>.StartListening<float>(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
@@ -43,7 +43,7 @@ public class FollowerController : HeroController
         EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
-        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
+        EventManager<HeroEvents>.StopListening<float>(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
         EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
         EventManager<UIEvents>.StopListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
@@ -88,21 +88,19 @@ public class FollowerController : HeroController
 
     private void OnLeaderAttackStarted()
     {
-        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
         TransitionToState(AttackState);
     }
 
     private void OnLeaderAttackStopped()
     {
         TransitionToState(FollowState);
-        EventManager<HeroEvents>.StartListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
     }
 
-    private void OnLeaderDirectionChanged()
+    private void OnLeaderDirectionChanged(float moveHorizontal)
     {
-        if (_currentState != AttackState) // AttackState일 때는 무시
+        if (_currentState != AttackState && IsAutoMode) // AttackState일 때는 무시
         {
-            
+            HandleSpriteFlip(moveHorizontal);
         }
     }
 

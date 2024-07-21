@@ -19,9 +19,13 @@ public class HeroManualState : IHeroState
 
     public void PhysicsUpdateState()
     {
-        if (_hero.MoveInput == Vector2.zero) return;
+        if (_hero.MoveInput == Vector2.zero)
+        {
+            _hero.Rb.velocity = Vector3.zero; // 이동 입력이 없으면 속도를 0으로 설정
+            return;
+        }
         
-        Move();
+        Move2();
         _hero.LastUserInputTime = Time.time;
     }
     
@@ -37,6 +41,23 @@ public class HeroManualState : IHeroState
         Vector3 newPosition = _hero.Rb.position + moveDirection * (_hero.moveSpeed * Time.fixedDeltaTime);
         newPosition.y = _hero.InitialY;
         _hero.Rb.MovePosition(newPosition);
+        _hero.Animator.SetFloat(_hero.SpeedParameter, moveDirection.magnitude);
+
+        if (moveDirection != Vector3.zero)
+        {
+            _hero.HandleSpriteFlip(_hero.MoveInput.x);
+        }
+        else
+        {
+            _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
+            _hero.TransitionToState(_hero.IdleState);
+        }
+    }
+    
+    private void Move2()
+    {
+        Vector3 moveDirection = new Vector3(_hero.MoveInput.x, 0, _hero.MoveInput.y * _hero.zSpeedMultiplier);
+        _hero.Rb.velocity = moveDirection * _hero.moveSpeed;
         _hero.Animator.SetFloat(_hero.SpeedParameter, moveDirection.magnitude);
 
         if (moveDirection != Vector3.zero)

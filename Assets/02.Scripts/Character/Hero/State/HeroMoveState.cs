@@ -14,6 +14,8 @@ public class HeroMoveState : IHeroState
     public void UpdateState()
     {
         if(_hero.CurrentTarget == null) _hero.TransitionToState(_hero.IdleState);
+        
+        if(!_hero.IsAutoMode) _hero.TransitionToState(_hero.IdleState); // 이동 중 오토모드가 해제되면 대기 상태로 변경
     }
 
     public void PhysicsUpdateState()
@@ -23,7 +25,11 @@ public class HeroMoveState : IHeroState
         MoveTowardsTarget();
     }
 
-    public void ExitState() { }
+    public void ExitState()
+    {
+        _hero.Rb.velocity = Vector3.zero;
+        _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
+    }
 
     private void SetTarget()
     {

@@ -10,6 +10,7 @@ public class HeroIdleState : IHeroState
     {
         _hero = hero;
         _lastCheckTime = Time.time;
+        _hero.Rb.velocity = Vector3.zero;
         _hero.Animator.SetFloat(_hero.SpeedParameter, 0);
     }
 
@@ -20,9 +21,14 @@ public class HeroIdleState : IHeroState
             _lastCheckTime = Time.time;
             FindClosestEnemy();
         }
+        
+        if(!_hero.IsAutoMode) _hero.Rb.velocity = Vector3.zero;
     }
 
-    public void PhysicsUpdateState() { }
+    public void PhysicsUpdateState()
+    {
+        
+    }
 
     public void ExitState() { }
 

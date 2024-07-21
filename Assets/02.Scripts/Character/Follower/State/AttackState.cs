@@ -23,8 +23,6 @@ public class AttackState : IFollowerState
             // FindClosestEnemy();
             _targetEnemy = _follower.leader.CurrentTarget;
         }
-        
-        DebugLogger.Log("Enter FollowerAttackState");
     }
 
     public void UpdateState()
@@ -66,7 +64,6 @@ public class AttackState : IFollowerState
     {
         _targetEnemy = null;
         _follower.Animator.SetBool(_follower.IsAttacking, false);
-        // 포메이션 위치 복귀
         _follower.heroStats.moveSpeed = _originalMoveSpeed;
     }
     
