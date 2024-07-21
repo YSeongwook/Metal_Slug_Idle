@@ -56,9 +56,7 @@ public class HeroController : MonoBehaviour
     {
         Initialize();
         TransitionToState(IdleState);
-        EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
-        EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
-        EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
+        AddEvents();
     }
 
     private void Start()
@@ -68,6 +66,20 @@ public class HeroController : MonoBehaviour
 
     // 오브젝트 파괴 시 호출
     protected virtual void OnDestroy()
+    {
+        RemoveEvents();
+    }
+
+    // 이벤트 구독
+    private void AddEvents()
+    {
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
+        EventManager<UIEvents>.StartListening(UIEvents.OnTouchStartJoystick, OnUserControl);
+        EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
+    }
+
+    // 이벤트 구독 취소
+    private void RemoveEvents()
     {
         EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
         EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
@@ -148,7 +160,7 @@ public class HeroController : MonoBehaviour
     }
     
     // 자동 모드 전환
-    private void ToggleAutoMode()
+    protected void ToggleAutoMode()
     {
         IsAutoMode = !IsAutoMode;
     }

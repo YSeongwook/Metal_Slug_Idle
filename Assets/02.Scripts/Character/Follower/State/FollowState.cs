@@ -13,7 +13,6 @@ public class FollowState : IFollowerState
         _follower = follower;
         _follower.Animator.SetFloat(_follower.SpeedParameter, 0);
         _originalMoveSpeed = _follower.heroStats.moveSpeed; // 원래 이동 속도 저장
-
         // 현재 타겟이 없을 때만 포메이션 복귀 상태로 설정
         if (_follower.CurrentTarget == null)
         {

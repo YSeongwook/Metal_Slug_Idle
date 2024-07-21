@@ -20,6 +20,17 @@ public class FollowerController : HeroController
     private void Start()
     {
         InitializeFollower();
+        AddEvents();
+    }
+    
+    private new void OnDestroy()
+    {
+        RemoveEvents();
+    }
+
+    private void AddEvents()
+    {
+        EventManager<UIEvents>.StartListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
         EventManager<HeroEvents>.StartListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
@@ -27,8 +38,20 @@ public class FollowerController : HeroController
         EventManager<UIEvents>.StartListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
 
+    private void RemoveEvents()
+    {
+        EventManager<UIEvents>.StopListening(UIEvents.OnClickAutoButton, ToggleAutoMode);
+        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
+        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
+        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
+        EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
+        EventManager<UIEvents>.StopListening(UIEvents.OnTouchEndJoystick, OffUserControl);
+    }
+
     public void InitializeFollower()
     {
+        this.heroStats = this.HeroStatsManager.GetHeroStats();
+        
         this.IsLeader = false;
         if (leader == null)
         {
@@ -47,15 +70,6 @@ public class FollowerController : HeroController
         {
             Debug.LogError("Leader not assigned to follower.");
         }
-    }
-
-    private new void OnDestroy()
-    {
-        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStarted, OnLeaderAttackStarted);
-        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderAttackStopped, OnLeaderAttackStopped);
-        EventManager<HeroEvents>.StopListening(HeroEvents.LeaderDirectionChanged, OnLeaderDirectionChanged);
-        EventManager<UIEvents>.StopListening(UIEvents.OnTouchStartJoystick, OnUserControl);
-        EventManager<UIEvents>.StopListening(UIEvents.OnTouchEndJoystick, OffUserControl);
     }
 
     // 매 프레임 상태 업데이트

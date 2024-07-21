@@ -20,8 +20,6 @@ public class HeroMoveState : IHeroState
     {
         if (!_hero.IsAutoMode) return;
         
-        DebugLogger.Log("AutoMode");
-        
         MoveTowardsTarget();
     }
 
@@ -36,8 +34,6 @@ public class HeroMoveState : IHeroState
     {
         if (_target == null) return;
 
-        DebugLogger.Log(_target);
-        
         Vector3 direction = (_target.position - _hero.transform.position).normalized;
         float attackRangeBuffer = 1.0f; // 추가적인 마진
         float distanceToMove = Vector3.Distance(_hero.transform.position, _target.position) - (_hero.heroStats.attackRange - attackRangeBuffer);

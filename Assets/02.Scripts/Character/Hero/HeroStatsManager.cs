@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class HeroStatsManager : MonoBehaviour
@@ -6,20 +5,20 @@ public class HeroStatsManager : MonoBehaviour
     public int heroId; // 로드할 영웅의 ID
     public HeroStats heroStats;
     
-    private HeroStatsLoader heroStatsLoader;
+    private HeroStatsLoader _heroStatsLoader;
 
     private void Awake()
     {
-        heroStatsLoader = FindObjectOfType<HeroStatsLoader>();
+        _heroStatsLoader = FindObjectOfType<HeroStatsLoader>();
         Initialize();
     }
     
     public void Initialize()
     {
-        if (heroStatsLoader != null)
+        if (_heroStatsLoader != null)
         {
-            heroStatsLoader.LoadHeroStats();
-            heroStats = heroStatsLoader.GetHeroStatsById(heroId);
+            _heroStatsLoader.LoadHeroStats();
+            heroStats = _heroStatsLoader.GetHeroStatsById(heroId);
         }
 
         if (heroStats == null)
@@ -31,7 +30,6 @@ public class HeroStatsManager : MonoBehaviour
     public float AttackRange => heroStats.attackRange;
     public float AttackDamage => heroStats.attack;
     public float AttackSpeed => heroStats.attackSpeed;
-    public float MoveSpeed => heroStats.moveSpeed;
 
     // 체력 회복 함수 호출 예시
     public void HealHero(int amount)
