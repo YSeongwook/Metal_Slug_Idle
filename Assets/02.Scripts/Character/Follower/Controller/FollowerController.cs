@@ -138,4 +138,9 @@ public class FollowerController : HeroController
         hudPosition.x *= -1;
         hud.localPosition = hudPosition;
     }
+
+    public void EndFormationChanged()
+    {
+        if(leader.IsFlipped != this.IsFlipped) HandleSpriteFlip(1f);
+    }
 }

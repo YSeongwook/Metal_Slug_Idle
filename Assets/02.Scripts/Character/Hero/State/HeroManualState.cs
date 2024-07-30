@@ -54,6 +54,7 @@ public class HeroManualState : IHeroState
         }
     }
     
+    // Move 메서드 이동 방식 변경 중
     private void Move2()
     {
         Vector3 moveDirection = new Vector3(_hero.MoveInput.x, 0, _hero.MoveInput.y * _hero.zSpeedMultiplier);

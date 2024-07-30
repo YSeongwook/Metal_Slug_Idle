@@ -52,6 +52,7 @@ namespace EnumTypes
         OnClickSortListAttackButton,
         OnClickHeroTabButton,
         OnClickFormationTabButton,
+        FormationChanged,
     }
 
     public enum DataEvents

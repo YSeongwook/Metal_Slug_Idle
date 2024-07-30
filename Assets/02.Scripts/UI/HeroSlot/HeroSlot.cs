@@ -20,6 +20,7 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private GameObject _inGameHero; // 렌더 텍스쳐 영웅에 대응하는 인게임 영웅
     private HeroController _inGameHeroController; // 렌더 텍스쳐 영웅에 대응하는 인게임 영웅
     private bool _isChangeLeaderMode; // 리더 변경 모드 판별 변수
+    private bool _flipX; // 영웅 스프라이트 렌더러 flip 변수
 
     private const float SlotXSpacing = 230f; // 슬롯 간의 x축 간격
     private const float SlotYSpacing = 130f; // 슬롯 간의 y축 간격
@@ -193,6 +194,8 @@ public class HeroSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             // 캐릭터의 위치를 업데이트합니다.
             targetSlot.UpdateCharacterPosition();
             UpdateCharacterPosition();
+            
+            EventManager<UIEvents>.TriggerEvent(UIEvents.FormationChanged);
         }
 
         // 드랍 시 캐릭터 위치 고정

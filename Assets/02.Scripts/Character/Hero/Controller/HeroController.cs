@@ -244,7 +244,7 @@ public class HeroController : MonoBehaviour
         hudPosition.x *= -1;
         hud.localPosition = hudPosition;
         
-        EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderDirectionChanged);
+        EventManager<HeroEvents>.TriggerEvent(HeroEvents.LeaderDirectionChanged, moveHorizontal);
     }
 
     protected void OnCollisionEnter(Collision col)

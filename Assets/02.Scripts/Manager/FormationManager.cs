@@ -177,7 +177,6 @@ public class FormationManager : Singleton<FormationManager>
         followerController.leader = leader;
     }
 
-    // 이 메서드가 문제
     public void UpdateFormationOffSets()
     {
         var leaderOffset = _leaderFollowerController.formationOffset;
