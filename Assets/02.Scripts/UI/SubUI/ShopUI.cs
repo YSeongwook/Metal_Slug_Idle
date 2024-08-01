@@ -70,8 +70,8 @@ public class ShopUI : SubUI
             summonSingleButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
             summonTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
             summonThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
-            summonResultTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
-            summonResultThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultTenButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.AddGachaTen));
+            summonResultThirtyButton.onClick.AddListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.AddGachaThirty));
         }
         else
         {
@@ -83,8 +83,8 @@ public class ShopUI : SubUI
             summonSingleButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaSingle));
             summonTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
             summonThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
-            summonResultTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaTen));
-            summonResultThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.GachaThirty));
+            summonResultTenButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.AddGachaTen));
+            summonResultThirtyButton.onClick.RemoveListener(() => EventManager<GachaEvents>.TriggerEvent(GachaEvents.AddGachaThirty));
         }
     }
 

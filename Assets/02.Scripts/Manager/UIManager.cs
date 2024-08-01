@@ -486,7 +486,7 @@ public class UIManager : Singleton<UIManager>
     public void OnClickSummonButton()
     {
         panelSummonResult.SetActive(true); // 소환 결과 패널 활성화
-        ToggleMainUnderButtons(); // 하단 버튼들 토글
+        ToggleMainUnderButtons(); // 하단 버튼들 토글, 추가 가챠 버튼을 눌렀을 때 이 메서드 동작해서 하단 버튼 사라지는 듯
         EnableMainCloseButton(); // 하단 닫기 버튼 활성화, 하단 데코 비활성화
         upperDeco.SetActive(false); // 상단바 데코 비활성화
     }

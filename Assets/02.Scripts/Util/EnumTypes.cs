@@ -67,7 +67,9 @@ namespace EnumTypes
     {
         GachaSingle,
         GachaTen,
-        GachaThirty
+        GachaThirty,
+        AddGachaTen,
+        AddGachaThirty
     }
 
     public enum GoogleEvents

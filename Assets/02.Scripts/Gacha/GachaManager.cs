@@ -50,6 +50,8 @@ public class GachaManager : MonoBehaviour
         EventManager<GachaEvents>.StartListening(GachaEvents.GachaSingle, () => PerformGacha(1));
         EventManager<GachaEvents>.StartListening(GachaEvents.GachaTen, () => PerformGacha(10));
         EventManager<GachaEvents>.StartListening(GachaEvents.GachaThirty, () => PerformGacha(30));
+        EventManager<GachaEvents>.StartListening(GachaEvents.AddGachaTen, () => PerformGacha(10));
+        EventManager<GachaEvents>.StartListening(GachaEvents.AddGachaThirty, () => PerformGacha(30));
     }
 
     private void OnDisable()
@@ -57,6 +59,8 @@ public class GachaManager : MonoBehaviour
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaSingle, () => PerformGacha(1));
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaTen, () => PerformGacha(10));
         EventManager<GachaEvents>.StopListening(GachaEvents.GachaThirty, () => PerformGacha(30));
+        EventManager<GachaEvents>.StopListening(GachaEvents.AddGachaTen, () => PerformGacha(10));
+        EventManager<GachaEvents>.StopListening(GachaEvents.AddGachaThirty, () => PerformGacha(30));
     }
 
     public void SetHeroData(HeroDataWrapper heroData)
@@ -150,6 +154,7 @@ public class GachaManager : MonoBehaviour
         }
     }
 
+    // 이 부분의 업데이트에서 assigned가 전부 false가 되는 것 같다.
     private async Task UpdateHeroCollection(int[] heroIds, string userId)
     {
         await DatabaseManager.Instance.UpdateHeroCollection(userId, heroIds); // Firebase 데이터 업데이트
