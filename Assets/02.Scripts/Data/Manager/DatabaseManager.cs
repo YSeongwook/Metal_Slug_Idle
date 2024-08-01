@@ -37,16 +37,16 @@ public class DatabaseManager : Singleton<DatabaseManager>
         {
             if (task.IsCanceled)
             {
-                Debug.LogError("유저 데이터 저장이 취소되었습니다.");
+                DebugLogger.LogError("유저 데이터 저장이 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("유저 데이터 저장 중 오류 발생: " + task.Exception);
+                DebugLogger.LogError("유저 데이터 저장 중 오류 발생: " + task.Exception);
                 return;
             }
 
-            Debug.Log("유저 데이터 저장 성공.");
+            DebugLogger.Log("유저 데이터 저장 성공.");
         });
     }
 
@@ -66,7 +66,7 @@ public class DatabaseManager : Singleton<DatabaseManager>
         }
         else
         {
-            Debug.LogWarning("유저 데이터가 존재하지 않습니다.");
+            DebugLogger.LogWarning("유저 데이터가 존재하지 않습니다.");
             return null;
         }
     }
@@ -82,16 +82,16 @@ public class DatabaseManager : Singleton<DatabaseManager>
         {
             if (task.IsCanceled)
             {
-                Debug.LogError("유저 히어로 컬렉션 저장이 취소되었습니다.");
+                DebugLogger.LogError("유저 히어로 컬렉션 저장이 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("유저 히어로 컬렉션 저장 중 오류 발생: " + task.Exception);
+                DebugLogger.LogError("유저 히어로 컬렉션 저장 중 오류 발생: " + task.Exception);
                 return;
             }
 
-            Debug.Log("유저 히어로 컬렉션 저장 성공.");
+            DebugLogger.Log("유저 히어로 컬렉션 저장 성공.");
         });
     }
 
@@ -106,7 +106,7 @@ public class DatabaseManager : Singleton<DatabaseManager>
         }
         else
         {
-            Debug.LogWarning("유저 히어로 컬렉션 데이터가 존재하지 않습니다.");
+            DebugLogger.LogWarning("유저 히어로 컬렉션 데이터가 존재하지 않습니다.");
             return null;
         }
     }
@@ -130,7 +130,7 @@ public class DatabaseManager : Singleton<DatabaseManager>
         }
         else
         {
-            Debug.LogWarning("유저 히어로 컬렉션 데이터가 존재하지 않습니다.");
+            DebugLogger.LogWarning("유저 히어로 컬렉션 데이터가 존재하지 않습니다.");
         }
     }
 
@@ -140,16 +140,16 @@ public class DatabaseManager : Singleton<DatabaseManager>
         {
             if (task.IsCanceled)
             {
-                Debug.LogError("모든 데이터 삭제가 취소되었습니다.");
+                DebugLogger.LogError("모든 데이터 삭제가 취소되었습니다.");
                 return;
             }
             if (task.IsFaulted)
             {
-                Debug.LogError("모든 데이터 삭제 중 오류 발생: " + task.Exception);
+                DebugLogger.LogError("모든 데이터 삭제 중 오류 발생: " + task.Exception);
                 return;
             }
 
-            Debug.Log("모든 데이터 삭제 성공.");
+            DebugLogger.Log("모든 데이터 삭제 성공.");
         });
     }
 
@@ -157,7 +157,7 @@ public class DatabaseManager : Singleton<DatabaseManager>
     {
         if (_databaseRef == null || GetCurrentUser() == null)
         {
-            Debug.LogError("Firebase Database or User not initialized.");
+            DebugLogger.LogError("Firebase Database or User not initialized.");
             return;
         }
 
@@ -171,7 +171,7 @@ public class DatabaseManager : Singleton<DatabaseManager>
         }
         else
         {
-            Debug.Log("HeroData not found in Firebase Realtime Database.");
+            DebugLogger.Log("HeroData not found in Firebase Realtime Database.");
         }
     }
 }

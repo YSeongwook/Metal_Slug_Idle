@@ -68,7 +68,7 @@ public class FollowerController : HeroController
         }
         else
         {
-            Debug.LogError("Leader not assigned to follower.");
+            DebugLogger.LogError("Leader not assigned to follower.");
         }
     }
 

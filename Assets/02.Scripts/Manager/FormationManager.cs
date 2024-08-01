@@ -65,12 +65,12 @@ public class FormationManager : Singleton<FormationManager>
         // 리더와 팔로워가 제대로 할당되었는지 확인
         if (leader == null)
         {
-            Debug.LogError("Leader not found!");
+            DebugLogger.LogError("Leader not found!");
         }
 
         if (followers.Count == 0)
         {
-            Debug.LogError("Followers not found!");
+            DebugLogger.LogError("Followers not found!");
         }
         else
         {
@@ -158,7 +158,7 @@ public class FormationManager : Singleton<FormationManager>
         
         UpdateFormationOffSets();
 
-        Debug.Log("New Leader assigned: " + leader.name);
+        DebugLogger.Log("New Leader assigned: " + leader.name);
     }
 
     private void SetFollower(GameObject follower)

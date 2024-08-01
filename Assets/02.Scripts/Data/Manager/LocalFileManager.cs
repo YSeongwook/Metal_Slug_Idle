@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class LocalFileManager : Singleton<LocalFileManager>
 {
-    private string heroCollectionFileName = "HeroCollection.json";
+    private const string HeroCollectionFileName = "HeroCollection.json";
 
     public void SaveHeroCollectionToLocalFile(string base64HeroCollection)
     {
         string json = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(base64HeroCollection));
-        string path = Path.Combine(Application.persistentDataPath, heroCollectionFileName);
+        string path = Path.Combine(Application.persistentDataPath, HeroCollectionFileName);
         File.WriteAllText(path, json);
         Debug.Log("HeroCollection saved to local file.");
     }
 
     public string LoadHeroCollectionFromLocalFile()
     {
-        string path = Path.Combine(Application.persistentDataPath, heroCollectionFileName);
+        string path = Path.Combine(Application.persistentDataPath, HeroCollectionFileName);
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
@@ -30,7 +30,7 @@ public class LocalFileManager : Singleton<LocalFileManager>
 
     public void DeleteLocalHeroCollectionFile()
     {
-        string path = Path.Combine(Application.persistentDataPath, heroCollectionFileName);
+        string path = Path.Combine(Application.persistentDataPath, HeroCollectionFileName);
         if (File.Exists(path))
         {
             File.Delete(path);
