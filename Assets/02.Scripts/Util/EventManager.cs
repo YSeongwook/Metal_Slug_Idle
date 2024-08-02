@@ -132,7 +132,7 @@ namespace EventLibrary
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"Error triggering event {eventName} with parameter {parameter}: {e.Message}");
+                    DebugLogger.LogError($"Error triggering event {eventName} with parameter {parameter}: {e.Message}");
                 }
             }
         }
@@ -150,7 +150,7 @@ namespace EventLibrary
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"Error triggering event {eventName}: {e.Message}");
+                    DebugLogger.LogError($"Error triggering event {eventName}: {e.Message}");
                 }
             }
         }

@@ -41,6 +41,7 @@ public class HeroController : MonoBehaviour
     public readonly HeroAttackState AttackState = new HeroAttackState();
     public readonly HeroManualState ManualState = new HeroManualState();
 
+    // 애니메이터 파라미터 캐싱
     public readonly int SpeedParameter = Animator.StringToHash("Speed");
     public readonly int AttackParameter = Animator.StringToHash("Attack");
     public readonly int IsAttacking = Animator.StringToHash("IsAttacking");
