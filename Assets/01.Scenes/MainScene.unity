@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5417,6 +5417,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4845110182130845165, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5008155010462111736, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5492,6 +5496,10 @@ PrefabInstance:
     - target: {fileID: 5617364716133085594, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_Name
       value: UI Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617364716133085594, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5617364716133085597, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_Camera
@@ -5831,7 +5839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8089475338963439317, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8257705150753945064, guid: 100f73d60bddc4542a61f70ce2f27026, type: 3}
       propertyPath: m_AnchorMax.x
